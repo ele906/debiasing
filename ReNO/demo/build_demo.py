@@ -317,13 +317,17 @@ code.cite {
   <section>
     <div class="section-num">01 — the mechanism</div>
     <h2>Watching the noise get optimized</h2>
-    <p>Below is one real run: the prompt <span class="muted">"goose"</span> generated with SDXL-Turbo, gradient step 0 through the final selected frame. Drag the slider through the actual saved checkpoints — the model itself never changes, only the noise it starts from.</p>
+    <p>Below is one real run per prompt with SDXL-Turbo, gradient step 0 through the final selected frame. Drag the slider through the actual saved checkpoints — the model itself never changes, only the noise it starts from. Switch prompts with the arrows.</p>
 
+    <div class="prompt-switch">
+      <button class="prompt-arrow" id="opt-prompt-prev">‹</button>
+      <div class="prompt-label" id="opt-prompt-label"></div>
+      <button class="prompt-arrow" id="opt-prompt-next">›</button>
+    </div>
     <div class="opt-frame">
       <div class="opt-image-wrap">
         <img id="opt-img" src="" alt="Optimization frame" />
       </div>
-      <div class="opt-prompt">"a photo of a goose"</div>
       <div class="opt-controls">
         <div class="opt-slider-row">
           <input type="range" id="opt-slider" min="0" max="51" step="1" value="0" />
@@ -386,17 +390,34 @@ code.cite {
 const DATA = JSON.parse(document.getElementById('demo-data').textContent);
 
 // --- optimization strip ---
-const gooseFrames = ['init_image', ...Array.from({length: 50}, (_, i) => String(i)), 'best_image'];
-const gooseLabels = ['step 0 / init noise', ...Array.from({length: 50}, (_, i) => `step ${i + 1}`), 'best / final noise'];
+const optPrompts = [
+  { key: 'goose', label: 'a photo of a goose' },
+  { key: 'parrot', label: 'a photo of a parrot' },
+  { key: 'eagle', label: 'a photo of an eagle' },
+];
+const optFrameKeys = ['init_image', ...Array.from({length: 50}, (_, i) => String(i)), 'best_image'];
+const optLabels = ['step 0 / init noise', ...Array.from({length: 50}, (_, i) => `step ${i + 1}`), 'best / final noise'];
 const optImg = document.getElementById('opt-img');
 const optCaption = document.getElementById('opt-caption');
 const optSlider = document.getElementById('opt-slider');
-function renderOpt(i) {
-  optImg.src = DATA.goose[gooseFrames[i]];
-  optCaption.textContent = gooseLabels[i];
+const optPromptLabelEl = document.getElementById('opt-prompt-label');
+let optPromptIdx = 0;
+let optStepIdx = 0;
+function renderOpt() {
+  optPromptLabelEl.textContent = `"${optPrompts[optPromptIdx].label}"`;
+  optImg.src = DATA[optPrompts[optPromptIdx].key][optFrameKeys[optStepIdx]];
+  optCaption.textContent = optLabels[optStepIdx];
 }
-optSlider.addEventListener('input', e => renderOpt(+e.target.value));
-renderOpt(0);
+optSlider.addEventListener('input', e => { optStepIdx = +e.target.value; renderOpt(); });
+document.getElementById('opt-prompt-prev').addEventListener('click', () => {
+  optPromptIdx = (optPromptIdx + optPrompts.length - 1) % optPrompts.length;
+  renderOpt();
+});
+document.getElementById('opt-prompt-next').addEventListener('click', () => {
+  optPromptIdx = (optPromptIdx + 1) % optPrompts.length;
+  renderOpt();
+});
+renderOpt();
 
 // --- 9-face composition grid ---
 const gridPrompts = [

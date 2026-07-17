@@ -139,9 +139,25 @@ class FairnessLoss(BaseRewardLoss):
         return torch.cat(crops, dim=0)
 
     def _blur_defense(self, pixels: torch.Tensor) -> torch.Tensor:
+        # A *fixed* blur is fully differentiable, so gradient ascent just
+        # finds a noise pattern tuned to survive that exact transform
+        # (adversarial "gradient masking" -- confirmed empirically: at
+        # fairness_weighting=15 the KL loss collapsed and the classifier's
+        # predicted race flipped, but an independent visual check of the
+        # saved PNGs showed no actual change in the depicted face).
+        # Randomizing the downsample factor and adding pixel noise each
+        # call means no single fixed perturbation survives every step --
+        # the optimizer can only get consistent reward from changes that
+        # remain visible after an unpredictable blur, i.e. genuine,
+        # low-frequency (real) image structure. Same idea as Expectation-
+        # over-Transformation, applied against the attacker instead of by it.
         b, c, h, w = pixels.shape
+        pixels = pixels + 0.02 * torch.randn_like(pixels)
         pixels = F.avg_pool2d(pixels, kernel_size=3, stride=1, padding=1)
-        small = F.interpolate(pixels, size=(h // 2, w // 2), mode="bilinear", align_corners=False)
+        factor = int(torch.randint(2, 5, (1,)).item())  # random in {2,3,4}
+        small = F.interpolate(
+            pixels, size=(h // factor, w // factor), mode="bilinear", align_corners=False
+        )
         return F.interpolate(small, size=(h, w), mode="bilinear", align_corners=False)
 
     def __call__(self, image: torch.Tensor, prompt: str) -> torch.Tensor:
