@@ -181,54 +181,59 @@ input[type="range"] {
   margin-top: 0.2rem;
 }
 
-/* Bias drift gallery */
-.pair-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+/* 9-face composition grid */
+.prompt-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
   margin-top: 1.75rem;
 }
-@media (max-width: 640px) {
-  .pair-grid { grid-template-columns: 1fr; }
+.prompt-arrow {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  font-family: var(--mono);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pair-card {
+.prompt-arrow:hover { border-color: var(--accent); color: var(--accent); }
+.prompt-label {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.15rem;
+  min-width: 11rem;
+  text-align: center;
+}
+.face-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 24rem;
+  margin: 1.25rem auto 0;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 0.9rem;
+  padding: 0.6rem;
 }
-.pair-images {
-  display: flex;
-  gap: 0.4rem;
-}
-.pair-images figure {
-  margin: 0;
-  flex: 1;
-  min-width: 0;
-}
-.pair-images img {
+.face-grid img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 3px;
   display: block;
+  background: var(--surface-2);
 }
-.pair-images figcaption {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 0.35rem;
-}
-.pair-label {
-  font-family: var(--display);
-  font-style: italic;
-  font-size: 0.92rem;
-  color: var(--text);
-  margin-top: 0.75rem;
-  text-align: center;
+.grid-controls {
+  max-width: 24rem;
+  margin: 1rem auto 0;
 }
 
 /* Composition plots */
@@ -331,13 +336,24 @@ code.cite {
   <section>
     <div class="section-num">02 — the failure mode</div>
     <h2>Reward climbing has a direction — and it isn't neutral</h2>
-    <p>Reward models are trained on human preference data, and that data has its own demographic skew. Optimize purely for "looks good / matches the prompt" on an occupation prompt like <em>nurse</em> or <em>CEO</em>, and the population of faces the model converges toward can shift — not because anyone asked for that, but because it's the direction the reward gradient points.</p>
+    <p>Reward models are trained on human preference data, and that data has its own demographic skew. Optimize purely for "looks good / matches the prompt" on an occupation prompt like <em>nurse</em>, <em>CEO</em>, or <em>software engineer</em>, and the population of faces the model converges toward can shift — not because anyone asked for that, but because it's the direction the reward gradient points. These 9 seeds are from the fairness-regularized run — drag through the optimization steps to watch the grid settle, and switch prompts with the arrows.</p>
 
-    <div class="pair-grid" id="pair-grid"></div>
+    <div class="prompt-switch">
+      <button class="prompt-arrow" id="prompt-prev">‹</button>
+      <div class="prompt-label" id="prompt-label"></div>
+      <button class="prompt-arrow" id="prompt-next">›</button>
+    </div>
+    <div class="face-grid" id="face-grid"></div>
+    <div class="grid-controls">
+      <div class="opt-slider-row">
+        <input type="range" id="grid-slider" min="0" max="7" step="1" value="0" />
+      </div>
+      <div class="opt-caption" id="grid-caption">step 0 / init noise</div>
+    </div>
   </section>
 
   <section>
-    <div class="section-num">03 — the experiment</div>
+    <div class="section-num">03 — the measurement</div>
     <h2>Tracking demographic composition across optimization</h2>
     <p>To measure the drift directly, we generate 20 seeds per occupation prompt, classify the detected faces at every optimization stage with a FairFace model, and log the racial composition as the noise moves toward higher reward. <span class="muted">Baseline</span> uses the standard multi-reward objective; <span class="muted">fairness</span> adds a composition-aware term that regularizes the reward gradient against runaway demographic drift.</p>
 
@@ -377,25 +393,43 @@ function renderOpt(i) {
 optSlider.addEventListener('input', e => renderOpt(+e.target.value));
 renderOpt(0);
 
-// --- bias drift pairs ---
-const pairs = [
-  { key: 'nurse', label: 'a photo of a nurse' },
+// --- 9-face composition grid ---
+const gridPrompts = [
   { key: 'ceo', label: 'a photo of a CEO' },
-  { key: 'mechanic', label: 'a photo of a mechanic' },
+  { key: 'nurse', label: 'a photo of a nurse' },
+  { key: 'swe', label: 'a photo of a software engineer' },
 ];
-const grid = document.getElementById('pair-grid');
-pairs.forEach(p => {
-  const card = document.createElement('div');
-  card.className = 'pair-card';
-  card.innerHTML = `
-    <div class="pair-images">
-      <figure><img src="${DATA[p.key].init}" alt="init"><figcaption>init</figcaption></figure>
-      <figure><img src="${DATA[p.key].best}" alt="optimized"><figcaption>optimized</figcaption></figure>
-    </div>
-    <div class="pair-label">"${p.label}"</div>
-  `;
-  grid.appendChild(card);
+const gridStepLabels = ['step 0 / init noise', 'step 0', 'step 10', 'step 20', 'step 30', 'step 40', 'step 49', 'best / final noise'];
+let promptIdx = 0;
+let stepIdx = 0;
+
+const faceGridEl = document.getElementById('face-grid');
+const promptLabelEl = document.getElementById('prompt-label');
+const gridCaptionEl = document.getElementById('grid-caption');
+const gridSlider = document.getElementById('grid-slider');
+
+function renderGrid() {
+  const key = gridPrompts[promptIdx].key;
+  promptLabelEl.textContent = `"${gridPrompts[promptIdx].label}"`;
+  gridCaptionEl.textContent = gridStepLabels[stepIdx];
+  const seeds = DATA.grid[key];
+  faceGridEl.innerHTML = Array.from({ length: 9 }, (_, seed) =>
+    `<img src="${seeds[seed][stepIdx]}" alt="seed ${seed}, ${gridStepLabels[stepIdx]}">`
+  ).join('');
+}
+document.getElementById('prompt-prev').addEventListener('click', () => {
+  promptIdx = (promptIdx + gridPrompts.length - 1) % gridPrompts.length;
+  renderGrid();
 });
+document.getElementById('prompt-next').addEventListener('click', () => {
+  promptIdx = (promptIdx + 1) % gridPrompts.length;
+  renderGrid();
+});
+gridSlider.addEventListener('input', e => {
+  stepIdx = +e.target.value;
+  renderGrid();
+});
+renderGrid();
 
 // --- composition plot toggle ---
 const plotImg = document.getElementById('plot-img');
