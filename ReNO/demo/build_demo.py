@@ -321,7 +321,7 @@ code.cite {
       <div class="opt-prompt">"a photo of a goose"</div>
       <div class="opt-controls">
         <div class="opt-slider-row">
-          <input type="range" id="opt-slider" min="0" max="5" step="1" value="0" />
+          <input type="range" id="opt-slider" min="0" max="51" step="1" value="0" />
         </div>
         <div class="opt-caption" id="opt-caption">step 0 / init noise</div>
       </div>
@@ -365,8 +365,8 @@ code.cite {
 const DATA = JSON.parse(document.getElementById('demo-data').textContent);
 
 // --- optimization strip ---
-const gooseFrames = ['init_image', '10', '20', '30', '40', 'best_image'];
-const gooseLabels = ['step 0 / init noise', 'step 10', 'step 20', 'step 30', 'step 40', 'best / final noise'];
+const gooseFrames = ['init_image', ...Array.from({length: 50}, (_, i) => String(i)), 'best_image'];
+const gooseLabels = ['step 0 / init noise', ...Array.from({length: 50}, (_, i) => `step ${i + 1}`), 'best / final noise'];
 const optImg = document.getElementById('opt-img');
 const optCaption = document.getElementById('opt-caption');
 const optSlider = document.getElementById('opt-slider');
