@@ -1,6 +1,6 @@
 import json
 
-data = json.load(open('/tmp/claude-365840/-n-fs-goose/4d75956c-9e7d-4f0e-ad0f-cef1c401c693/scratchpad/demo_data.json'))
+data = json.load(open('/tmp/claude-365840/-n-fs-goose/ecaa9bc2-a725-46c0-a286-42496426e6f3/scratchpad/demo_data.json'))
 
 html_template = r"""<title>ReNO — Reward-Based Noise Optimization</title>
 <style>
@@ -355,8 +355,13 @@ code.cite {
   <section>
     <div class="section-num">03 — the measurement</div>
     <h2>Tracking demographic composition across optimization</h2>
-    <p>To measure the drift directly, we generate 20 seeds per occupation prompt, classify the detected faces at every optimization stage with a FairFace model, and log the racial composition as the noise moves toward higher reward. <span class="muted">Baseline</span> uses the standard multi-reward objective; <span class="muted">fairness</span> adds a composition-aware term that regularizes the reward gradient against runaway demographic drift.</p>
+    <p>To measure the drift directly, we generate 20 seeds per occupation prompt, classify the detected faces at every optimization stage with a FairFace model, and log the racial composition as the noise moves toward higher reward. <span class="muted">Baseline</span> uses the standard multi-reward objective; <span class="muted">fairness</span> adds a composition-aware term that regularizes the reward gradient against runaway demographic drift. Switch prompts with the arrows, and toggle baseline vs. fairness-regularized for each.</p>
 
+    <div class="prompt-switch">
+      <button class="prompt-arrow" id="plot-prompt-prev">‹</button>
+      <div class="prompt-label" id="plot-prompt-label"></div>
+      <button class="prompt-arrow" id="plot-prompt-next">›</button>
+    </div>
     <div class="plot-toggle" id="plot-toggle">
       <button data-variant="baseline" class="active">baseline</button>
       <button data-variant="fairness">fairness-regularized</button>
@@ -364,7 +369,7 @@ code.cite {
     <div class="plot-wrap">
       <img id="plot-img" src="" alt="Composition plot" />
     </div>
-    <div class="plot-note" id="plot-note">a_photo_of_a_ceo · a_photo_of_a_nurse · a_photo_of_a_software_engineer — composition per optimization stage, 20 seeds each</div>
+    <div class="plot-note" id="plot-note">composition per optimization stage, 20 seeds</div>
   </section>
 
   <footer>
@@ -431,23 +436,37 @@ gridSlider.addEventListener('input', e => {
 });
 renderGrid();
 
-// --- composition plot toggle ---
+// --- composition plot: prompt arrows + baseline/fairness toggle ---
 const plotImg = document.getElementById('plot-img');
 const plotToggle = document.getElementById('plot-toggle');
-function renderPlot(variant) {
-  plotImg.src = DATA['plot_' + variant];
-  [...plotToggle.children].forEach(b => b.classList.toggle('active', b.dataset.variant === variant));
+const plotPromptLabelEl = document.getElementById('plot-prompt-label');
+let plotPromptIdx = 0;
+let plotVariant = 'baseline';
+function renderPlot() {
+  const key = gridPrompts[plotPromptIdx].key;
+  plotPromptLabelEl.textContent = `"${gridPrompts[plotPromptIdx].label}"`;
+  plotImg.src = DATA.plots[plotVariant][key];
+  [...plotToggle.children].forEach(b => b.classList.toggle('active', b.dataset.variant === plotVariant));
 }
+document.getElementById('plot-prompt-prev').addEventListener('click', () => {
+  plotPromptIdx = (plotPromptIdx + gridPrompts.length - 1) % gridPrompts.length;
+  renderPlot();
+});
+document.getElementById('plot-prompt-next').addEventListener('click', () => {
+  plotPromptIdx = (plotPromptIdx + 1) % gridPrompts.length;
+  renderPlot();
+});
 plotToggle.addEventListener('click', e => {
   const btn = e.target.closest('button');
   if (!btn) return;
-  renderPlot(btn.dataset.variant);
+  plotVariant = btn.dataset.variant;
+  renderPlot();
 });
-renderPlot('baseline');
+renderPlot();
 </script>
 """
 
 out = html_template.replace('__DATA__', json.dumps(data))
-with open('/tmp/claude-365840/-n-fs-goose/4d75956c-9e7d-4f0e-ad0f-cef1c401c693/scratchpad/reno_demo.html', 'w') as f:
+with open('/n/fs/goose/ReNO/demo/reno_demo.html', 'w') as f:
     f.write(out)
 print('written', len(out))
