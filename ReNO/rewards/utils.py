@@ -73,6 +73,8 @@ def get_reward_losses(
                 args.fairface_weights,
                 memsave=args.memsave,
                 target_dist=args.fairness_target_dist,
+                gender_target_dist=args.fairness_gender_target_dist,
+                enable_gender=args.fairness_enable_gender,
             )
         )
     return reward_losses

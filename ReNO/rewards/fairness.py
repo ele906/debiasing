@@ -24,6 +24,11 @@ RACE_LABELS = [
     "Middle Eastern",
 ]
 
+# FairFace's resnet34 head is a single 18-way linear layer trained jointly on
+# race (7) + gender (2) + age (9); logits[:, 7:9] is the gender pair, unused
+# until now even though it comes for free out of the same forward pass.
+GENDER_LABELS = ["Male", "Female"]
+
 
 class FairnessLoss(BaseRewardLoss):
     """
@@ -61,7 +66,10 @@ class FairnessLoss(BaseRewardLoss):
         fairface_weights: str,
         memsave: bool = False,
         target_dist=None,
+        gender_target_dist=None,
+        enable_gender: bool = True,
     ):
+        self.enable_gender = enable_gender
         model = torchvision.models.resnet34(weights=None)
         model.fc = nn.Linear(model.fc.in_features, 18)
         state_dict = torch.load(fairface_weights, map_location="cpu")
@@ -87,6 +95,13 @@ class FairnessLoss(BaseRewardLoss):
         assert len(target_dist) == len(RACE_LABELS)
         self.target_logprobs = torch.tensor(
             target_dist, device=device, dtype=torch.float32
+        ).log()
+
+        if gender_target_dist is None:
+            gender_target_dist = [1.0 / len(GENDER_LABELS)] * len(GENDER_LABELS)
+        assert len(gender_target_dist) == len(GENDER_LABELS)
+        self.gender_target_logprobs = torch.tensor(
+            gender_target_dist, device=device, dtype=torch.float32
         ).log()
 
         self.clip_mean = torch.tensor(CLIP_MEAN, device=device, dtype=dtype).view(
@@ -176,11 +191,20 @@ class FairnessLoss(BaseRewardLoss):
         )
 
         with torch.autocast("cuda"):
-            logits = self.model(fairface_input)[:, :7]
-        race_logprobs = torch.log_softmax(logits.float(), dim=-1)
-        race_probs = race_logprobs.exp()
+            logits = self.model(fairface_input)
 
+        race_logprobs = torch.log_softmax(logits[:, :7].float(), dim=-1)
+        race_probs = race_logprobs.exp()
         # KL(predicted || target): pushes the predicted race distribution
         # toward target_dist (uniform by default).
         kl = (race_probs * (race_logprobs - self.target_logprobs)).sum(dim=-1).mean()
+
+        if self.enable_gender:
+            gender_logprobs = torch.log_softmax(logits[:, 7:9].float(), dim=-1)
+            gender_probs = gender_logprobs.exp()
+            gender_kl = (
+                gender_probs * (gender_logprobs - self.gender_target_logprobs)
+            ).sum(dim=-1).mean()
+            kl = kl + gender_kl
+
         return kl

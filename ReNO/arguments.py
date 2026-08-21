@@ -90,6 +90,20 @@ def parse_args(args=None):
         "East Asian, Southeast Asian, Indian, Middle Eastern]; must sum to "
         "1. Defaults to uniform.",
     )
+    # FairFace's classifier head predicts gender jointly with race from the
+    # same forward pass, so regularizing it is free -- no second model.
+    parser.add_argument("--disable_fairness_gender",
+                        default=True,
+                        action="store_false",
+                        dest="fairness_enable_gender")
+    parser.add_argument(
+        "--fairness_gender_target_dist",
+        type=float,
+        nargs=2,
+        default=None,
+        help="Target probability for [Male, Female]; must sum to 1. "
+        "Defaults to uniform (0.5/0.5).",
+    )
 
     # bias correction: counteracts the systematic latent-space drift induced
     # by reward optimization (see training/bias_correction.py)
