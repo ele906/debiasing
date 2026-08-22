@@ -9,8 +9,9 @@
 #SBATCH --output=logs/%x-%j.out
 #SBATCH --mail-type=end,fail
 #SBATCH --mail-user=el8403@princeton.edu
-#SBATCH --dependency=afterok:3745426
+#SBATCH --dependency=afterok:3745490
 
+set -e
 source /usr/local/anaconda3/2024.02/etc/profile.d/conda.sh
 conda activate /n/fs/goose/el8403/conda-envs/reno
 

@@ -21,9 +21,9 @@ cd /n/fs/goose/ReNO
 PYTHONPATH=. python ../FairFace/scripts/generate_race_ground_truth.py \
   --model sdxl-turbo \
   --cache_dir /n/fs/goose/el8403/hf-cache \
-  --save_dir outputs/race_ground_truth \
+  --save_dir /n/fs/goose/FairFace/data/ground_truth \
   --n_seeds 60
 
 PYTHONPATH=. python scripts/score_fairface_on_ground_truth.py \
-  --data_dir outputs/race_ground_truth \
+  --data_dir /n/fs/goose/FairFace/data/ground_truth \
   --weights fairface_weights/res34_fair_align_multi_7_20190809.pt

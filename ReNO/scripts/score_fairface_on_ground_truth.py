@@ -65,7 +65,9 @@ def main():
     rows = []
     confusion = defaultdict(lambda: defaultdict(int))  # confusion[true_race][pred_race]
     category_dirs = sorted(
-        d for d in glob.glob(os.path.join(args.data_dir, "*")) if os.path.isdir(d)
+        d
+        for d in glob.glob(os.path.join(args.data_dir, "*"))
+        if os.path.isdir(d) and os.path.basename(d) != "plots"
     )
     if not category_dirs:
         raise SystemExit(f"no category dirs found under {args.data_dir}")
