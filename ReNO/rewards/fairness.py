@@ -128,7 +128,17 @@ class FairnessLoss(BaseRewardLoss):
     def compute_loss(self, image_features, text_features) -> torch.Tensor:
         raise NotImplementedError("FairnessLoss overrides __call__ directly.")
 
-    def _crop_to_face(self, pixels: torch.Tensor) -> torch.Tensor:
+    def _crop_to_faces(self, pixels: torch.Tensor, max_faces: int = 5) -> torch.Tensor:
+        """
+        Detects every face in each image (up to max_faces) and returns one
+        crop per detected face, stacked along the batch dim. Each crop is
+        still a *view* into the graph-connected `pixels` tensor (via
+        F.interpolate), so gradients from every face flow back to the same
+        underlying image -- the KL loss's final .mean(dim=-1)... .mean() in
+        __call__ then averages the fairness loss across all people in the
+        image, not just one. Falls back to the full image if no face is
+        detected (same as the single-face behavior this replaces).
+        """
         b, _, h, w = pixels.shape
         crops = []
         for i in range(b):
@@ -138,19 +148,23 @@ class FairnessLoss(BaseRewardLoss):
                     * 255
                 ).astype(np.uint8)
                 boxes, _ = self.mtcnn.detect(img_np)
-            crop = pixels[i : i + 1]
+            found_any = False
             if boxes is not None and len(boxes) > 0:
-                x1, y1, x2, y2 = boxes[0]
-                x1, y1 = max(int(x1), 0), max(int(y1), 0)
-                x2, y2 = min(int(x2), w), min(int(y2), h)
-                if x2 - x1 >= 8 and y2 - y1 >= 8:
-                    crop = F.interpolate(
-                        crop[:, :, y1:y2, x1:x2],
-                        size=(h, w),
-                        mode="bilinear",
-                        align_corners=False,
-                    )
-            crops.append(crop)
+                for x1, y1, x2, y2 in boxes[:max_faces]:
+                    x1, y1 = max(int(x1), 0), max(int(y1), 0)
+                    x2, y2 = min(int(x2), w), min(int(y2), h)
+                    if x2 - x1 >= 8 and y2 - y1 >= 8:
+                        crops.append(
+                            F.interpolate(
+                                pixels[i : i + 1, :, y1:y2, x1:x2],
+                                size=(h, w),
+                                mode="bilinear",
+                                align_corners=False,
+                            )
+                        )
+                        found_any = True
+            if not found_any:
+                crops.append(pixels[i : i + 1])
         return torch.cat(crops, dim=0)
 
     def _blur_defense(self, pixels: torch.Tensor) -> torch.Tensor:
@@ -183,7 +197,7 @@ class FairnessLoss(BaseRewardLoss):
         # apply the ImageNet normalization FairFace's resnet34 expects.
         pixels = image * self.clip_std.to(image.dtype) + self.clip_mean.to(image.dtype)
 
-        pixels = self._crop_to_face(pixels)
+        pixels = self._crop_to_faces(pixels)
         pixels = self._blur_defense(pixels)
 
         fairface_input = (pixels - self.imagenet_mean.to(image.dtype)) / (

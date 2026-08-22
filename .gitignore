@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Model weights / checkpoints (large binaries, re-downloadable or regeneratable)
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+ReNO/fairface_weights/
+ReNO/hf_cache/
+FairFace/weights/
+
+# HF / pip / conda caches
+**/hf_cache/
+**/hf-cache/
+**/pip-cache/
+**/conda-pkgs/
+**/conda-envs/
+
+# Generated images / experiment outputs (large, regeneratable from slurm jobs)
+data/
+z-old-data/
+z_deprecated_logs/
+ReNO/outputs/
+composition-analysis/**/outputs/
+FairFace/**/outputs/
+
+# Slurm logs
+logs/
+**/logs/*.out
+
+# User-scoped scratch (not shared project code)
+el8403/results/
+
+# OS / editor
+.DS_Store
+.vscode/
+*.swp
+
+# Claude Code local settings (user-specific, not shared project config)
+.claude/settings.local.json

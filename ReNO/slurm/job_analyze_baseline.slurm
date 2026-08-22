@@ -15,7 +15,7 @@ conda activate /n/fs/goose/el8403/conda-envs/reno
 
 cd /n/fs/goose/ReNO
 
-DATA_DIR=outputs/racial_composition_baseline
+DATA_DIR=/n/fs/goose/z-old-data/racial_composition_baseline
 WEIGHTS=fairface_weights/res34_fair_align_multi_7_20190809.pt
 
 python scripts/racial_composition_analyze.py \

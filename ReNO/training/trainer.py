@@ -1,5 +1,7 @@
+import csv
 import logging
 import math
+import os
 from typing import Dict, List, Optional, Tuple
 
 import PIL
@@ -48,6 +50,15 @@ class LatentNoiseTrainer:
         self.bias_corrector = bias_corrector
         self.best_latents = None
         self.preprocess_fn = clip_img_transform(224)
+
+    def _append_reward_row(self, save_dir: str, iteration: int, rewards: Dict[str, float]):
+        path = os.path.join(save_dir, "rewards.csv")
+        write_header = not os.path.exists(path)
+        with open(path, "a", newline="") as f:
+            writer = csv.writer(f)
+            if write_header:
+                writer.writerow(["iteration"] + list(rewards.keys()))
+            writer.writerow([iteration] + list(rewards.values()))
 
     def train(
         self,
@@ -123,6 +134,8 @@ class LatentNoiseTrainer:
                 total_loss += regularization.to(total_loss.dtype)
             if self.log_metrics:
                 logging.info(f"Iteration {iteration}: {to_log}")
+            if save_dir is not None:
+                self._append_reward_row(save_dir, iteration, rewards)
             if total_reward_loss < best_loss:
                 best_loss = total_reward_loss
                 best_image = image
