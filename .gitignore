@@ -27,6 +27,8 @@ z_deprecated_logs/
 ReNO/outputs/
 composition-analysis/**/outputs/
 FairFace/**/outputs/
+baseline/images/
+baseline/heatmaps/top10_by_category/
 
 # Slurm logs
 logs/
