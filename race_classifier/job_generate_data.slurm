@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --job-name=race_classify_sae
+#SBATCH --job-name=race_classify_generate
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
@@ -14,4 +14,4 @@ source /usr/local/anaconda3/2024.02/etc/profile.d/conda.sh
 conda activate /n/fs/goose/el8403/conda-envs/reno
 
 cd /n/fs/goose/ReNO
-python /n/fs/goose/race_classifier/race_classify_from_sae_feats.py
+python /n/fs/goose/race_classifier/generate_data.py
