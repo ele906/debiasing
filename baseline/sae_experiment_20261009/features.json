@@ -1,0 +1,17 @@
+[
+  {
+    "feature": 3677,
+    "mean_activation": 13.479745864868164,
+    "active_fraction": 0.6171875
+  },
+  {
+    "feature": 3123,
+    "mean_activation": 10.31283950805664,
+    "active_fraction": 0.5078125
+  },
+  {
+    "feature": 3432,
+    "mean_activation": 8.215660095214844,
+    "active_fraction": 0.50390625
+  }
+]

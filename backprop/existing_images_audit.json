@@ -1,0 +1,14 @@
+{
+  "audit_date": "2026-10-09",
+  "compatible_simple_prompt_dataset_found": false,
+  "existing_portrait_baseline": {
+    "path": "/n/fs/goose/baseline/images",
+    "images": 600,
+    "images_per_race_gender_cell": 50,
+    "prompt_template": "a portrait of a {race} {gender} with a neutral expression, without any facial coverings, in a neutral white colored t-shirt against a neutral white background",
+    "reuse_for_simple_prompt_baseline": false
+  },
+  "other_locations_inspected": ["race_classifier", "data", "z-old-data", "ReNO"],
+  "other_images": "Feature overlays, intervention outputs, and occupation/multi-person ReNO runs; not a verified matching 12-cell simple-prompt baseline",
+  "decision": "Keep earlier data intact and generate a separate 1200-image simple-prompt dataset"
+}

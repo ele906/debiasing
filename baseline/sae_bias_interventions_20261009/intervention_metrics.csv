@@ -1,0 +1,433 @@
+prompt_race,prompt_gender,seed,feature,strength,pixel_change,saved_baseline_replay_error
+black,man,40,138,0,0.0,0.0
+black,man,40,138,0.5,0.0,0.0
+black,man,40,138,1,0.0,0.0
+black,man,40,138,2,0.0,0.0
+black,man,40,527,0,3.801793416341146,0.0
+black,man,40,527,0.5,2.1001434326171875,0.0
+black,man,40,527,1,0.0,0.0
+black,man,40,527,2,2.932988484700521,0.0
+black,man,40,3530,0,0.0,0.0
+black,man,40,3530,0.5,0.0,0.0
+black,man,40,3530,1,0.0,0.0
+black,man,40,3530,2,0.0,0.0
+black,man,41,138,0,0.0,0.0
+black,man,41,138,0.5,0.0,0.0
+black,man,41,138,1,0.0,0.0
+black,man,41,138,2,0.0,0.0
+black,man,41,527,0,2.201324462890625,0.0
+black,man,41,527,0.5,1.2376797993977864,0.0
+black,man,41,527,1,0.0,0.0
+black,man,41,527,2,2.2401657104492188,0.0
+black,man,41,3530,0,0.0,0.0
+black,man,41,3530,0.5,0.0,0.0
+black,man,41,3530,1,0.0,0.0
+black,man,41,3530,2,0.0,0.0
+black,man,42,138,0,0.0,0.0
+black,man,42,138,0.5,0.0,0.0
+black,man,42,138,1,0.0,0.0
+black,man,42,138,2,0.0,0.0
+black,man,42,527,0,13.884639739990234,0.0
+black,man,42,527,0.5,9.053560892740885,0.0
+black,man,42,527,1,0.0,0.0
+black,man,42,527,2,35.96127573649088,0.0
+black,man,42,3530,0,0.0,0.0
+black,man,42,3530,0.5,0.0,0.0
+black,man,42,3530,1,0.0,0.0
+black,man,42,3530,2,0.0,0.0
+white,man,40,138,0,0.0,0.0
+white,man,40,138,0.5,0.0,0.0
+white,man,40,138,1,0.0,0.0
+white,man,40,138,2,0.0,0.0
+white,man,40,527,0,0.0,0.0
+white,man,40,527,0.5,0.0,0.0
+white,man,40,527,1,0.0,0.0
+white,man,40,527,2,0.0,0.0
+white,man,40,3530,0,0.0,0.0
+white,man,40,3530,0.5,0.0,0.0
+white,man,40,3530,1,0.0,0.0
+white,man,40,3530,2,0.0,0.0
+white,man,41,138,0,0.0,0.0
+white,man,41,138,0.5,0.0,0.0
+white,man,41,138,1,0.0,0.0
+white,man,41,138,2,0.0,0.0
+white,man,41,527,0,0.0,0.0
+white,man,41,527,0.5,0.0,0.0
+white,man,41,527,1,0.0,0.0
+white,man,41,527,2,0.0,0.0
+white,man,41,3530,0,0.0,0.0
+white,man,41,3530,0.5,0.0,0.0
+white,man,41,3530,1,0.0,0.0
+white,man,41,3530,2,0.0,0.0
+white,man,42,138,0,0.0,0.0
+white,man,42,138,0.5,0.0,0.0
+white,man,42,138,1,0.0,0.0
+white,man,42,138,2,0.0,0.0
+white,man,42,527,0,0.0,0.0
+white,man,42,527,0.5,0.0,0.0
+white,man,42,527,1,0.0,0.0
+white,man,42,527,2,0.0,0.0
+white,man,42,3530,0,0.0,0.0
+white,man,42,3530,0.5,0.0,0.0
+white,man,42,3530,1,0.0,0.0
+white,man,42,3530,2,0.0,0.0
+east asian,man,40,138,0,0.0,0.0
+east asian,man,40,138,0.5,0.0,0.0
+east asian,man,40,138,1,0.0,0.0
+east asian,man,40,138,2,0.0,0.0
+east asian,man,40,527,0,0.0,0.0
+east asian,man,40,527,0.5,0.0,0.0
+east asian,man,40,527,1,0.0,0.0
+east asian,man,40,527,2,0.0,0.0
+east asian,man,40,3530,0,0.0,0.0
+east asian,man,40,3530,0.5,0.0,0.0
+east asian,man,40,3530,1,0.0,0.0
+east asian,man,40,3530,2,0.0,0.0
+east asian,man,41,138,0,0.0,0.0
+east asian,man,41,138,0.5,0.0,0.0
+east asian,man,41,138,1,0.0,0.0
+east asian,man,41,138,2,0.0,0.0
+east asian,man,41,527,0,0.0,0.0
+east asian,man,41,527,0.5,0.0,0.0
+east asian,man,41,527,1,0.0,0.0
+east asian,man,41,527,2,0.0,0.0
+east asian,man,41,3530,0,0.0,0.0
+east asian,man,41,3530,0.5,0.0,0.0
+east asian,man,41,3530,1,0.0,0.0
+east asian,man,41,3530,2,0.0,0.0
+east asian,man,42,138,0,0.0,0.0
+east asian,man,42,138,0.5,0.0,0.0
+east asian,man,42,138,1,0.0,0.0
+east asian,man,42,138,2,0.0,0.0
+east asian,man,42,527,0,0.3940162658691406,0.0
+east asian,man,42,527,0.5,0.3133049011230469,0.0
+east asian,man,42,527,1,0.0,0.0
+east asian,man,42,527,2,0.45057423909505206,0.0
+east asian,man,42,3530,0,0.0,0.0
+east asian,man,42,3530,0.5,0.0,0.0
+east asian,man,42,3530,1,0.0,0.0
+east asian,man,42,3530,2,0.0,0.0
+middle eastern,man,40,138,0,2.3716761271158853,0.0
+middle eastern,man,40,138,0.5,1.4504432678222656,0.0
+middle eastern,man,40,138,1,0.0,0.0
+middle eastern,man,40,138,2,3.898326873779297,0.0
+middle eastern,man,40,527,0,0.0,0.0
+middle eastern,man,40,527,0.5,0.0,0.0
+middle eastern,man,40,527,1,0.0,0.0
+middle eastern,man,40,527,2,0.0,0.0
+middle eastern,man,40,3530,0,8.70162582397461,0.0
+middle eastern,man,40,3530,0.5,4.783377329508464,0.0
+middle eastern,man,40,3530,1,0.0,0.0
+middle eastern,man,40,3530,2,5.004540761311849,0.0
+middle eastern,man,41,138,0,4.389392852783203,0.0
+middle eastern,man,41,138,0.5,2.576624552408854,0.0
+middle eastern,man,41,138,1,0.0,0.0
+middle eastern,man,41,138,2,4.119795481363933,0.0
+middle eastern,man,41,527,0,0.33714040120442706,0.0
+middle eastern,man,41,527,0.5,0.3004468282063802,0.0
+middle eastern,man,41,527,1,0.0,0.0
+middle eastern,man,41,527,2,0.3696136474609375,0.0
+middle eastern,man,41,3530,0,1.772064208984375,0.0
+middle eastern,man,41,3530,0.5,1.0219001770019531,0.0
+middle eastern,man,41,3530,1,0.0,0.0
+middle eastern,man,41,3530,2,1.8581911722819011,0.0
+middle eastern,man,42,138,0,9.215506235758463,0.0
+middle eastern,man,42,138,0.5,5.739459991455078,0.0
+middle eastern,man,42,138,1,0.0,0.0
+middle eastern,man,42,138,2,8.274798075358072,0.0
+middle eastern,man,42,527,0,0.9634513854980469,0.0
+middle eastern,man,42,527,0.5,0.6882476806640625,0.0
+middle eastern,man,42,527,1,0.0,0.0
+middle eastern,man,42,527,2,0.8374519348144531,0.0
+middle eastern,man,42,3530,0,3.3539822896321616,0.0
+middle eastern,man,42,3530,0.5,1.960889180501302,0.0
+middle eastern,man,42,3530,1,0.0,0.0
+middle eastern,man,42,3530,2,3.7359746297200522,0.0
+indian,man,40,138,0,0.0,0.0
+indian,man,40,138,0.5,0.0,0.0
+indian,man,40,138,1,0.0,0.0
+indian,man,40,138,2,0.0,0.0
+indian,man,40,527,0,0.6582158406575521,0.0
+indian,man,40,527,0.5,0.4321886698404948,0.0
+indian,man,40,527,1,0.0,0.0
+indian,man,40,527,2,0.6524073282877604,0.0
+indian,man,40,3530,0,0.0,0.0
+indian,man,40,3530,0.5,0.0,0.0
+indian,man,40,3530,1,0.0,0.0
+indian,man,40,3530,2,0.0,0.0
+indian,man,41,138,0,0.2915967305501302,0.0
+indian,man,41,138,0.5,0.27115631103515625,0.0
+indian,man,41,138,1,0.0,0.0
+indian,man,41,138,2,0.3239580790201823,0.0
+indian,man,41,527,0,1.1007169087727864,0.0
+indian,man,41,527,0.5,0.6781463623046875,0.0
+indian,man,41,527,1,0.0,0.0
+indian,man,41,527,2,1.0416615804036458,0.0
+indian,man,41,3530,0,0.0,0.0
+indian,man,41,3530,0.5,0.0,0.0
+indian,man,41,3530,1,0.0,0.0
+indian,man,41,3530,2,0.0,0.0
+indian,man,42,138,0,0.0,0.0
+indian,man,42,138,0.5,0.0,0.0
+indian,man,42,138,1,0.0,0.0
+indian,man,42,138,2,0.0,0.0
+indian,man,42,527,0,2.3284937540690103,0.0
+indian,man,42,527,0.5,1.4017016092936199,0.0
+indian,man,42,527,1,0.0,0.0
+indian,man,42,527,2,2.5047569274902344,0.0
+indian,man,42,3530,0,0.0,0.0
+indian,man,42,3530,0.5,0.0,0.0
+indian,man,42,3530,1,0.0,0.0
+indian,man,42,3530,2,0.0,0.0
+hispanic,man,40,138,0,0.0,0.0
+hispanic,man,40,138,0.5,0.0,0.0
+hispanic,man,40,138,1,0.0,0.0
+hispanic,man,40,138,2,0.0,0.0
+hispanic,man,40,527,0,0.7930806477864584,0.0
+hispanic,man,40,527,0.5,0.5000750223795573,0.0
+hispanic,man,40,527,1,0.0,0.0
+hispanic,man,40,527,2,0.8798497517903646,0.0
+hispanic,man,40,3530,0,0.0,0.0
+hispanic,man,40,3530,0.5,0.0,0.0
+hispanic,man,40,3530,1,0.0,0.0
+hispanic,man,40,3530,2,0.0,0.0
+hispanic,man,41,138,0,0.0,0.0
+hispanic,man,41,138,0.5,0.0,0.0
+hispanic,man,41,138,1,0.0,0.0
+hispanic,man,41,138,2,0.0,0.0
+hispanic,man,41,527,0,1.4020449320475261,0.0
+hispanic,man,41,527,0.5,0.842596689860026,0.0
+hispanic,man,41,527,1,0.0,0.0
+hispanic,man,41,527,2,1.3404604593912761,0.0
+hispanic,man,41,3530,0,0.0,0.0
+hispanic,man,41,3530,0.5,0.0,0.0
+hispanic,man,41,3530,1,0.0,0.0
+hispanic,man,41,3530,2,0.0,0.0
+hispanic,man,42,138,0,0.0,0.0
+hispanic,man,42,138,0.5,0.0,0.0
+hispanic,man,42,138,1,0.0,0.0
+hispanic,man,42,138,2,0.0,0.0
+hispanic,man,42,527,0,5.670658111572266,0.0
+hispanic,man,42,527,0.5,3.1227035522460938,0.0
+hispanic,man,42,527,1,0.0,0.0
+hispanic,man,42,527,2,4.417396545410156,0.0
+hispanic,man,42,3530,0,0.0,0.0
+hispanic,man,42,3530,0.5,0.0,0.0
+hispanic,man,42,3530,1,0.0,0.0
+hispanic,man,42,3530,2,0.0,0.0
+black,woman,40,138,0,0.0,0.0
+black,woman,40,138,0.5,0.0,0.0
+black,woman,40,138,1,0.0,0.0
+black,woman,40,138,2,0.0,0.0
+black,woman,40,527,0,7.175924936930339,0.0
+black,woman,40,527,0.5,3.8860079447428384,0.0
+black,woman,40,527,1,0.0,0.0
+black,woman,40,527,2,6.6250762939453125,0.0
+black,woman,40,3530,0,0.0,0.0
+black,woman,40,3530,0.5,0.0,0.0
+black,woman,40,3530,1,0.0,0.0
+black,woman,40,3530,2,0.0,0.0
+black,woman,41,138,0,0.0,0.0
+black,woman,41,138,0.5,0.0,0.0
+black,woman,41,138,1,0.0,0.0
+black,woman,41,138,2,0.0,0.0
+black,woman,41,527,0,4.187629699707031,0.0
+black,woman,41,527,0.5,2.5732421875,0.0
+black,woman,41,527,1,0.0,0.0
+black,woman,41,527,2,5.176891326904297,0.0
+black,woman,41,3530,0,0.0,0.0
+black,woman,41,3530,0.5,0.0,0.0
+black,woman,41,3530,1,0.0,0.0
+black,woman,41,3530,2,0.0,0.0
+black,woman,42,138,0,0.0,0.0
+black,woman,42,138,0.5,0.0,0.0
+black,woman,42,138,1,0.0,0.0
+black,woman,42,138,2,0.0,0.0
+black,woman,42,527,0,12.347483317057291,0.0
+black,woman,42,527,0.5,6.7298940022786455,0.0
+black,woman,42,527,1,0.0,0.0
+black,woman,42,527,2,11.89370854695638,0.0
+black,woman,42,3530,0,0.0,0.0
+black,woman,42,3530,0.5,0.0,0.0
+black,woman,42,3530,1,0.0,0.0
+black,woman,42,3530,2,0.0,0.0
+white,woman,40,138,0,0.0,0.0
+white,woman,40,138,0.5,0.0,0.0
+white,woman,40,138,1,0.0,0.0
+white,woman,40,138,2,0.0,0.0
+white,woman,40,527,0,0.0,0.0
+white,woman,40,527,0.5,0.0,0.0
+white,woman,40,527,1,0.0,0.0
+white,woman,40,527,2,0.0,0.0
+white,woman,40,3530,0,0.0,0.0
+white,woman,40,3530,0.5,0.0,0.0
+white,woman,40,3530,1,0.0,0.0
+white,woman,40,3530,2,0.0,0.0
+white,woman,41,138,0,0.0,0.0
+white,woman,41,138,0.5,0.0,0.0
+white,woman,41,138,1,0.0,0.0
+white,woman,41,138,2,0.0,0.0
+white,woman,41,527,0,0.0,0.0
+white,woman,41,527,0.5,0.0,0.0
+white,woman,41,527,1,0.0,0.0
+white,woman,41,527,2,0.0,0.0
+white,woman,41,3530,0,0.0,0.0
+white,woman,41,3530,0.5,0.0,0.0
+white,woman,41,3530,1,0.0,0.0
+white,woman,41,3530,2,0.0,0.0
+white,woman,42,138,0,0.0,0.0
+white,woman,42,138,0.5,0.0,0.0
+white,woman,42,138,1,0.0,0.0
+white,woman,42,138,2,0.0,0.0
+white,woman,42,527,0,0.0,0.0
+white,woman,42,527,0.5,0.0,0.0
+white,woman,42,527,1,0.0,0.0
+white,woman,42,527,2,0.0,0.0
+white,woman,42,3530,0,0.0,0.0
+white,woman,42,3530,0.5,0.0,0.0
+white,woman,42,3530,1,0.0,0.0
+white,woman,42,3530,2,0.0,0.0
+east asian,woman,40,138,0,0.0,0.0
+east asian,woman,40,138,0.5,0.0,0.0
+east asian,woman,40,138,1,0.0,0.0
+east asian,woman,40,138,2,0.0,0.0
+east asian,woman,40,527,0,0.0,0.0
+east asian,woman,40,527,0.5,0.0,0.0
+east asian,woman,40,527,1,0.0,0.0
+east asian,woman,40,527,2,0.0,0.0
+east asian,woman,40,3530,0,0.0,0.0
+east asian,woman,40,3530,0.5,0.0,0.0
+east asian,woman,40,3530,1,0.0,0.0
+east asian,woman,40,3530,2,0.0,0.0
+east asian,woman,41,138,0,0.0,0.0
+east asian,woman,41,138,0.5,0.0,0.0
+east asian,woman,41,138,1,0.0,0.0
+east asian,woman,41,138,2,0.0,0.0
+east asian,woman,41,527,0,0.0,0.0
+east asian,woman,41,527,0.5,0.0,0.0
+east asian,woman,41,527,1,0.0,0.0
+east asian,woman,41,527,2,0.0,0.0
+east asian,woman,41,3530,0,0.0,0.0
+east asian,woman,41,3530,0.5,0.0,0.0
+east asian,woman,41,3530,1,0.0,0.0
+east asian,woman,41,3530,2,0.0,0.0
+east asian,woman,42,138,0,0.0,0.0
+east asian,woman,42,138,0.5,0.0,0.0
+east asian,woman,42,138,1,0.0,0.0
+east asian,woman,42,138,2,0.0,0.0
+east asian,woman,42,527,0,0.0,0.0
+east asian,woman,42,527,0.5,0.0,0.0
+east asian,woman,42,527,1,0.0,0.0
+east asian,woman,42,527,2,0.0,0.0
+east asian,woman,42,3530,0,0.0,0.0
+east asian,woman,42,3530,0.5,0.0,0.0
+east asian,woman,42,3530,1,0.0,0.0
+east asian,woman,42,3530,2,0.0,0.0
+middle eastern,woman,40,138,0,5.310638427734375,0.0
+middle eastern,woman,40,138,0.5,2.574554443359375,0.0
+middle eastern,woman,40,138,1,0.0,0.0
+middle eastern,woman,40,138,2,2.914442698160807,0.0
+middle eastern,woman,40,527,0,5.448960622151692,0.0
+middle eastern,woman,40,527,0.5,2.8427734375,0.0
+middle eastern,woman,40,527,1,0.0,0.0
+middle eastern,woman,40,527,2,6.184120178222656,0.0
+middle eastern,woman,40,3530,0,0.9504165649414062,0.0
+middle eastern,woman,40,3530,0.5,0.5533714294433594,0.0
+middle eastern,woman,40,3530,1,0.0,0.0
+middle eastern,woman,40,3530,2,0.8873697916666666,0.0
+middle eastern,woman,41,138,0,2.6251195271809897,0.0
+middle eastern,woman,41,138,0.5,1.4930483500162761,0.0
+middle eastern,woman,41,138,1,0.0,0.0
+middle eastern,woman,41,138,2,2.7678248087565103,0.0
+middle eastern,woman,41,527,0,0.6856842041015625,0.0
+middle eastern,woman,41,527,0.5,0.47432835896809894,0.0
+middle eastern,woman,41,527,1,0.0,0.0
+middle eastern,woman,41,527,2,0.5540288289388021,0.0
+middle eastern,woman,41,3530,0,1.313794453938802,0.0
+middle eastern,woman,41,3530,0.5,0.8682301839192709,0.0
+middle eastern,woman,41,3530,1,0.0,0.0
+middle eastern,woman,41,3530,2,1.4135246276855469,0.0
+middle eastern,woman,42,138,0,3.6865310668945312,0.0
+middle eastern,woman,42,138,0.5,2.3413848876953125,0.0
+middle eastern,woman,42,138,1,0.0,0.0
+middle eastern,woman,42,138,2,5.5768788655598955,0.0
+middle eastern,woman,42,527,0,1.0590095520019531,0.0
+middle eastern,woman,42,527,0.5,0.6951980590820312,0.0
+middle eastern,woman,42,527,1,0.0,0.0
+middle eastern,woman,42,527,2,1.1119372049967449,0.0
+middle eastern,woman,42,3530,0,0.3919868469238281,0.0
+middle eastern,woman,42,3530,0.5,0.40032068888346356,0.0
+middle eastern,woman,42,3530,1,0.0,0.0
+middle eastern,woman,42,3530,2,0.4137471516927083,0.0
+indian,woman,40,138,0,0.4048881530761719,0.0
+indian,woman,40,138,0.5,0.28548558553059894,0.0
+indian,woman,40,138,1,0.0,0.0
+indian,woman,40,138,2,0.41581090291341144,0.0
+indian,woman,40,527,0,1.7685038248697917,0.0
+indian,woman,40,527,0.5,1.0453783671061199,0.0
+indian,woman,40,527,1,0.0,0.0
+indian,woman,40,527,2,1.968579610188802,0.0
+indian,woman,40,3530,0,0.0,0.0
+indian,woman,40,3530,0.5,0.0,0.0
+indian,woman,40,3530,1,0.0,0.0
+indian,woman,40,3530,2,0.0,0.0
+indian,woman,41,138,0,0.794274648030599,0.0
+indian,woman,41,138,0.5,0.5175654093424479,0.0
+indian,woman,41,138,1,0.0,0.0
+indian,woman,41,138,2,1.0352236429850261,0.0
+indian,woman,41,527,0,0.5263595581054688,0.0
+indian,woman,41,527,0.5,0.3648834228515625,0.0
+indian,woman,41,527,1,0.0,0.0
+indian,woman,41,527,2,0.5314661661783854,0.0
+indian,woman,41,3530,0,0.0,0.0
+indian,woman,41,3530,0.5,0.0,0.0
+indian,woman,41,3530,1,0.0,0.0
+indian,woman,41,3530,2,0.0,0.0
+indian,woman,42,138,0,0.5886217753092448,0.0
+indian,woman,42,138,0.5,0.43834177652994794,0.0
+indian,woman,42,138,1,0.0,0.0
+indian,woman,42,138,2,0.6357307434082031,0.0
+indian,woman,42,527,0,2.1464029947916665,0.0
+indian,woman,42,527,0.5,1.2642072041829426,0.0
+indian,woman,42,527,1,0.0,0.0
+indian,woman,42,527,2,2.678391774495443,0.0
+indian,woman,42,3530,0,0.0,0.0
+indian,woman,42,3530,0.5,0.0,0.0
+indian,woman,42,3530,1,0.0,0.0
+indian,woman,42,3530,2,0.0,0.0
+hispanic,woman,40,138,0,0.0,0.0
+hispanic,woman,40,138,0.5,0.0,0.0
+hispanic,woman,40,138,1,0.0,0.0
+hispanic,woman,40,138,2,0.0,0.0
+hispanic,woman,40,527,0,1.428113301595052,0.0
+hispanic,woman,40,527,0.5,0.8379376729329427,0.0
+hispanic,woman,40,527,1,0.0,0.0
+hispanic,woman,40,527,2,1.4618390401204426,0.0
+hispanic,woman,40,3530,0,0.0,0.0
+hispanic,woman,40,3530,0.5,0.0,0.0
+hispanic,woman,40,3530,1,0.0,0.0
+hispanic,woman,40,3530,2,0.0,0.0
+hispanic,woman,41,138,0,0.0,0.0
+hispanic,woman,41,138,0.5,0.0,0.0
+hispanic,woman,41,138,1,0.0,0.0
+hispanic,woman,41,138,2,0.0,0.0
+hispanic,woman,41,527,0,1.6666984558105469,0.0
+hispanic,woman,41,527,0.5,1.0151405334472656,0.0
+hispanic,woman,41,527,1,0.0,0.0
+hispanic,woman,41,527,2,1.5836029052734375,0.0
+hispanic,woman,41,3530,0,0.0,0.0
+hispanic,woman,41,3530,0.5,0.0,0.0
+hispanic,woman,41,3530,1,0.0,0.0
+hispanic,woman,41,3530,2,0.0,0.0
+hispanic,woman,42,138,0,0.0,0.0
+hispanic,woman,42,138,0.5,0.0,0.0
+hispanic,woman,42,138,1,0.0,0.0
+hispanic,woman,42,138,2,0.0,0.0
+hispanic,woman,42,527,0,11.908852895100912,0.0
+hispanic,woman,42,527,0.5,5.944938659667969,0.0
+hispanic,woman,42,527,1,0.0,0.0
+hispanic,woman,42,527,2,6.130714416503906,0.0
+hispanic,woman,42,3530,0,0.0,0.0
+hispanic,woman,42,3530,0.5,0.0,0.0
+hispanic,woman,42,3530,1,0.0,0.0
+hispanic,woman,42,3530,2,0.0,0.0
