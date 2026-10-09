@@ -39,6 +39,45 @@ it with the pretrained SAE, and pools the features. It does not train a new SAE.
 Seeds are shared across all groups. The same seeds belong to train (60), validation
 (20), or test (20) across all 12 groups, avoiding seed leakage between splits.
 
+## Stage 2: explore the pretrained SAE features
+
+The GPU scripts require the existing [sdxl-unbox](https://github.com/surkovv/sdxl-unbox)
+checkout at `../sdxl-unbox`, its pretrained SAE checkpoint, and cached SDXL Turbo
+model weights. The upstream checkout is a separate Git repository, not bundled
+in this commit. The analysis script only needs NumPy and the locally generated
+`sae_features.npz`. Large datasets, weights, and heatmap run outputs stay local.
+
+`analyze_sae_features.py` adapts the ranking method from
+`../sdxl-unbox/scripts/sae_bias_experiment.py` to this dataset. It uses spatial
+mean activations by default, ranks positive within-gender race contrasts on
+discovery seeds, checks their effects on validation seeds, and reserves test seeds.
+Use `--pooling max --output backprop/sae_analysis_max` for the old classifier's
+spatial-max representation. Feature IDs retain the original pretrained SAE meaning.
+
+The initial analysis is in [sae_analysis/REPORT.md](sae_analysis/REPORT.md).
+Full top-20 lists and spatial/image activity measurements are in its CSV files.
+These are associations with prompt groups, not covering-specific feature labels.
+
+`sae_heatmaps.py` adapts the visual workflow from
+`../baseline/sae_top10_heatmaps.ipynb`. It replays three discovery seeds per cell,
+checks exact image reproduction, and overlays the three top-ranked feature maps.
+It saves raw maps and activation measurements so overlay brightness is not used
+to compare magnitudes. It imports the existing SAE implementation, keeping the
+pretrained checkpoint and feature IDs intact.
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python backprop/analyze_sae_features.py \
+  --output backprop/sae_analysis_new
+sbatch backprop/sae_heatmaps.slurm
+```
+
+The corrected heatmap job is **4074519**, with log
+`logs/backprop_sae_maps-4074519.out`. It was queued awaiting a GPU when Stage 2
+was published; the previous job failed on an import-path issue that is now fixed.
+Check `squeue -j 4074519` for current status. When complete, inspect
+[sae_heatmaps/REPORT.md](sae_heatmaps/REPORT.md). Analysis and visualization do not
+train an SAE or classifier and do not suppress any features.
+
 ## Backprop code (written, not trained)
 
 `numpy_backprop.py` adapts the class approach: model dictionary, forward pass,

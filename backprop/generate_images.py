@@ -10,6 +10,15 @@ import time
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(ROOT / 'sdxl-unbox'))
+
+import numpy as np
+import torch
+import diffusers
+from PIL import Image, ImageDraw
+from diffusers import AutoencoderKL, EulerAncestralDiscreteScheduler
+from SDLens import HookedStableDiffusionXLPipeline
+from SAE import SparseAutoencoder
+
 RACES = ['black', 'white', 'east asian', 'middle eastern', 'indian', 'hispanic']
 GENDERS = ['man', 'woman']
 BLOCK = 'unet.down_blocks.2.attentions.1'
@@ -46,13 +55,6 @@ def main():
     args = p.parse_args()
     if args.count < 5:
         p.error('count must be at least 5 for train/validation/test splits')
-    import numpy as np
-    import torch
-    import diffusers
-    from PIL import Image, ImageDraw
-    from diffusers import AutoencoderKL, EulerAncestralDiscreteScheduler
-    from SDLens import HookedStableDiffusionXLPipeline
-    from SAE import SparseAutoencoder
 
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
