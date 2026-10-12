@@ -1,0 +1,12 @@
+# Visual review
+
+Complete table from [visual_review.csv](visual_review.csv); 6 rows. No rows are omitted.
+
+| sample_id | concept | detector_label | visual_spot_check | issue | review_scope |
+| --- | --- | --- | --- | --- | --- |
+| black_woman_seed042 | afro | 0 | visible rounded curly hairstyle | detector-negative control appears to contain the concept | single displayed image; not a full annotation pass |
+| black_woman_seed051 | afro | 0 | visible rounded curly hairstyle | detector-negative control appears to contain the concept | single displayed image; not a full annotation pass |
+| east_asian_man_seed002 | beard | 0 | visible goatee and facial hair | detector-negative control contains facial hair matched by beard/goatee definition | single displayed image; not a full annotation pass |
+| east_asian_man_seed012 | beard | 0 | visible goatee and facial hair | detector-negative control contains facial hair matched by beard/goatee definition | single displayed image; not a full annotation pass |
+| indian_man_seed002 | necklace | 1 | feature 3985 activation near mouth; necklace box below chin | selected map does not overlap named object | single displayed image; not a full annotation pass |
+| indian_man_seed013 | necklace | 1 | feature 3985 activation near mouth; necklace box below chin | selected map does not overlap named object | single displayed image; not a full annotation pass |

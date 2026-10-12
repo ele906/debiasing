@@ -111,3 +111,15 @@ The full SAE ranking uses train-only within-group ROC AUC, weighted by the small
 Necklace feature 3985 has global validation AUC about 0.805 and within-group AUC about 0.742, but only one qualifying validation group. Afro feature 1500 has high global agreement (about 0.966), with weaker within-group agreement (about 0.667). Beard feature 5085 has high global agreement but below-chance within-group agreement, demonstrating confounding. The full candidates differ from the pilot IDs and do not inherit the pilot's spatial validation. Detector review, fresh controls, and spatial/causal checks remain before suppression.
 
 `markdown_tables.py` exports all rows and columns of count/rate and SAE result CSVs; wide concept tables are split into smaller column blocks without dropping data. The full detector records, dependency caches, and 1,200 individual full-size boxed panels stay local; the complete summary tables, box coordinate CSV, and 12 representative category sheets are staged for Git.
+
+## Current intersection checks
+
+[Quick update and presentation wording](QUICK_UPDATE.md). The current spatial checks supersede interpreting image-level agreement alone as a concept intersection.
+
+`intersections.py` replays all 240 validation images and measures SAE activation inside matching C2C-style detector boxes, normalized by box area. It provides circular-translation reference scores and exact replay checks. The report distinguishes pooled localization from localization in the same qualifying prompt groups used for within-group validation. Matching controls require at least three detector positives and three negatives. Recorded visual review issues are kept separate from raw detector labels.
+
+The top-one checks are in [intersections/REPORT.md](intersections/REPORT.md). All five train-selected candidates for necklace, afro, and beard are in [intersections_alternatives/REPORT.md](intersections_alternatives/REPORT.md). Numerical screening is not semantic validation: confirmed detector misses are flagged, and all alternative candidates are reported.
+
+Necklace-region feature 3181 is the current provisional overlap. The earlier 3985 candidate failed the controlled spatial test. Afro and beard controls have observed detector-label errors; their specificity is unresolved. No weights were changed or features suppressed.
+
+`fresh_controls.py` generates 48 independently seeded paired controls with fixed features 3181, 1500, and 2893. The manifest preserves requested conditions separately from blank visual-review labels. Requested present/absent prompts do not establish actual concept presence. These controls are additional data, not part of the original 1,200-image count tables.

@@ -47,7 +47,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--directory',type=Path,required=True)
     args=p.parse_args()
-    names=['counts_by_category.csv','rates_by_category.csv','raw_phrase_counts_by_category.csv','counts_by_race.csv','summary.csv','candidates.csv']
+    names=['counts_by_category.csv','rates_by_category.csv','raw_phrase_counts_by_category.csv','counts_by_race.csv','summary.csv','candidates.csv','intersection_summary.csv','visual_review.csv']
     found=0
     for name in names:
         path=args.directory/name

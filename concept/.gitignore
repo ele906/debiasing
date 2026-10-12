@@ -8,3 +8,8 @@ hf_modules_*/
 full_run/
 category_analysis/boxes/
 category_analysis_full/boxes/
+intersections/maps/
+intersections_alternatives/maps/
+independent_controls/features/
+independent_controls/images/
+independent_controls/detector/*_grounded.jpg
