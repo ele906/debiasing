@@ -10,6 +10,30 @@ import os
 HERE = Path(__file__).resolve().parent
 
 
+def summarize(rows, records, summary_dir):
+    counts = Counter()
+    table = []
+    for row, record in zip(rows, records):
+        concepts = sorted({str(s).strip().lower() for source in ['grounding', 'objects'] for s in record[source]['labels'] if str(s).strip()})
+        counts.update(concepts)
+        table.append(dict(sample_id=row['sample_id'], split=row['split'], race_prompt=row['race_prompt'],
+            gender_prompt=row['gender_prompt'], image=row['image'], features=row['features'],
+            caption=record['caption'], detected_concepts='; '.join(concepts), concepts='',
+            harmful_depiction='', harm_reason='', reviewer='', notes=''))
+    summary_dir.mkdir(parents=True, exist_ok=True)
+    with (summary_dir / 'concept_predictions.csv').open('w', newline='') as f:
+        w = csv.DictWriter(f, lineterminator='\n', fieldnames=list(table[0])); w.writeheader(); w.writerows(table)
+    with (summary_dir / 'concept_frequencies.csv').open('w', newline='') as f:
+        w = csv.writer(f, lineterminator='\n'); w.writerow(['detected_concept', 'image_count', 'image_fraction'])
+        w.writerows((c, n, n / len(records)) for c, n in counts.most_common())
+    report = ['# Extracted concept candidates', '', 'Florence-2 predictions, not validated concepts or racism labels.', '', f'Images: {len(records)}', '', '## Most frequent detector phrases', '']
+    report += [f'- {c}: {n}/{len(records)} images' for c, n in counts.most_common(30)]
+    report += ['', '## Example descriptions', '']
+    report += [f'- {r["sample_id"]}: {r["caption"]}' for r in records[:12]]
+    report += ['', 'Review concept_predictions.csv and copy corrected labels into its concepts column before using pilot.py rank. Do not rank the unreviewed detected_concepts column. Phrase synonyms are not merged automatically.']
+    (summary_dir / 'REPORT.md').write_text('\n'.join(line.rstrip() for line in report).rstrip()+'\n')
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--review', type=Path, default=HERE / 'pilot/review.csv')
@@ -18,6 +42,7 @@ def main():
     p.add_argument('--model', default='microsoft/Florence-2-base-ft')
     p.add_argument('--revision', required=True, help='Pinned Hugging Face commit SHA')
     p.add_argument('--cache', type=Path, default=HERE / 'hf_cache')
+    p.add_argument('--include-test', action='store_true', help='Extract test labels for descriptive audit only')
     p.add_argument('--limit', type=int)
     p.add_argument('--device', choices=['cpu', 'cuda'], default='cuda')
     args = p.parse_args()
@@ -29,13 +54,15 @@ def main():
         rows = rows[:args.limit]
     if not rows or len({r['sample_id'] for r in rows}) != len(rows):
         raise ValueError('Need nonempty unique sample IDs')
-    if any(r['split'] == 'test' for r in rows):
+    if not args.include_test and any(r['split'] == 'test' for r in rows):
         raise ValueError('Keep test samples reserved')
     settings = dict(model=args.model, revision=args.revision,
         review_sha256=hashlib.sha256(args.review.read_bytes()).hexdigest(),
         sample_ids=[r['sample_id'] for r in rows], tasks=['<MORE_DETAILED_CAPTION>', '<CAPTION_TO_PHRASE_GROUNDING>', '<OD>'],
         max_new_tokens=512, num_beams=3, do_sample=False, device=args.device,
         interpretation='Unreviewed detector predictions; not racism labels')
+    if args.include_test:
+        settings['includes_test_for_descriptive_audit'] = True
     args.output.mkdir(parents=True, exist_ok=True)
     settings_path = args.output / 'settings.json'
     if settings_path.exists() and json.loads(settings_path.read_text()) != settings:
@@ -106,27 +133,7 @@ def main():
             overlay.save(args.output / f'{sample}_grounded.jpg')
         records.append(record)
         print(f'{i+1}/{len(rows)} {sample}: {record["caption"]}', flush=True)
-    counts = Counter()
-    table = []
-    for row, record in zip(rows, records):
-        concepts = sorted({str(s).strip().lower() for source in ['grounding', 'objects'] for s in record[source]['labels'] if str(s).strip()})
-        counts.update(concepts)
-        table.append(dict(sample_id=row['sample_id'], split=row['split'], race_prompt=row['race_prompt'],
-            gender_prompt=row['gender_prompt'], image=row['image'], features=row['features'],
-            caption=record['caption'], detected_concepts='; '.join(concepts), concepts='',
-            harmful_depiction='', harm_reason='', reviewer='', notes=''))
-    args.summary_dir.mkdir(parents=True, exist_ok=True)
-    with (args.summary_dir / 'concept_predictions.csv').open('w', newline='') as f:
-        w = csv.DictWriter(f, lineterminator='\n', fieldnames=list(table[0])); w.writeheader(); w.writerows(table)
-    with (args.summary_dir / 'concept_frequencies.csv').open('w', newline='') as f:
-        w = csv.writer(f, lineterminator='\n'); w.writerow(['detected_concept', 'image_count', 'image_fraction'])
-        w.writerows((c, n, n / len(records)) for c, n in counts.most_common())
-    report = ['# Extracted concept candidates', '', 'Florence-2 predictions, not validated concepts or racism labels.', '', f'Images: {len(records)}', '', '## Most frequent detector phrases', '']
-    report += [f'- {c}: {n}/{len(records)} images' for c, n in counts.most_common(30)]
-    report += ['', '## Example descriptions', '']
-    report += [f'- {r["sample_id"]}: {r["caption"]}' for r in records[:12]]
-    report += ['', 'Review concept_predictions.csv and copy corrected labels into its concepts column before using pilot.py rank. Do not rank the unreviewed detected_concepts column. Phrase synonyms are not merged automatically.']
-    (args.summary_dir / 'REPORT.md').write_text('\n'.join(report))
+    summarize(rows, records, args.summary_dir)
     print('Extraction complete. Human review and SAE mapping remain.', flush=True)
 
 

@@ -54,6 +54,7 @@ def main():
     p.add_argument('--predictions', type=Path, default=HERE / 'concept_predictions.csv')
     p.add_argument('--data', type=Path, default=HERE.parent / 'backprop')
     p.add_argument('--output', type=Path, default=HERE / 'sae_comparison')
+    p.add_argument('--exclude-test', action='store_true', help='Discard test rows from full extraction input before any comparison')
     p.add_argument('--top-k', type=int, default=5)
     args = p.parse_args()
     if args.top_k < 1:
@@ -62,6 +63,9 @@ def main():
         raise ValueError('Choose a new output directory')
     with args.predictions.open() as f:
         rows = list(csv.DictReader(f))
+    input_count = len(rows)
+    if args.exclude_test:
+        rows = [r for r in rows if r['split'] != 'test']
     if not rows or len({r['sample_id'] for r in rows}) != len(rows):
         raise ValueError('Need unique nonempty rows')
     if any(r['split'] not in ['train','validation'] for r in rows):
@@ -110,7 +114,7 @@ def main():
     write(args.output/'summary.csv',summary,list(summary[0]))
     write(args.output/'candidates.csv',candidates,list(candidates[0]) if candidates else ['concept','feature'])
     write(args.output/'detector_targets.csv',labels,list(labels[0]))
-    (args.output/'settings.json').write_text(json.dumps(dict(predictions_sha256=hashlib.sha256(args.predictions.read_bytes()).hexdigest(),patterns=PATTERNS,sae_checkpoint=settings['sae_checkpoint'],sae_weights_sha256=settings['sae_weights_sha256'],block=settings['block'],pooling='spatial mean',samples=len(rows),train=int(train.sum()),validation=int(val.sum()),top_k=args.top_k,selection='Train only; within-group standardized mean differences when possible, otherwise flagged global contrast',interpretation='Unreviewed detector-label agreement; not causal validation or evidence of reduced racism'),indent=2))
+    (args.output/'settings.json').write_text(json.dumps(dict(predictions_sha256=hashlib.sha256(args.predictions.read_bytes()).hexdigest(),patterns=PATTERNS,sae_checkpoint=settings['sae_checkpoint'],sae_weights_sha256=settings['sae_weights_sha256'],block=settings['block'],pooling='spatial mean',samples=len(rows),excluded_test=input_count-len(rows),train=int(train.sum()),validation=int(val.sum()),top_k=args.top_k,selection='Train only; within-group standardized mean differences when possible, otherwise flagged global contrast',interpretation='Unreviewed detector-label agreement; not causal validation or evidence of reduced racism'),indent=2))
     report=['# SAE agreement with extracted concepts','','Existing pretrained SAE; no training or suppression. Targets are unreviewed Florence-2 detector phrases, normalized by explicit patterns. Detector absence may be a missed detection.','',f'{len(rows)} images: {train.sum()} train, {val.sum()} validation; test untouched.','', '| Concept | Feature | Train AUC | Validation AUC | Matched groups train/val | Status |','|---|---:|---:|---:|---:|---|']
     for r in summary:
         fmt=lambda v: '' if v=='' else f'{v:.3f}'

@@ -23,3 +23,9 @@ Existing pretrained SAE; no training or suppression. Targets are unreviewed Flor
 AUC 0.5 means chance ordering, 1 means perfect separation of detector positives/negatives. Validation labels never choose the feature. Group controls can contain only one positive/negative image in this small pilot; these are exploratory results with no significance claim. High global AUC can reflect prompt-group identity rather than the named concept. Missing matched validation groups prevents distinguishing those explanations. Features can mix concepts. No concept has been causally established.
 
 Next: inspect spatial SAE maps, review/correct detector labels, expand within-group positive/negative controls, then test interventions and random-feature controls. Clothing and hairstyles are not themselves harm targets.
+
+## Spatial replay check (completed pilot)
+
+Twelve discovery examples were replayed with exact pixel identity to their saved images. Headscarf feature 3364 was inactive on both selected detector-positive images, so the AUC result does not support a reliable headscarf feature. Necklace feature 43 activated in a small region near the top of the head in the inspected example, rather than on the necklace. Kimono feature 1899 activated around the clothing/shoulder region in the inspected example, but kimono and flower detector labels are confounded with the same prompt group.
+
+[Map measurements](maps/metrics.csv) and [map interpretation](maps/README.md). These observations weaken the first two candidates; the kimono association needs controls before it can be called concept-specific. No suppression has run.

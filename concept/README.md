@@ -78,3 +78,15 @@ Run `python concept/compare_sae.py` in the existing reno environment. It joins t
 Results: [SAE report](sae_comparison/REPORT.md), [summary](sae_comparison/summary.csv), and [top candidates](sae_comparison/candidates.csv). The headscarf candidate has validation AUC about 0.72. Several candidates are near chance. Kimono and flower choose the same feature (1899), with no within-group controls: perfect separation can reflect prompt-group associations, not separate concept features.
 
 `sbatch concept/sae_maps.slurm` replays 12 discovery examples for headscarf, necklace, and kimono and saves original/map comparisons under `sae_comparison/maps`. Pixel replay must match the original exactly. No model or SAE is trained, and no features are suppressed. Visual inspection and stronger controls remain necessary before intervention.
+
+## Category counts and bounding boxes
+
+`category_counts.py` creates image-level normalized concept counts/rates, raw phrase counts, race-pooled counts, and boxed image sheets. The completed pilot is in [category_analysis/REPORT.md](category_analysis/REPORT.md): 12 categories, six images each, 739 unique boxes. The dataset has 12 prompt categories, not 16. All detected boxes have source labels and numbered legends; phrase grounding and object detection are both included. Category sheets show six examples per category; full-size individual panels stay local under boxes/.
+
+## Full 1,200-image extraction
+
+`full_dataset.py prepare` splits the existing manifest into four 300-image shards and reuses exact-hash-matching pilot predictions. `extract_full.slurm` runs the detector on all images, including test images for a descriptive audit. After all shards complete, `full_dataset.py merge` verifies image hashes and box/label counts, archives the 72-image summaries under `pilot/extraction_summary/`, and replaces the top-level extraction report and prediction/frequency CSVs with full-dataset results.
+
+For the full SAE comparison, use `compare_sae.py --exclude-test --output concept/sae_comparison_full`: 720 training and 240 validation samples; the 240 test samples do not choose features. Full-dataset category counts can include test samples for descriptive auditing, so the dataset has now been inspected broadly; further confirmatory conclusions should use new independent controls.
+
+The pilot SAE spatial replay completed with 12 exact image reproductions. Headscarf 3364 was inactive on the two selected detector-positive examples, and inspected necklace 43 activation was near the head rather than the necklace. Kimono 1899 overlapped clothing but remains prompt-group-confounded. The current candidates are exploratory rather than established intervention targets.

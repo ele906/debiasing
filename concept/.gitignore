@@ -4,3 +4,7 @@ deps/
 __pycache__/
 extracted/*_grounded.jpg
 sae_comparison/maps/*.npy
+hf_modules_*/
+full_run/
+category_analysis/boxes/
+category_analysis_full/boxes/
