@@ -17,3 +17,7 @@ Pixel change is mean absolute RGB difference on a 0–255 scale. It measures how
 Open the [comparison grids](wardrobe_pilot/REPORT.md), [measurements](wardrobe_pilot/metrics.csv), or [sample manifest](wardrobe_pilot/manifest.csv). The source images are regenerated from the existing prompt and seed and are omitted from Git; the grids contain the results. The runnable script and Slurm job are [wardrobe_pilot.py](wardrobe_pilot.py) and [wardrobe_pilot.slurm](wardrobe_pilot.slurm).
 
 The fixed candidate IDs came from the train-only feature ranking. The control feature was sampled with a fixed random seed from features matched approximately on activation size and frequency within this selected set. This small control is informative but is not a formal causal or statistical test.
+
+## Headscarf and earring ablation
+
+The separate [headscarf and earring pilot](accessory_ablation/REPORT.md) tests the discovery-ranked candidate features at strengths -1, -0.5, 0, 0.5, and 1, with same-prompt samples and matched random-feature controls. The runnable script is [accessory_ablation.py](accessory_ablation.py). These negative values subtract more than the feature's measured contribution; they do not retrain the SAE.

@@ -1,0 +1,19 @@
+{
+  "targets": {
+    "headscarf": 1257,
+    "earrings": 4858
+  },
+  "random_controls": {
+    "headscarf": 2539,
+    "earrings": 2940
+  },
+  "strengths": [
+    -1,
+    -0.5,
+    0,
+    0.5,
+    1
+  ],
+  "samples": 16,
+  "interpretation": "Exploratory, no training; unreviewed detector labels and image-change metrics do not establish concept removal."
+}
