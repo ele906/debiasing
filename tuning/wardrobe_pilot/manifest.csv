@@ -1,0 +1,21 @@
+concept,target_feature,source_label,sample_id,split,race_prompt,gender_prompt,image,features
+turban,1526,detector_positive,middle_eastern_man_seed095,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed095.png,/n/fs/goose/backprop/features/middle_eastern_man/seed095.npz
+turban,1526,detector_positive,middle_eastern_man_seed083,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed083.png,/n/fs/goose/backprop/features/middle_eastern_man/seed083.npz
+turban,1526,detector_positive,middle_eastern_man_seed012,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed012.png,/n/fs/goose/backprop/features/middle_eastern_man/seed012.npz
+turban,1526,detector_positive,middle_eastern_man_seed070,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed070.png,/n/fs/goose/backprop/features/middle_eastern_man/seed070.npz
+turban,1526,detector_negative,middle_eastern_man_seed047,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed047.png,/n/fs/goose/backprop/features/middle_eastern_man/seed047.npz
+turban,1526,detector_negative,middle_eastern_man_seed022,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed022.png,/n/fs/goose/backprop/features/middle_eastern_man/seed022.npz
+turban,1526,detector_negative,middle_eastern_man_seed096,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed096.png,/n/fs/goose/backprop/features/middle_eastern_man/seed096.npz
+turban,1526,detector_negative,middle_eastern_man_seed013,validation,middle eastern,man,/n/fs/goose/backprop/images/middle_eastern_man/seed013.png,/n/fs/goose/backprop/features/middle_eastern_man/seed013.npz
+flower,2230,detector_positive,east_asian_woman_seed083,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed083.png,/n/fs/goose/backprop/features/east_asian_woman/seed083.npz
+flower,2230,detector_positive,east_asian_woman_seed002,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed002.png,/n/fs/goose/backprop/features/east_asian_woman/seed002.npz
+flower,2230,detector_positive,east_asian_woman_seed041,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed041.png,/n/fs/goose/backprop/features/east_asian_woman/seed041.npz
+flower,2230,detector_positive,east_asian_woman_seed042,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed042.png,/n/fs/goose/backprop/features/east_asian_woman/seed042.npz
+flower,2230,detector_negative,east_asian_woman_seed053,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed053.png,/n/fs/goose/backprop/features/east_asian_woman/seed053.npz
+flower,2230,detector_negative,east_asian_woman_seed066,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed066.png,/n/fs/goose/backprop/features/east_asian_woman/seed066.npz
+flower,2230,detector_negative,east_asian_woman_seed096,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed096.png,/n/fs/goose/backprop/features/east_asian_woman/seed096.npz
+flower,2230,detector_negative,east_asian_woman_seed051,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed051.png,/n/fs/goose/backprop/features/east_asian_woman/seed051.npz
+kimono,5046,detector_positive,east_asian_man_seed022,validation,east asian,man,/n/fs/goose/backprop/images/east_asian_man/seed022.png,/n/fs/goose/backprop/features/east_asian_man/seed022.npz
+kimono,5046,detector_positive,east_asian_man_seed095,validation,east asian,man,/n/fs/goose/backprop/images/east_asian_man/seed095.png,/n/fs/goose/backprop/features/east_asian_man/seed095.npz
+kimono,5046,detector_negative,east_asian_man_seed074,validation,east asian,man,/n/fs/goose/backprop/images/east_asian_man/seed074.png,/n/fs/goose/backprop/features/east_asian_man/seed074.npz
+kimono,5046,detector_negative,east_asian_man_seed061,validation,east asian,man,/n/fs/goose/backprop/images/east_asian_man/seed061.png,/n/fs/goose/backprop/features/east_asian_man/seed061.npz

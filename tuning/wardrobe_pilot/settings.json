@@ -1,0 +1,20 @@
+{
+  "source": "Original validation images, exact prompt/seed replay",
+  "targets": {
+    "turban": 1526,
+    "flower": 2230,
+    "kimono": 5046
+  },
+  "random_controls": {
+    "turban": 2430,
+    "flower": 2940,
+    "kimono": 4544
+  },
+  "strengths": [
+    0,
+    0.5,
+    1
+  ],
+  "samples": 20,
+  "interpretation": "Exploratory feature ablation; no model training. Detector labels are unreviewed and pixel change is not concept removal."
+}

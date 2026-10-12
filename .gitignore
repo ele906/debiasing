@@ -22,6 +22,7 @@ FairFace/weights/
 
 # Generated images / experiment outputs (large, regeneratable from slurm jobs)
 data/
+tuning/wardrobe_pilot/images/
 z-old-data/
 z_deprecated_logs/
 ReNO/outputs/
