@@ -120,6 +120,13 @@ verified semantic labels or causal effects. Candidate selection may be impossibl
 if covering presence is perfectly confounded with prompt group; collect targeted
 control data rather than interpreting group separation as a covering feature.
 
+For the three current object concepts, the small human-review packet is
+[`sae_review_60/README.md`](sae_review_60/README.md), and the goal-specific
+backprop plan is [`GOAL_BACKPROP.md`](GOAL_BACKPROP.md). `train_probe.py` accepts
+any reviewed binary label column using `--label-column`; for example,
+`flower_present`. Its probe gradient ranks SAE feature candidates. It does not
+yet backpropagate through the diffusion generator.
+
 ## Later: fixed suppression, independent of classifier training
 
 Choose feature IDs after inspecting training/validation associations and controls.

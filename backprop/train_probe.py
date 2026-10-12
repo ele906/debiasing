@@ -1,4 +1,4 @@
-"""FUTURE training entry point: manual backprop on human-labelled head coverings."""
+"""Train an SAE-feature probe for a human-reviewed binary visual concept."""
 import argparse
 import copy
 import csv
@@ -15,6 +15,8 @@ HERE = Path(__file__).resolve().parent
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--data', type=Path, default=HERE)
+    p.add_argument('--annotations', type=Path, help='CSV with one reviewed 0/1 label column per concept')
+    p.add_argument('--label-column', default='head_covering', help='Reviewed binary target column (blank/uncertain rows are ignored)')
     p.add_argument('--output', type=Path, default=HERE / 'trained_probe')
     p.add_argument('--pooling', choices=['mean', 'max'], default='mean')
     p.add_argument('--hidden-size', type=int, default=0, help='0 gives interpretable logistic regression')
@@ -25,24 +27,28 @@ def main():
     args = p.parse_args()
     if args.iterations < 1 or args.batch_size < 1 or args.learning_rate <= 0:
         p.error('Iterations, batch size and learning rate must be positive')
-    with (args.data / 'annotations.csv').open() as f:
+    annotation_path = args.annotations or (args.data / 'annotations.csv')
+    with annotation_path.open() as f:
         rows = {r['sample_id']: r for r in csv.DictReader(f)}
+    if not rows or args.label_column not in next(iter(rows.values())):
+        raise ValueError(f'No label column {args.label_column!r} in {annotation_path}')
     with np.load(args.data / 'sae_features.npz', allow_pickle=False) as f:
         X, splits = f[f'X_{args.pooling}'].astype(np.float64), f['split'].copy()
         ids, race, gender = f['sample_id'].copy(), f['y_race'].copy(), f['y_gender'].copy()
     # Blank/uncertain labels are missing, never negative examples.
     labels = []
     for sid in ids:
-        value = rows[str(sid)]['head_covering'].strip().lower()
+        record = rows.get(str(sid))
+        value = record[args.label_column].strip().lower() if record else ''
         if value not in ('', 'uncertain', '0', '1'):
-            raise ValueError(f'{sid}: head_covering must be 0, 1, uncertain, or blank')
+            raise ValueError(f'{sid}: {args.label_column} must be 0, 1, uncertain, or blank')
         labels.append(int(value) if value in ('0', '1') else -1)
     y = np.array(labels)
     train = np.flatnonzero((splits == 'train') & (y >= 0))
     val = np.flatnonzero((splits == 'validation') & (y >= 0))
     test = np.flatnonzero((splits == 'test') & (y >= 0))
     if len(np.unique(y[train])) != 2 or len(np.unique(y[val])) != 2:
-        raise ValueError('Label both covered and uncovered examples in train AND validation before training')
+        raise ValueError(f'Label both positive and negative {args.label_column} examples in train AND validation before training')
     if args.output.exists():
         raise ValueError('Output already exists; choose a new --output to preserve earlier runs')
     # Normalization and feature selection never see validation/test statistics.
@@ -68,9 +74,9 @@ def main():
             print(json.dumps(row), flush=True)
     args.output.mkdir(parents=True)
     settings_hash = hashlib.sha256((args.data / 'generation_settings.json').read_bytes()).hexdigest()
-    metadata = dict(target='head_covering', positive_class=1, pooling=args.pooling,
+    metadata = dict(target=args.label_column, positive_class=1, pooling=args.pooling,
                     generation_settings_sha256=settings_hash, selection='validation cross entropy',
-                    interpretation='Attribute probe, not a fairness score or a causal feature label')
+                    interpretation='Probe and SAE-input gradients rank candidates; they do not prove causal control or reduced bias')
     save_model(args.output / 'model.npz', best, mean, std, metadata)
     (args.output / 'training_history.json').write_text(json.dumps(history, indent=2))
     report = {}
@@ -83,7 +89,7 @@ def main():
                             confusion=np.array([[np.sum((y[idx] == a) & (pred == b)) for b in (0, 1)]
                                                 for a in (0, 1)]).tolist())
     (args.output / 'evaluation.json').write_text(json.dumps(report, indent=2))
-    # Equal-weight within-cell covered-vs-uncovered contrasts reduce prompt-group confounding.
+    # Equal-weight within-cell positive/negative contrasts reduce prompt-group confounding.
     contrasts = []
     positive_idx = []
     for r in range(6):
@@ -95,7 +101,7 @@ def main():
                 positive_idx.extend(a.tolist())
     if not contrasts:
         (args.output / 'feature_selection_status.txt').write_text(
-            'No candidate ranking: need >=2 covered and >=2 uncovered TRAIN examples within at least one race/gender cell.\n')
+            f'No candidate ranking: need >=2 positive and >=2 negative TRAIN examples for {args.label_column} within at least one race/gender cell.\n')
         return
     contrast = np.stack(contrasts).mean(0)
     gradient = positive_logit_gradient(best, Z[:, positive_idx]) / std[:, None]
@@ -103,9 +109,9 @@ def main():
     candidates = np.flatnonzero((contrast > 0) & (local_margin_contribution > 0))
     candidates = candidates[np.argsort(-local_margin_contribution[candidates])][:50]
     with (args.output / 'candidate_features.csv').open('w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=['feature', 'within_cell_contrast', 'local_margin_contribution', 'matched_cells'])
+        writer = csv.DictWriter(f, fieldnames=['feature', 'target', 'within_cell_contrast', 'local_margin_contribution', 'matched_cells'])
         writer.writeheader()
-        writer.writerows(dict(feature=int(j), within_cell_contrast=float(contrast[j]),
+        writer.writerows(dict(feature=int(j), target=args.label_column, within_cell_contrast=float(contrast[j]),
             local_margin_contribution=float(local_margin_contribution[j]), matched_cells=len(contrasts)) for j in candidates)
 
 

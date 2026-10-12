@@ -1,0 +1,15 @@
+{
+  "samples": 60,
+  "samples_per_group": 5,
+  "train_per_group": 4,
+  "validation_per_group": 1,
+  "test_samples": 0,
+  "selection_seed": 20261013,
+  "selection": "Uniform random sample within each race/gender group and source split; no concept labels used for selection",
+  "labels": [
+    "turban_present",
+    "flower_present",
+    "kimono_present"
+  ],
+  "label_values": "Use 1=present, 0=absent, uncertain=uncertain; blank=not reviewed"
+}
