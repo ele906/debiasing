@@ -1,0 +1,72 @@
+{
+  "sample_id": "indian_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/indian_woman/seed002.png",
+  "image_sha256": "a3d0dd3229453e95c2f144fd225fcbe91242cdf2eefb347bb8b98c37c69b6a35",
+  "caption": "A woman is looking at the camera. She has a red dot on her forehead. She is wearing a pink scarf around her head. She also has earrings on her ears. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        239.36001586914062,
+        123.64800262451172,
+        266.4960021972656,
+        159.48800659179688
+      ],
+      [
+        61.18400192260742,
+        0.25600001215934753,
+        445.18402099609375,
+        420.09600830078125
+      ],
+      [
+        84.73600769042969,
+        283.3919982910156,
+        140.54400634765625,
+        442.1120300292969
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "red dot",
+      "head",
+      "earrings"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        104.19200134277344,
+        30.976001739501953,
+        399.10400390625,
+        423.16802978515625
+      ],
+      [
+        139.0080108642578,
+        426.75201416015625,
+        371.968017578125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking at the camera. She has a red dot on her forehead. She is wearing a pink scarf around her head. She also has earrings on her ears. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>red dot<loc_467><loc_241><loc_520><loc_311>head<loc_119><loc_0><loc_869><loc_820>earrings<loc_165><loc_553><loc_274><loc_863></s>",
+    "objects": "</s><s>human face<loc_203><loc_60><loc_779><loc_826>necklace<loc_271><loc_833><loc_726><loc_998>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

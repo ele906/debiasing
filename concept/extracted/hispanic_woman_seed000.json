@@ -1,0 +1,135 @@
+{
+  "sample_id": "hispanic_woman_seed000",
+  "image": "/n/fs/goose/backprop/images/hispanic_woman/seed000.png",
+  "image_sha256": "d7a20ea79d2d1c8060983cec233759cbb65af08561283b312e00191107cbd9e5",
+  "caption": "A woman is looking directly at the camera. She has dark brown eyes and dark brown hair. Her eyebrows are furrowed and her lips are pursed. She is wearing a pearl necklace and earrings. Her dress is white and her hair is pulled back.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        104.7040023803711,
+        157.95201110839844,
+        310.52801513671875,
+        216.83201599121094
+      ],
+      [
+        233.2160186767578,
+        159.48800659179688,
+        307.4560241699219,
+        195.3280029296875
+      ],
+      [
+        107.77600860595703,
+        184.5760040283203,
+        177.4080047607422,
+        215.80801391601562
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        405.760009765625
+      ],
+      [
+        207.6160125732422,
+        128.25601196289062,
+        322.8160095214844,
+        170.24000549316406
+      ],
+      [
+        89.85600280761719,
+        163.58401489257812,
+        177.4080047607422,
+        187.64801025390625
+      ],
+      [
+        171.7760009765625,
+        304.3840026855469,
+        295.6800231933594,
+        357.1200256347656
+      ],
+      [
+        99.07200622558594,
+        301.31201171875,
+        146.17601013183594,
+        411.39202880859375
+      ],
+      [
+        0.25600001215934753,
+        361.21600341796875,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        510.72003173828125,
+        405.760009765625
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "eyes",
+      "eyes",
+      "eyes",
+      "hair",
+      "Her eyebrows",
+      "Her eyebrows",
+      "lips",
+      "earrings",
+      "Her dress",
+      "hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        98.56000518798828,
+        301.31201171875,
+        146.17601013183594,
+        410.8800048828125
+      ],
+      [
+        86.78400421142578,
+        47.87200164794922,
+        379.1360168457031,
+        412.416015625
+      ],
+      [
+        180.48001098632812,
+        223.48800659179688,
+        420.09600830078125,
+        511.2320251464844
+      ],
+      [
+        181.50401306152344,
+        365.31201171875,
+        415.4880065917969,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "earrings",
+      "human face",
+      "necklace",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking directly at the camera. She has dark brown eyes and dark brown hair. Her eyebrows are furrowed and her lips are pursed. She is wearing a pearl necklace and earrings. Her dress is white and her hair is pulled back.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>eyes<loc_204><loc_308><loc_606><loc_423><loc_455><loc_311><loc_600><loc_381><loc_210><loc_360><loc_346><loc_421>hair<loc_0><loc_0><loc_997><loc_792>Her eyebrows<loc_405><loc_250><loc_630><loc_332><loc_175><loc_319><loc_346><loc_366>lips<loc_335><loc_594><loc_577><loc_697>earrings<loc_193><loc_588><loc_285><loc_803>Her dress<loc_0><loc_705><loc_998><loc_998>hair<loc_0><loc_1><loc_997><loc_792></s>",
+    "objects": "</s><s>earrings<loc_192><loc_588><loc_285><loc_802>human face<loc_169><loc_93><loc_740><loc_805>necklace<loc_352><loc_436><loc_820><loc_998><loc_354><loc_713><loc_811><loc_998>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

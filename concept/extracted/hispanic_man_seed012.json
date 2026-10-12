@@ -1,0 +1,107 @@
+{
+  "sample_id": "hispanic_man_seed012",
+  "image": "/n/fs/goose/backprop/images/hispanic_man/seed012.png",
+  "image_sha256": "b48356cb5a50ccf32880c05960ac7c39a6747ef062c3b355480a382ac963adc9",
+  "caption": "A man is looking directly at the camera. He has dark brown hair and a goatee. His eyes are open and he has a slight smile on his face. He is wearing a light blue button down shirt.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        150.7840118408203,
+        0.25600001215934753,
+        450.30401611328125,
+        262.9120178222656
+      ],
+      [
+        225.02401733398438,
+        372.4800109863281,
+        390.9120178222656,
+        453.3760070800781
+      ],
+      [
+        226.5600128173828,
+        318.2080078125,
+        380.1600036621094,
+        361.72802734375
+      ],
+      [
+        201.47201538085938,
+        212.7360076904297,
+        398.5920104980469,
+        246.01600646972656
+      ],
+      [
+        327.42401123046875,
+        215.29600524902344,
+        396.0320129394531,
+        242.9440155029297
+      ],
+      [
+        205.05601501464844,
+        216.32000732421875,
+        270.08001708984375,
+        243.4560089111328
+      ],
+      [
+        246.01600646972656,
+        341.2480163574219,
+        362.75201416015625,
+        376.06402587890625
+      ],
+      [
+        171.7760009765625,
+        103.16800689697266,
+        429.82403564453125,
+        451.3280334472656
+      ],
+      [
+        0.25600001215934753,
+        401.1520080566406,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "hair",
+      "goatee",
+      "goatee",
+      "his eyes",
+      "his eyes",
+      "his eyes",
+      "smile",
+      "face",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        171.7760009765625,
+        97.53600311279297,
+        428.28802490234375,
+        446.2080078125
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is looking directly at the camera. He has dark brown hair and a goatee. His eyes are open and he has a slight smile on his face. He is wearing a light blue button down shirt.</s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>hair<loc_294><loc_0><loc_879><loc_513>goatee<loc_439><loc_727><loc_763><loc_885><loc_442><loc_621><loc_742><loc_706>his eyes<loc_393><loc_415><loc_778><loc_480><loc_639><loc_420><loc_773><loc_474><loc_400><loc_422><loc_527><loc_475>smile<loc_480><loc_666><loc_708><loc_734>face<loc_335><loc_201><loc_839><loc_881>shirt<loc_0><loc_783><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_335><loc_190><loc_836><loc_871>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

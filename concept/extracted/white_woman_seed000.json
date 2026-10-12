@@ -1,0 +1,100 @@
+{
+  "sample_id": "white_woman_seed000",
+  "image": "/n/fs/goose/backprop/images/white_woman/seed000.png",
+  "image_sha256": "7501f11a4cf9d5ad43628a452ca3159bdec355ea7bb179e4ca0c1804b3391652",
+  "caption": "A black and white photo of a woman. The woman has long, wavy blonde hair. Her eyes are open and her lips are pursed. She is wearing a white shirt. The background is plain white.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        495.3600158691406,
+        491.7760314941406
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        494.3360290527344,
+        491.2640380859375
+      ],
+      [
+        123.1360092163086,
+        169.21600341796875,
+        310.0160217285156,
+        211.71200561523438
+      ],
+      [
+        243.4560089111328,
+        170.75201416015625,
+        307.4560241699219,
+        200.9600067138672
+      ],
+      [
+        126.72000885009766,
+        182.52801513671875,
+        190.7200164794922,
+        210.68800354003906
+      ],
+      [
+        180.48001098632812,
+        296.1920166015625,
+        281.3440246582031,
+        337.1520080566406
+      ],
+      [
+        0.25600001215934753,
+        418.04803466796875,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black",
+      "photo",
+      "The woman",
+      "hair",
+      "Her eyes",
+      "Her eyes",
+      "Her eyes",
+      "lips",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        94.97600555419922,
+        62.720001220703125,
+        355.5840148925781,
+        389.8880310058594
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white photo of a woman. The woman has long, wavy blonde hair. Her eyes are open and her lips are pursed. She is wearing a white shirt. The background is plain white.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_998>photo<loc_0><loc_0><loc_996><loc_998>The woman<loc_0><loc_0><loc_967><loc_960>hair<loc_0><loc_0><loc_965><loc_959>Her eyes<loc_240><loc_330><loc_605><loc_413><loc_475><loc_333><loc_600><loc_392><loc_247><loc_356><loc_372><loc_411>lips<loc_352><loc_578><loc_549><loc_658>shirt<loc_0><loc_816><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_185><loc_122><loc_694><loc_761>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

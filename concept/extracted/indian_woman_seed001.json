@@ -1,0 +1,86 @@
+{
+  "sample_id": "indian_woman_seed001",
+  "image": "/n/fs/goose/backprop/images/indian_woman/seed001.png",
+  "image_sha256": "53c138837f9bd4ee2c58fc97b41a1fddb8b9f8797404e052feb57dcf26c43d58",
+  "caption": "A woman is wearing a red and gold outfit. There is a red dot on her forehead. There are earrings on her ears. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        256.76800537109375,
+        89.85600280761719,
+        280.8320007324219,
+        168.70401000976562
+      ],
+      [
+        257.2799987792969,
+        139.0080108642578,
+        279.2960205078125,
+        167.6800079345703
+      ],
+      [
+        155.3920135498047,
+        241.4080047607422,
+        200.44801330566406,
+        349.44000244140625
+      ],
+      [
+        343.8080139160156,
+        241.92001342773438,
+        385.7920227050781,
+        339.20001220703125
+      ],
+      [
+        143.10400390625,
+        182.01600646972656,
+        184.5760040283203,
+        260.864013671875
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "a red dot",
+      "a red dot",
+      "earrings",
+      "earrings",
+      "ears"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        175.36001586914062,
+        87.8080062866211,
+        368.3840026855469,
+        344.83203125
+      ],
+      [
+        176.38400268554688,
+        345.85601806640625,
+        354.0480041503906,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a red and gold outfit. There is a red dot on her forehead. There are earrings on her ears. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>a red dot<loc_501><loc_175><loc_548><loc_329><loc_502><loc_271><loc_545><loc_327>earrings<loc_303><loc_471><loc_391><loc_682><loc_671><loc_472><loc_753><loc_662>ears<loc_279><loc_355><loc_360><loc_509></s>",
+    "objects": "</s><s>human face<loc_342><loc_171><loc_719><loc_673>necklace<loc_344><loc_675><loc_691><loc_998>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

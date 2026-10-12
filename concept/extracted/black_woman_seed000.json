@@ -1,0 +1,121 @@
+{
+  "sample_id": "black_woman_seed000",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed000.png",
+  "image_sha256": "de9151c2673d12ba817300f5166489ea574f22306bd1f49420308e9295bee3f8",
+  "caption": "A black and white photo of a young girl. The girl has large hoop earrings on her ears. Her hair is dark and curly. Her eyes are open and her lips are pursed.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        100.09600830078125,
+        313.0880126953125,
+        163.07200622558594,
+        413.9520263671875
+      ],
+      [
+        365.8240051269531,
+        262.9120178222656,
+        409.3440246582031,
+        396.0320129394531
+      ],
+      [
+        365.8240051269531,
+        262.9120178222656,
+        408.83203125,
+        396.0320129394531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.6960144042969,
+        401.1520080566406
+      ],
+      [
+        111.87200164794922,
+        175.36001586914062,
+        317.18402099609375,
+        231.1680145263672
+      ],
+      [
+        245.50401306152344,
+        177.92001342773438,
+        314.6240234375,
+        213.24801635742188
+      ],
+      [
+        113.92000579833984,
+        194.81600952148438,
+        178.9440155029297,
+        230.14401245117188
+      ],
+      [
+        169.21600341796875,
+        310.52801513671875,
+        291.072021484375,
+        374.0160217285156
+      ]
+    ],
+    "labels": [
+      "A black",
+      "photo",
+      "girl",
+      "hoop earrings",
+      "hoop earrings",
+      "ears",
+      "Her hair",
+      "Her eyes",
+      "Her eyes",
+      "Her eyes",
+      "lips"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        109.82400512695312,
+        191.74400329589844,
+        181.50401306152344,
+        234.24000549316406
+      ],
+      [
+        97.53600311279297,
+        52.480003356933594,
+        375.5520324707031,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white photo of a young girl. The girl has large hoop earrings on her ears. Her hair is dark and curly. Her eyes are open and her lips are pursed.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_998>photo<loc_0><loc_0><loc_996><loc_998>girl<loc_0><loc_0><loc_997><loc_998>hoop earrings<loc_195><loc_611><loc_318><loc_808><loc_714><loc_513><loc_799><loc_773>ears<loc_714><loc_513><loc_798><loc_773>Her hair<loc_0><loc_0><loc_995><loc_783>Her eyes<loc_218><loc_342><loc_619><loc_451><loc_479><loc_347><loc_614><loc_416><loc_222><loc_380><loc_349><loc_449>lips<loc_330><loc_606><loc_568><loc_730></s>",
+    "objects": "</s><s>human eye<loc_214><loc_374><loc_354><loc_457>human face<loc_190><loc_102><loc_733><loc_832>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

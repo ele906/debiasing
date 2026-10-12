@@ -1,0 +1,93 @@
+{
+  "sample_id": "black_man_seed012",
+  "image": "/n/fs/goose/backprop/images/black_man/seed012.png",
+  "image_sha256": "2714e6883be8c9685aae4d49dc9bedff0e27428abda6325fe78f485e74d0443d",
+  "caption": "A black man is looking directly at the camera. His eyes are open and he has a slight smile on his face. He has short black hair. He is wearing a black and white shirt. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        2.81600022315979,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        185.0880126953125,
+        201.47201538085938,
+        397.5680236816406,
+        246.52801513671875
+      ],
+      [
+        188.16000366210938,
+        204.03201293945312,
+        256.76800537109375,
+        238.3360137939453
+      ],
+      [
+        325.88800048828125,
+        211.20001220703125,
+        395.0080261230469,
+        243.968017578125
+      ],
+      [
+        233.2160186767578,
+        336.6400146484375,
+        349.9520263671875,
+        404.2240295410156
+      ],
+      [
+        152.83200073242188,
+        74.49600219726562,
+        423.16802978515625,
+        457.4720153808594
+      ],
+      [
+        146.68800354003906,
+        3.328000068664551,
+        434.94403076171875,
+        208.6400146484375
+      ],
+      [
+        0.25600001215934753,
+        422.1440124511719,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black man",
+      "his eyes",
+      "his eyes",
+      "his eyes",
+      "smile",
+      "face",
+      "hair",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        157.44000244140625,
+        72.44800567626953,
+        418.5600280761719,
+        459.52001953125
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black man is looking directly at the camera. His eyes are open and he has a slight smile on his face. He has short black hair. He is wearing a black and white shirt. The background is blurry.</s>",
+    "grounding": "</s><s>A black man<loc_0><loc_5><loc_998><loc_998>his eyes<loc_361><loc_393><loc_776><loc_481><loc_367><loc_398><loc_501><loc_465><loc_636><loc_412><loc_771><loc_476>smile<loc_455><loc_657><loc_683><loc_789>face<loc_298><loc_145><loc_826><loc_893>hair<loc_286><loc_6><loc_849><loc_407>shirt<loc_0><loc_824><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_307><loc_141><loc_817><loc_897>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

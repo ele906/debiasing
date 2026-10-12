@@ -1,0 +1,72 @@
+{
+  "sample_id": "east_asian_man_seed003",
+  "image": "/n/fs/goose/backprop/images/east_asian_man/seed003.png",
+  "image_sha256": "c0feca3b7927a54add6adc81e18f742e00599b118d2f2d2b883ad2b6ef9edfe2",
+  "caption": "An Asian man is looking directly at the camera. He has a slight smile on his face. His hair is short and black. He is wearing a grey shirt. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        219.9040069580078,
+        306.4320068359375,
+        324.3520202636719,
+        342.2720031738281
+      ],
+      [
+        139.52000427246094,
+        53.50400161743164,
+        398.5920104980469,
+        416.51202392578125
+      ],
+      [
+        129.27999877929688,
+        0.25600001215934753,
+        410.8800048828125,
+        215.29600524902344
+      ],
+      [
+        0.25600001215934753,
+        354.0480041503906,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "An Asian man",
+      "smile",
+      "face",
+      "His hair",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        141.56800842285156,
+        51.96800231933594,
+        398.08001708984375,
+        412.416015625
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An Asian man is looking directly at the camera. He has a slight smile on his face. His hair is short and black. He is wearing a grey shirt. The background is blurry.</s>",
+    "grounding": "</s><s>An Asian man<loc_0><loc_0><loc_998><loc_998>smile<loc_429><loc_598><loc_633><loc_668>face<loc_272><loc_104><loc_778><loc_813>His hair<loc_252><loc_0><loc_802><loc_420>shirt<loc_0><loc_691><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_276><loc_101><loc_777><loc_805>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

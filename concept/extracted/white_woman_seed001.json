@@ -1,0 +1,177 @@
+{
+  "sample_id": "white_woman_seed001",
+  "image": "/n/fs/goose/backprop/images/white_woman/seed001.png",
+  "image_sha256": "e27c227171fd988a9f5e00b3f331ed3625febdf08af891d0eed7b124b06bc1dd",
+  "caption": "A portrait of a woman. The woman has long blonde hair. The hair is wavy. The women is wearing a white shirt. The shirt is collarless. The wall behind the woman is white.  The woman is looking directly at the camera. There is a slight smile on the woman's face. Her eyes are blue. Her eyebrows are light brown. Her mouth is slightly open.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        6.9120001792907715,
+        0.25600001215934753,
+        511.2320251464844,
+        411.39202880859375
+      ],
+      [
+        6.9120001792907715,
+        0.25600001215934753,
+        510.72003173828125,
+        411.39202880859375
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        6.9120001792907715,
+        0.25600001215934753,
+        510.2080383300781,
+        411.39202880859375
+      ],
+      [
+        6.9120001792907715,
+        327.9360046386719,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        6.9120001792907715,
+        328.4480285644531,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.6960144042969,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.18402099609375,
+        411.39202880859375
+      ],
+      [
+        176.89601135253906,
+        74.49600219726562,
+        362.2400207519531,
+        321.7920227050781
+      ],
+      [
+        232.70401000976562,
+        250.62400817871094,
+        306.4320068359375,
+        283.9040222167969
+      ],
+      [
+        176.89601135253906,
+        74.49600219726562,
+        361.72802734375,
+        321.7920227050781
+      ],
+      [
+        195.8400115966797,
+        157.44000244140625,
+        332.0320129394531,
+        185.60000610351562
+      ],
+      [
+        282.3680114746094,
+        159.48800659179688,
+        329.4720153808594,
+        182.01600646972656
+      ],
+      [
+        198.91200256347656,
+        162.04800415039062,
+        240.38401794433594,
+        185.0880126953125
+      ],
+      [
+        191.2320098876953,
+        145.15200805664062,
+        334.08001708984375,
+        164.60800170898438
+      ],
+      [
+        279.8080139160156,
+        144.63999938964844,
+        333.5680236816406,
+        160.5120086669922
+      ],
+      [
+        191.2320098876953,
+        146.68800354003906,
+        241.92001342773438,
+        163.58401489257812
+      ],
+      [
+        232.70401000976562,
+        250.62400817871094,
+        306.9440002441406,
+        283.9040222167969
+      ]
+    ],
+    "labels": [
+      "A portrait",
+      "The woman",
+      "hair",
+      "The women",
+      "The women",
+      "shirt",
+      "shirt",
+      "wall",
+      "The wall",
+      "The wall",
+      "The woman",
+      "smile",
+      "face",
+      "Her eyes",
+      "Her eyes",
+      "Her eyes",
+      "Her eyebrows",
+      "Her eyebrows",
+      "Her eyebrows",
+      "Her mouth"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        178.4320068359375,
+        74.49600219726562,
+        359.6800231933594,
+        320.2560119628906
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A portrait of a woman. The woman has long blonde hair. The hair is wavy. The women is wearing a white shirt. The shirt is collarless. The wall behind the woman is white.  The woman is looking directly at the camera. There is a slight smile on the woman's face. Her eyes are blue. Her eyebrows are light brown. Her mouth is slightly open.</s>",
+    "grounding": "</s><s>A portrait<loc_0><loc_0><loc_998><loc_998>The woman<loc_13><loc_0><loc_998><loc_803>hair<loc_13><loc_0><loc_997><loc_803>The women<loc_0><loc_0><loc_996><loc_998><loc_13><loc_0><loc_996><loc_803>shirt<loc_13><loc_640><loc_998><loc_998>shirt<loc_13><loc_641><loc_998><loc_998>wall<loc_0><loc_0><loc_997><loc_998>The wall<loc_0><loc_0><loc_995><loc_998><loc_0><loc_0><loc_994><loc_803>The woman<loc_345><loc_145><loc_707><loc_628>smile<loc_454><loc_489><loc_598><loc_554>face<loc_345><loc_145><loc_706><loc_628>Her eyes<loc_382><loc_307><loc_648><loc_362><loc_551><loc_311><loc_643><loc_355><loc_388><loc_316><loc_469><loc_361>Her eyebrows<loc_373><loc_283><loc_652><loc_321><loc_546><loc_282><loc_651><loc_313><loc_373><loc_286><loc_472><loc_319>Her mouth<loc_454><loc_489><loc_599><loc_554></s>",
+    "objects": "</s><s>human face<loc_348><loc_145><loc_702><loc_625>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

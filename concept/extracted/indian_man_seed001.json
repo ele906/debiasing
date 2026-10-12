@@ -1,0 +1,79 @@
+{
+  "sample_id": "indian_man_seed001",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed001.png",
+  "image_sha256": "8082bd306be5686eea90b82041ffd868a7fcd2956fce121f649cd6f55c06a62b",
+  "caption": "An old man with a red turban on his head. He has a long white beard. He is wearing a brown shirt. There is dirt behind him. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        51.96800231933594,
+        0.25600001215934753,
+        417.0240173339844,
+        213.24801635742188
+      ],
+      [
+        54.52800369262695,
+        0.25600001215934753,
+        419.5840148925781,
+        478.4640197753906
+      ],
+      [
+        138.49600219726562,
+        274.6880187988281,
+        401.1520080566406,
+        482.5600280761719
+      ],
+      [
+        0.25600001215934753,
+        392.96002197265625,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        472.83203125
+      ]
+    ],
+    "labels": [
+      "An old man",
+      "a red turban",
+      "head",
+      "beard",
+      "shirt",
+      "dirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        141.56800842285156,
+        86.78400421142578,
+        379.64801025390625,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An old man with a red turban on his head. He has a long white beard. He is wearing a brown shirt. There is dirt behind him. </s>",
+    "grounding": "</s><s>An old man<loc_0><loc_0><loc_998><loc_998>a red turban<loc_101><loc_0><loc_814><loc_416>head<loc_106><loc_0><loc_819><loc_934>beard<loc_270><loc_536><loc_783><loc_942>shirt<loc_0><loc_767><loc_998><loc_998>dirt<loc_0><loc_0><loc_997><loc_923></s>",
+    "objects": "</s><s>human face<loc_276><loc_169><loc_741><loc_832>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

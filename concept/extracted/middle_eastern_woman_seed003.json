@@ -1,0 +1,100 @@
+{
+  "sample_id": "middle_eastern_woman_seed003",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed003.png",
+  "image_sha256": "6dd0adebbc5cd1331c1a57117530f3735440724b3dde1cc6dd6b76692161d7cd",
+  "caption": "A woman is wearing a brown scarf around her head. There is a gold piece on her forehead. The woman has dark brown eyes and a brown nose. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        247.04000854492188,
+        42.75200271606445,
+        292.09600830078125,
+        126.72000885009766
+      ],
+      [
+        147.71200561523438,
+        45.3120002746582,
+        409.85601806640625,
+        147.20001220703125
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        165.6320037841797,
+        156.92800903320312,
+        384.76800537109375,
+        202.49600219726562
+      ],
+      [
+        168.19200134277344,
+        160.0,
+        245.50401306152344,
+        199.93600463867188
+      ],
+      [
+        306.4320068359375,
+        160.5120086669922,
+        382.2080078125,
+        199.42401123046875
+      ],
+      [
+        237.82400512695312,
+        185.0880126953125,
+        318.7200012207031,
+        297.21600341796875
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "a gold piece",
+      "forehead",
+      "The woman",
+      "eyes",
+      "eyes",
+      "eyes",
+      "nose"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        161.5360107421875,
+        158.46400451660156,
+        247.55201721191406,
+        203.0080108642578
+      ],
+      [
+        139.52000427246094,
+        41.21600341796875,
+        430.8480224609375,
+        419.5840148925781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a brown scarf around her head. There is a gold piece on her forehead. The woman has dark brown eyes and a brown nose. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>a gold piece<loc_482><loc_83><loc_570><loc_247> forehead<loc_288><loc_88><loc_800><loc_287>The woman<loc_0><loc_1><loc_998><loc_998>eyes<loc_323><loc_306><loc_751><loc_395><loc_328><loc_312><loc_479><loc_390><loc_598><loc_313><loc_746><loc_389>nose<loc_464><loc_361><loc_622><loc_580></s>",
+    "objects": "</s><s>human eye<loc_315><loc_309><loc_483><loc_396>human face<loc_272><loc_80><loc_841><loc_819>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

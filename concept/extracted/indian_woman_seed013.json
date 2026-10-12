@@ -1,0 +1,86 @@
+{
+  "sample_id": "indian_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/indian_woman/seed013.png",
+  "image_sha256": "1094baa978cd72d9aa80aa5d637d7d520c04844418d8d8b5c9fe748d32a85e9c",
+  "caption": "A woman is wearing a red saree. She has a gold necklace around her neck. There is a red dot on her forehead. ",
+  "grounding": {
+    "bboxes": [
+      [
+        2.81600022315979,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        2.30400013923645,
+        320.2560119628906,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        168.70401000976562,
+        313.0880126953125,
+        370.4320068359375,
+        511.2320251464844
+      ],
+      [
+        283.3919982910156,
+        129.79200744628906,
+        302.8480224609375,
+        154.8800048828125
+      ],
+      [
+        216.32000732421875,
+        84.22400665283203,
+        370.4320068359375,
+        158.46400451660156
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "sauree",
+      "necklace",
+      "a red dot",
+      "forehead"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        197.37600708007812,
+        77.0560073852539,
+        383.2320251464844,
+        318.2080078125
+      ],
+      [
+        170.24000549316406,
+        316.6720275878906,
+        367.87200927734375,
+        511.2320251464844
+      ],
+      [
+        215.80801391601562,
+        316.6720275878906,
+        355.072021484375,
+        408.32000732421875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "necklace",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a red saree. She has a gold necklace around her neck. There is a red dot on her forehead. </s>",
+    "grounding": "</s><s>A woman<loc_5><loc_0><loc_998><loc_998>sauree<loc_4><loc_625><loc_998><loc_998>necklace<loc_329><loc_611><loc_723><loc_998>a red dot<loc_553><loc_253><loc_591><loc_302> forehead<loc_422><loc_164><loc_723><loc_309></s>",
+    "objects": "</s><s>human face<loc_385><loc_150><loc_748><loc_621>necklace<loc_332><loc_618><loc_718><loc_998><loc_421><loc_618><loc_693><loc_797>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

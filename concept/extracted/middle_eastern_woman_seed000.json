@@ -1,0 +1,100 @@
+{
+  "sample_id": "middle_eastern_woman_seed000",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed000.png",
+  "image_sha256": "d510656c66945eda0d636b99076cba9e88df8ea1dfddd4e777ed0c58f886a4df",
+  "caption": "A close up of a woman's face is shown. The woman has dark brown eyebrows and blue eyes. She is wearing a white and brown scarf around her head. The background of the image is white.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        67.84000396728516,
+        29.440000534057617,
+        449.7920227050781,
+        511.2320251464844
+      ],
+      [
+        244.48001098632812,
+        136.9600067138672,
+        392.96002197265625,
+        185.60000610351562
+      ],
+      [
+        76.54400634765625,
+        149.760009765625,
+        208.1280059814453,
+        188.16000366210938
+      ],
+      [
+        89.34400177001953,
+        170.75201416015625,
+        387.84002685546875,
+        234.24000549316406
+      ],
+      [
+        280.32000732421875,
+        171.7760009765625,
+        385.280029296875,
+        226.04800415039062
+      ],
+      [
+        91.39200592041016,
+        183.04000854492188,
+        197.37600708007812,
+        233.2160186767578
+      ]
+    ],
+    "labels": [
+      "A close up of a woman's face is shown",
+      "The woman",
+      "eyebrows",
+      "eyebrows",
+      "eyes",
+      "eyes",
+      "eyes"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        84.73600769042969,
+        180.99200439453125,
+        200.44801330566406,
+        238.84800720214844
+      ],
+      [
+        68.86400604248047,
+        22.784000396728516,
+        449.7920227050781,
+        511.2320251464844
+      ],
+      [
+        187.13600158691406,
+        205.56800842285156,
+        302.3360290527344,
+        354.0480041503906
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A close up of a woman's face is shown. The woman has dark brown eyebrows and blue eyes. She is wearing a white and brown scarf around her head. The background of the image is white.</s>",
+    "grounding": "</s><s>A close up of a woman's face is shown<loc_0><loc_0><loc_998><loc_998>The woman<loc_132><loc_57><loc_878><loc_998>eyebrows<loc_477><loc_267><loc_767><loc_362><loc_149><loc_292><loc_406><loc_367>eyes<loc_174><loc_333><loc_757><loc_457><loc_547><loc_335><loc_752><loc_441><loc_178><loc_357><loc_385><loc_455></s>",
+    "objects": "</s><s>human eye<loc_165><loc_353><loc_391><loc_466>human face<loc_134><loc_44><loc_878><loc_998>human nose<loc_365><loc_401><loc_590><loc_691>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

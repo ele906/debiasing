@@ -1,0 +1,100 @@
+{
+  "sample_id": "hispanic_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/hispanic_woman/seed013.png",
+  "image_sha256": "0a8045f35b1ff8f6d69a8ae801fe30a664bc9f8dda98f31c816657be35a8b10e",
+  "caption": "A woman is looking at the camera. She has a necklace around her neck. She is wearing earrings on her ears. The woman has long dark hair. ",
+  "grounding": {
+    "bboxes": [
+      [
+        24.32000160217285,
+        18.68800163269043,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        232.1920166015625,
+        298.2400207519531,
+        384.76800537109375,
+        413.4400329589844
+      ],
+      [
+        369.9200134277344,
+        203.0080108642578,
+        395.0080261230469,
+        288.51202392578125
+      ],
+      [
+        223.48800659179688,
+        209.6640167236328,
+        250.62400817871094,
+        286.97601318359375
+      ],
+      [
+        24.32000160217285,
+        18.176000595092773,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        22.784000396728516,
+        19.200000762939453,
+        490.75201416015625,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "necklace",
+      "earrings",
+      "earrings",
+      "The woman",
+      "hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        86.78400421142578,
+        320.2560119628906,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        227.58401489257812,
+        86.27200317382812,
+        380.1600036621094,
+        292.6080017089844
+      ],
+      [
+        233.2160186767578,
+        304.3840026855469,
+        383.2320251464844,
+        480.51202392578125
+      ],
+      [
+        234.24000549316406,
+        304.8960266113281,
+        381.6960144042969,
+        412.416015625
+      ],
+      [
+        30.464000701904297,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "fancy dress",
+      "human face",
+      "necklace",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking at the camera. She has a necklace around her neck. She is wearing earrings on her ears. The woman has long dark hair. </s>",
+    "grounding": "</s><s>A woman<loc_47><loc_36><loc_998><loc_998>necklace<loc_453><loc_582><loc_751><loc_807>earrings<loc_722><loc_396><loc_771><loc_563><loc_436><loc_409><loc_489><loc_560>The woman<loc_47><loc_35><loc_998><loc_998>hair<loc_44><loc_37><loc_958><loc_998></s>",
+    "objects": "</s><s>fancy dress<loc_169><loc_625><loc_998><loc_998>human face<loc_444><loc_168><loc_742><loc_571>necklace<loc_455><loc_594><loc_748><loc_938><loc_457><loc_595><loc_745><loc_805>woman<loc_59><loc_0><loc_998><loc_998></s>"
+  }
+}

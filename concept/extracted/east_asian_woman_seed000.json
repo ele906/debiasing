@@ -1,0 +1,65 @@
+{
+  "sample_id": "east_asian_woman_seed000",
+  "image": "/n/fs/goose/backprop/images/east_asian_woman/seed000.png",
+  "image_sha256": "6548697186cd6419f0651a426c0ba1b5f1b1ef536719b3f16cbad3070493364c",
+  "caption": "A woman is wearing a kimono. She has a flower in her hair. She is looking off to the side. The background is blurry. ",
+  "grounding": {
+    "bboxes": [
+      [
+        184.5760040283203,
+        2.30400013923645,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        184.5760040283203,
+        346.3680114746094,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        463.61602783203125,
+        22.784000396728516,
+        511.2320251464844,
+        89.85600280761719
+      ],
+      [
+        246.52801513671875,
+        1.7920000553131104,
+        511.2320251464844,
+        268.0320129394531
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "kimono",
+      "flower",
+      "hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        262.9120178222656,
+        115.45600891113281,
+        449.7920227050781,
+        360.1920166015625
+      ],
+      [
+        183.552001953125,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a kimono. She has a flower in her hair. She is looking off to the side. The background is blurry. </s>",
+    "grounding": "</s><s>A woman<loc_360><loc_4><loc_998><loc_998>kimono<loc_360><loc_676><loc_998><loc_998>flower<loc_905><loc_44><loc_998><loc_175>hair<loc_481><loc_3><loc_998><loc_523></s>",
+    "objects": "</s><s>human face<loc_513><loc_225><loc_878><loc_703>woman<loc_358><loc_0><loc_998><loc_998></s>"
+  }
+}

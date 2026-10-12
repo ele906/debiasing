@@ -1,0 +1,100 @@
+{
+  "sample_id": "middle_eastern_woman_seed012",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed012.png",
+  "image_sha256": "cb762c64e3ad7f3a001306a1fee9a3047c8a7998e54ecfc5e1b04ed65f0d70db",
+  "caption": "A woman is wearing a head covering. The head covering is brown and white. The woman has blue eyes and a pink lip. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        50.432003021240234,
+        0.25600001215934753,
+        511.2320251464844,
+        490.2400207519531
+      ],
+      [
+        121.08800506591797,
+        46.84800338745117,
+        478.4640197753906,
+        488.1920166015625
+      ],
+      [
+        164.60800170898438,
+        174.84800720214844,
+        433.9200134277344,
+        230.656005859375
+      ],
+      [
+        167.1680145263672,
+        181.50401306152344,
+        264.96002197265625,
+        230.14401245117188
+      ],
+      [
+        341.2480163574219,
+        176.38400268554688,
+        431.87200927734375,
+        224.5120086669922
+      ],
+      [
+        243.968017578125,
+        366.8480224609375,
+        380.6720275878906,
+        419.5840148925781
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "The head covering",
+      "The woman",
+      "eyes",
+      "eyes",
+      "eyes",
+      "lip"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        158.46400451660156,
+        179.96800231933594,
+        268.54400634765625,
+        232.70401000976562
+      ],
+      [
+        123.1360092163086,
+        42.75200271606445,
+        476.416015625,
+        488.1920166015625
+      ],
+      [
+        257.7920227050781,
+        210.17601013183594,
+        357.1200256347656,
+        340.73602294921875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a head covering. The head covering is brown and white. The woman has blue eyes and a pink lip. The background is blurry.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>The head covering<loc_98><loc_0><loc_998><loc_957>The woman<loc_236><loc_91><loc_934><loc_953>eyes<loc_321><loc_341><loc_847><loc_450><loc_326><loc_354><loc_517><loc_449><loc_666><loc_344><loc_843><loc_438>lip<loc_476><loc_716><loc_743><loc_819></s>",
+    "objects": "</s><s>human eye<loc_309><loc_351><loc_524><loc_454>human face<loc_240><loc_83><loc_930><loc_953>human nose<loc_503><loc_410><loc_697><loc_665>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

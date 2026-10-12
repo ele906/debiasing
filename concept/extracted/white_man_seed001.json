@@ -1,0 +1,121 @@
+{
+  "sample_id": "white_man_seed001",
+  "image": "/n/fs/goose/backprop/images/white_man/seed001.png",
+  "image_sha256": "05e96e89590371cd9f8f6c627edd800e611b97f4d310f5c282966aa7719b0572",
+  "caption": "This is a portrait of a man. The portrait is in black and white. The man has a serious look on his face. The mans hair is slicked back. The hair is dark and light brown. The eyes are blue. The nose of the man is a lighter color. The mouth is slightly closed. The shirt he is wearing is a collared shirt.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        106.75200653076172,
+        5.88800048828125,
+        420.09600830078125,
+        427.7760314941406
+      ],
+      [
+        134.40000915527344,
+        72.96000671386719,
+        384.76800537109375,
+        425.2160339355469
+      ],
+      [
+        109.82400512695312,
+        4.86400032043457,
+        419.072021484375,
+        222.46400451660156
+      ],
+      [
+        168.70401000976562,
+        184.0640106201172,
+        349.9520263671875,
+        220.92800903320312
+      ],
+      [
+        172.8000030517578,
+        186.62400817871094,
+        233.72801208496094,
+        216.32000732421875
+      ],
+      [
+        286.97601318359375,
+        189.69601440429688,
+        346.8800048828125,
+        217.8560028076172
+      ],
+      [
+        220.416015625,
+        195.3280029296875,
+        297.21600341796875,
+        295.6800231933594
+      ],
+      [
+        205.05601501464844,
+        320.2560119628906,
+        316.6720275878906,
+        353.0240173339844
+      ],
+      [
+        0.25600001215934753,
+        392.96002197265625,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        392.96002197265625,
+        510.72003173828125,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "portrait",
+      "The portrait",
+      "The man",
+      "face",
+      "The mans hair",
+      "The eyes",
+      "The eyes",
+      "The eyes",
+      "The nose",
+      "The mouth",
+      "The shirt",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        134.91200256347656,
+        68.86400604248047,
+        382.2080078125,
+        422.1440124511719
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>This is a portrait of a man. The portrait is in black and white. The man has a serious look on his face. The mans hair is slicked back. The hair is dark and light brown. The eyes are blue. The nose of the man is a lighter color. The mouth is slightly closed. The shirt he is wearing is a collared shirt.</s>",
+    "grounding": "</s><s>portrait<loc_0><loc_0><loc_998><loc_998>The portrait<loc_0><loc_0><loc_997><loc_998>The man<loc_208><loc_11><loc_820><loc_835>face<loc_262><loc_142><loc_751><loc_830>The mans hair<loc_214><loc_9><loc_818><loc_434>The eyes<loc_329><loc_359><loc_683><loc_431><loc_337><loc_364><loc_456><loc_422><loc_560><loc_370><loc_677><loc_425>The nose<loc_430><loc_381><loc_580><loc_577>The mouth<loc_400><loc_625><loc_618><loc_689>The shirt<loc_0><loc_767><loc_998><loc_998>shirt<loc_0><loc_767><loc_997><loc_998></s>",
+    "objects": "</s><s>human face<loc_263><loc_134><loc_746><loc_824>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

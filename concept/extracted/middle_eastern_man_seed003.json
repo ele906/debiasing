@@ -1,0 +1,86 @@
+{
+  "sample_id": "middle_eastern_man_seed003",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_man/seed003.png",
+  "image_sha256": "937a298795939af12e4218a04a0a0bbe62f2be320c7f95055b9023ba0bab98e3",
+  "caption": "A man is wearing a white headdress. The headdress is made of white cloth. The man has a beard on his face. He is looking directly at the camera. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        130.3040008544922,
+        84.73600769042969,
+        430.8480224609375,
+        465.6640319824219
+      ],
+      [
+        140.03201293945312,
+        212.7360076904297,
+        423.16802978515625,
+        465.1520080566406
+      ],
+      [
+        131.8400115966797,
+        85.76000213623047,
+        428.28802490234375,
+        464.6400146484375
+      ]
+    ],
+    "labels": [
+      "A man",
+      "The headdress",
+      "The headdress",
+      "The man",
+      "beard",
+      "face"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        141.56800842285156,
+        235.77601623535156,
+        423.6800231933594,
+        466.176025390625
+      ],
+      [
+        147.71200561523438,
+        49.92000198364258,
+        422.1440124511719,
+        446.2080078125
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human beard",
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing a white headdress. The headdress is made of white cloth. The man has a beard on his face. He is looking directly at the camera. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>The headdress<loc_0><loc_0><loc_997><loc_998><loc_0><loc_0><loc_996><loc_998>The man<loc_254><loc_165><loc_841><loc_909>beard<loc_273><loc_415><loc_826><loc_908>face<loc_257><loc_167><loc_836><loc_907></s>",
+    "objects": "</s><s>human beard<loc_276><loc_460><loc_827><loc_910>human face<loc_288><loc_97><loc_824><loc_871>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

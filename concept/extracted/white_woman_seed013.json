@@ -1,0 +1,79 @@
+{
+  "sample_id": "white_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/white_woman/seed013.png",
+  "image_sha256": "f541470d431a2562a72ffc47b62fdb9e2b58a8f669812a3466d74331239ee384",
+  "caption": "A woman with long blonde hair is wearing a white shirt. There is a white wall behind the woman. ",
+  "grounding": {
+    "bboxes": [
+      [
+        30.976001739501953,
+        5.37600040435791,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        66.81600189208984,
+        6.9120001792907715,
+        489.72802734375,
+        446.2080078125
+      ],
+      [
+        93.9520034790039,
+        358.656005859375,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        30.976001739501953,
+        5.37600040435791,
+        510.72003173828125,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "long blonde hair",
+      "a white shirt",
+      "a white wall",
+      "woman"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        94.97600555419922,
+        358.656005859375,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        204.54400634765625,
+        83.20000457763672,
+        379.64801025390625,
+        314.6240234375
+      ],
+      [
+        30.464000701904297,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "fancy dress",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman with long blonde hair is wearing a white shirt. There is a white wall behind the woman. </s>",
+    "grounding": "</s><s>A woman<loc_60><loc_10><loc_998><loc_998>long blonde hair<loc_130><loc_13><loc_956><loc_871>a white shirt<loc_183><loc_700><loc_998><loc_998>a white wall<loc_0><loc_0><loc_998><loc_998>woman<loc_60><loc_10><loc_997><loc_998></s>",
+    "objects": "</s><s>fancy dress<loc_185><loc_700><loc_998><loc_998>human face<loc_399><loc_162><loc_741><loc_614>woman<loc_59><loc_0><loc_998><loc_998></s>"
+  }
+}

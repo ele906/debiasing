@@ -1,0 +1,86 @@
+{
+  "sample_id": "white_man_seed013",
+  "image": "/n/fs/goose/backprop/images/white_man/seed013.png",
+  "image_sha256": "a29086cfd70537f916083644af0f024cfc88b44f771b493fb7106b7713933df4",
+  "caption": "A black and white photo of a man. The man has a serious look on his face. His hair is short and slicked back. He is wearing a white collared shirt with a black jacket over it.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        109.31200408935547,
+        69.37600708007812,
+        406.7840270996094,
+        480.0000305175781
+      ],
+      [
+        91.39200592041016,
+        0.25600001215934753,
+        429.31201171875,
+        229.12001037597656
+      ],
+      [
+        0.25600001215934753,
+        425.2160339355469,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        425.2160339355469,
+        510.72003173828125,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black",
+      "photo",
+      "man",
+      "face",
+      "His hair",
+      "shirt",
+      "jacket"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        112.89600372314453,
+        64.2560043334961,
+        404.2240295410156,
+        474.8800354003906
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white photo of a man. The man has a serious look on his face. His hair is short and slicked back. He is wearing a white collared shirt with a black jacket over it.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_998>photo<loc_0><loc_0><loc_996><loc_998>man<loc_0><loc_0><loc_997><loc_998>face<loc_213><loc_135><loc_794><loc_937>His hair<loc_178><loc_0><loc_838><loc_447>shirt<loc_0><loc_830><loc_998><loc_998>jacket<loc_0><loc_830><loc_997><loc_998></s>",
+    "objects": "</s><s>human face<loc_220><loc_125><loc_789><loc_927>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

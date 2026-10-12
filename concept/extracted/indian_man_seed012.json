@@ -1,0 +1,72 @@
+{
+  "sample_id": "indian_man_seed012",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed012.png",
+  "image_sha256": "dc808ca7297eeefcd99ed65ac2185ad5f982769eaffe9a5c5e820097e6c7ebb1",
+  "caption": "A man is wearing an orange turban on his head. He has a white beard on his face. He is wearing a white shirt. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        25.856000900268555,
+        0.25600001215934753,
+        492.28802490234375,
+        199.42401123046875
+      ],
+      [
+        152.83200073242188,
+        241.4080047607422,
+        419.072021484375,
+        424.1920166015625
+      ],
+      [
+        140.03201293945312,
+        48.89600372314453,
+        422.656005859375,
+        423.6800231933594
+      ],
+      [
+        0.25600001215934753,
+        359.6800231933594,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "an orange turban",
+      "beard",
+      "face",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        141.56800842285156,
+        40.19200134277344,
+        422.1440124511719,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing an orange turban on his head. He has a white beard on his face. He is wearing a white shirt. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>an orange turban<loc_50><loc_0><loc_961><loc_389>beard<loc_298><loc_471><loc_818><loc_828>face<loc_273><loc_95><loc_825><loc_827>shirt<loc_0><loc_702><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_276><loc_78><loc_824><loc_832>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

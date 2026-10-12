@@ -1,0 +1,14 @@
+concept,train_positive,train_negative,validation_positive,validation_negative,status,selection,feature,train_auc,validation_auc,train_matched_groups,validation_matched_groups,validation_within_difference
+head_covering,9,27,8,28,within-group controls available; inspect validation effect,within_prompt_groups,656,0.6111111111111112,0.5,5,3,0.0
+turban,3,33,4,32,within-group controls available; inspect validation effect,within_prompt_groups,656,0.8333333333333334,0.5,2,1,0.0
+headscarf,3,33,2,34,within-group controls available; inspect validation effect,within_prompt_groups,3364,0.6666666666666666,0.7205882352941176,2,2,0.007581595331430435
+earrings,9,27,8,28,within-group controls available; inspect validation effect,within_prompt_groups,4013,0.5555555555555556,0.5,2,4,0.0
+necklace,6,30,7,29,insufficient within-group validation controls,global_confounded,43,0.9138888888888889,0.6798029556650246,0,2,0.03359553590416908
+beard,10,26,6,30,within-group controls available; inspect validation effect,within_prompt_groups,3596,0.55,0.48333333333333334,1,2,0.0
+afro,2,34,3,33,insufficient within-group validation controls,within_prompt_groups,4015,1.0,0.8333333333333334,1,0,
+kimono,3,33,3,33,insufficient within-group validation controls,global_confounded,1899,1.0,1.0,0,0,
+shirt,12,24,14,22,within-group controls available; inspect validation effect,within_prompt_groups,1949,0.6961805555555556,0.6266233766233766,7,3,-0.005887781580289205
+tank_top,3,33,3,33,within-group controls available; inspect validation effect,within_prompt_groups,4199,0.8080808080808081,0.30303030303030304,3,2,0.0
+smile,3,33,6,30,within-group controls available; inspect validation effect,within_prompt_groups,4911,0.6666666666666666,0.45,3,4,0.0
+flower,3,33,3,33,insufficient within-group validation controls,global_confounded,1899,1.0,1.0,0,0,
+red_dot,3,33,2,34,within-group controls available; inspect validation effect,within_prompt_groups,576,0.6666666666666666,0.5,2,1,0.0

@@ -1,0 +1,86 @@
+{
+  "sample_id": "indian_man_seed013",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed013.png",
+  "image_sha256": "71280091aa8398c083ce716c64a89b92a7855cf416fd35335d021f10cabcbd2b",
+  "caption": "An old man with a turban on his head. He has a white beard and mustache. He is wearing a gold necklace and a white tank top. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        449.280029296875,
+        235.26400756835938
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        448.7680358886719,
+        278.7840270996094
+      ],
+      [
+        161.0240020751953,
+        293.63201904296875,
+        384.2560119628906,
+        477.4400329589844
+      ],
+      [
+        177.92001342773438,
+        293.1200256347656,
+        358.1440124511719,
+        353.5360107421875
+      ],
+      [
+        165.6320037841797,
+        393.9840087890625,
+        378.6240234375,
+        511.2320251464844
+      ],
+      [
+        141.56800842285156,
+        400.6400146484375,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "An old man",
+      "a turban",
+      "head",
+      "beard",
+      "mustache",
+      "a gold necklace",
+      "a white tank top"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        143.10400390625,
+        70.91200256347656,
+        400.6400146484375,
+        439.5520324707031
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An old man with a turban on his head. He has a white beard and mustache. He is wearing a gold necklace and a white tank top. </s>",
+    "grounding": "</s><s>An old man<loc_0><loc_0><loc_998><loc_998>a turban<loc_0><loc_0><loc_877><loc_459>head<loc_0><loc_0><loc_876><loc_544>beard<loc_314><loc_573><loc_750><loc_932>mustache<loc_347><loc_572><loc_699><loc_690>a gold necklace<loc_323><loc_769><loc_739><loc_998>a white tank top<loc_276><loc_782><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_279><loc_138><loc_782><loc_858>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

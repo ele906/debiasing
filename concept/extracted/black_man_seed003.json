@@ -1,0 +1,107 @@
+{
+  "sample_id": "black_man_seed003",
+  "image": "/n/fs/goose/backprop/images/black_man/seed003.png",
+  "image_sha256": "0dc38da5e0951d81908d3a3fca49a28e11ce5309fa688ce2b78edc1a095206db",
+  "caption": "This is a portrait of a man. The man is African American. The photo is in black and white. There is a white background behind the man's head. The face of the man is dark skinned. The eyebrows are dark and light brown. The eyes are open. The nose is a light brown color. The mouth is slightly closed.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.18402099609375,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.6960144042969,
+        511.2320251464844
+      ],
+      [
+        107.77600860595703,
+        0.25600001215934753,
+        444.1600341796875,
+        445.18402099609375
+      ],
+      [
+        194.30401611328125,
+        123.64800262451172,
+        427.7760314941406,
+        168.70401000976562
+      ],
+      [
+        200.44801330566406,
+        157.44000244140625,
+        422.1440124511719,
+        215.80801391601562
+      ],
+      [
+        202.49600219726562,
+        159.48800659179688,
+        283.9040222167969,
+        201.9840087890625
+      ],
+      [
+        351.4880065917969,
+        172.8000030517578,
+        419.5840148925781,
+        212.7360076904297
+      ],
+      [
+        262.9120178222656,
+        174.3360137939453,
+        376.06402587890625,
+        290.0480041503906
+      ],
+      [
+        253.1840057373047,
+        303.3600158691406,
+        378.1120300292969,
+        373.5040283203125
+      ]
+    ],
+    "labels": [
+      "portrait",
+      "The man",
+      "The photo",
+      "The face",
+      "The eyebrows",
+      "The eyes",
+      "The eyes",
+      "The eyes",
+      "The nose",
+      "The mouth"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        145.66400146484375,
+        25.856000900268555,
+        432.384033203125,
+        443.1360168457031
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>This is a portrait of a man. The man is African American. The photo is in black and white. There is a white background behind the man's head. The face of the man is dark skinned. The eyebrows are dark and light brown. The eyes are open. The nose is a light brown color. The mouth is slightly closed.</s>",
+    "grounding": "</s><s>portrait<loc_0><loc_0><loc_998><loc_998>The man<loc_0><loc_0><loc_994><loc_998>The photo<loc_0><loc_0><loc_995><loc_998>The face<loc_210><loc_0><loc_867><loc_869>The eyebrows<loc_379><loc_241><loc_835><loc_329>The eyes<loc_391><loc_307><loc_824><loc_421><loc_395><loc_311><loc_554><loc_394><loc_686><loc_337><loc_819><loc_415>The nose<loc_513><loc_340><loc_734><loc_566>The mouth<loc_494><loc_592><loc_738><loc_729></s>",
+    "objects": "</s><s>human face<loc_284><loc_50><loc_844><loc_865>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

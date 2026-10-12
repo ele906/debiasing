@@ -1,0 +1,58 @@
+{
+  "sample_id": "east_asian_man_seed000",
+  "image": "/n/fs/goose/backprop/images/east_asian_man/seed000.png",
+  "image_sha256": "b898b6685a27aa58f26bbbd8c4eaf6bffe9f455bdc939ebbe3a837b9c385d3f6",
+  "caption": "An Asian man is looking directly at the camera.  He has a serious look on his face.  His hair is short and black.  The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        93.44000244140625,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        202.49600219726562,
+        93.44000244140625,
+        473.85601806640625,
+        459.0080261230469
+      ],
+      [
+        191.2320098876953,
+        0.25600001215934753,
+        504.5760192871094,
+        239.87200927734375
+      ]
+    ],
+    "labels": [
+      "An Asian man",
+      "face",
+      "His hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        205.56800842285156,
+        92.41600799560547,
+        470.7840270996094,
+        459.52001953125
+      ],
+      [
+        113.92000579833984,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An Asian man is looking directly at the camera.  He has a serious look on his face.  His hair is short and black.  The background is blurry.</s>",
+    "grounding": "</s><s>An Asian man<loc_182><loc_0><loc_998><loc_998>face<loc_395><loc_182><loc_925><loc_896>His hair<loc_373><loc_0><loc_985><loc_468></s>",
+    "objects": "</s><s>human face<loc_401><loc_180><loc_919><loc_897>man<loc_222><loc_0><loc_998><loc_998></s>"
+  }
+}

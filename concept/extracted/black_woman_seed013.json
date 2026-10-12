@@ -1,0 +1,58 @@
+{
+  "sample_id": "black_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed013.png",
+  "image_sha256": "0ff32f54098544e93372a611dd6d2886d5b2ba65a08d134799440a179e448638",
+  "caption": "A woman is looking directly at the camera. She has an afro. She is wearing silver hoop earrings and a black bra. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        61.18400192260742,
+        0.25600001215934753,
+        511.2320251464844,
+        300.8000183105469
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "afro"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        124.16000366210938,
+        348.9280090332031,
+        445.18402099609375,
+        511.2320251464844
+      ],
+      [
+        210.68800354003906,
+        91.90400695800781,
+        367.3600158691406,
+        310.0160217285156
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "brassiere",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking directly at the camera. She has an afro. She is wearing silver hoop earrings and a black bra. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>afro<loc_119><loc_0><loc_998><loc_587></s>",
+    "objects": "</s><s>brassiere<loc_242><loc_681><loc_869><loc_998>human face<loc_411><loc_179><loc_717><loc_605>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

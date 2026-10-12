@@ -1,0 +1,6 @@
+hf_cache/
+hf_modules/
+deps/
+__pycache__/
+extracted/*_grounded.jpg
+sae_comparison/maps/*.npy

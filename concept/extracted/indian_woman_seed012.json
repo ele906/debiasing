@@ -1,0 +1,58 @@
+{
+  "sample_id": "indian_woman_seed012",
+  "image": "/n/fs/goose/backprop/images/indian_woman/seed012.png",
+  "image_sha256": "ac17cebe4fe0615106da90b1f5ced8f1490f8ce25101d9ac730b77ee46b16a95",
+  "caption": "A woman is looking at the camera. She has a red dot on her forehead. She is wearing gold earrings and a blue shirt. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        271.10400390625,
+        80.64000701904297,
+        292.6080017089844,
+        106.75200653076172
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "dot"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        321.7920227050781,
+        192.25601196289062,
+        417.0240173339844,
+        235.77601623535156
+      ],
+      [
+        143.10400390625,
+        61.18400192260742,
+        449.7920227050781,
+        453.8880310058594
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking at the camera. She has a red dot on her forehead. She is wearing gold earrings and a blue shirt. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>dot<loc_529><loc_157><loc_571><loc_208></s>",
+    "objects": "</s><s>human eye<loc_628><loc_375><loc_814><loc_460>human face<loc_279><loc_119><loc_878><loc_886>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

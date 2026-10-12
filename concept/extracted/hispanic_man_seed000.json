@@ -1,0 +1,100 @@
+{
+  "sample_id": "hispanic_man_seed000",
+  "image": "/n/fs/goose/backprop/images/hispanic_man/seed000.png",
+  "image_sha256": "4d65847f120fddd86e324b35d6bfa5341076fc68fc3cb78f6f194911a648ba8b",
+  "caption": "A man is looking directly at the camera. He has dark brown hair and a goatee. His eyes are dark and he has a serious look on his face. He is wearing a white button down shirt.",
+  "grounding": {
+    "bboxes": [
+      [
+        27.904001235961914,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        66.81600189208984,
+        0.25600001215934753,
+        485.1200256347656,
+        317.6960144042969
+      ],
+      [
+        177.4080047607422,
+        284.9280090332031,
+        357.63201904296875,
+        432.384033203125
+      ],
+      [
+        178.4320068359375,
+        284.9280090332031,
+        344.83203125,
+        340.2240295410156
+      ],
+      [
+        144.1280059814453,
+        167.1680145263672,
+        346.8800048828125,
+        213.760009765625
+      ],
+      [
+        269.5680236816406,
+        169.21600341796875,
+        343.2960205078125,
+        199.42401123046875
+      ],
+      [
+        148.22401428222656,
+        182.01600646972656,
+        214.27200317382812,
+        212.22401428222656
+      ],
+      [
+        125.69600677490234,
+        53.50400161743164,
+        415.4880065917969,
+        431.3600158691406
+      ],
+      [
+        27.39200210571289,
+        340.73602294921875,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "hair",
+      "goatee",
+      "goatee",
+      "eyes",
+      "eyes",
+      "eyes",
+      "face",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        126.2080078125,
+        48.89600372314453,
+        409.85601806640625,
+        430.8480224609375
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is looking directly at the camera. He has dark brown hair and a goatee. His eyes are dark and he has a serious look on his face. He is wearing a white button down shirt.</s>",
+    "grounding": "</s><s>A man<loc_54><loc_0><loc_998><loc_998>hair<loc_130><loc_0><loc_947><loc_620>goatee<loc_346><loc_556><loc_698><loc_844><loc_348><loc_556><loc_673><loc_664>eyes<loc_281><loc_326><loc_677><loc_417><loc_526><loc_330><loc_670><loc_389><loc_289><loc_355><loc_418><loc_414>face<loc_245><loc_104><loc_811><loc_842>shirt<loc_53><loc_665><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_246><loc_95><loc_800><loc_841>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

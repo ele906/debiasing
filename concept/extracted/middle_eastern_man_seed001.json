@@ -1,0 +1,100 @@
+{
+  "sample_id": "middle_eastern_man_seed001",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_man/seed001.png",
+  "image_sha256": "6dedf4b6d953fd66495eff79affe1954043179f62167ef0d8bee9134c143bfa7",
+  "caption": "A man with a white beard and a black and white hat on his head. He is wearing a white shirt. There is dirt behind the man. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        128.25601196289062,
+        261.88800048828125,
+        388.864013671875,
+        488.7040100097656
+      ],
+      [
+        68.86400604248047,
+        0.25600001215934753,
+        434.94403076171875,
+        168.19200134277344
+      ],
+      [
+        68.86400604248047,
+        0.25600001215934753,
+        434.4320068359375,
+        488.1920166015625
+      ],
+      [
+        0.25600001215934753,
+        393.4720153808594,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.18402099609375,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "a white beard",
+      "a black and white hat",
+      "head",
+      "a white shirt",
+      "dirt",
+      "dirt",
+      "man"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        127.74400329589844,
+        265.4720153808594,
+        390.9120178222656,
+        494.8480224609375
+      ],
+      [
+        132.864013671875,
+        92.41600799560547,
+        379.64801025390625,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human beard",
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man with a white beard and a black and white hat on his head. He is wearing a white shirt. There is dirt behind the man. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>a white beard<loc_250><loc_511><loc_759><loc_954>a black and white hat<loc_134><loc_0><loc_849><loc_328>head<loc_134><loc_0><loc_848><loc_953>a white shirt<loc_0><loc_768><loc_998><loc_998>dirt<loc_0><loc_0><loc_997><loc_998><loc_0><loc_0><loc_996><loc_998>man<loc_0><loc_0><loc_994><loc_998></s>",
+    "objects": "</s><s>human beard<loc_249><loc_518><loc_763><loc_966>human face<loc_259><loc_180><loc_741><loc_832>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "sample_id": "white_woman_seed003",
+  "image": "/n/fs/goose/backprop/images/white_woman/seed003.png",
+  "image_sha256": "325f59569a43a4ee640b9a21acbb92042b0e2adbf9d96f86fadb0c8165c724b1",
+  "caption": "A woman is posing for a photo. She has long blonde hair. She is wearing a white tank top. Her eyes are blue and her lips are pink.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        55.552001953125,
+        0.25600001215934753,
+        511.2320251464844,
+        510.72003173828125
+      ],
+      [
+        56.57600402832031,
+        376.5760192871094,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        191.74400329589844,
+        150.7840118408203,
+        356.09600830078125,
+        182.52801513671875
+      ],
+      [
+        295.6800231933594,
+        152.32000732421875,
+        354.5600280761719,
+        178.9440155029297
+      ],
+      [
+        193.79200744628906,
+        155.3920135498047,
+        248.0640106201172,
+        181.50401306152344
+      ],
+      [
+        236.80001831054688,
+        264.96002197265625,
+        322.30401611328125,
+        301.8240051269531
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "hair",
+      "tank top",
+      "Her eyes",
+      "Her eyes",
+      "Her eyes",
+      "lips"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        165.6320037841797,
+        54.52800369262695,
+        396.0320129394531,
+        346.8800048828125
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is posing for a photo. She has long blonde hair. She is wearing a white tank top. Her eyes are blue and her lips are pink.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>hair<loc_108><loc_0><loc_998><loc_997>tank top<loc_110><loc_735><loc_998><loc_998>Her eyes<loc_374><loc_294><loc_695><loc_356><loc_577><loc_297><loc_692><loc_349><loc_378><loc_303><loc_484><loc_354>lips<loc_462><loc_517><loc_629><loc_589></s>",
+    "objects": "</s><s>human face<loc_323><loc_106><loc_773><loc_677>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

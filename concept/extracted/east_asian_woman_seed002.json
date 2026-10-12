@@ -1,0 +1,79 @@
+{
+  "sample_id": "east_asian_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/east_asian_woman/seed002.png",
+  "image_sha256": "e57392f8299b1c9a6da2d4f88e4204e55907a54e69fa2fd4b2a5661adfc6ef33",
+  "caption": "A woman is wearing a kimono. She has a flower in her hair. The woman has dark brown hair. ",
+  "grounding": {
+    "bboxes": [
+      [
+        90.36800384521484,
+        24.832000732421875,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        90.8800048828125,
+        337.66400146484375,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        370.4320068359375,
+        75.52000427246094,
+        452.864013671875,
+        201.9840087890625
+      ],
+      [
+        139.52000427246094,
+        25.34400177001953,
+        429.31201171875,
+        304.8960266113281
+      ],
+      [
+        90.36800384521484,
+        25.34400177001953,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        139.52000427246094,
+        25.856000900268555,
+        429.31201171875,
+        304.8960266113281
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "kimono",
+      "flower",
+      "hair",
+      "The woman",
+      "hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        148.22401428222656,
+        105.21600341796875,
+        334.08001708984375,
+        363.7760314941406
+      ],
+      [
+        87.8080062866211,
+        25.856000900268555,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a kimono. She has a flower in her hair. The woman has dark brown hair. </s>",
+    "grounding": "</s><s>A woman<loc_176><loc_48><loc_998><loc_998>kimono<loc_177><loc_659><loc_998><loc_998>flower<loc_723><loc_147><loc_884><loc_394>hair<loc_272><loc_49><loc_838><loc_595>The woman<loc_176><loc_49><loc_998><loc_998>hair<loc_272><loc_50><loc_838><loc_595></s>",
+    "objects": "</s><s>human face<loc_289><loc_205><loc_652><loc_710>woman<loc_171><loc_50><loc_998><loc_998></s>"
+  }
+}

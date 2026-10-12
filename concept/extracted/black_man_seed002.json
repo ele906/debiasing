@@ -1,0 +1,86 @@
+{
+  "sample_id": "black_man_seed002",
+  "image": "/n/fs/goose/backprop/images/black_man/seed002.png",
+  "image_sha256": "3aac10fc73d0f3c883293f38788bd1327eee133d88b776cb641ecf916be6c1ec",
+  "caption": "This is a portrait of a black man.  The man has dark skin and dark eyes.  He is wearing a black suit with a white collared shirt underneath.  His mouth is slightly open.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        120.06400299072266,
+        175.36001586914062,
+        387.84002685546875,
+        224.5120086669922
+      ],
+      [
+        123.64800262451172,
+        178.9440155029297,
+        215.80801391601562,
+        222.46400451660156
+      ],
+      [
+        295.1679992675781,
+        178.9440155029297,
+        385.280029296875,
+        220.92800903320312
+      ],
+      [
+        177.92001342773438,
+        341.760009765625,
+        338.6880187988281,
+        422.656005859375
+      ]
+    ],
+    "labels": [
+      "a portrait",
+      "The man",
+      "eyes",
+      "eyes",
+      "eyes",
+      "his mouth"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        85.76000213623047,
+        0.25600001215934753,
+        422.1440124511719,
+        511.2320251464844
+      ],
+      [
+        189.1840057373047,
+        188.16000366210938,
+        321.7920227050781,
+        319.7440185546875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "human nose",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>This is a portrait of a black man.  The man has dark skin and dark eyes.  He is wearing a black suit with a white collared shirt underneath.  His mouth is slightly open.</s>",
+    "grounding": "</s><s>a portrait<loc_0><loc_0><loc_998><loc_998>The man<loc_0><loc_1><loc_998><loc_998>eyes<loc_234><loc_342><loc_757><loc_438><loc_241><loc_349><loc_421><loc_434><loc_576><loc_349><loc_752><loc_431>his mouth<loc_347><loc_667><loc_661><loc_825></s>",
+    "objects": "</s><s>human face<loc_167><loc_0><loc_824><loc_998>human nose<loc_369><loc_367><loc_628><loc_624>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}
