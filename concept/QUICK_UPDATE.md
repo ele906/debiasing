@@ -1,6 +1,6 @@
 # Quick research update
 
-We are identifying candidate concepts shared by a C2C-style Florence-2 audit and the pretrained SDXL Turbo SAE. The current evidence is descriptive and exploratory; no features have been suppressed.
+We are identifying candidate concepts shared by a C2C-style Florence-2 audit and the pretrained SDXL Turbo SAE. The current evidence is exploratory. A first feature-strength intervention has now run; it did not remove necklace detector labels.
 
 ## Completed
 
@@ -37,3 +37,7 @@ Generated 48 new paired images using four new seeds per group, two groups per co
 - [Fresh necklace controls](independent_controls/necklace_controls.jpg)
 - [Fresh afro controls](independent_controls/afro_controls.jpg)
 - [Fresh beard controls](independent_controls/beard_controls.jpg)
+
+## First tuning experiment
+
+[Completed tuning summary](tuning/run_001/SUMMARY.md). Feature 3181 and an activity-matched random control were swept at alpha 0, 0.5, 1, and 1.5 on sixteen fresh images. Every unchanged-strength output matched the original exactly. Necklace detector presence stayed 9/16 across target strengths. Inspected examples show necklace appearance and face/pose changes, not clean necklace removal. This is a useful distinction between finding a spatial association and achieving concept-specific control.

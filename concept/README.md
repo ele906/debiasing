@@ -120,6 +120,10 @@ Necklace feature 3985 has global validation AUC about 0.805 and within-group AUC
 
 The top-one checks are in [intersections/REPORT.md](intersections/REPORT.md). All five train-selected candidates for necklace, afro, and beard are in [intersections_alternatives/REPORT.md](intersections_alternatives/REPORT.md). Numerical screening is not semantic validation: confirmed detector misses are flagged, and all alternative candidates are reported.
 
-Necklace-region feature 3181 is the current provisional overlap. The earlier 3985 candidate failed the controlled spatial test. Afro and beard controls have observed detector-label errors; their specificity is unresolved. No weights were changed or features suppressed.
+Necklace-region feature 3181 is the current provisional overlap. The earlier 3985 candidate failed the controlled spatial test. Afro and beard controls have observed detector-label errors; their specificity is unresolved. These spatial checks keep weights fixed. The subsequent feature-strength sweep is documented under tuning.
 
 `fresh_controls.py` generates 48 independently seeded paired controls with fixed features 3181, 1500, and 2893. The manifest preserves requested conditions separately from blank visual-review labels. Requested present/absent prompts do not establish actual concept presence. These controls are additional data, not part of the original 1,200-image count tables.
+
+## Feature-strength tuning
+
+[Experiment folder and method](tuning/README.md), [completed sweep summary](tuning/run_001/SUMMARY.md), and [target/control comparison grids](tuning/run_001/REPORT.md). The first sweep completed sixteen samples at four strengths for feature 3181 and activity-matched control 2808. All baseline/no-op checks passed. Target edits change image appearance but leave necklace detector presence unchanged at 9/16. No best strength or successful concept-erasure result is claimed.
