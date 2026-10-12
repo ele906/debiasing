@@ -21,3 +21,7 @@ The fixed candidate IDs came from the train-only feature ranking. The control fe
 ## Headscarf and earring ablation
 
 The separate [headscarf and earring pilot](accessory_ablation/REPORT.md) tests the discovery-ranked candidate features at strengths -1, -0.5, 0, 0.5, and 1, with same-prompt samples and matched random-feature controls. The runnable script is [accessory_ablation.py](accessory_ablation.py). These negative values subtract more than the feature's measured contribution; they do not retrain the SAE.
+
+## C2C-box-masked earring ablation
+
+The [box-masked pilot](box_masked_earring/REPORT.md) maps localized C2C earring boxes to the SAE's runtime spatial grid and compares local suppression with global suppression and a random-feature control. The runner is [box_masked_earring.py](box_masked_earring.py).

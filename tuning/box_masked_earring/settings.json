@@ -1,0 +1,14 @@
+{
+  "candidate_feature": 4858,
+  "random_control_feature": 2940,
+  "box_masked": true,
+  "box_source": "concept/category_analysis_full/bounding_boxes.csv",
+  "box_padding_activation_cells": 1,
+  "strengths": [
+    0,
+    0.5,
+    1
+  ],
+  "samples": 4,
+  "interpretation": "Exploratory spatial intervention; C2C boxes and automatic labels require visual review."
+}
