@@ -34,12 +34,41 @@ def auc(y, score):
     return float(((pos[:, None] > neg).sum() + .5 * (pos[:, None] == neg).sum()) / (len(pos) * len(neg)))
 
 
-def matched_difference(x, y, rows, split):
+def auc_features(y, scores):
+    """ROC AUC for every feature, using average ranks for tied activations."""
+    positive = int(y.sum())
+    negative = len(y) - positive
+    if not positive or not negative:
+        return np.full(scores.shape[1], np.nan)
+    order = np.argsort(scores, axis=0, kind='stable')
+    sorted_scores = np.take_along_axis(scores, order, axis=0)
+    positions = np.broadcast_to(np.arange(len(y))[:, None], order.shape)
+    starts = np.concatenate([np.ones((1, scores.shape[1]), dtype=bool), sorted_scores[1:] != sorted_scores[:-1]])
+    ends = np.concatenate([sorted_scores[:-1] != sorted_scores[1:], np.ones((1, scores.shape[1]), dtype=bool)])
+    first = np.maximum.accumulate(np.where(starts, positions, 0), axis=0)
+    last = np.minimum.accumulate(np.where(ends, positions, len(y)-1)[::-1], axis=0)[::-1]
+    ranks = (first + last) / 2 + 1
+    positive_ranks = (ranks * y[order]).sum(axis=0)
+    return (positive_ranks - positive * (positive + 1) / 2) / (positive * negative)
+
+
+def matched_auc(x, y, rows, split, min_count):
+    curves, weights = [], []
+    for group in sorted({(r['race_prompt'], r['gender_prompt']) for r in rows}):
+        mask = np.array([r['split'] == split and (r['race_prompt'], r['gender_prompt']) == group for r in rows])
+        positive, negative = int((mask & y).sum()), int((mask & ~y).sum())
+        if min(positive, negative) >= min_count:
+            curves.append(auc_features(y[mask], x[mask]))
+            weights.append(min(positive, negative))
+    return (np.average(curves, axis=0, weights=weights) if curves else None), len(curves)
+
+
+def matched_difference(x, y, rows, split, min_count=1):
     contrasts = []
     for group in sorted({(r['race_prompt'], r['gender_prompt']) for r in rows}):
         mask = np.array([r['split'] == split and (r['race_prompt'], r['gender_prompt']) == group for r in rows])
         pos, neg = mask & y, mask & ~y
-        if pos.any() and neg.any():
+        if pos.sum() >= min_count and neg.sum() >= min_count:
             contrasts.append(x[pos].mean(0) - x[neg].mean(0))
     return (np.mean(contrasts, axis=0) if contrasts else None), len(contrasts)
 
@@ -55,9 +84,11 @@ def main():
     p.add_argument('--data', type=Path, default=HERE.parent / 'backprop')
     p.add_argument('--output', type=Path, default=HERE / 'sae_comparison')
     p.add_argument('--exclude-test', action='store_true', help='Discard test rows from full extraction input before any comparison')
+    p.add_argument('--min-group-count', type=int, default=3)
+    p.add_argument('--min-feature-positive', type=int, default=5)
     p.add_argument('--top-k', type=int, default=5)
     args = p.parse_args()
-    if args.top_k < 1:
+    if min(args.top_k, args.min_group_count, args.min_feature_positive) < 1:
         p.error('top-k must be positive')
     if args.output.exists():
         raise ValueError('Choose a new output directory')
@@ -93,33 +124,42 @@ def main():
         for r, present in zip(rows, y):
             labels.append(dict(sample_id=r['sample_id'], split=r['split'], concept=concept, detector_present=int(present)))
         counts = dict(train_positive=int((train & y).sum()), train_negative=int((train & ~y).sum()), validation_positive=int((val & y).sum()), validation_negative=int((val & ~y).sum()))
-        within, ng = matched_difference(x, y, rows, 'train')
-        vwithin, nvg = matched_difference(x, y, rows, 'validation')
+        within, ng = matched_difference(x, y, rows, 'train', args.min_group_count)
+        vwithin, nvg = matched_difference(x, y, rows, 'validation', args.min_group_count)
+        train_curve, train_control_groups = matched_auc(x, y, rows, 'train', args.min_group_count)
+        val_curve, val_control_groups = matched_auc(x, y, rows, 'validation', args.min_group_count)
         if not counts['train_positive'] or not counts['train_negative']:
-            summary.append(dict(concept=concept, **counts, status='no discovery class contrast', selection='', feature='', train_auc='', validation_auc='', train_matched_groups=ng, validation_matched_groups=nvg, validation_within_difference=''))
+            summary.append(dict(concept=concept, **counts, status='no discovery class contrast', selection='', feature='', train_auc='', validation_auc='', train_matched_groups=ng, validation_matched_groups=nvg, validation_within_difference='', train_matched_auc='', validation_matched_auc='', train_positive_active='', validation_positive_active=''))
             continue
         global_diff = x[train & y].mean(0) - x[train & ~y].mean(0)
-        selection = 'within_prompt_groups' if within is not None else 'global_confounded'
+        selection = 'within_group_auc' if train_curve is not None else 'global_auc_confounded'
         effect = within if within is not None else global_diff
-        ranked = np.argsort(-(effect / sd), kind='stable')[:args.top_k]
+        global_curve = auc_features(y[train], x[train])
+        score = train_curve if train_curve is not None else global_curve
+        support = (x[train & y] > 0).sum(0)
+        eligible = np.flatnonzero((support >= args.min_feature_positive) & (score > .5))
+        ranked = eligible[np.lexsort((-global_curve[eligible], -score[eligible]))[:args.top_k]]
+        if not len(ranked):
+            summary.append(dict(concept=concept, **counts, status='no positively associated feature with required training support', selection=selection, feature='', train_auc='', validation_auc='', train_matched_groups=train_control_groups, validation_matched_groups=val_control_groups, validation_within_difference='', train_matched_auc='', validation_matched_auc='', train_positive_active='', validation_positive_active=''))
+            continue
         for rank, feature in enumerate(ranked,1):
             a, va = auc(y[train], x[train,feature]), auc(y[val],x[val,feature])
             vdiff = None if vwithin is None else float(vwithin[feature])
-            record=dict(concept=concept, rank=rank, feature=int(feature), selection=selection, train_standardized_difference=float(effect[feature]/sd[feature]), train_auc=a, validation_auc='' if va is None else va, train_matched_groups=ng, validation_matched_groups=nvg, validation_within_difference='' if vdiff is None else vdiff)
+            record=dict(concept=concept, rank=rank, feature=int(feature), selection=selection, train_standardized_difference=float(effect[feature]/sd[feature]), train_auc=a, validation_auc='' if va is None else va, train_matched_groups=train_control_groups, validation_matched_groups=val_control_groups, validation_within_difference='' if vdiff is None else vdiff, train_matched_auc='' if train_curve is None else float(train_curve[feature]), validation_matched_auc='' if val_curve is None else float(val_curve[feature]), train_positive_active=int(support[feature]), validation_positive_active=int((x[val & y, feature] > 0).sum()))
             candidates.append(record)
             if rank == 1:
-                status = 'within-group controls available; inspect validation effect' if ng and nvg else 'insufficient within-group validation controls'
-                summary.append(dict(concept=concept, **counts, status=status, **{k:record[k] for k in ['selection','feature','train_auc','validation_auc','train_matched_groups','validation_matched_groups','validation_within_difference']}))
+                status = 'within-group controls available; inspect validation effect' if train_control_groups and val_control_groups else 'insufficient within-group validation controls'
+                summary.append(dict(concept=concept, **counts, status=status, **{k:record[k] for k in ['selection','feature','train_auc','validation_auc','train_matched_groups','validation_matched_groups','validation_within_difference','train_matched_auc','validation_matched_auc','train_positive_active','validation_positive_active']}))
     args.output.mkdir(parents=True)
     write(args.output/'summary.csv',summary,list(summary[0]))
     write(args.output/'candidates.csv',candidates,list(candidates[0]) if candidates else ['concept','feature'])
     write(args.output/'detector_targets.csv',labels,list(labels[0]))
-    (args.output/'settings.json').write_text(json.dumps(dict(predictions_sha256=hashlib.sha256(args.predictions.read_bytes()).hexdigest(),patterns=PATTERNS,sae_checkpoint=settings['sae_checkpoint'],sae_weights_sha256=settings['sae_weights_sha256'],block=settings['block'],pooling='spatial mean',samples=len(rows),excluded_test=input_count-len(rows),train=int(train.sum()),validation=int(val.sum()),top_k=args.top_k,selection='Train only; within-group standardized mean differences when possible, otherwise flagged global contrast',interpretation='Unreviewed detector-label agreement; not causal validation or evidence of reduced racism'),indent=2))
-    report=['# SAE agreement with extracted concepts','','Existing pretrained SAE; no training or suppression. Targets are unreviewed Florence-2 detector phrases, normalized by explicit patterns. Detector absence may be a missed detection.','',f'{len(rows)} images: {train.sum()} train, {val.sum()} validation; test untouched.','', '| Concept | Feature | Train AUC | Validation AUC | Matched groups train/val | Status |','|---|---:|---:|---:|---:|---|']
+    (args.output/'settings.json').write_text(json.dumps(dict(predictions_sha256=hashlib.sha256(args.predictions.read_bytes()).hexdigest(),patterns=PATTERNS,sae_checkpoint=settings['sae_checkpoint'],sae_weights_sha256=settings['sae_weights_sha256'],block=settings['block'],pooling='spatial mean',samples=len(rows),excluded_test=input_count-len(rows),train=int(train.sum()),validation=int(val.sum()),top_k=args.top_k,min_group_count=args.min_group_count,min_feature_positive=args.min_feature_positive,selection='Train only; within-group AUC weighted by smaller class size, then global AUC for ties. Require positive activation on at least min_feature_positive detector-positive training images; global AUC fallback flagged confounded',interpretation='Unreviewed detector-label agreement; not causal validation or evidence of reduced racism'),indent=2))
+    report=['# SAE agreement with extracted concepts','','Existing pretrained SAE; no training or suppression. Targets are unreviewed Florence-2 detector phrases, normalized by explicit patterns. Detector absence may be a missed detection.','',f'{len(rows)} images: {train.sum()} train, {val.sum()} validation; test rows are excluded from this comparison.','', '| Concept | Feature | Train AUC | Validation AUC | Within-group validation AUC | Matched groups train/val | Status |','|---|---:|---:|---:|---:|---:|---|']
     for r in summary:
         fmt=lambda v: '' if v=='' else f'{v:.3f}'
-        report.append(f'| {r["concept"]} | {r["feature"]} | {fmt(r["train_auc"])} | {fmt(r["validation_auc"])} | {r["train_matched_groups"]}/{r["validation_matched_groups"]} | {r["status"]} |')
-    report += ['', 'AUC 0.5 means chance ordering, 1 means perfect separation of detector positives/negatives. Validation labels never choose the feature. Group controls can contain only one positive/negative image in this small pilot; these are exploratory results with no significance claim. High global AUC can reflect prompt-group identity rather than the named concept. Missing matched validation groups prevents distinguishing those explanations. Features can mix concepts. No concept has been causally established.', '', 'Next: inspect spatial SAE maps, review/correct detector labels, expand within-group positive/negative controls, then test interventions and random-feature controls. Clothing and hairstyles are not themselves harm targets.']
+        report.append(f'| {r["concept"]} | {r["feature"]} | {fmt(r["train_auc"])} | {fmt(r["validation_auc"])} | {fmt(r["validation_matched_auc"])} | {r["train_matched_groups"]}/{r["validation_matched_groups"]} | {r["status"]} |')
+    report += ['', f'AUC 0.5 means chance ordering, 1 means perfect separation of detector positives/negatives. Validation labels never choose the feature. Feature selection requires at least {args.min_group_count} detector positives and {args.min_group_count} negatives per matched training group, with group AUC weighted by the smaller class size. Features must activate on at least {args.min_feature_positive} detector-positive training images. These are exploratory results with no significance claim. High global AUC can reflect prompt-group identity rather than the named concept. Missing matched validation groups prevents distinguishing those explanations. Features can mix concepts. No concept has been causally established.', '', 'Next: inspect spatial SAE maps, review/correct detector labels, expand within-group positive/negative controls, then test interventions and random-feature controls. Clothing and hairstyles are not themselves harm targets.']
     (args.output/'REPORT.md').write_text('\n'.join(report))
     print('\n'.join(report),flush=True)
 

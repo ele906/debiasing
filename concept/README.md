@@ -90,3 +90,24 @@ Results: [SAE report](sae_comparison/REPORT.md), [summary](sae_comparison/summar
 For the full SAE comparison, use `compare_sae.py --exclude-test --output concept/sae_comparison_full`: 720 training and 240 validation samples; the 240 test samples do not choose features. Full-dataset category counts can include test samples for descriptive auditing, so the dataset has now been inspected broadly; further confirmatory conclusions should use new independent controls.
 
 The pilot SAE spatial replay completed with 12 exact image reproductions. Headscarf 3364 was inactive on the two selected detector-positive examples, and inspected necklace 43 activation was near the head rather than the necklace. Kimono 1899 overlapped clothing but remains prompt-group-confounded. The current candidates are exploratory rather than established intervention targets.
+
+### Completed full results
+
+All 1,200 extraction outputs were verified. Top-level `REPORT.md`, `concept_predictions.csv`, and `concept_frequencies.csv` now cover all 1,200 images. The original 72-image summaries are preserved in `pilot/extraction_summary/`.
+
+- [Complete counts by category](category_analysis_full/counts_by_category.md)
+- [Complete rates by category](category_analysis_full/rates_by_category.md)
+- [Complete raw phrase counts](category_analysis_full/raw_phrase_counts_by_category.md)
+- [Complete race-pooled counts](category_analysis_full/counts_by_race.md)
+- [Full bounding-box report and category sheets](category_analysis_full/REPORT.md)
+- [Full SAE comparison](sae_comparison_full/REPORT.md)
+- [Complete SAE summary table](sae_comparison_full/summary.md)
+- [All SAE candidates](sae_comparison_full/candidates.md)
+
+Each of the 12 source categories has 100 images. Turban detector counts are 93/100 for Indian-man prompts, 27/100 for Middle-Eastern-man prompts, and 1/100 for Indian-woman prompts. Raw phrase tables preserve generic scarf labels separately; headscarf patterns do not treat every scarf as a head covering. Malformed reversed-coordinate boxes are kept in raw predictions but skipped in drawings.
+
+The full SAE ranking uses train-only within-group ROC AUC, weighted by the smaller class size, requiring at least three detector positives and three negatives per qualifying group and at least five detector-positive training images on which the feature activates. This avoids promoting features that fire on just one image. Global AUC is a tie-breaker or flagged fallback when training group controls are unavailable. The report shows both global and within-group validation agreement. The 240 test rows are excluded before all SAE comparison calculations.
+
+Necklace feature 3985 has global validation AUC about 0.805 and within-group AUC about 0.742, but only one qualifying validation group. Afro feature 1500 has high global agreement (about 0.966), with weaker within-group agreement (about 0.667). Beard feature 5085 has high global agreement but below-chance within-group agreement, demonstrating confounding. The full candidates differ from the pilot IDs and do not inherit the pilot's spatial validation. Detector review, fresh controls, and spatial/causal checks remain before suppression.
+
+`markdown_tables.py` exports all rows and columns of count/rate and SAE result CSVs; wide concept tables are split into smaller column blocks without dropping data. The full detector records, dependency caches, and 1,200 individual full-size boxed panels stay local; the complete summary tables, box coordinate CSV, and 12 representative category sheets are staged for Git.

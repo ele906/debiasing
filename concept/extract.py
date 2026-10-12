@@ -125,9 +125,14 @@ def main():
                 caption=caption, grounding=grounding, objects=objects,
                 raw=dict(caption=raw_caption, grounding=raw_grounding, objects=raw_od))
             path.write_text(json.dumps(record, indent=2))
+        if not (args.output / f'{sample}_grounded.jpg').exists():
+            with Image.open(row['image']) as source:
+                image = source.convert('RGB')
             overlay = image.copy()
             draw = ImageDraw.Draw(overlay)
-            for label, box in zip(grounding['labels'], grounding['bboxes']):
+            for label, box in zip(record['grounding']['labels'], record['grounding']['bboxes']):
+                if len(box) != 4 or box[2] < box[0] or box[3] < box[1]:
+                    continue  # Preserve raw invalid predictions, omit their drawing.
                 draw.rectangle(box, outline='red', width=2)
                 draw.text((box[0], box[1]), label, fill='red', stroke_width=1, stroke_fill='white')
             overlay.save(args.output / f'{sample}_grounded.jpg')

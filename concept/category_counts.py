@@ -54,14 +54,14 @@ def main():
         tally=Counter(c for r in samples for c in normalized[r['sample_id']])
         pooled.append(dict(race_prompt=race,images=len(samples),**{c:tally[c] for c in PATTERNS}))
     write(args.output/'counts_by_race.csv',pooled,['race_prompt','images']+list(PATTERNS))
-    report=['# Concept counts by prompt category','','Counts are images containing a detector label, not numbers of boxes. Repeated labels in an image count once. Targets are unreviewed predictions; missing labels may be detector misses. Clothing and hairstyle presence is not a racism label.','',f'This pilot has {len(groups)} categories, {len(rows)} images total. The source dataset defines six race prompts and two gender prompts (12 categories), not 16. Counts use every supplied image; denominators appear in the table. Test labels, when supplied, are descriptive only and must be excluded from SAE feature selection.','']
+    report=['# Concept counts by prompt category','','Counts are images containing a detector label, not numbers of boxes. Repeated labels in an image count once. Targets are unreviewed predictions; missing labels may be detector misses. Clothing and hairstyle presence is not a racism label.','',f'This extraction has {len(groups)} categories, {len(rows)} images total. The source dataset defines six race prompts and two gender prompts (12 categories), not 16. Counts use every supplied image; denominators appear in the table. Test labels, when supplied, are descriptive only and must be excluded from SAE feature selection.','']
     for chunk in [list(PATTERNS)[:7],list(PATTERNS)[7:]]:
         report += ['| Category | Images | '+' | '.join(chunk)+' |','|---|---:|'+'---:|'*len(chunk)]
         for row in counts:report.append('| '+row['category']+' | '+str(row['images'])+' | '+' | '.join(str(row[c]) for c in chunk)+' |')
         report.append('')
     report += ['## How labels are matched','','The normalized table uses these exact detector-phrase patterns (caption-only mentions are excluded):','']
     report += [f'- `{c}`: `{pattern}`' for c,pattern in PATTERNS.items()]
-    report += ['', 'Raw phrases are preserved in raw_phrase_counts_by_category.csv. Rates are fractions from 0 to 1 in rates_by_category.csv. The pilot is small and these are descriptive counts, not population estimates or significance tests.', '', '## Bounding boxes', '', 'Category JPG sheets below show all unique phrase-grounding and object-detection boxes for each image. Numbered boxes correspond to the legend below each tile. Blue: phrase grounding; red: object detection. Both sources can disagree or miss concepts. Some large boxes label whole people or abstract descriptions rather than distinct objects. These boxes are not SAE heatmaps.', '']
+    report += ['', 'Raw phrases are preserved in raw_phrase_counts_by_category.csv. Rates are fractions from 0 to 1 in rates_by_category.csv. The pilot is small and these are descriptive counts, not population estimates or significance tests.', '', '## Bounding boxes', '', 'Category JPG sheets below show all unique phrase-grounding and object-detection boxes for each image. Numbered boxes correspond to the legend below each tile. Blue: phrase grounding; red: object detection. Both sources can disagree or miss concepts. Malformed reversed-coordinate boxes are preserved in the raw JSON but omitted from these drawings. Some large boxes label whole people or abstract descriptions rather than distinct objects. These boxes are not SAE heatmaps.', '']
     report += [f'Category sheets show the first {args.sheet_limit} examples per category. Individual boxed images exist under boxes/ for every supplied sample.', '']
     bbox_rows=[]
     (args.output/'boxes').mkdir()
@@ -80,6 +80,9 @@ def main():
                     key=(str(label).lower().strip(),tuple(round(float(v),1) for v in box))
                     if key in seen:continue
                     seen.add(key)
+                    if len(box)!=4 or box[2]<box[0] or box[3]<box[1]:
+                        print(f'Skipping malformed box: {sample} {source} {label}',flush=True)
+                        continue
                     number=len(legend)+1
                     draw.rectangle(box,outline=color,width=2)
                     draw.text((box[0],box[1]),str(number),fill=color,stroke_width=1,stroke_fill='white')
