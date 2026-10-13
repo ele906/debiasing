@@ -1,0 +1,25 @@
+{
+  "prompt_group": "east asian woman",
+  "train_images": 60,
+  "validation_images": 20,
+  "train_positive": 19,
+  "train_negative": 41,
+  "validation_positive": 8,
+  "validation_negative": 12,
+  "canonical_roi_boxes_for_negatives": [
+    [
+      165.6320037841797,
+      254.7200164794922,
+      195.3280029296875,
+      337.66400146484375
+    ],
+    [
+      365.31201171875,
+      240.38401794433594,
+      388.3520202636719,
+      315.64801025390625
+    ]
+  ],
+  "feature_selection": "Rank by train-only AUC of mean SAE activation inside C2C earring boxes; apply the train-positive median left/right boxes to detector-negative rows. Validation AUC does not select features.",
+  "labels": "Unreviewed C2C/Floence-2 earring detections; false negatives may occur."
+}

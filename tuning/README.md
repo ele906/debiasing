@@ -25,3 +25,5 @@ The separate [headscarf and earring pilot](accessory_ablation/REPORT.md) tests t
 ## C2C-box-masked earring ablation
 
 The [box-masked pilot](box_masked_earring/REPORT.md) maps localized C2C earring boxes to the SAE's runtime spatial grid and compares local suppression with global suppression and a random-feature control. The runner is [box_masked_earring.py](box_masked_earring.py).
+
+The [spatial feature search](earring_spatial_search/RANKING.md) ranks SAE features using C2C earring regions on training images, reports held-out scores, and tests the top three features in the boxes. Its runner is [earring_spatial_search.py](earring_spatial_search.py); the intervention comparisons are in [INTERVENTIONS.md](earring_spatial_search/INTERVENTIONS.md).
