@@ -42,11 +42,43 @@ I tested the three highest-ranked features on the eight validation-positive imag
 
 Feature 4858 changed pixels in all eight images, but visual inspection showed that the earrings remained. Features 766 and 1237 often made no change because they had little or no activation in the boxed region. The control was also tested. Pixel difference measures how much an image changed; it does not tell us whether an earring disappeared.
 
-This montage shows the C2C box and the generated comparisons for all eight validation-positive images. Each panel compares the original with the three candidate features and the control at the tested strengths. The target remained visible after suppression.
+The figures below show one validation seed at a time. Each compares the original image and earring box with the output after zeroing each of the three candidate features or the control feature inside the box. The earrings remain visible in these examples.
 
-![Intervention comparisons for all eight validation-positive images](figures/intervention_examples.png)
+### Seed 012
 
-Individual full-size comparison grids are available in the [experiment output folder](../../tuning/earring_spatial_search/grids/).
+![Seed 012: original and feature suppression comparisons](figures/east_asian_woman_seed012_comparison.jpg)
+
+### Seed 047
+
+![Seed 047: original and feature suppression comparisons](figures/east_asian_woman_seed047_comparison.jpg)
+
+### Seed 051
+
+![Seed 051: original and feature suppression comparisons](figures/east_asian_woman_seed051_comparison.jpg)
+
+### Seed 054
+
+![Seed 054: original and feature suppression comparisons](figures/east_asian_woman_seed054_comparison.jpg)
+
+### Seed 061
+
+![Seed 061: original and feature suppression comparisons](figures/east_asian_woman_seed061_comparison.jpg)
+
+### Seed 066
+
+![Seed 066: original and feature suppression comparisons](figures/east_asian_woman_seed066_comparison.jpg)
+
+### Seed 083
+
+![Seed 083: original and feature suppression comparisons](figures/east_asian_woman_seed083_comparison.jpg)
+
+### Seed 096
+
+![Seed 096: original and feature suppression comparisons](figures/east_asian_woman_seed096_comparison.jpg)
+
+The original detailed 4-row grids, including half-strength and unchanged conditions, are in the [experiment output folder](../../tuning/earring_spatial_search/grids/).
+
+
 
 ## Result and limitations
 
