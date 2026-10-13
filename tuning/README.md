@@ -1,6 +1,6 @@
-# SAE feature tuning pilots
+# SAE Feature Ablation Experiments
 
-This folder holds the newest intervention experiment. The earlier necklace pilot remains documented in [concept/tuning](../concept/tuning/README.md).
+This folder documents interventions that scale selected pretrained SAE feature contributions during diffusion generation. The earlier necklace pilot remains documented in [concept/tuning](../concept/tuning/README.md).
 
 ## Kimono, flower, and turban pilot
 

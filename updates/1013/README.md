@@ -1,4 +1,9 @@
-# First SAE feature experiment: earrings
+# Earring Spatial SAE Feature Search and Ablation
+
+This is the 10/13 write-up for the spatial earring feature search and its held-out intervention test. Related experiments from the same work period are documented separately:
+
+- [Turban, flower, and kimono feature ablation](wardrobe_feature_ablation.md)
+- [SAE box prediction and flower feature intervention](sae_box_flower_intervention.md)
 
 ## Question
 
