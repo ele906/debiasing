@@ -28,11 +28,25 @@ I calculated AUC by comparing positive-image scores with negative-image scores. 
 
 The top feature looked somewhat more promising on the training images, but did not separate the validation labels reliably. The validation set had only 8 positive and 12 negative images, so these scores are exploratory.
 
+The ROC plot shows true-positive rate against false-positive rate as the score threshold changes. The dashed diagonal is chance-level ranking. The step-shaped curves are expected with only 20 validation images. AUC is the area under each curve; it does not require a plot, but the plot makes the ranking behavior easier to see.
+
+![Validation ROC curves for the three candidate SAE features](figures/validation_roc.png)
+
+This plot compares the same features on training and validation. Feature 4858 scored higher on training but fell below chance on validation.
+
+![Train and validation AUC for the three candidate features](figures/auc_train_validation.png)
+
 ## Intervention test
 
 I tested the three highest-ranked features on the eight validation-positive images. During generation, I reduced each feature’s contribution inside the C2C earring box, with a one-cell border on the SAE activation grid. Strength 1 left the feature unchanged, 0 removed its contribution in the selected region, and 0.5 reduced it by half. I also tested feature 2940 as a control.
 
 Feature 4858 changed pixels in all eight images, but visual inspection showed that the earrings remained. Features 766 and 1237 often made no change because they had little or no activation in the boxed region. The control was also tested. Pixel difference measures how much an image changed; it does not tell us whether an earring disappeared.
+
+This montage shows the C2C box and the generated comparisons for all eight validation-positive images. Each panel compares the original with the three candidate features and the control at the tested strengths. The target remained visible after suppression.
+
+![Intervention comparisons for all eight validation-positive images](figures/intervention_examples.png)
+
+Individual full-size comparison grids are available in the [experiment output folder](../../tuning/earring_spatial_search/grids/).
 
 ## Result and limitations
 
