@@ -63,7 +63,7 @@ For each selected unit, we encoded held-out residuals into the 16 x 16 SAE grid 
 
 The maps use the same blocky color-pixel style as the other SAE heatmaps: nearest-neighbor 16 x 16 cells, `jet` colors, transparent zero-activation cells, and 50% opacity over the photo.
 
-![Original selected feature activation overlays; white boxes show C2C flower regions](images/followup/initial_activation_overlays.jpg)
+![Original selected feature activation overlays; white boxes show C2C flower regions](images/followup/initial_activation_overlays_half_opacity.png)
 
 This supports the hypothesis that the globally applied SAE features encode other image details along with flower-related information.
 
@@ -81,7 +81,7 @@ The top three flower-head contribution features from training were 2810, 1563, a
 
 ![Flower-only SAE features on a held-out positive prompt](images/followup/flower_only_positive_seed007.jpg)
 
-![Flower-only fine-tuned feature activation overlays; white boxes show C2C flower regions](images/followup/flower_only_activation_overlays.jpg)
+![Flower-only fine-tuned feature activation overlays; white boxes show C2C flower regions](images/followup/flower_only_activation_overlays_half_opacity.png)
 
 ### Takeaway
 
