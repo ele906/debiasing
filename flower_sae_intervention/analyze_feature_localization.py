@@ -46,7 +46,9 @@ def main():
 
     import torch
     from PIL import Image, ImageDraw
+    sys.path.insert(0, str(ROOT / "backprop"))
     sys.path.insert(0, str(ROOT / "sdxl-unbox"))
+    from heatmap_style import make_heatmap_overlay
     from SAE import SparseAutoencoder
 
     device = torch.device("cuda")
@@ -99,17 +101,7 @@ def main():
         if sid not in positive_ids or len(examples) >= 18:
             continue
         base = Image.open(path).convert("RGB").resize((512, 512))
-        positive_act = act[act > 0]
-        scale = float(np.percentile(positive_act, 99)) if positive_act.size else 1.0
-        normalized = np.clip(act / max(scale, 1e-12), 0, 1)
-        heat = Image.fromarray(np.uint8(255 * normalized)).resize((512, 512))
-        normalized = np.asarray(heat, dtype=np.float32) / 255
-        base_array = np.asarray(base, dtype=np.float32)
-        heat_array = np.zeros_like(base_array)
-        heat_array[..., 0] = 255
-        heat_array[..., 1] = 70 * (1 - normalized)
-        alpha = (normalized ** 1.5 * 0.65)[..., None]
-        composite = Image.fromarray(np.uint8(np.clip(base_array * (1 - alpha) + heat_array * alpha, 0, 255)))
+        composite = make_heatmap_overlay(base, act).convert("RGB")
         draw = ImageDraw.Draw(composite)
         for box in boxes:
             x1, y1, x2, y2 = box
