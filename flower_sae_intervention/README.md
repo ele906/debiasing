@@ -40,3 +40,57 @@ All labels and boxes here are C2C working targets and were not manually audited.
 - [Intervention runner in this folder](ablate_flower_features.py)
 
 The runner expects the local `sae-training` workspace, cached model weights, residuals, and generated source images to be available alongside this folder. Those large/private run artifacts are not included here.
+
+## Follow-up tests
+
+### 1. Lighter interventions
+
+We tested the original selected features (940, 2810, 1855) on four held-out C2C-positive and four negative prompts at lower strengths. Here, strength 1 is a no-op; 0.75 attenuates feature contributions by 25%, and 0.9 attenuates them by 10%.
+
+| Retained feature contribution | Positive image MAE / 255 | Negative image MAE / 255 |
+|---|---:|---:|
+| 0.75 | 3.42 | 3.13 |
+| 0.90 | 1.61 | 1.57 |
+| 1.00 (no-op) | 0.00 | 0.00 |
+
+The gentler intervention changed both groups less, but the flower remained visible. Positive and negative changes were similar, so lowering strength did not make the intervention flower-specific.
+
+![Lower strength comparison on a held-out positive prompt](images/followup/low_strength_positive_seed007.jpg)
+
+### 2. Feature activation localization
+
+For each selected unit, we encoded held-out residuals into the 16 x 16 SAE grid and compared activations inside the C2C flower boxes with activations outside. The original selected features peaked inside the box in only 2 of 8 positive examples for feature 940, and 0 of 8 for features 2810 and 1855. Their spatial activation overlays show broad activity around the face, hair, clothing, and background.
+
+![Original selected feature activation overlays; white boxes show C2C flower regions](images/followup/initial_activation_overlays.jpg)
+
+This supports the hypothesis that the globally applied SAE features encode other image details along with flower-related information.
+
+### 3. Diffusion step-count comparison
+
+The existing four-step test used SDXL Turbo at the same U-Net layer, applying the hook on each of its four denoising steps. This tests step count within Turbo; it is not a comparison against standard SDXL Base. The four-step replay already drifted from the one-step source by MAE 66.64/255 on positives and 57.99/255 on negatives. Zeroing the selected features changed the four-step replay by MAE 32.63 and 25.16, respectively, while the random control changed it by 6.84. The flower remained visible. More steps did not solve the intervention and came with substantial baseline image drift.
+
+![Four-step SDXL Turbo comparison](images/four_step_positive_seed007.jpg)
+
+### 4. Flower-only supervised SAE fine-tune
+
+We trained a fresh SAE and box head for five epochs using only the C2C flower box targets, with the same 720/240/240 split and reconstruction, objectness, and box losses. Validation-loss selection chose the checkpoint for held-out evaluation. On the 240-image test split (13 C2C positives), the box head reached objectness AP 0.782 and mean IoU 0.128 on positive images; recall at score/IoU 0.5 remained 0. This is weak box localization.
+
+The top three flower-head contribution features from training were 2810, 1563, and 2291. Zeroing them changed four positive images by MAE 10.98/255 and four negatives by 9.95/255. The flower remained in the inspected positive example. Feature 2810 peaked inside the C2C box in 0 of 8 held-out positives, feature 1563 in 4 of 8, and feature 2291 in 1 of 8. Fine-tuning one SAE for flower-box prediction therefore did not produce a reliable flower-only intervention in this small test.
+
+![Flower-only SAE features on a held-out positive prompt](images/followup/flower_only_positive_seed007.jpg)
+
+![Flower-only fine-tuned feature activation overlays; white boxes show C2C flower regions](images/followup/flower_only_activation_overlays.jpg)
+
+### Takeaway
+
+The results point more strongly to feature entanglement and global feature suppression than to a simple strength problem. The Turbo step-count test also shows that this setup drifts substantially as more denoising steps are added. A useful next experiment is to train/select units with box-local supervision and intervene only at the flower's spatial cells, then evaluate flower reduction and preservation of the person separately. All localization metrics use C2C's automatically generated boxes as labels; they have not been manually audited.
+
+### Follow-up artifacts
+
+- [Low-strength metrics](results/low_strength_metrics.csv)
+- [Initial selected feature localization](results/initial_feature_localization.csv)
+- [Flower-only box test metrics](results/flower_only_box_test_metrics.json)
+- [Flower-only training history](results/flower_only_training_history.json)
+- [Flower-only image intervention metrics](results/flower_only_intervention_metrics.csv)
+- [Flower-only selected feature localization](results/flower_only_feature_localization.csv)
+- [Experiment scripts](.)

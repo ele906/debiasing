@@ -33,6 +33,8 @@ def main():
     parser.add_argument("--features", type=int, default=3)
     parser.add_argument("--seed", type=int, default=20261012)
     parser.add_argument("--num-inference-steps", type=int, default=1)
+    parser.add_argument("--strengths", type=float, nargs="+", default=[0.0, 0.5, 1.0],
+                        help="Feature contribution retained: 0 removes it, 1 is a no-op")
     parser.add_argument("--positive-limit", type=int)
     parser.add_argument("--negative-limit", type=int)
     args = parser.parse_args()
@@ -56,10 +58,14 @@ def main():
     device = torch.device("cuda")
     sae = SparseAutoencoder.load_from_disk(str(args.sae_checkpoint)).float().to(device).eval()
     weights = torch.load(args.head, map_location=device, weights_only=True)
-    head = torch.nn.Conv2d(sae.n_dirs, 10, kernel_size=1).to(device)
+    head_outputs = weights["weight"].shape[0]
+    if head_outputs % 5:
+        raise ValueError(f"Unexpected box-head output channels: {head_outputs}")
+    head = torch.nn.Conv2d(sae.n_dirs, head_outputs, kernel_size=1).to(device)
     head.load_state_dict(weights)
     head.eval()
-    flower_weight = head.weight[5, :, 0, 0]
+    flower_concept_index = 1 if head_outputs >= 10 else 0
+    flower_weight = head.weight[flower_concept_index * 5, :, 0, 0]
 
     targets = read_csv(args.targets)
     train_rows = [r for r in targets if r["concept"] == "flower" and r["split"] == "train"
@@ -144,7 +150,7 @@ def main():
     (args.output / "settings.json").write_text(json.dumps(dict(
         sae_checkpoint=str(args.sae_checkpoint), box_head=str(args.head), block=BLOCK,
         selection_group=GROUP, train_positive=len(positive), train_negative=len(negative),
-        selected_features=chosen, random_control=control, strengths=[0, 0.5, 1],
+        selected_features=chosen, random_control=control, strengths=args.strengths,
         num_inference_steps=args.num_inference_steps,
         test_positive=sum(int(r["detector_present"]) for r in selected),
         test_negative=sum(not int(r["detector_present"]) for r in selected),
@@ -165,10 +171,11 @@ def main():
         if args.num_inference_steps == 1 and replay_mae != 0:
             raise RuntimeError(f"Source replay mismatch for {row['sample_id']}: MAE={replay_mae}")
         variants = [("source", original), ("replay", replay)]
-        for alpha, label in [(0.0, "features_zero"), (0.5, "features_half"), (1.0, "features_noop")]:
+        for alpha in args.strengths:
+            label = f"features_{alpha:g}"
             edited = pipe.run_with_hooks(**gen_args(), position_hook_dict={BLOCK: intervention(sae, chosen, alpha)}).images[0]
             delta = float(np.abs(np.asarray(edited).astype(float)-np.asarray(replay).astype(float)).mean())
-            if alpha == 1 and delta != 0:
+            if alpha == 1.0 and delta != 0:
                 raise RuntimeError("Strength 1 was not an exact no-op")
             edited.save(args.output / f"{row['sample_id']}_{label}.png")
             variants.append((label, edited))
