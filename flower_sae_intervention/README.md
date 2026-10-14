@@ -61,7 +61,7 @@ The gentler intervention changed both groups less, but the flower remained visib
 
 For each selected unit, we encoded held-out residuals into the 16 x 16 SAE grid and compared activations inside the C2C flower boxes with activations outside. The original selected features peaked inside the box in only 2 of 8 positive examples for feature 940, and 0 of 8 for features 2810 and 1855. Their spatial activation overlays show broad activity around the face, hair, clothing, and background.
 
-The maps use the same blocky color-pixel style as the other SAE heatmaps: nearest-neighbor 16 x 16 cells, `jet` colors, transparent zero-activation cells, and 60% opacity.
+The maps use the same blocky color-pixel style as the other SAE heatmaps: nearest-neighbor 16 x 16 cells, `jet` colors, transparent zero-activation cells, and 50% opacity over the photo.
 
 ![Original selected feature activation overlays; white boxes show C2C flower regions](images/followup/initial_activation_overlays.jpg)
 

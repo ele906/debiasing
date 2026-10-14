@@ -101,7 +101,7 @@ def main():
         if sid not in positive_ids or len(examples) >= 18:
             continue
         base = Image.open(path).convert("RGB").resize((512, 512))
-        composite = make_heatmap_overlay(base, act).convert("RGB")
+        composite = make_heatmap_overlay(base, act, alpha=0.5).convert("RGB")
         draw = ImageDraw.Draw(composite)
         for box in boxes:
             x1, y1, x2, y2 = box
