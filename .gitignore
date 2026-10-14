@@ -26,6 +26,7 @@ tuning/wardrobe_pilot/images/
 z-old-data/
 z_deprecated_logs/
 ReNO/outputs/
+outputs/interactive_generation/
 composition-analysis/**/outputs/
 FairFace/**/outputs/
 baseline/images/

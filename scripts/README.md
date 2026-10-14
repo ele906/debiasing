@@ -5,6 +5,7 @@ This folder is the root-level map for the scripts used most often. The canonical
 ## Start generation
 
 - [`start/README.md`](start/README.md): simple prompt generation and the existing SDXL Turbo SAE generation/activation-capture runner.
+- [`generate/README.md`](generate/README.md): interactive notebooks for prompt batches and a Turbo/Base visual comparison.
 
 ## Train an SAE
 
