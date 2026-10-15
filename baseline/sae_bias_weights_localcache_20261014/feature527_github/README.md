@@ -49,3 +49,16 @@ Weights are multiplicative factors on the feature contribution: 0 removes it, -1
 - [seed42_feature527_middle_eastern_woman_weights.png](./seed42_feature527_middle_eastern_woman_weights.png)
 - [seed42_feature527_white_man_weights.png](./seed42_feature527_white_man_weights.png)
 - [seed42_feature527_white_woman_weights.png](./seed42_feature527_white_woman_weights.png)
+
+## Mean pixel difference by prompt race label
+
+Mean absolute RGB difference from the matched original (0–255 scale), averaged over six images per prompt-race label (two prompt genders × three seeds). These values measure image change, not image quality or fairness. The labels are from generation prompts.
+
+| Prompt race label | n | Weight −1 | Weight −0.5 | Weight 0 | Weight 0.5 |
+|---|---:|---:|---:|---:|---:|
+| Black | 6 | 12.166 | 9.857 | 7.266 | 4.263 |
+| White | 6 | 0.000 | 0.000 | 0.000 | 0.000 |
+| East Asian | 6 | 0.100 | 0.089 | 0.066 | 0.052 |
+| Middle Eastern | 6 | 2.373 | 1.951 | 1.416 | 0.833 |
+| Indian | 6 | 2.358 | 1.916 | 1.421 | 0.864 |
+| Hispanic | 6 | 11.345 | 7.376 | 3.812 | 2.044 |
