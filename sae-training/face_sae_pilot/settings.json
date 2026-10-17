@@ -1,0 +1,11 @@
+{
+  "images": 120,
+  "per_prompt_category": 10,
+  "seed": 20261016,
+  "selection": "balanced random sample across 12 race/gender prompt cells",
+  "proposal_source": "/n/fs/goose/concept/category_analysis_full/bounding_boxes.csv",
+  "proposal_source_type": "object detection only",
+  "proposal_label": "human face",
+  "coordinates": "normalized x1,y1,x2,y2 in 0..1",
+  "warning": "Automatic C2C proposals are unreviewed and must not be used as ground truth."
+}
