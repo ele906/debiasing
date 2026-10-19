@@ -1,37 +1,8 @@
 # Concept-supervised SAE experiment
 
-## Face SAE reconstruction images
+## Face SAE training and visualizations
 
-`fine_tune_face_sae.py` now defaults to 20 epochs and saves SAE snapshots at epochs 0, 4, 8, 12, 16, and 20. Epoch 0 is the pretrained SAE before fine-tuning. The snapshots let the SDXL pipeline render the same held-out prompts and seeds through each checkpoint.
-
-Run fine-tuning into a new run directory, then render one held-out test portrait from each of the 12 prompt groups:
-
-```bash
-python sae-training/fine_tune_face_sae.py --epochs 20 --output sae-training/runs/face_sae_020
-python sae-training/render_epoch_reconstructions.py sae-training/runs/face_sae_020
-```
-
-Each sample gets a comparison sheet under `reconstructions/<sample_id>/comparison.jpg`; `reconstructions/all_samples.jpg` gives an overview. Rendering uses the saved prompt and seed for every checkpoint. The saved source image is shown as `original`; epoch 0 and later columns are generated with the corresponding SAE reconstruction hook. This is an SDXL image comparison of SAE-mediated generation, rather than a direct VAE decode of a residual tensor.
-
-## Plot training results
-
-The trainer stores per-epoch metrics in `training_history.json` and the original-versus-fine-tuned validation/test metrics in `heldout_reconstruction.json`. To make a plot and a CSV copy of the epoch history, run:
-
-```bash
-python sae-training/plot_face_sae_run.py sae-training/runs/face_sae_020
-```
-
-This writes `training_and_test_metrics.png`, `training_history.csv`, and `REPORT.md` into the run directory. Use `--output PATH` to save these files elsewhere.
-
-## Render feature maps with the jet palette
-
-The trainer's feature overlays use a blue-to-red `jet` palette with nearest-neighbor scaling, so the 16×16 activation grid stays visibly pixelated. To regenerate the feature maps for a completed run:
-
-```bash
-python sae-training/render_face_heatmaps.py sae-training/runs/face_sae_020
-```
-
-The new maps are written to `runs/face_sae_020/feature_maps_jet/heatmaps/`; the existing heatmaps are left in place.
+For copyable commands to train for 20 epochs, make plots and CSVs, render images at epochs 0/4/8/12/16/20, and regenerate pixelated `jet` feature maps, see [FACE_SAE_QUICKSTART.md](FACE_SAE_QUICKSTART.md).
 
 ## Goal
 
