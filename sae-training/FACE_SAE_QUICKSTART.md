@@ -84,6 +84,34 @@ prompt groups arranged by row. It is saved to
 If rendering stops partway through, rerun the command with `--resume` to reuse
 completed sample sheets and finish the remaining ones.
 
+## Compare feature activations inside face parts
+
+The box annotations include face, eye, eyebrow, nose, mouth/lip, and ear
+regions for some held-out images. Generate region-specific heatmaps from the
+saved residuals and epoch checkpoints with:
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/render_face_region_heatmaps.py \
+  sae-training/runs/face_sae_020
+```
+
+The script writes one sheet per region and top-ranked feature to
+`sae-training/runs/face_sae_020/region_heatmaps/<region>/feature_<id>.jpg`.
+Rows are race/gender categories and columns are checkpoint epochs. It selects
+one held-out image with a matching region box for each category when one is
+available; missing annotations are labeled. Ear matching excludes earrings.
+These are exploratory overlays from the existing SAE features, not evidence
+that a feature has learned a semantic face-part label. The part boxes are
+automatic and should be reviewed visually.
+
+Each overlay is scaled within its annotated region to show the activation
+pattern. For activation magnitude comparisons, use
+`region_heatmaps/regional_activation_summary.csv`; it records mean/max
+activation and the fraction of active cells for each feature, epoch, region,
+and selected image. Add `--resume` to replace sheets in an existing output
+folder.
+
 ## Start a new training run
 
 Each run needs a new output directory. The existing `face_sae_020` folder
