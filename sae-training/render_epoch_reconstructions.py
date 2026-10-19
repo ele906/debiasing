@@ -239,22 +239,25 @@ def load_saved_sample(row, snapshots, features, output_dir):
     if not all(path.is_file() for path in expected):
         return None
 
-    with Image.open(sample_dir / "original.png") as source:
-        original = source.convert("RGB")
-    epoch_results = []
-    for epoch in epochs:
-        with Image.open(sample_dir / f"epoch_{epoch:03d}_reconstruction.png") as source:
-            reconstruction = source.convert("RGB")
-        feature_images = {}
-        for feature in features:
-            path = sample_dir / f"epoch_{epoch:03d}_feature_{feature}.png"
-            with Image.open(path) as source:
-                feature_images[feature] = source.convert("RGB")
-        epoch_results.append({
-            "epoch": epoch,
-            "reconstruction": reconstruction,
-            "features": feature_images,
-        })
+    try:
+        with Image.open(sample_dir / "original.png") as source:
+            original = source.convert("RGB")
+        epoch_results = []
+        for epoch in epochs:
+            with Image.open(sample_dir / f"epoch_{epoch:03d}_reconstruction.png") as source:
+                reconstruction = source.convert("RGB")
+            feature_images = {}
+            for feature in features:
+                path = sample_dir / f"epoch_{epoch:03d}_feature_{feature}.png"
+                with Image.open(path) as source:
+                    feature_images[feature] = source.convert("RGB")
+            epoch_results.append({
+                "epoch": epoch,
+                "reconstruction": reconstruction,
+                "features": feature_images,
+            })
+    except (OSError, ValueError):
+        return None
     return {"row": row, "original": original, "epochs": epoch_results}
 
 
@@ -306,6 +309,77 @@ def save_gender_overview(samples, output_path):
     overview.save(output_path, quality=92)
 
 
+def save_category_epoch_sheets(samples, features, output_dir):
+    """Save one race/gender row per category and one column per epoch."""
+    sheet_dir = output_dir / "feature_sheets"
+    sheet_dir.mkdir(parents=True, exist_ok=True)
+    epochs = samples[0]["epochs"]
+    categories = [
+        (race, gender)
+        for race in RACES
+        for gender in GENDERS
+    ]
+    sample_by_category = {
+        (sample["row"]["race_prompt"].replace(" ", "_"),
+         sample["row"]["gender_prompt"]): sample
+        for sample in samples
+    }
+
+    tile_size = 160
+    label_width = 150
+    header_height = 42
+    row_height = 170
+    sheet_size = (label_width + len(epochs) * tile_size,
+                  header_height + len(categories) * row_height)
+
+    for feature in features:
+        sheet = Image.new("RGB", sheet_size, "white")
+        draw = ImageDraw.Draw(sheet)
+        draw.text((4, 4), f"Feature {feature}", fill="black")
+        for column, result in enumerate(epochs):
+            draw.text((label_width + column * tile_size + 5, 20),
+                      f"epoch {result['epoch']}", fill="black")
+
+        for row_index, (race, gender) in enumerate(categories):
+            y = header_height + row_index * row_height
+            sample = sample_by_category.get((race, gender))
+            label = f"{race.replace('_', ' ').title()} {gender.title()}"
+            draw.text((4, y + 8), label, fill="black")
+            if sample is None:
+                draw.text((4, y + 30), "no held-out sample", fill="gray")
+                continue
+            draw.text((4, y + 30), f"seed {sample['row']['seed']}", fill="gray")
+            for column, result in enumerate(sample["epochs"]):
+                x = label_width + column * tile_size
+                tile = result["features"][feature].resize(
+                    (tile_size - 8, tile_size - 8)
+                )
+                sheet.paste(tile, (x + 4, y + 4))
+
+        sheet.save(sheet_dir / f"feature_{feature}.jpg", quality=92)
+
+    reconstructions = Image.new("RGB", sheet_size, "white")
+    draw = ImageDraw.Draw(reconstructions)
+    draw.text((4, 4), "SAE reconstruction", fill="black")
+    for column, result in enumerate(epochs):
+        draw.text((label_width + column * tile_size + 5, 20),
+                  f"epoch {result['epoch']}", fill="black")
+    for row_index, (race, gender) in enumerate(categories):
+        y = header_height + row_index * row_height
+        sample = sample_by_category.get((race, gender))
+        label = f"{race.replace('_', ' ').title()} {gender.title()}"
+        draw.text((4, y + 8), label, fill="black")
+        if sample is None:
+            draw.text((4, y + 30), "no held-out sample", fill="gray")
+            continue
+        draw.text((4, y + 30), f"seed {sample['row']['seed']}", fill="gray")
+        for column, result in enumerate(sample["epochs"]):
+            x = label_width + column * tile_size
+            tile = result["reconstruction"].resize((tile_size - 8, tile_size - 8))
+            reconstructions.paste(tile, (x + 4, y + 4))
+    reconstructions.save(sheet_dir / "reconstruction_by_category.jpg", quality=92)
+
+
 def main():
     args = parse_args()
     settings = json.loads((args.run / "settings.json").read_text())
@@ -350,7 +424,9 @@ def main():
         rendered_samples.append(saved)
 
     save_gender_overview(rendered_samples, args.output / "all_samples.jpg")
+    save_category_epoch_sheets(rendered_samples, features, args.output)
     print(f"Saved comparison overview to {args.output / 'all_samples.jpg'}", flush=True)
+    print(f"Saved category and feature sheets to {args.output / 'feature_sheets'}", flush=True)
 
 
 if __name__ == "__main__":

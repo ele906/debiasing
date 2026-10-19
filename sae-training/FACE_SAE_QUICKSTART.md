@@ -64,11 +64,19 @@ and seeds through each checkpoint:
   sae-training/runs/face_sae_020
 ```
 
-Each race/gender category gets a contact sheet under
-`reconstructions/<sample_id>/contact_sheet.jpg`. Rows are epochs; columns are
-the full SAE reconstruction followed by pixel heatmap overlays for the same
-top three validation-ranked features. The original image is saved separately
-as `original.png` in that category folder.
+Each race/gender category gets an individual comparison sheet under
+`reconstructions/<sample_id>/contact_sheet.jpg`. For an across-category
+comparison, the script also writes `reconstructions/feature_sheets/`:
+
+- `feature_1664.jpg`, `feature_1600.jpg`, and `feature_1237.jpg` each show one
+  feature across all categories. Rows are the 12 race/gender categories (Black
+  Man, Black Woman, White Man, White Woman, and so on); columns are epochs
+  0, 4, 8, 12, 16, and 20.
+- `reconstruction_by_category.jpg` uses the same 12 category rows and epoch
+  columns to compare full SAE reconstructions.
+
+The feature IDs come from the run's validation-ranked feature CSV. Each
+category row uses one held-out test seed, shown beside the category label.
 
 The overview puts men in the left panel and women in the right panel, with
 prompt groups arranged by row. It is saved to
