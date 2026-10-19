@@ -264,11 +264,18 @@ def build_run_settings(args, checkpoint_hash, split, best_epoch, snapshots_dir):
 def make_feature_overlay(image, activation_map):
     values = activation_map.float().cpu().numpy()
     scale = max(float(values.max()), 1e-6)
-    alpha = Image.fromarray(
-        np.uint8(np.clip(values / scale, 0, 1) * 255)
-    ).resize(image.size)
-    red = Image.new("RGB", image.size, "red")
-    return Image.composite(red, image, alpha.point(lambda value: int(value * 0.55)))
+    normalized = np.clip(values / scale, 0, 1)
+    red = np.clip(1.5 - np.abs(4 * normalized - 3), 0, 1)
+    green = np.clip(1.5 - np.abs(4 * normalized - 2), 0, 1)
+    blue = np.clip(1.5 - np.abs(4 * normalized - 1), 0, 1)
+    alpha = np.uint8(normalized * 180)
+    rgba = np.uint8(np.stack((red, green, blue), axis=-1) * 255)
+    rgba = np.dstack((rgba, alpha))
+    heatmap = Image.fromarray(rgba, mode="RGBA").resize(
+        image.size,
+        resample=Image.Resampling.NEAREST,
+    )
+    return Image.alpha_composite(image.convert("RGBA"), heatmap).convert("RGB")
 
 
 def make_heatmap_sheet(group, images, tile_size):
@@ -348,7 +355,7 @@ def rank_face_features(sae, ids, boxes, residual_dir, device):
 
 @torch.no_grad()
 def render_test_heatmaps(sae, ranked, test_rows, boxes, residual_dir, output, device):
-    features = [r["feature"] for r in ranked[:3]]
+    features = [int(row["feature"]) for row in ranked[:3]]
     selected_rows = {}
     ordered_rows = sorted(
         test_rows,

@@ -23,6 +23,16 @@ python sae-training/plot_face_sae_run.py sae-training/runs/face_sae_020
 
 This writes `training_and_test_metrics.png`, `training_history.csv`, and `REPORT.md` into the run directory. Use `--output PATH` to save these files elsewhere.
 
+## Render feature maps with the jet palette
+
+The trainer's feature overlays use a blue-to-red `jet` palette with nearest-neighbor scaling, so the 16×16 activation grid stays visibly pixelated. To regenerate the feature maps for a completed run:
+
+```bash
+python sae-training/render_face_heatmaps.py sae-training/runs/face_sae_020
+```
+
+The new maps are written to `runs/face_sae_020/feature_maps_jet/heatmaps/`; the existing heatmaps are left in place.
+
 ## Goal
 
 Test whether reviewed concept labels help an SAE represent *kimono* and *flower* more directly than the current reconstruction-trained SAE, while preserving useful reconstruction quality. This is a separate experiment from attenuating one feature in the frozen SAE.
