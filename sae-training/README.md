@@ -1,5 +1,18 @@
 # Concept-supervised SAE experiment
 
+## Face SAE reconstruction images
+
+`fine_tune_face_sae.py` now defaults to 20 epochs and saves SAE snapshots at epochs 0, 4, 8, 12, 16, and 20. Epoch 0 is the pretrained SAE before fine-tuning. The snapshots let the SDXL pipeline render the same held-out prompts and seeds through each checkpoint.
+
+Run fine-tuning into a new run directory, then render one held-out test portrait from each of the 12 prompt groups:
+
+```bash
+python sae-training/fine_tune_face_sae.py --epochs 20 --output sae-training/runs/face_sae_020
+python sae-training/render_epoch_reconstructions.py sae-training/runs/face_sae_020
+```
+
+Each sample gets a comparison sheet under `reconstructions/<sample_id>/comparison.jpg`; `reconstructions/all_samples.jpg` gives an overview. Rendering uses the saved prompt and seed for every checkpoint. The saved source image is shown as `original`; epoch 0 and later columns are generated with the corresponding SAE reconstruction hook. This is an SDXL image comparison of SAE-mediated generation, rather than a direct VAE decode of a residual tensor.
+
 ## Goal
 
 Test whether reviewed concept labels help an SAE represent *kimono* and *flower* more directly than the current reconstruction-trained SAE, while preserving useful reconstruction quality. This is a separate experiment from attenuating one feature in the frozen SAE.

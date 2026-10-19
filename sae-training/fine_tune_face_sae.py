@@ -170,14 +170,16 @@ def main():
     parser.add_argument("--boxes", type=Path, default=DEFAULT_BOXES)
     parser.add_argument("--checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--output", type=Path, default=ROOT / "sae-training/runs/face_sae_001")
-    parser.add_argument("--epochs", type=int, default=5)
+    parser.add_argument("--epochs", type=int, default=20)
+    parser.add_argument("--snapshot-interval", type=int, default=4,
+                        help="Save SAE checkpoints every N epochs for image comparisons; 0 disables periodic snapshots")
     parser.add_argument("--lr", type=float, default=1e-6)
     parser.add_argument("--seed", type=int, default=20261016)
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError(f"Output exists; choose a fresh --output: {args.output}")
-    if args.epochs < 1 or args.lr <= 0:
-        parser.error("epochs and learning rate must be positive")
+    if args.epochs < 1 or args.lr <= 0 or args.snapshot_interval < 0:
+        parser.error("epochs and learning rate must be positive; snapshot interval cannot be negative")
     rows = read_csv(args.manifest)
     boxes = face_boxes(args.boxes)
     eligible = [r for r in rows if r["sample_id"] in boxes and (args.residuals / f"{r['sample_id']}.npy").is_file()]
@@ -206,6 +208,10 @@ def main():
     history = []
     best_val = float("inf")
     best_epoch = None
+    snapshots_dir = args.output / "checkpoints"
+    snapshots_dir.mkdir()
+    # Epoch 0 is the pretrained SAE before any updates.
+    sae.save_to_disk(str(snapshots_dir / "epoch_000"))
     for epoch in range(args.epochs):
         sae.train()
         order = list(split["train"])
@@ -242,6 +248,14 @@ def main():
             best_val = val_metrics["face_mse"]
             best_epoch = epoch + 1
             sae.save_to_disk(str(args.output / "sae"))
+        completed_epoch = epoch + 1
+        if args.snapshot_interval and completed_epoch % args.snapshot_interval == 0:
+            sae.save_to_disk(str(snapshots_dir / f"epoch_{completed_epoch:03d}"))
+
+    # Always retain the final checkpoint, including when the epoch count is
+    # not divisible by the snapshot interval.
+    if args.epochs % max(args.snapshot_interval, 1) != 0:
+        sae.save_to_disk(str(snapshots_dir / f"epoch_{args.epochs:03d}"))
 
     # Compare the untouched baseline and selected fine-tuned SAE on held-out data.
     selected = SparseAutoencoder.load_from_disk(str(args.output / "sae")).float().to(device).eval()
@@ -274,6 +288,8 @@ def main():
         "generator_updated": False,
         "sae_updated": True,
         "epochs": args.epochs,
+        "snapshot_interval": args.snapshot_interval,
+        "snapshot_epochs": sorted(int(p.name.removeprefix("epoch_")) for p in snapshots_dir.iterdir()),
         "learning_rate": args.lr,
         "auxk_coefficient": 1.0 / 32.0,
         "seed": args.seed,
