@@ -64,9 +64,15 @@ and seeds through each checkpoint:
   sae-training/runs/face_sae_020
 ```
 
-The overview is saved to
-`sae-training/runs/face_sae_020/reconstructions/all_samples.jpg`; individual
-comparison sheets are saved under `reconstructions/<sample_id>/`.
+Each race/gender category gets a contact sheet under
+`reconstructions/<sample_id>/contact_sheet.jpg`. Rows are epochs; columns are
+the full SAE reconstruction followed by pixel heatmap overlays for the same
+top three validation-ranked features. The original image is saved separately
+as `original.png` in that category folder.
+
+The overview puts men in the left panel and women in the right panel, with
+prompt groups arranged by row. It is saved to
+`sae-training/runs/face_sae_020/reconstructions/all_samples.jpg`.
 If rendering stops partway through, rerun the command with `--resume` to reuse
 completed sample sheets and finish the remaining ones.
 
