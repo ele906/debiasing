@@ -13,6 +13,16 @@ python sae-training/render_epoch_reconstructions.py sae-training/runs/face_sae_0
 
 Each sample gets a comparison sheet under `reconstructions/<sample_id>/comparison.jpg`; `reconstructions/all_samples.jpg` gives an overview. Rendering uses the saved prompt and seed for every checkpoint. The saved source image is shown as `original`; epoch 0 and later columns are generated with the corresponding SAE reconstruction hook. This is an SDXL image comparison of SAE-mediated generation, rather than a direct VAE decode of a residual tensor.
 
+## Plot training results
+
+The trainer stores per-epoch metrics in `training_history.json` and the original-versus-fine-tuned validation/test metrics in `heldout_reconstruction.json`. To make a plot and a CSV copy of the epoch history, run:
+
+```bash
+python sae-training/plot_face_sae_run.py sae-training/runs/face_sae_020
+```
+
+This writes `training_and_test_metrics.png`, `training_history.csv`, and `REPORT.md` into the run directory. Use `--output PATH` to save these files elsewhere.
+
 ## Goal
 
 Test whether reviewed concept labels help an SAE represent *kimono* and *flower* more directly than the current reconstruction-trained SAE, while preserving useful reconstruction quality. This is a separate experiment from attenuating one feature in the frozen SAE.
