@@ -5,6 +5,8 @@ import json
 import sys
 from pathlib import Path
 
+from PIL import Image, ImageDraw
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA = ROOT / "backprop"
 BLOCK = "unet.down_blocks.2.attentions.1"
@@ -24,12 +26,14 @@ def parse_args():
                         help="Held-out test images to render for each prompt group")
     parser.add_argument("--cache-dir", type=Path, default=ROOT / "ReNO/hf_cache")
     parser.add_argument("--allow-download", action="store_true")
+    parser.add_argument("--resume", action="store_true",
+                        help="Reuse completed sample sheets in an existing output directory")
     args = parser.parse_args()
     if args.seeds_per_cell < 1:
         parser.error("--seeds-per-cell must be positive")
     args.run = args.run.resolve()
     args.output = (args.output or args.run / "reconstructions").resolve()
-    if args.output.exists():
+    if args.output.exists() and not args.resume:
         raise ValueError(f"Output already exists; choose a new directory: {args.output}")
     return args
 
@@ -123,7 +127,6 @@ def generation_args(row):
 
 def render_checkpoint_images(row, snapshots, pipeline, sae_class, data_dir):
     import torch
-    from PIL import Image
 
     with Image.open(data_dir / row["image"]) as source:
         images = [("original", source.convert("RGB"))]
@@ -144,10 +147,8 @@ def render_checkpoint_images(row, snapshots, pipeline, sae_class, data_dir):
 
 
 def save_comparison(sample_id, images, output_dir):
-    from PIL import Image, ImageDraw
-
     sample_dir = output_dir / sample_id
-    sample_dir.mkdir()
+    sample_dir.mkdir(exist_ok=True)
     tile_width, tile_height = 192, 216
     sheet = Image.new("RGB", (tile_width * len(images), tile_height), "white")
     draw = ImageDraw.Draw(sheet)
@@ -163,8 +164,6 @@ def save_comparison(sample_id, images, output_dir):
 
 
 def save_overview(comparisons, output_path):
-    from PIL import Image, ImageDraw
-
     columns = 2
     page_width = comparisons[0][1].width
     page_height = comparisons[0][1].height + 18
@@ -194,7 +193,7 @@ def main():
     sys.path.insert(0, str(ROOT / "sdxl-unbox"))
     from SAE import SparseAutoencoder
 
-    args.output.mkdir(parents=True)
+    args.output.mkdir(parents=True, exist_ok=args.resume)
     epochs = [int(snapshot.name.split("_")[1]) for snapshot in snapshots]
     run_settings = {
         "run": str(args.run),
@@ -210,6 +209,13 @@ def main():
 
     comparisons = []
     for row in samples:
+        sample_dir = args.output / row["sample_id"]
+        comparison_path = sample_dir / "comparison.jpg"
+        if comparison_path.is_file():
+            with Image.open(comparison_path) as existing_sheet:
+                comparisons.append((row["sample_id"], existing_sheet.convert("RGB")))
+            print(f"Reused {row['sample_id']}", flush=True)
+            continue
         images = render_checkpoint_images(
             row, snapshots, pipeline, SparseAutoencoder, args.data
         )

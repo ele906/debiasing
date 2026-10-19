@@ -67,6 +67,8 @@ and seeds through each checkpoint:
 The overview is saved to
 `sae-training/runs/face_sae_020/reconstructions/all_samples.jpg`; individual
 comparison sheets are saved under `reconstructions/<sample_id>/`.
+If rendering stops partway through, rerun the command with `--resume` to reuse
+completed sample sheets and finish the remaining ones.
 
 ## Start a new training run
 
