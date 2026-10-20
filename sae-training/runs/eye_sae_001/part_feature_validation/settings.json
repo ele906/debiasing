@@ -1,0 +1,49 @@
+{
+  "model": "/n/fs/goose/sae-training/runs/eye_sae_001/sae",
+  "candidate_selection": "eye candidates from eye fine-tuning validation ranking; eyebrow and ear candidates selected by macro category activation contrast on validation data",
+  "test_evaluation": "candidate features evaluated only on test split; eyes and eyebrows contrasted with other face cells, ears contrasted with other image cells",
+  "box_filter": {
+    "maximum_area_fraction": 0.12,
+    "minimum_region_cells": 2,
+    "earrings_excluded": true
+  },
+  "regions": {
+    "eyes": {
+      "candidate_features": [
+        3701,
+        3593,
+        1600
+      ],
+      "validation_categories": 11,
+      "test_categories": 9,
+      "test_images": 90,
+      "bootstrap_method": "stratified image bootstrap within race/gender categories; macro-average category contrast",
+      "bootstrap_samples": 2000
+    },
+    "eyebrows": {
+      "candidate_features": [
+        1600,
+        3701,
+        1237
+      ],
+      "validation_categories": 9,
+      "test_categories": 7,
+      "test_images": 28,
+      "bootstrap_method": "stratified image bootstrap within race/gender categories; macro-average category contrast",
+      "bootstrap_samples": 2000
+    },
+    "ears": {
+      "candidate_features": [
+        4858,
+        2230,
+        2611
+      ],
+      "validation_categories": 6,
+      "test_categories": 6,
+      "test_images": 18,
+      "bootstrap_method": "stratified image bootstrap within race/gender categories; macro-average category contrast",
+      "bootstrap_samples": 2000
+    }
+  },
+  "interpretation": "Positive held-out contrast supports spatial association with the annotated box, not a semantic feature label. Boxes are automatic and unreviewed."
+}

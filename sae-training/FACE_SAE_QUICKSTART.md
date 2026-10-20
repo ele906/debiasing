@@ -146,6 +146,34 @@ To render part-specific overlays using the eye-fine-tuned SAE, run:
 When the run folder contains `eye_localized_features.csv`, the renderer uses
 that ranking for its three feature sheets.
 
+## Validate eye, eyebrow, and ear feature candidates
+
+This analysis keeps feature selection and evaluation separate. The three eye
+features come from the eye run's validation ranking. Eyebrow and ear candidates
+are selected on validation activation contrast, then all candidates are
+evaluated on held-out test images. It reports the average activation difference
+between the annotated region and a reference area, with a category-stratified
+image-bootstrap confidence interval. Eyes and eyebrows use the rest of the
+detected face as the reference; ears use the rest of the image because ear
+boxes can extend beyond the face detector box.
+
+Run it from `/n/fs/goose`:
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/validate_face_part_features.py \
+  sae-training/runs/eye_sae_001
+```
+
+Results are saved to
+`sae-training/runs/eye_sae_001/part_feature_validation/`. To replace existing
+results after changing the analysis, add `--resume`. The CSV includes each
+feature's test contrast, 95% interval, positive-image fraction, and sample
+counts; the folder's `REPORT.md` summarizes the current results. Positive
+contrast means the feature activates more inside that annotation than in its
+reference area. It supports spatial association with these automatic boxes,
+not proof that a feature semantically represents eyes, eyebrows, or ears.
+
 ## Start a new training run
 
 Each run needs a new output directory. The existing `face_sae_020` folder
