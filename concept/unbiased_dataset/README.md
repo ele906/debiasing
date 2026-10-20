@@ -10,7 +10,9 @@ absolute image paths. All rows use `split=unlabeled`: this is a descriptive
 detector audit, not a train/validation/test experiment. The extractor writes
 per-image captions, phrase-grounding boxes, object-detection boxes, and
 visualized grounding outputs under `results/extracted/`; summary CSVs and a
-report go under `results/`.
+report go under `results/`. A postprocessing step creates
+`results/category_analysis/bounding_boxes.csv`, box visualizations, and
+category-level detection counts.
 
 Run from `/n/fs/goose` on the cluster:
 

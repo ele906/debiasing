@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --gres=gpu:1
-#SBATCH --time=00:45:00
+#SBATCH --time=02:00:00
 #SBATCH --output=/n/fs/goose/concept/logs/%x-%j.out
 set -euo pipefail
 cd /n/fs/goose
@@ -22,3 +22,9 @@ read -r CONCEPT_REVISION < concept/model_revision.txt
   --output concept/unbiased_dataset/results/extracted \
   --summary-dir concept/unbiased_dataset/results \
   --revision "$CONCEPT_REVISION"
+if [[ ! -f concept/unbiased_dataset/results/category_analysis/bounding_boxes.csv ]]; then
+  /n/fs/goose/el8403/conda-envs/reno/bin/python -u concept/category_counts.py \
+    --predictions concept/unbiased_dataset/results/concept_predictions.csv \
+    --records-dir concept/unbiased_dataset/results/extracted \
+    --output concept/unbiased_dataset/results/category_analysis
+fi
