@@ -22,6 +22,8 @@ FairFace/weights/
 
 # Generated images / experiment outputs (large, regeneratable from slurm jobs)
 data/
+concept/unbiased_dataset/input.csv
+concept/unbiased_dataset/results/
 tuning/wardrobe_pilot/images/
 z-old-data/
 z_deprecated_logs/

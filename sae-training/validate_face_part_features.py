@@ -16,7 +16,7 @@ from SAE import SparseAutoencoder
 from fine_tune_face_sae import DEFAULT_BOXES, DEFAULT_MANIFEST, DEFAULT_RESIDUALS, face_boxes, read_csv
 from render_face_region_heatmaps import load_region_boxes
 
-REGIONS = ("eyes", "eyebrows", "ears")
+REGIONS = ("eyes", "eyebrows", "nose", "ears")
 MAX_BOX_AREA = 0.12
 MIN_REGION_CELLS = 2
 

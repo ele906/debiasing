@@ -32,6 +32,18 @@
       "bootstrap_method": "stratified image bootstrap within race/gender categories; macro-average category contrast",
       "bootstrap_samples": 2000
     },
+    "nose": {
+      "candidate_features": [
+        1664,
+        3593,
+        1991
+      ],
+      "validation_categories": 6,
+      "test_categories": 4,
+      "test_images": 13,
+      "bootstrap_method": "stratified image bootstrap within race/gender categories; macro-average category contrast",
+      "bootstrap_samples": 2000
+    },
     "ears": {
       "candidate_features": [
         4858,
