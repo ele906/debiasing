@@ -112,6 +112,40 @@ activation and the fraction of active cells for each feature, epoch, region,
 and selected image. Add `--resume` to replace sheets in an existing output
 folder.
 
+## Run a separate eyes-only fine-tuning experiment
+
+This starts from the original pretrained SAE and trains only on activation
+cells inside eye boxes. It balances sampling across the 12 race/gender groups,
+chooses the checkpoint by macro-average validation eye reconstruction error,
+and also measures whole-face reconstruction to check for loss outside the
+eyes. It does not change `face_sae_020`.
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/fine_tune_eye_sae.py \
+  --epochs 20 \
+  --snapshot-interval 4 \
+  --output sae-training/runs/eye_sae_001
+```
+
+The eye-box filter excludes boxes covering more than 12% of the image and
+images with fewer than two 16×16 activation cells inside the boxes. The run
+folder contains checkpoints, `training_history.json`,
+`heldout_reconstruction.json`, `heldout_metrics.csv`,
+`eye_localized_features.csv`, and `settings.json`.
+These are exploratory results from automatic, unreviewed boxes.
+
+To render part-specific overlays using the eye-fine-tuned SAE, run:
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/render_face_region_heatmaps.py \
+  sae-training/runs/eye_sae_001
+```
+
+When the run folder contains `eye_localized_features.csv`, the renderer uses
+that ranking for its three feature sheets.
+
 ## Start a new training run
 
 Each run needs a new output directory. The existing `face_sae_020` folder

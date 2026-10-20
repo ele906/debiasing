@@ -109,11 +109,14 @@ def choose_samples(data_dir, boxes_by_sample, residual_dir):
 
 
 def load_features(run_dir, count):
-    with (run_dir / "face_localized_features.csv").open(newline="") as source:
+    ranking_path = run_dir / "eye_localized_features.csv"
+    if not ranking_path.is_file():
+        ranking_path = run_dir / "face_localized_features.csv"
+    with ranking_path.open(newline="") as source:
         rows = list(csv.DictReader(source))
     features = [int(row["feature"]) for row in rows[:count]]
     if not features:
-        raise ValueError("No ranked features in face_localized_features.csv")
+        raise ValueError(f"No ranked features in {ranking_path}")
     return features
 
 
