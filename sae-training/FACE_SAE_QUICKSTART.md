@@ -146,7 +146,7 @@ To render part-specific overlays using the eye-fine-tuned SAE, run:
 When the run folder contains `eye_localized_features.csv`, the renderer uses
 that ranking for its three feature sheets.
 
-## Validate eye, eyebrow, and ear feature candidates
+## Validate eye, eyebrow, nose, and ear feature candidates
 
 This analysis keeps feature selection and evaluation separate. The three eye
 features come from the eye run's validation ranking. Eyebrow, nose, and ear
@@ -173,6 +173,20 @@ counts; the folder's `REPORT.md` summarizes the current results. Positive
 contrast means the feature activates more inside that annotation than in its
 reference area. It supports spatial association with these automatic boxes,
 not proof that a feature semantically represents eyes, eyebrows, nose, or ears.
+
+To make epoch sheets using different features for each region, run:
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/render_region_specific_heatmaps.py \
+  sae-training/runs/eye_sae_001
+```
+
+The script uses each region's validation-ranked candidates and renders them
+only inside that region's box, on held-out test images. Each sheet keeps the
+12 race/gender categories as rows and epochs 0, 4, 8, 12, 16, and 20 as
+columns. Files are saved under
+`sae-training/runs/eye_sae_001/region_specific_heatmaps/<region>/`.
 
 ## Start a new training run
 
