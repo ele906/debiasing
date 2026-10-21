@@ -2,7 +2,7 @@
 
 All 240 held-out portraits are shown below. Each sheet has rows for face, eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.
 
-Cyan outlines the detected face box; yellow outlines the target part box. A missing box means there is no usable automatic annotation, not that the part is absent. Feature IDs were selected on validation data. See the [validation feature table](validation_selected_features.csv) and [full report](../REPORT.md).
+Cyan outlines the detected face box; yellow outlines the target part box. ‘No bbox detected’ means the automatic annotation pipeline did not produce a usable box for that part; it does not mean the part is absent. Feature IDs were selected on validation data. See the [validation feature table](validation_selected_features.csv) and [full report](../REPORT.md).
 
 ## Black Man
 

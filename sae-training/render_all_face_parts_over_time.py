@@ -204,7 +204,7 @@ def render_individual(row, boxes, face_map, epoch_maps, features, images_dir, ou
     for part_index, part in enumerate(PARTS):
         items = boxes.get(sid, {}).get(part, []) if part != "face" else []
         part_exists = part == "face" or bool(items)
-        row_label = f"{part.title()} · f{features[part]}" + ("" if part_exists else " · no box")
+        row_label = f"{part.title()} · f{features[part]}" + ("" if part_exists else " · no bbox detected")
         draw.text((5, header_h + part_index * tile + 52), row_label, fill=(25, 40, 55), font=font)
         for epoch_index, epoch in enumerate(EPOCHS):
             values = epoch_maps[epoch][sid][part]
@@ -214,7 +214,7 @@ def render_individual(row, boxes, face_map, epoch_maps, features, images_dir, ou
             y = header_h + part_index * tile
             sheet.paste(rendered, (x, y))
             if not part_exists:
-                ImageDraw.Draw(sheet).text((x + 5, y + 5), "NO PART BOX", fill="#fff200", font=font,
+                ImageDraw.Draw(sheet).text((x + 5, y + 5), "NO BBOX DETECTED", fill="#fff200", font=font,
                                            stroke_width=1, stroke_fill="#222222")
     out = output_dir / "sheets" / f"{sid}.jpg"
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -231,7 +231,7 @@ def write_gallery(rows, boxes, output_dir):
         "",
         f"All {len(rows)} held-out portraits are shown below. Each sheet has rows for face, eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.",
         "",
-        "Cyan outlines the detected face box; yellow outlines the target part box. A missing box means there is no usable automatic annotation, not that the part is absent. Feature IDs were selected on validation data. See the [validation feature table](validation_selected_features.csv) and [full report](../REPORT.md).",
+        "Cyan outlines the detected face box; yellow outlines the target part box. ‘No bbox detected’ means the automatic annotation pipeline did not produce a usable box for that part; it does not mean the part is absent. Feature IDs were selected on validation data. See the [validation feature table](validation_selected_features.csv) and [full report](../REPORT.md).",
         "",
     ]
     for category_name in sorted(by_category):
@@ -281,7 +281,7 @@ def main():
         "box_sources": str(args.boxes),
         "part_box_max_area_fraction": MAX_PART_AREA,
         "overlay": "jet heatmap normalized within detected face; cyan face box; yellow part box; nearest-neighbor activation upscaling",
-        "missing_box_interpretation": "No usable automatic box is missing annotation evidence, not absence of the part.",
+        "missing_box_interpretation": "No bbox detected means the automatic annotation pipeline did not produce a usable box; it does not indicate the part is absent.",
     }, indent=2) + "\n")
     print(f"Saved {len(test_rows)} per-image grids and gallery to {args.output}", flush=True)
 

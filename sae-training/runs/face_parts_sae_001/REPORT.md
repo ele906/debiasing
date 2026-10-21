@@ -40,10 +40,11 @@ The [complete held-out gallery](individual_part_epoch_grids/index.md) contains
 one sheet for each of the 240 test portraits. Each sheet uses rows for face,
 eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.
 The cyan outline marks the detected face box; the yellow outline marks that
-part's automatic box. A missing part box indicates missing usable annotation,
-not that the person lacks that feature. The face row is shown within the face
-box; ears are compared against the non-ear image area because ear boxes can
-extend beyond the face box.
+part's automatic box. “No bbox detected” means the automatic annotation
+pipeline did not produce a usable box for that part; it does not mean the
+person lacks that feature. The face row is shown within the face box; ears are
+compared against the non-ear image area because ear boxes can extend beyond
+the face box.
 
 For each part, a single SAE feature was selected using only validation data:
 the feature with the highest macro-category mean activation contrast between

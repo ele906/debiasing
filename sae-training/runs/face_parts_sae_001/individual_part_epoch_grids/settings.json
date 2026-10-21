@@ -50,5 +50,5 @@
   "box_sources": "/n/fs/goose/concept/category_analysis_full/bounding_boxes.csv",
   "part_box_max_area_fraction": 0.12,
   "overlay": "jet heatmap normalized within detected face; cyan face box; yellow part box; nearest-neighbor activation upscaling",
-  "missing_box_interpretation": "No usable automatic box is missing annotation evidence, not absence of the part."
+  "missing_box_interpretation": "No bbox detected means the automatic annotation pipeline did not produce a usable box; it does not indicate the part is absent."
 }
