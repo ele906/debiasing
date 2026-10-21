@@ -1,7 +1,6 @@
 """Compare SAE feature activations inside annotated facial regions."""
 import argparse
 import csv
-import csv
 import json
 import re
 import sys
@@ -33,12 +32,14 @@ def parse_args():
     parser.add_argument("--output", type=Path, help="Output folder (default: RUN/region_heatmaps)")
     parser.add_argument("--feature-count", type=int, default=3,
                         help="Number of top validation-ranked features to render")
+    parser.add_argument("--samples-per-category", type=int, default=1,
+                        help="Maximum held-out seeds to show per region/category")
     parser.add_argument("--device", default="cuda" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--resume", action="store_true",
                         help="Overwrite sheets in an existing output folder")
     args = parser.parse_args()
-    if args.feature_count < 1:
-        parser.error("--feature-count must be positive")
+    if args.feature_count < 1 or args.samples_per_category < 1:
+        parser.error("--feature-count and --samples-per-category must be positive")
     args.run = args.run.resolve()
     args.data = args.data.resolve()
     args.boxes = args.boxes.resolve()
@@ -101,10 +102,11 @@ def choose_samples(data_dir, boxes_by_sample, residual_dir):
                 key=lambda row: int(row["seed"]),
             )
             for region in REGIONS:
-                sample = next((row for row in category_rows
-                               if region in boxes_by_sample.get(row["sample_id"], {})
-                               and (residual_dir / f"{row['sample_id']}.npy").is_file()), None)
-                selected[region, category] = sample
+                selected[region, category] = [
+                    row for row in category_rows
+                    if region in boxes_by_sample.get(row["sample_id"], {})
+                    and (residual_dir / f"{row['sample_id']}.npy").is_file()
+                ]
     return selected
 
 
@@ -148,7 +150,7 @@ def region_mask(boxes, height, width, device):
 
 
 def collect_activations(selected, boxes_by_sample, residual_dir, snapshots, features, device):
-    sample_ids = sorted({row["sample_id"] for row in selected.values() if row is not None})
+    sample_ids = sorted({row["sample_id"] for rows in selected.values() for row in rows})
     activations = {}
     for snapshot in snapshots:
         sae = SparseAutoencoder.load_from_disk(str(snapshot)).float().to(device).eval()
@@ -189,29 +191,31 @@ def make_overlay(image, values, mask, boxes):
     return result
 
 
-def save_sheets(selected, boxes_by_sample, activations, epochs, features_by_region, data_dir, output_dir):
+def save_sheets(selected, boxes_by_sample, activations, epochs, features_by_region, data_dir,
+                output_dir, samples_per_category):
     tile_size, label_width, header_height, row_height = 160, 180, 44, 170
     categories = [(race, gender) for race in RACES for gender in GENDERS]
     output_dir.mkdir(parents=True, exist_ok=True)
     summary_rows = []
     for region in REGIONS:
         for feature in features_by_region[region]:
+            shown_rows = [(category, row)
+                          for category in categories
+                          for row in selected[region, category][:samples_per_category]]
             sheet = Image.new("RGB", (label_width + len(epochs) * tile_size,
-                                       header_height + len(categories) * row_height), "white")
+                                       header_height + max(1, len(shown_rows)) * row_height), "white")
             draw = ImageDraw.Draw(sheet)
             draw.text((4, 4), f"{region.title()} · feature {feature}", fill="black")
             for column, epoch in enumerate(epochs):
                 draw.text((label_width + column * tile_size + 5, 22), f"epoch {epoch}", fill="black")
-            for row_index, category in enumerate(categories):
+            if not shown_rows:
+                draw.text((4, header_height + 7), "No held-out samples with usable boxes", fill="gray")
+            for row_index, (category, row) in enumerate(shown_rows):
                 y = header_height + row_index * row_height
                 race, gender = category
                 draw.text((4, y + 7), f"{race.replace('_', ' ').title()} {gender.title()}", fill="black")
-                row = selected[region, category]
-                if row is None:
-                    draw.text((4, y + 28), "no part box", fill="gray")
-                    continue
                 sample_id = row["sample_id"]
-                draw.text((4, y + 28), f"seed {row['seed']}", fill="gray")
+                draw.text((4, y + 28), f"seed {row['seed']} · {sample_id}", fill="gray")
                 with Image.open(data_dir / row["image"]) as source:
                     image = source.convert("RGB")
                 boxes = boxes_by_sample[sample_id][region]
@@ -251,6 +255,7 @@ def main():
         raise ValueError(f"Expected SAE block {BLOCK}; found {settings.get('block')}")
     boxes_by_sample = load_region_boxes(args.boxes)
     selected = choose_samples(args.data, boxes_by_sample, args.residuals)
+    selected = {key: rows[:args.samples_per_category] for key, rows in selected.items()}
     features_by_region = load_features(args.run, args.feature_count)
     features = sorted({feature for values in features_by_region.values() for feature in values})
     if not features:
@@ -261,14 +266,17 @@ def main():
                                       snapshots, features, device)
     save_sheets(selected, boxes_by_sample, activations,
                 [int(snapshot.name.split("_")[1]) for snapshot in snapshots],
-                features_by_region, args.data, args.output)
+                features_by_region, args.data, args.output, args.samples_per_category)
     summary = {
         "epochs": [int(snapshot.name.split("_")[1]) for snapshot in snapshots],
         "features_by_region": features_by_region,
         "regions": list(REGIONS),
+        "samples_per_category_maximum": args.samples_per_category,
+        "sample_split": "test",
+        "data_source": args.data.name,
         "sample_ids": {
-            f"{region}/{race}_{gender}": row["sample_id"] if row else None
-            for (region, (race, gender)), row in selected.items()
+            f"{region}/{race}_{gender}": [row["sample_id"] for row in rows]
+            for (region, (race, gender)), rows in selected.items()
         },
         "annotation_source": str(args.boxes),
         "annotation_note": "Automatic boxes; earrings are excluded from ear regions; inspect overlays before interpreting.",

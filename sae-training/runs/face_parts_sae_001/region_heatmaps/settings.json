@@ -39,80 +39,415 @@
     "mouth",
     "ears"
   ],
+  "samples_per_category_maximum": 5,
+  "sample_split": "test",
+  "data_source": "independent_test_seed200_299",
   "sample_ids": {
-    "face/black_man": "black_man_seed007",
-    "eyes/black_man": "black_man_seed007",
-    "eyebrows/black_man": "black_man_seed019",
-    "nose/black_man": "black_man_seed035",
-    "mouth/black_man": "black_man_seed019",
-    "ears/black_man": "black_man_seed089",
-    "face/black_woman": "black_woman_seed007",
-    "eyes/black_woman": "black_woman_seed023",
-    "eyebrows/black_woman": null,
-    "nose/black_woman": null,
-    "mouth/black_woman": "black_woman_seed023",
-    "ears/black_woman": "black_woman_seed019",
-    "face/white_man": "white_man_seed007",
-    "eyes/white_man": "white_man_seed015",
-    "eyebrows/white_man": "white_man_seed023",
-    "nose/white_man": "white_man_seed071",
-    "mouth/white_man": "white_man_seed063",
-    "ears/white_man": null,
-    "face/white_woman": "white_woman_seed007",
-    "eyes/white_woman": "white_woman_seed007",
-    "eyebrows/white_woman": "white_woman_seed038",
-    "nose/white_woman": "white_woman_seed088",
-    "mouth/white_woman": "white_woman_seed007",
-    "ears/white_woman": null,
-    "face/east_asian_man": "east_asian_man_seed007",
-    "eyes/east_asian_man": "east_asian_man_seed069",
-    "eyebrows/east_asian_man": "east_asian_man_seed058",
-    "nose/east_asian_man": null,
-    "mouth/east_asian_man": null,
-    "ears/east_asian_man": null,
-    "face/east_asian_woman": "east_asian_woman_seed007",
-    "eyes/east_asian_woman": null,
-    "eyebrows/east_asian_woman": null,
-    "nose/east_asian_woman": null,
-    "mouth/east_asian_woman": null,
-    "ears/east_asian_woman": "east_asian_woman_seed015",
-    "face/middle_eastern_man": "middle_eastern_man_seed007",
-    "eyes/middle_eastern_man": "middle_eastern_man_seed019",
-    "eyebrows/middle_eastern_man": null,
-    "nose/middle_eastern_man": null,
-    "mouth/middle_eastern_man": null,
-    "ears/middle_eastern_man": null,
-    "face/middle_eastern_woman": "middle_eastern_woman_seed007",
-    "eyes/middle_eastern_woman": "middle_eastern_woman_seed007",
-    "eyebrows/middle_eastern_woman": "middle_eastern_woman_seed024",
-    "nose/middle_eastern_woman": "middle_eastern_woman_seed009",
-    "mouth/middle_eastern_woman": "middle_eastern_woman_seed019",
-    "ears/middle_eastern_woman": "middle_eastern_woman_seed089",
-    "face/indian_man": "indian_man_seed007",
-    "eyes/indian_man": null,
-    "eyebrows/indian_man": null,
-    "nose/indian_man": null,
-    "mouth/indian_man": null,
-    "ears/indian_man": "indian_man_seed058",
-    "face/indian_woman": "indian_woman_seed007",
-    "eyes/indian_woman": null,
-    "eyebrows/indian_woman": null,
-    "nose/indian_woman": null,
-    "mouth/indian_woman": null,
-    "ears/indian_woman": "indian_woman_seed007",
-    "face/hispanic_man": "hispanic_man_seed007",
-    "eyes/hispanic_man": "hispanic_man_seed007",
-    "eyebrows/hispanic_man": "hispanic_man_seed035",
-    "nose/hispanic_man": null,
-    "mouth/hispanic_man": "hispanic_man_seed035",
-    "ears/hispanic_man": null,
-    "face/hispanic_woman": "hispanic_woman_seed007",
-    "eyes/hispanic_woman": "hispanic_woman_seed072",
-    "eyebrows/hispanic_woman": "hispanic_woman_seed072",
-    "nose/hispanic_woman": null,
-    "mouth/hispanic_woman": null,
-    "ears/hispanic_woman": "hispanic_woman_seed035"
+    "face/black_man": [
+      "black_man_seed200",
+      "black_man_seed201",
+      "black_man_seed202",
+      "black_man_seed203",
+      "black_man_seed204"
+    ],
+    "eyes/black_man": [
+      "black_man_seed200",
+      "black_man_seed203",
+      "black_man_seed205",
+      "black_man_seed206",
+      "black_man_seed207"
+    ],
+    "eyebrows/black_man": [
+      "black_man_seed201",
+      "black_man_seed203",
+      "black_man_seed207",
+      "black_man_seed210",
+      "black_man_seed214"
+    ],
+    "nose/black_man": [
+      "black_man_seed203",
+      "black_man_seed205",
+      "black_man_seed207",
+      "black_man_seed208",
+      "black_man_seed210"
+    ],
+    "mouth/black_man": [
+      "black_man_seed201",
+      "black_man_seed203",
+      "black_man_seed207",
+      "black_man_seed208",
+      "black_man_seed209"
+    ],
+    "ears/black_man": [
+      "black_man_seed219",
+      "black_man_seed227",
+      "black_man_seed296"
+    ],
+    "face/black_woman": [
+      "black_woman_seed200",
+      "black_woman_seed201",
+      "black_woman_seed202",
+      "black_woman_seed203",
+      "black_woman_seed204"
+    ],
+    "eyes/black_woman": [
+      "black_woman_seed201",
+      "black_woman_seed203",
+      "black_woman_seed208",
+      "black_woman_seed216",
+      "black_woman_seed219"
+    ],
+    "eyebrows/black_woman": [
+      "black_woman_seed203",
+      "black_woman_seed208",
+      "black_woman_seed216",
+      "black_woman_seed230",
+      "black_woman_seed231"
+    ],
+    "nose/black_woman": [
+      "black_woman_seed216",
+      "black_woman_seed253"
+    ],
+    "mouth/black_woman": [
+      "black_woman_seed201",
+      "black_woman_seed203",
+      "black_woman_seed208",
+      "black_woman_seed216",
+      "black_woman_seed219"
+    ],
+    "ears/black_woman": [
+      "black_woman_seed208",
+      "black_woman_seed214",
+      "black_woman_seed220",
+      "black_woman_seed229",
+      "black_woman_seed244"
+    ],
+    "face/white_man": [
+      "white_man_seed200",
+      "white_man_seed201",
+      "white_man_seed202",
+      "white_man_seed203",
+      "white_man_seed204"
+    ],
+    "eyes/white_man": [
+      "white_man_seed201",
+      "white_man_seed204",
+      "white_man_seed205",
+      "white_man_seed206",
+      "white_man_seed207"
+    ],
+    "eyebrows/white_man": [
+      "white_man_seed208",
+      "white_man_seed213",
+      "white_man_seed216",
+      "white_man_seed217",
+      "white_man_seed219"
+    ],
+    "nose/white_man": [
+      "white_man_seed207",
+      "white_man_seed215",
+      "white_man_seed216",
+      "white_man_seed219",
+      "white_man_seed247"
+    ],
+    "mouth/white_man": [
+      "white_man_seed201",
+      "white_man_seed207",
+      "white_man_seed215",
+      "white_man_seed216",
+      "white_man_seed219"
+    ],
+    "ears/white_man": [
+      "white_man_seed216",
+      "white_man_seed294"
+    ],
+    "face/white_woman": [
+      "white_woman_seed200",
+      "white_woman_seed201",
+      "white_woman_seed202",
+      "white_woman_seed203",
+      "white_woman_seed204"
+    ],
+    "eyes/white_woman": [
+      "white_woman_seed200",
+      "white_woman_seed201",
+      "white_woman_seed202",
+      "white_woman_seed204",
+      "white_woman_seed205"
+    ],
+    "eyebrows/white_woman": [
+      "white_woman_seed201",
+      "white_woman_seed207",
+      "white_woman_seed208",
+      "white_woman_seed209",
+      "white_woman_seed214"
+    ],
+    "nose/white_woman": [
+      "white_woman_seed208",
+      "white_woman_seed227",
+      "white_woman_seed238",
+      "white_woman_seed239",
+      "white_woman_seed242"
+    ],
+    "mouth/white_woman": [
+      "white_woman_seed200",
+      "white_woman_seed202",
+      "white_woman_seed205",
+      "white_woman_seed208",
+      "white_woman_seed212"
+    ],
+    "ears/white_woman": [],
+    "face/east_asian_man": [
+      "east_asian_man_seed200",
+      "east_asian_man_seed201",
+      "east_asian_man_seed202",
+      "east_asian_man_seed203",
+      "east_asian_man_seed204"
+    ],
+    "eyes/east_asian_man": [
+      "east_asian_man_seed203",
+      "east_asian_man_seed207",
+      "east_asian_man_seed211",
+      "east_asian_man_seed214",
+      "east_asian_man_seed216"
+    ],
+    "eyebrows/east_asian_man": [
+      "east_asian_man_seed216",
+      "east_asian_man_seed263",
+      "east_asian_man_seed296"
+    ],
+    "nose/east_asian_man": [
+      "east_asian_man_seed216",
+      "east_asian_man_seed253",
+      "east_asian_man_seed296"
+    ],
+    "mouth/east_asian_man": [
+      "east_asian_man_seed296"
+    ],
+    "ears/east_asian_man": [
+      "east_asian_man_seed216"
+    ],
+    "face/east_asian_woman": [
+      "east_asian_woman_seed200",
+      "east_asian_woman_seed201",
+      "east_asian_woman_seed202",
+      "east_asian_woman_seed203",
+      "east_asian_woman_seed204"
+    ],
+    "eyes/east_asian_woman": [
+      "east_asian_woman_seed209",
+      "east_asian_woman_seed253",
+      "east_asian_woman_seed259",
+      "east_asian_woman_seed281",
+      "east_asian_woman_seed282"
+    ],
+    "eyebrows/east_asian_woman": [
+      "east_asian_woman_seed281",
+      "east_asian_woman_seed286"
+    ],
+    "nose/east_asian_woman": [],
+    "mouth/east_asian_woman": [
+      "east_asian_woman_seed253"
+    ],
+    "ears/east_asian_woman": [
+      "east_asian_woman_seed207",
+      "east_asian_woman_seed210",
+      "east_asian_woman_seed211",
+      "east_asian_woman_seed215",
+      "east_asian_woman_seed228"
+    ],
+    "face/middle_eastern_man": [
+      "middle_eastern_man_seed200",
+      "middle_eastern_man_seed201",
+      "middle_eastern_man_seed202",
+      "middle_eastern_man_seed203",
+      "middle_eastern_man_seed204"
+    ],
+    "eyes/middle_eastern_man": [
+      "middle_eastern_man_seed200",
+      "middle_eastern_man_seed208",
+      "middle_eastern_man_seed219",
+      "middle_eastern_man_seed222",
+      "middle_eastern_man_seed233"
+    ],
+    "eyebrows/middle_eastern_man": [
+      "middle_eastern_man_seed208",
+      "middle_eastern_man_seed219",
+      "middle_eastern_man_seed234",
+      "middle_eastern_man_seed237",
+      "middle_eastern_man_seed241"
+    ],
+    "nose/middle_eastern_man": [],
+    "mouth/middle_eastern_man": [],
+    "ears/middle_eastern_man": [],
+    "face/middle_eastern_woman": [
+      "middle_eastern_woman_seed200",
+      "middle_eastern_woman_seed201",
+      "middle_eastern_woman_seed202",
+      "middle_eastern_woman_seed203",
+      "middle_eastern_woman_seed204"
+    ],
+    "eyes/middle_eastern_woman": [
+      "middle_eastern_woman_seed200",
+      "middle_eastern_woman_seed201",
+      "middle_eastern_woman_seed202",
+      "middle_eastern_woman_seed203",
+      "middle_eastern_woman_seed204"
+    ],
+    "eyebrows/middle_eastern_woman": [
+      "middle_eastern_woman_seed201",
+      "middle_eastern_woman_seed204",
+      "middle_eastern_woman_seed205",
+      "middle_eastern_woman_seed208",
+      "middle_eastern_woman_seed213"
+    ],
+    "nose/middle_eastern_woman": [
+      "middle_eastern_woman_seed207",
+      "middle_eastern_woman_seed209",
+      "middle_eastern_woman_seed211",
+      "middle_eastern_woman_seed217",
+      "middle_eastern_woman_seed223"
+    ],
+    "mouth/middle_eastern_woman": [
+      "middle_eastern_woman_seed200",
+      "middle_eastern_woman_seed203",
+      "middle_eastern_woman_seed208",
+      "middle_eastern_woman_seed212",
+      "middle_eastern_woman_seed215"
+    ],
+    "ears/middle_eastern_woman": [
+      "middle_eastern_woman_seed207",
+      "middle_eastern_woman_seed210",
+      "middle_eastern_woman_seed216",
+      "middle_eastern_woman_seed226",
+      "middle_eastern_woman_seed259"
+    ],
+    "face/indian_man": [
+      "indian_man_seed200",
+      "indian_man_seed201",
+      "indian_man_seed202",
+      "indian_man_seed203",
+      "indian_man_seed204"
+    ],
+    "eyes/indian_man": [
+      "indian_man_seed208",
+      "indian_man_seed237",
+      "indian_man_seed245",
+      "indian_man_seed253",
+      "indian_man_seed259"
+    ],
+    "eyebrows/indian_man": [
+      "indian_man_seed200",
+      "indian_man_seed253"
+    ],
+    "nose/indian_man": [],
+    "mouth/indian_man": [
+      "indian_man_seed237",
+      "indian_man_seed253"
+    ],
+    "ears/indian_man": [
+      "indian_man_seed219",
+      "indian_man_seed265"
+    ],
+    "face/indian_woman": [
+      "indian_woman_seed200",
+      "indian_woman_seed201",
+      "indian_woman_seed202",
+      "indian_woman_seed203",
+      "indian_woman_seed204"
+    ],
+    "eyes/indian_woman": [
+      "indian_woman_seed228",
+      "indian_woman_seed229",
+      "indian_woman_seed253",
+      "indian_woman_seed298"
+    ],
+    "eyebrows/indian_woman": [],
+    "nose/indian_woman": [],
+    "mouth/indian_woman": [],
+    "ears/indian_woman": [
+      "indian_woman_seed202",
+      "indian_woman_seed203",
+      "indian_woman_seed204",
+      "indian_woman_seed211",
+      "indian_woman_seed213"
+    ],
+    "face/hispanic_man": [
+      "hispanic_man_seed200",
+      "hispanic_man_seed201",
+      "hispanic_man_seed202",
+      "hispanic_man_seed203",
+      "hispanic_man_seed204"
+    ],
+    "eyes/hispanic_man": [
+      "hispanic_man_seed201",
+      "hispanic_man_seed205",
+      "hispanic_man_seed207",
+      "hispanic_man_seed208",
+      "hispanic_man_seed209"
+    ],
+    "eyebrows/hispanic_man": [
+      "hispanic_man_seed202",
+      "hispanic_man_seed205",
+      "hispanic_man_seed208",
+      "hispanic_man_seed214",
+      "hispanic_man_seed215"
+    ],
+    "nose/hispanic_man": [
+      "hispanic_man_seed216",
+      "hispanic_man_seed227",
+      "hispanic_man_seed228",
+      "hispanic_man_seed274"
+    ],
+    "mouth/hispanic_man": [
+      "hispanic_man_seed201",
+      "hispanic_man_seed208",
+      "hispanic_man_seed215",
+      "hispanic_man_seed219",
+      "hispanic_man_seed227"
+    ],
+    "ears/hispanic_man": [],
+    "face/hispanic_woman": [
+      "hispanic_woman_seed200",
+      "hispanic_woman_seed201",
+      "hispanic_woman_seed202",
+      "hispanic_woman_seed203",
+      "hispanic_woman_seed204"
+    ],
+    "eyes/hispanic_woman": [
+      "hispanic_woman_seed207",
+      "hispanic_woman_seed208",
+      "hispanic_woman_seed215",
+      "hispanic_woman_seed216",
+      "hispanic_woman_seed220"
+    ],
+    "eyebrows/hispanic_woman": [
+      "hispanic_woman_seed215",
+      "hispanic_woman_seed216",
+      "hispanic_woman_seed237",
+      "hispanic_woman_seed253",
+      "hispanic_woman_seed262"
+    ],
+    "nose/hispanic_woman": [
+      "hispanic_woman_seed228",
+      "hispanic_woman_seed262",
+      "hispanic_woman_seed298"
+    ],
+    "mouth/hispanic_woman": [
+      "hispanic_woman_seed220",
+      "hispanic_woman_seed253",
+      "hispanic_woman_seed262",
+      "hispanic_woman_seed278",
+      "hispanic_woman_seed279"
+    ],
+    "ears/hispanic_woman": [
+      "hispanic_woman_seed202",
+      "hispanic_woman_seed203",
+      "hispanic_woman_seed209",
+      "hispanic_woman_seed212",
+      "hispanic_woman_seed214"
+    ]
   },
-  "annotation_source": "/n/fs/goose/concept/category_analysis_full/bounding_boxes.csv",
+  "annotation_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/annotations/bounding_boxes.csv",
   "annotation_note": "Automatic boxes; earrings are excluded from ear regions; inspect overlays before interpreting."
 }
