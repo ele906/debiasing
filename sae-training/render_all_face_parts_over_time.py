@@ -222,22 +222,30 @@ def render_individual(row, boxes, face_map, epoch_maps, features, images_dir, ou
     return out
 
 
-def write_gallery(rows, boxes, output):
-    html = ["<!doctype html><meta charset='utf-8'><title>Held-out face part heatmaps</title>",
-            "<style>body{font:14px system-ui;margin:24px;color:#243247}h1{margin-bottom:4px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}.card{border:1px solid #ccd5df;padding:8px;border-radius:6px}.card img{width:100%;height:auto}.muted{color:#66717f}</style>",
-            "<h1>Held-out face-part feature maps</h1>",
-            f"<p class='muted'>Each image sheet shows {len(PARTS)} part rows (face, eyes, eyebrows, nose, ears) and epochs 0, 4, 8, 12, 16, 20 across columns. Cyan is the detected face box; yellow is the target part box. No box means no usable automatic annotation, not evidence the part is absent. Feature IDs were selected on validation data.</p>"]
+def write_gallery(rows, boxes, output_dir):
     by_category = defaultdict(list)
     for row in rows:
         by_category[category(row)].append(row)
+    markdown = [
+        "# Held-out face-part feature maps",
+        "",
+        f"All {len(rows)} held-out portraits are shown below. Each sheet has rows for face, eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.",
+        "",
+        "Cyan outlines the detected face box; yellow outlines the target part box. A missing box means there is no usable automatic annotation, not that the part is absent. Feature IDs were selected on validation data. See the [validation feature table](validation_selected_features.csv) and [full report](../REPORT.md).",
+        "",
+    ]
     for category_name in sorted(by_category):
-        html.append(f"<h2>{category_name.replace('_', ' ').title()}</h2><div class='grid'>")
+        markdown.extend([f"## {category_name.replace('_', ' ').title()}", ""])
         for row in sorted(by_category[category_name], key=lambda item: int(item["seed"])):
             sid = row["sample_id"]
             boxes_count = sum(bool(boxes.get(sid, {}).get(part)) for part in PARTS if part != "face")
-            html.append(f"<a class='card' href='sheets/{sid}.jpg'><strong>{sid}</strong> · {boxes_count} part types boxed<br><img loading='lazy' src='sheets/{sid}.jpg'></a>")
-        html.append("</div>")
-    output.write_text("\n".join(html) + "\n")
+            markdown.extend([
+                f"### {sid} · {boxes_count} part types with boxes",
+                "",
+                f'<a href="sheets/{sid}.jpg"><img src="sheets/{sid}.jpg" width="840" alt="{sid}: face, eyes, eyebrows, nose, and ears across six epochs"></a>',
+                "",
+            ])
+    (output_dir / "index.md").write_text("\n".join(markdown) + "\n")
 
 
 def main():
@@ -257,8 +265,7 @@ def main():
                           args.images, args.output)
         if index % 40 == 0:
             print(f"rendered {index}/{len(test_rows)} individual grids", flush=True)
-    gallery = args.output / "index.html"
-    write_gallery(test_rows, boxes, gallery)
+    write_gallery(test_rows, boxes, args.output)
     with (args.output / "validation_selected_features.csv").open("w", newline="") as target:
         writer = csv.writer(target, lineterminator="\n")
         writer.writerow(("part", "feature", "validation_macro_contrast", "validation_images", "validation_categories"))

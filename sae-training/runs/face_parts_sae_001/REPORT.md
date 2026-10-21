@@ -36,7 +36,7 @@ so treat those estimates as preliminary and inspect the boxes in the sheets.
 
 ## Held-out per-image feature maps across training
 
-The [complete held-out gallery](individual_part_epoch_grids/index.html) contains
+The [complete held-out gallery](individual_part_epoch_grids/index.md) contains
 one sheet for each of the 240 test portraits. Each sheet uses rows for face,
 eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.
 The cyan outline marks the detected face box; the yellow outline marks that
@@ -54,6 +54,24 @@ eyebrows 1600, nose 1664, and ears 4858. These are candidate spatial
 associations, not proof that a feature exclusively represents a semantic part.
 The validation contrasts and coverage are in
 [`validation_selected_features.csv`](individual_part_epoch_grids/validation_selected_features.csv).
+
+### How to read the feature table
+
+`validation_macro_contrast` is the feature's average activation inside the
+annotated part box minus its average activation in a reference area, computed
+for each validation image. Image contrasts are averaged within each race and
+gender category, then the category means are averaged equally. The score is in
+SAE activation units: it is not a percentage, accuracy, or correlation
+coefficient. A larger positive value means stronger average localization to
+that part under this measure. Scores across different parts are not directly
+comparable because their boxes, reference areas, and category coverage differ.
+
+`validation_images` counts validation images with usable boxes for that part;
+`validation_categories` counts the represented race/gender categories. Nose
+and ear estimates have limited coverage (21 images/6 categories and 17/6), so
+their selected features are especially preliminary. Face and nose selecting
+the same feature (1664) means that feature scored highest for both contrasts;
+it does not show that the feature exclusively represents either one.
 
 ## Reproducibility files
 
