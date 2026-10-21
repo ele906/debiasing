@@ -47,9 +47,11 @@ validation script below. That is a separate evaluation from the visual gallery.
 - [`render_face_region_heatmaps.py`](../../render_face_region_heatmaps.py): renders top region-ranked features on selected held-out examples.
 
 The current gallery is summarized in the [full experiment report](REPORT.md).
-The feature sheets in `region_heatmaps/` show up to five held-out test seeds
-per race/gender category, across the six saved SAE epochs; the independent
-seed-200–299 test set is used for these multi-seed visual comparisons.
+The feature pages in `region_heatmaps/` show up to five held-out test seeds
+per race/gender category, across the six saved SAE epochs. Each Markdown page
+has one row per seed and one image column per epoch; the independent
+seed-200–299 test set is used for these multi-seed visual comparisons. Browse
+the [heatmap index](region_heatmaps/index.md).
 
 ## Reproduce the gallery
 

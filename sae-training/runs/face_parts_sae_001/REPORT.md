@@ -29,13 +29,15 @@ eyebrows: 3701, 1600, 1237; nose: 1664, 3593, 1991; ears: 4858, 3725,
 2230. Features can rank for more than one region; these are spatial activation
 associations, not dedicated semantic labels.
 
-Epoch heatmap sheets use epochs 0, 4, 8, 12, 16, and 20 and are in
-`region_heatmaps/<region>/feature_<id>.jpg`. The updated sheets show up to five
-held-out test portraits per race/gender category, using the independent
-seed-200–299 set. Categories can show fewer than five portraits when automatic
-part boxes are missing. The source annotations are automatic and unreviewed.
-Test coverage is especially small for nose and ears, so treat those estimates
-as preliminary and inspect the boxes in the sheets.
+Epoch heatmaps use epochs 0, 4, 8, 12, 16, and 20. Browse the
+[feature heatmap index](region_heatmaps/index.md); each Markdown page in
+`region_heatmaps/<region>/feature_<id>.md` aligns one row per held-out seed,
+with one image cell per epoch. Up to five test portraits per race/gender
+category are shown, using the independent seed-200–299 set. Categories can
+show fewer than five portraits when automatic part boxes are missing. The
+source annotations are automatic and unreviewed. Test coverage is especially
+small for nose and ears, so treat those estimates as preliminary and inspect
+the boxes in the sheets.
 
 ## Held-out per-image feature maps across training
 

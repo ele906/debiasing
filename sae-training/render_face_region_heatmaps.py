@@ -193,34 +193,39 @@ def make_overlay(image, values, mask, boxes):
 
 def save_sheets(selected, boxes_by_sample, activations, epochs, features_by_region, data_dir,
                 output_dir, samples_per_category):
-    tile_size, label_width, header_height, row_height = 160, 180, 44, 170
+    tile_size = 152
     categories = [(race, gender) for race in RACES for gender in GENDERS]
     output_dir.mkdir(parents=True, exist_ok=True)
     summary_rows = []
+    feature_pages = []
     for region in REGIONS:
+        region_dir = output_dir / region
+        region_dir.mkdir(parents=True, exist_ok=True)
         for feature in features_by_region[region]:
             shown_rows = [(category, row)
                           for category in categories
                           for row in selected[region, category][:samples_per_category]]
-            sheet = Image.new("RGB", (label_width + len(epochs) * tile_size,
-                                       header_height + max(1, len(shown_rows)) * row_height), "white")
-            draw = ImageDraw.Draw(sheet)
-            draw.text((4, 4), f"{region.title()} · feature {feature}", fill="black")
-            for column, epoch in enumerate(epochs):
-                draw.text((label_width + column * tile_size + 5, 22), f"epoch {epoch}", fill="black")
-            if not shown_rows:
-                draw.text((4, header_height + 7), "No held-out samples with usable boxes", fill="gray")
-            for row_index, (category, row) in enumerate(shown_rows):
-                y = header_height + row_index * row_height
+            feature_dir = region_dir / f"feature_{feature}"
+            feature_dir.mkdir(parents=True, exist_ok=True)
+            page = [
+                f"# {region.title()} — Feature {feature}",
+                "",
+                "Each row is one held-out test seed. Columns show the same portrait at each SAE checkpoint.",
+                "The heatmap is shown inside the automatically annotated target region; boxes are cyan.",
+                "",
+            ]
+            headers = ["Category", "Seed", *(f"Epoch {epoch}" for epoch in epochs)]
+            page.append("| " + " | ".join(headers) + " |")
+            page.append("| " + " | ".join(["---"] * len(headers)) + " |")
+            for category, row in shown_rows:
                 race, gender = category
-                draw.text((4, y + 7), f"{race.replace('_', ' ').title()} {gender.title()}", fill="black")
                 sample_id = row["sample_id"]
-                draw.text((4, y + 28), f"seed {row['seed']} · {sample_id}", fill="gray")
                 with Image.open(data_dir / row["image"]) as source:
                     image = source.convert("RGB")
                 boxes = boxes_by_sample[sample_id][region]
                 mask = region_mask(boxes, *activations[epochs[0], sample_id, feature].shape,
                                    torch.device("cpu")).numpy()
+                image_cells = []
                 for column, epoch in enumerate(epochs):
                     feature_map = activations[epoch, sample_id, feature]
                     selected_values = feature_map[mask]
@@ -236,11 +241,28 @@ def save_sheets(selected, boxes_by_sample, activations, epochs, features_by_regi
                         "active_cell_fraction": float((selected_values > 0).mean()) if selected_values.size else 0.0,
                     })
                     overlay = make_overlay(image, feature_map, mask, boxes)
-                    tile = overlay.resize((tile_size - 8, tile_size - 8))
-                    sheet.paste(tile, (label_width + column * tile_size + 4, y + 4))
-            region_dir = output_dir / region
-            region_dir.mkdir(exist_ok=True)
-            sheet.save(region_dir / f"feature_{feature}.jpg", quality=92)
+                    tile = overlay.resize((tile_size, tile_size))
+                    tile_name = f"{sample_id}_epoch_{epoch:03d}.jpg"
+                    tile.save(feature_dir / tile_name, quality=78, optimize=True)
+                    image_cells.append(f"![epoch {epoch}]({feature_dir.name}/{tile_name})")
+                page.append("| " + " | ".join([
+                    f"{race.replace('_', ' ').title()} {gender.title()}",
+                    f"{row['seed']} ({sample_id})",
+                    *image_cells,
+                ]) + " |")
+            if not shown_rows:
+                page.append("| — | — | No usable held-out samples |" + " |" * (len(epochs) - 1))
+            page.append("")
+            page.append(f"Shown seeds: {len(shown_rows)}. At most {samples_per_category} per category.")
+            page_path = region_dir / f"feature_{feature}.md"
+            page_path.write_text("\n".join(page) + "\n")
+            (region_dir / f"feature_{feature}.jpg").unlink(missing_ok=True)
+            feature_pages.append((region, feature, len(shown_rows)))
+    index = ["# Fine-tuning region heatmaps", "",
+             "Each feature page is a Markdown table with one row per held-out seed and one image column per epoch.", ""]
+    for region, feature, count in feature_pages:
+        index.append(f"- [{region.title()} · feature {feature}](./{region}/feature_{feature}.md) ({count} seeds)")
+    (output_dir / "index.md").write_text("\n".join(index) + "\n")
     if summary_rows:
         with (output_dir / "regional_activation_summary.csv").open("w", newline="") as target:
             writer = csv.DictWriter(target, fieldnames=list(summary_rows[0]), lineterminator="\n")
@@ -272,6 +294,7 @@ def main():
         "features_by_region": features_by_region,
         "regions": list(REGIONS),
         "samples_per_category_maximum": args.samples_per_category,
+        "output_format": "One Markdown table per region/feature; one row per held-out seed, with one image cell per epoch.",
         "sample_split": "test",
         "data_source": args.data.name,
         "sample_ids": {

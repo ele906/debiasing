@@ -40,6 +40,7 @@
     "ears"
   ],
   "samples_per_category_maximum": 5,
+  "output_format": "One Markdown table per region/feature; one row per held-out seed, with one image cell per epoch.",
   "sample_split": "test",
   "data_source": "independent_test_seed200_299",
   "sample_ids": {
