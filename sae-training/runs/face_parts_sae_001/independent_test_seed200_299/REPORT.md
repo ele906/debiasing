@@ -37,11 +37,21 @@ does not show that the SAE detects or semantically represents facial parts.
 - `face_parts_evaluation.json`: full pooled and per-category metrics.
 - `manifest.csv`: prompt groups, seeds, test split, and relative image paths.
 - `annotations/bounding_boxes.csv`: aggregated automatic region boxes.
-- `contact_sheets/`: generated portraits grouped by prompt category.
-- `region_heatmaps/`: pixelated feature overlays, with epochs 0, 4, 8, 12, 16,
-  and 20 in each sheet.
+- `contact_sheets/`: plain generated portraits grouped by prompt category.
+  These are for browsing the images; they do not show training epochs.
+- `region_heatmaps/<region>/feature_<id>.jpg`: epoch comparison sheets. Each
+  row is a prompt category; columns show epochs 0, 4, 8, 12, 16, and 20 for the
+  same held-out portrait. Each tile has the region's automatic bounding box
+  and a pixelated jet-style overlay for that feature. For example, see
+  [`region_heatmaps/eyes/feature_1600.jpg`](region_heatmaps/eyes/feature_1600.jpg).
 - `detector/REPORT.md`: detector summary and coverage details.
 - `generation_settings.json`: generation model, prompts, seeds, and settings.
+
+The history contains metrics for all 20 epochs, but visual checkpoints were
+saved every four epochs. Therefore, the feature sheets show six snapshots
+(including the pretrained epoch 0), not all 21 epochs. To produce overlays for
+every epoch, the SAE must be trained again with `--snapshot-interval 1` before
+rendering the sheets.
 
 Individual generated images, cached model features, and residual activations
 are stored locally and are not included in the GitHub repository.
