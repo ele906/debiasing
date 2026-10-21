@@ -34,6 +34,27 @@ Epoch heatmap sheets use epochs 0, 4, 8, 12, 16, and 20 and are in
 automatic and unreviewed. Test coverage is especially small for nose and ears,
 so treat those estimates as preliminary and inspect the boxes in the sheets.
 
+## Held-out per-image feature maps across training
+
+The [complete held-out gallery](individual_part_epoch_grids/index.html) contains
+one sheet for each of the 240 test portraits. Each sheet uses rows for face,
+eyes, eyebrows, nose, and ears, and columns for epochs 0, 4, 8, 12, 16, and 20.
+The cyan outline marks the detected face box; the yellow outline marks that
+part's automatic box. A missing part box indicates missing usable annotation,
+not that the person lacks that feature. The face row is shown within the face
+box; ears are compared against the non-ear image area because ear boxes can
+extend beyond the face box.
+
+For each part, a single SAE feature was selected using only validation data:
+the feature with the highest macro-category mean activation contrast between
+the annotated part region and its reference region at epoch 20. The same
+feature is visualized at each checkpoint, while the test images are held out
+from feature selection. The resulting feature IDs are face 1664, eyes 3701,
+eyebrows 1600, nose 1664, and ears 4858. These are candidate spatial
+associations, not proof that a feature exclusively represents a semantic part.
+The validation contrasts and coverage are in
+[`validation_selected_features.csv`](individual_part_epoch_grids/validation_selected_features.csv).
+
 ## Reproducibility files
 
 - `settings.json`: checkpoint hash, split/category counts, sampler, and run settings.

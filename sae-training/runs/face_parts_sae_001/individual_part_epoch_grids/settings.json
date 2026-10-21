@@ -1,0 +1,54 @@
+{
+  "run": "/n/fs/goose/sae-training/runs/face_parts_sae_001",
+  "sample_split": "test",
+  "test_images": 240,
+  "parts": [
+    "face",
+    "eyes",
+    "eyebrows",
+    "nose",
+    "ears"
+  ],
+  "epochs": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "feature_selection": "one feature per part selected by macro-category activation contrast on validation data at epoch 20",
+  "feature_by_part": {
+    "face": 1664,
+    "eyes": 3701,
+    "eyebrows": 1600,
+    "nose": 1664,
+    "ears": 4858
+  },
+  "validation_coverage": {
+    "face": {
+      "images": 240,
+      "categories": 12
+    },
+    "eyes": {
+      "images": 101,
+      "categories": 11
+    },
+    "eyebrows": {
+      "images": 37,
+      "categories": 9
+    },
+    "nose": {
+      "images": 21,
+      "categories": 6
+    },
+    "ears": {
+      "images": 17,
+      "categories": 6
+    }
+  },
+  "box_sources": "/n/fs/goose/concept/category_analysis_full/bounding_boxes.csv",
+  "part_box_max_area_fraction": 0.12,
+  "overlay": "jet heatmap normalized within detected face; cyan face box; yellow part box; nearest-neighbor activation upscaling",
+  "missing_box_interpretation": "No usable automatic box is missing annotation evidence, not absence of the part."
+}
