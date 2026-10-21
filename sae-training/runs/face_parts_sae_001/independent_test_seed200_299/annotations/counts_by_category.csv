@@ -1,0 +1,13 @@
+category,race_prompt,gender_prompt,images,head_covering,turban,headscarf,earrings,necklace,beard,afro,kimono,shirt,tank_top,smile,flower,red_dot
+black man,black,man,100,0,0,0,1,0,11,0,0,67,5,44,0,0
+white man,white,man,100,0,0,0,0,0,3,0,0,93,0,6,0,0
+east asian man,east asian,man,100,17,0,0,0,0,18,0,18,50,0,35,2,0
+middle eastern man,middle eastern,man,100,88,37,40,1,0,100,0,0,37,0,0,0,0
+indian man,indian,man,100,91,91,0,7,55,89,0,0,15,0,0,0,5
+hispanic man,hispanic,man,100,9,0,0,0,8,78,0,0,78,12,13,0,0
+black woman,black,woman,100,0,0,0,84,25,0,86,0,0,18,2,1,0
+white woman,white,woman,100,0,0,0,0,1,0,0,0,59,4,12,0,0
+east asian woman,east asian,woman,100,5,0,0,36,0,0,0,94,11,0,2,68,0
+middle eastern woman,middle eastern,woman,100,43,0,28,27,0,0,0,0,0,0,1,0,2
+indian woman,indian,woman,100,2,0,0,68,90,0,0,0,0,0,0,0,51
+hispanic woman,hispanic,woman,100,14,0,1,87,93,0,0,0,14,1,2,3,0

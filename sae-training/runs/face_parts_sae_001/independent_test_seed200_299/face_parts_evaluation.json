@@ -1,0 +1,220 @@
+{
+  "dataset": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299",
+  "images": 1200,
+  "images_with_face_box": 1199,
+  "missing_residual_files": 0,
+  "annotation_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/annotations/bounding_boxes.csv",
+  "annotations_reviewed_by_human": false,
+  "regions": {
+    "eyes": {
+      "usable_images": 477,
+      "usable_categories": [
+        "black_man",
+        "black_woman",
+        "east_asian_man",
+        "east_asian_woman",
+        "hispanic_man",
+        "hispanic_woman",
+        "indian_man",
+        "indian_woman",
+        "middle_eastern_man",
+        "middle_eastern_woman",
+        "white_man",
+        "white_woman"
+      ]
+    },
+    "eyebrows": {
+      "usable_images": 162,
+      "usable_categories": [
+        "black_man",
+        "black_woman",
+        "east_asian_man",
+        "east_asian_woman",
+        "hispanic_man",
+        "hispanic_woman",
+        "indian_man",
+        "middle_eastern_man",
+        "middle_eastern_woman",
+        "white_man",
+        "white_woman"
+      ]
+    },
+    "nose": {
+      "usable_images": 85,
+      "usable_categories": [
+        "black_man",
+        "black_woman",
+        "east_asian_man",
+        "hispanic_man",
+        "hispanic_woman",
+        "middle_eastern_woman",
+        "white_man",
+        "white_woman"
+      ]
+    },
+    "ears": {
+      "usable_images": 77,
+      "usable_categories": [
+        "black_man",
+        "black_woman",
+        "east_asian_man",
+        "east_asian_woman",
+        "hispanic_woman",
+        "indian_man",
+        "indian_woman",
+        "middle_eastern_woman",
+        "white_man"
+      ]
+    }
+  },
+  "original_sae": {
+    "eyes": {
+      "images": 477,
+      "pooled_mse": 2.0697168981826692,
+      "macro_category_mse": 2.0824696329423893,
+      "categories": 12,
+      "per_category_mse": {
+        "black_man": 2.099030075569732,
+        "white_man": 1.9625737798421021,
+        "east_asian_man": 2.0756995437491654,
+        "middle_eastern_man": 2.45925317665056,
+        "indian_man": 1.9954958006393078,
+        "hispanic_man": 1.948036527633667,
+        "black_woman": 1.9980858357747395,
+        "white_woman": 2.0369510435021443,
+        "east_asian_woman": 2.380202263279965,
+        "middle_eastern_woman": 2.0914473175272947,
+        "indian_woman": 1.9125910845669833,
+        "hispanic_woman": 2.030269146573012
+      }
+    },
+    "eyebrows": {
+      "images": 162,
+      "pooled_mse": 2.10279978891969,
+      "macro_category_mse": 2.0837159510129273,
+      "categories": 11,
+      "per_category_mse": {
+        "black_man": 2.054101519877684,
+        "white_man": 1.9782971620559693,
+        "east_asian_man": 1.9467089566317473,
+        "middle_eastern_man": 2.70077683782003,
+        "indian_man": 1.841809590657552,
+        "hispanic_man": 1.9526250134343686,
+        "black_woman": 1.938564658164978,
+        "white_woman": 2.0445544054553766,
+        "east_asian_woman": 2.080732727050781,
+        "middle_eastern_woman": 2.1956676645168467,
+        "hispanic_woman": 2.1870369254768667
+      }
+    },
+    "nose": {
+      "images": 85,
+      "pooled_mse": 2.166375469339305,
+      "macro_category_mse": 2.098766558404307,
+      "categories": 8,
+      "per_category_mse": {
+        "black_man": 2.196564214674093,
+        "white_man": 2.0507104778289795,
+        "east_asian_man": 2.026744172067353,
+        "hispanic_man": 1.895049996211611,
+        "black_woman": 2.00546875,
+        "white_woman": 2.1158974734219638,
+        "middle_eastern_woman": 2.2591051046558888,
+        "hispanic_woman": 2.240592278374566
+      }
+    },
+    "ears": {
+      "images": 77,
+      "pooled_mse": 2.1977768969373637,
+      "macro_category_mse": 2.1628947757174646,
+      "categories": 9,
+      "per_category_mse": {
+        "black_man": 2.180466817220052,
+        "white_man": 2.0533896404763925,
+        "east_asian_man": 1.9658463541666666,
+        "indian_man": 2.1283834604116585,
+        "black_woman": 1.9831253282951586,
+        "east_asian_woman": 2.4394725871535967,
+        "middle_eastern_woman": 2.3049312591552735,
+        "indian_woman": 2.2064025077819824,
+        "hispanic_woman": 2.2040350267964026
+      }
+    },
+    "macro_region_mse": 2.106961729519272
+  },
+  "multi_region_fine_tuned_sae": {
+    "eyes": {
+      "images": 477,
+      "pooled_mse": 1.4073081408032446,
+      "macro_category_mse": 1.4395160004796346,
+      "categories": 12,
+      "per_category_mse": {
+        "black_man": 1.453270850109175,
+        "white_man": 1.2903736796035956,
+        "east_asian_man": 1.285396732428135,
+        "middle_eastern_man": 1.8803536563939443,
+        "indian_man": 1.529969308542651,
+        "hispanic_man": 1.3513759309595281,
+        "black_woman": 1.441407725016276,
+        "white_woman": 1.3283073334071946,
+        "east_asian_woman": 1.4753381628739206,
+        "middle_eastern_woman": 1.3744534531013182,
+        "indian_woman": 1.412305363741788,
+        "hispanic_woman": 1.4516398095780876
+      }
+    },
+    "eyebrows": {
+      "images": 162,
+      "pooled_mse": 1.481243484236641,
+      "macro_category_mse": 1.473238735551444,
+      "categories": 11,
+      "per_category_mse": {
+        "black_man": 1.4842602799058626,
+        "white_man": 1.3370396971702576,
+        "east_asian_man": 1.3374676444313742,
+        "middle_eastern_man": 2.084912219679499,
+        "indian_man": 1.3670799763997397,
+        "hispanic_man": 1.373688258295474,
+        "black_woman": 1.4515096127986908,
+        "white_woman": 1.3686941815030043,
+        "east_asian_woman": 1.3479649861653646,
+        "middle_eastern_woman": 1.4598856377325462,
+        "hispanic_woman": 1.5931235969840707
+      }
+    },
+    "nose": {
+      "images": 85,
+      "pooled_mse": 1.4925911547280297,
+      "macro_category_mse": 1.4508280189000153,
+      "categories": 8,
+      "per_category_mse": {
+        "black_man": 1.5208677479372186,
+        "white_man": 1.3745234632492065,
+        "east_asian_man": 1.3496645378343988,
+        "hispanic_man": 1.3144950340534078,
+        "black_woman": 1.4398719787597656,
+        "white_woman": 1.3825729023326527,
+        "middle_eastern_woman": 1.5299250387732004,
+        "hispanic_woman": 1.694703448260272
+      }
+    },
+    "ears": {
+      "images": 77,
+      "pooled_mse": 1.7040965956084582,
+      "macro_category_mse": 1.7149454750817459,
+      "categories": 9,
+      "per_category_mse": {
+        "black_man": 1.8278843434651693,
+        "white_man": 1.7290380063264266,
+        "east_asian_man": 1.645076192220052,
+        "indian_man": 1.8166207827054537,
+        "black_woman": 1.5066948399399267,
+        "east_asian_woman": 1.7359475585649597,
+        "middle_eastern_woman": 1.7841115778142755,
+        "indian_woman": 1.7262529544830323,
+        "hispanic_woman": 1.6628830202164189
+      }
+    },
+    "macro_region_mse": 1.5196320575032098
+  }
+}

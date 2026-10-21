@@ -1,0 +1,21 @@
+{
+  "predictions": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/detector/concept_predictions.csv",
+  "patterns": {
+    "head_covering": "\\b(head\\s*scarf|head\\s*covering|headdress|turban|hat|headband)\\b",
+    "turban": "\\bturban\\b",
+    "headscarf": "\\b(head\\s*scarf|headdress)\\b",
+    "earrings": "\\bearrings?\\b",
+    "necklace": "\\bnecklace\\b",
+    "beard": "\\b(beard|goatee)\\b",
+    "afro": "\\bafro\\b",
+    "kimono": "\\bkimono\\b",
+    "shirt": "\\bshirt\\b",
+    "tank_top": "\\btank top\\b",
+    "smile": "\\bsmile\\b",
+    "flower": "\\bflowers?\\b",
+    "red_dot": "\\bred dot\\b"
+  },
+  "samples": 1200,
+  "categories": 12,
+  "label_source": "Detector grounded/object phrases; not human labels"
+}
