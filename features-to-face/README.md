@@ -35,10 +35,12 @@ causal editing behavior.
 - [`heldout_feature_validation.csv`](heldout_feature_validation.csv): estimates for all 19 features across all four parts, including confidence intervals and coverage.
 - [`settings.json`](settings.json): original SAE checkpoint, fixed candidate IDs, box filters, and test-set coverage.
 - [`images/feature_part_examples.jpg`](images/feature_part_examples.jpg): illustrative held-out overlays. Each example was chosen for high target-box activation, so these panels are not representative samples.
+- [`seed_grids/index.md`](seed_grids/index.md): full per-feature, per-part visual grids across 12 categories.
 
 ## Scripts
 
 - [`validate_face_part_features.py`](../sae-training/validate_face_part_features.py): computes the region-versus-reference activation contrasts and bootstrap intervals on validation and test splits.
 - [`render_feature_part_examples.py`](../sae-training/render_feature_part_examples.py): renders the selected heatmap examples with face and part boxes.
+- [`build_feature_part_grids.py`](build_feature_part_grids.py): renders a separate heatmap-and-box grid for every feature/part pair using validation and test portraits.
 
 The [fine-tuning epoch gallery](../sae-training/runs/face_parts_sae_001/individual_part_epoch_grids/index.md) is a separate analysis of a fine-tuned SAE. It should not be confused with this fixed-pretrained-SAE feature-to-part test.

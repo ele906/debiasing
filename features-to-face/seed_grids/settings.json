@@ -1,0 +1,36 @@
+{
+  "model": "/n/fs/goose/sdxl-unbox/checkpoints/unet.down_blocks.2.attentions.1_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+  "feature_ids": [
+    138,
+    199,
+    433,
+    452,
+    527,
+    546,
+    669,
+    1563,
+    1664,
+    1759,
+    2486,
+    2527,
+    3181,
+    3279,
+    3459,
+    3611,
+    3722,
+    3725,
+    3884
+  ],
+  "parts": [
+    "eyes",
+    "eyebrows",
+    "nose",
+    "ears"
+  ],
+  "images_per_category": 25,
+  "sample_mix": "20 validation images in columns 1-4; five test images sampled evenly across sorted test seed IDs in column 5; no training images",
+  "test_only_quantitative_results": "/n/fs/goose/features-to-face/heldout_feature_validation.csv",
+  "heatmap_normalization": "per image within face; full image for ears",
+  "face_box_color": "cyan",
+  "part_box_color": "yellow"
+}
