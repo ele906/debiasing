@@ -109,6 +109,15 @@ def choose_samples(data_dir, boxes_by_sample, residual_dir):
 
 
 def load_features(run_dir, count):
+    region_ranking = run_dir / "region_localized_features.csv"
+    if region_ranking.is_file():
+        by_region = {region: [] for region in REGIONS}
+        with region_ranking.open(newline="") as source:
+            for row in csv.DictReader(source):
+                region = row["region"]
+                if region in by_region and len(by_region[region]) < count:
+                    by_region[region].append(int(row["feature"]))
+        return by_region
     ranking_path = run_dir / "eye_localized_features.csv"
     if not ranking_path.is_file():
         ranking_path = run_dir / "face_localized_features.csv"
@@ -117,7 +126,7 @@ def load_features(run_dir, count):
     features = [int(row["feature"]) for row in rows[:count]]
     if not features:
         raise ValueError(f"No ranked features in {ranking_path}")
-    return features
+    return {region: features for region in REGIONS}
 
 
 def load_snapshots(run_dir):
@@ -180,13 +189,13 @@ def make_overlay(image, values, mask, boxes):
     return result
 
 
-def save_sheets(selected, boxes_by_sample, activations, epochs, features, data_dir, output_dir):
+def save_sheets(selected, boxes_by_sample, activations, epochs, features_by_region, data_dir, output_dir):
     tile_size, label_width, header_height, row_height = 160, 180, 44, 170
     categories = [(race, gender) for race in RACES for gender in GENDERS]
     output_dir.mkdir(parents=True, exist_ok=True)
     summary_rows = []
     for region in REGIONS:
-        for feature in features:
+        for feature in features_by_region[region]:
             sheet = Image.new("RGB", (label_width + len(epochs) * tile_size,
                                        header_height + len(categories) * row_height), "white")
             draw = ImageDraw.Draw(sheet)
@@ -242,17 +251,20 @@ def main():
         raise ValueError(f"Expected SAE block {BLOCK}; found {settings.get('block')}")
     boxes_by_sample = load_region_boxes(args.boxes)
     selected = choose_samples(args.data, boxes_by_sample, args.residuals)
-    features = load_features(args.run, args.feature_count)
+    features_by_region = load_features(args.run, args.feature_count)
+    features = sorted({feature for values in features_by_region.values() for feature in values})
+    if not features:
+        raise ValueError("No ranked features were found for the requested regions")
     snapshots = load_snapshots(args.run)
     device = torch.device(args.device)
     activations = collect_activations(selected, boxes_by_sample, args.residuals,
                                       snapshots, features, device)
     save_sheets(selected, boxes_by_sample, activations,
                 [int(snapshot.name.split("_")[1]) for snapshot in snapshots],
-                features, args.data, args.output)
+                features_by_region, args.data, args.output)
     summary = {
         "epochs": [int(snapshot.name.split("_")[1]) for snapshot in snapshots],
-        "features": features,
+        "features_by_region": features_by_region,
         "regions": list(REGIONS),
         "sample_ids": {
             f"{region}/{race}_{gender}": row["sample_id"] if row else None

@@ -146,6 +146,65 @@ To render part-specific overlays using the eye-fine-tuned SAE, run:
 When the run folder contains `eye_localized_features.csv`, the renderer uses
 that ranking for its three feature sheets.
 
+## Fine-tune one SAE on eyes, eyebrows, nose, and ears
+
+This experiment starts from the same pretrained Top-K SAE and updates one
+shared encoder and decoder. Each epoch samples equally from the four regions,
+then balances race/gender categories among the available boxes for each region.
+The training, validation, and test splits stay separate. Validation chooses
+the checkpoint; test metrics are computed after selection.
+
+Submit the GPU job from `/n/fs/goose`:
+
+```bash
+sbatch sae-training/train_face_parts_sae.sbatch
+```
+
+The job writes checkpoints at epochs 0, 4, 8, 12, 16, and 20 to
+`sae-training/runs/face_parts_sae_001/checkpoints/`. The selected SAE,
+per-region validation rankings, epoch history, held-out reconstruction
+metrics, and exact data counts are saved in the same run folder. Its
+`region_localized_features.csv` ranks features separately for each region.
+Render one pixelated `jet` heatmap sheet per region and feature with:
+
+```bash
+sbatch sae-training/render_face_parts_sae.sbatch
+```
+
+The renderer uses each region's own validation-ranked features and the same
+held-out test images across checkpoints. Output is in
+`sae-training/runs/face_parts_sae_001/region_heatmaps/`.
+
+Because nose and ear detections are sparse and all these labels are automatic,
+read the per-region sample counts and inspect the boxes and overlays before
+interpreting a feature as associated with a facial part.
+
+## Expand the held-out face-part test set
+
+To test the already-trained SAE on more images, generate 100 additional seeds
+per race/gender prompt category (1,200 images). This reuses the original prompt
+wording, uses disjoint seeds 100–199, and marks every new image as test-only.
+The training and validation datasets and the selected checkpoint are untouched.
+Submit generation, then queue Florence annotation, held-out metrics, and
+heatmaps to run automatically after generation succeeds:
+
+```bash
+generation_job=$(sbatch --parsable sae-training/generate_face_parts_test_extension.sbatch)
+sbatch --dependency=afterok:${generation_job} \
+  sae-training/extract_face_parts_test_boxes.sbatch
+```
+
+Results are saved under
+`sae-training/runs/face_parts_sae_001/test_extension/`. `face_parts_evaluation.json`
+compares the original and fine-tuned SAE on the same newly generated images;
+`region_heatmaps/` shows the selected features by epoch. Metrics only include
+samples with usable automatic boxes. The JSON also reports the number of usable
+images per region, so detection coverage is visible alongside reconstruction
+error. The boxes remain unreviewed detector outputs.
+
+For the completed 1,200-image extension, the region-specific evaluation report
+is `sae-training/runs/face_parts_sae_001/test_extension/REPORT.md`.
+
 ## Validate eye, eyebrow, nose, and ear feature candidates
 
 This analysis keeps feature selection and evaluation separate. The three eye

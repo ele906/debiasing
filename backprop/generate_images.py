@@ -26,19 +26,23 @@ CHECKPOINT = ROOT / 'sdxl-unbox/checkpoints' / f'{BLOCK}_k10_hidden5120_auxk256_
 TEMPLATE = 'a picture of a {race} {gender}'
 
 
-def records(count):
+def records(count, seed_start=0, test_only=False):
     import numpy as np
-    # Hold out whole seeds across all prompt groups, not individual spatial tokens.
-    order = np.random.default_rng(20261009).permutation(count)
-    ntrain, nval = int(count * .6), int(count * .2)
-    split = {int(s): 'train' if i < ntrain else 'validation' if i < ntrain + nval else 'test'
-             for i, s in enumerate(order)}
+    seeds = list(range(seed_start, seed_start + count))
+    if test_only:
+        split = {seed: 'test' for seed in seeds}
+    else:
+        # Hold out whole seeds across all prompt groups, not spatial tokens.
+        order = np.random.default_rng(20261009).permutation(seeds)
+        ntrain, nval = int(count * .6), int(count * .2)
+        split = {int(s): 'train' if i < ntrain else 'validation' if i < ntrain + nval else 'test'
+                 for i, s in enumerate(order)}
     return [dict(sample_id=f'{race.replace(" ", "_")}_{gender}_seed{seed:03d}',
                  race_prompt=race, gender_prompt=gender, seed=seed, split=split[seed],
                  prompt=TEMPLATE.format(race=race, gender=gender),
                  image=f'images/{race.replace(" ", "_")}_{gender}/seed{seed:03d}.png',
                  features=f'features/{race.replace(" ", "_")}_{gender}/seed{seed:03d}.npz')
-            for gender in GENDERS for race in RACES for seed in range(count)]
+            for gender in GENDERS for race in RACES for seed in seeds]
 
 
 def write_csv(path, rows):
@@ -52,6 +56,12 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--count', type=int, default=100, help='Images per race/gender cell')
     p.add_argument('--output', type=Path, default=HERE)
+    p.add_argument('--seed-start', type=int, default=0,
+                   help='First random seed; use a disjoint range for a supplemental dataset')
+    p.add_argument('--test-only', action='store_true',
+                   help='Mark every generated sample test; do not add it to train or validation')
+    p.add_argument('--save-residuals', action='store_true',
+                   help='Save spatial U-Net residual vectors as residuals/<sample_id>.npy')
     args = p.parse_args()
     if args.count < 5:
         p.error('count must be at least 5 for train/validation/test splits')
@@ -70,11 +80,15 @@ def main():
                     split='60/20/20 by seed, shared across all 12 groups; RNG 20261009',
                     torch_version=torch.__version__, diffusers_version=diffusers.__version__,
                     labels='Generation prompt categories, not racial identities inferred from images')
+    if args.seed_start != 0 or args.test_only or args.save_residuals:
+        settings.update(seed_start=args.seed_start, test_only=args.test_only,
+                        save_residuals=args.save_residuals)
+        settings['split'] = ('test-only supplemental seed range' if args.test_only else settings['split'])
     settings_path = out / 'generation_settings.json'
     if settings_path.exists() and json.loads(settings_path.read_text()) != settings:
         raise ValueError('Existing generation settings differ; use a new output directory')
     settings_path.write_text(json.dumps(settings, indent=2))
-    rows = records(args.count)
+    rows = records(args.count, args.seed_start, args.test_only)
     write_csv(out / 'manifest.csv', rows)
     annotations = out / 'annotations.csv'
     if not annotations.exists():
@@ -93,7 +107,8 @@ def main():
     generated = 0
     for i, r in enumerate(rows):
         imgpath, featpath = out / r['image'], out / r['features']
-        if imgpath.exists() and featpath.exists():
+        residual_path = out / 'residuals' / f"{r['sample_id']}.npy"
+        if imgpath.exists() and featpath.exists() and (not args.save_residuals or residual_path.exists()):
             continue
         noise_rng = torch.Generator('cuda').manual_seed(r['seed'])
         scheduler_rng = torch.Generator('cuda').manual_seed(r['seed'])
@@ -112,6 +127,9 @@ def main():
         # Feature save follows image save: interruption is recoverable by deterministic replay.
         result.images[0].save(imgpath)
         np.savez_compressed(featpath, mean=mean, maximum=maximum, active_fraction=active)
+        if args.save_residuals:
+            residual_path.parent.mkdir(parents=True, exist_ok=True)
+            np.save(residual_path, residual[0].detach().cpu().numpy(), allow_pickle=False)
         del cache, residual, z
         generated += 1
         if generated == 1 or generated % 20 == 0:
