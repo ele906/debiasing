@@ -242,7 +242,7 @@ def write_gallery(rows, boxes, output_dir):
             markdown.extend([
                 f"### {sid} · {boxes_count} part types with boxes",
                 "",
-                f'<a href="sheets/{sid}.jpg"><img src="sheets/{sid}.jpg" width="840" alt="{sid}: face, eyes, eyebrows, nose, and ears across six epochs"></a>',
+                f"[![{sid}: face, eyes, eyebrows, nose, and ears across six epochs](sheets/{sid}.jpg)](sheets/{sid}.jpg)",
                 "",
             ])
     (output_dir / "index.md").write_text("\n".join(markdown) + "\n")
