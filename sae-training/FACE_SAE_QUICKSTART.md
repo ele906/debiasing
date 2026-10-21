@@ -35,6 +35,23 @@ To put the plot and CSV in a separate folder, add an output path:
 You can read the CSV in your own Python plotting code or open it in a
 spreadsheet. The trainer's original metric files remain in the run folder.
 
+## Plot the face-parts SAE training history
+
+The face-parts run records training loss and validation reconstruction MSE for
+eyes, eyebrows, nose, and ears at every epoch. Make the graph and a flat CSV
+with:
+
+```bash
+/n/fs/goose/el8403/conda-envs/reno/bin/python \
+  sae-training/plot_face_parts_sae.py \
+  sae-training/runs/face_parts_sae_001
+```
+
+This writes `training_curves.png` and `training_history.csv` into the run
+folder. The graph shows training loss, validation MSE for each region, and the
+mean validation MSE across regions. The CSV has one row per epoch and can be
+used to make your own plots.
+
 ## Regenerate pixelated feature heatmaps
 
 The overlays use a blue-to-red `jet` palette. Nearest-neighbor scaling keeps
