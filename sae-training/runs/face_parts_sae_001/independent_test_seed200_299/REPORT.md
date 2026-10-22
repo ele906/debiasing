@@ -32,6 +32,31 @@ requires enough annotated activation cells for evaluation. The lower MSE means
 the fine-tuned SAE reconstructed these held-out activations more closely. It
 does not show that the SAE detects or semantically represents facial parts.
 
+## Held-out spatial activation contrast
+
+The features were selected on validation data at epoch 20 and then evaluated
+without re-selection on this independent test set. Contrast is mean activation
+inside each automatic part box minus activation in its reference area, averaged
+within race/gender categories and then equally across categories. Error bars
+are 95% stratified image-bootstrap intervals. The annotations are automatic
+and have not been reviewed by a person.
+
+| Part | Fixed feature | Test contrast (95% interval) | Usable images | Categories | Reference |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Face | 1664 | 9.68 (9.54–9.82) | 1,199 | 12 | Outside face |
+| Eyes | 3701 | 11.93 (10.91–12.96) | 477 | 12 | Rest of face |
+| Eyebrows | 1600 | 13.08 (12.64–13.51) | 146 | 11 | Rest of face |
+| Nose | 1664 | 12.35 (11.10–13.55) | 84 | 8 | Rest of face |
+| Ears | 4858 | 13.14 (12.02–14.18) | 77 | 9 | Outside image |
+
+![Held-out test contrast by facial part](test_contrast/test_contrast.png)
+
+The plot and full-precision tables are in [`test_contrast/`](test_contrast/).
+The intervals are unadjusted and the nose/ear estimates use relatively few
+images, so treat them as preliminary spatial associations rather than semantic
+labels. The [nose feature map](final_feature_localization/nose/feature_1664.jpg)
+shows its activation overlays on held-out portraits.
+
 ## Files
 
 - `face_parts_evaluation.json`: full pooled and per-category metrics.
@@ -43,6 +68,8 @@ does not show that the SAE detects or semantically represents facial parts.
   checkpoint only. One sheet per candidate feature; rows show categories with
   the full-image activation overlay, face box, and target-part box. No epoch
   columns appear here.
+- `test_contrast/`: the quantitative held-out test contrast plot, summary
+  tables, category-level values, calculation settings, and generation script.
 - `region_heatmaps/<region>/feature_<id>.jpg`: epoch comparison sheets. Each
   row is a prompt category; columns show epochs 0, 4, 8, 12, 16, and 20 for the
   same held-out portrait. Each tile has the region's automatic bounding box
