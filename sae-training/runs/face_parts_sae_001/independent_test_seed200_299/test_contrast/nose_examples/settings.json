@@ -1,0 +1,48 @@
+{
+  "feature": 1664,
+  "part": "nose",
+  "checkpoint": "/n/fs/goose/sae-training/runs/face_parts_sae_001/checkpoints/epoch_020",
+  "feature_selection": "selected on validation data at epoch 20 by macro-category activation contrast",
+  "validation_gallery": {
+    "images": 11,
+    "categories": 6,
+    "examples": [
+      "black_man_seed002",
+      "black_man_seed041",
+      "east_asian_man_seed018",
+      "east_asian_man_seed053",
+      "middle_eastern_man_seed022",
+      "middle_eastern_woman_seed002",
+      "middle_eastern_woman_seed012",
+      "white_man_seed002",
+      "white_man_seed018",
+      "white_woman_seed052",
+      "white_woman_seed070"
+    ]
+  },
+  "independent_test_gallery": {
+    "images": 16,
+    "categories": 8,
+    "examples": [
+      "black_man_seed203",
+      "black_man_seed205",
+      "black_woman_seed216",
+      "black_woman_seed253",
+      "east_asian_man_seed216",
+      "east_asian_man_seed253",
+      "hispanic_man_seed216",
+      "hispanic_man_seed227",
+      "hispanic_woman_seed228",
+      "hispanic_woman_seed262",
+      "middle_eastern_woman_seed207",
+      "middle_eastern_woman_seed209",
+      "white_man_seed207",
+      "white_man_seed215",
+      "white_woman_seed208",
+      "white_woman_seed238"
+    ]
+  },
+  "per_category_limit": 2,
+  "overlay": "jet feature activation normalized within detected face; cyan face box; yellow nose box",
+  "annotations": "automatic region boxes, not human-reviewed"
+}

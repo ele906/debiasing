@@ -57,6 +57,13 @@ images, so treat them as preliminary spatial associations rather than semantic
 labels. The [nose feature map](final_feature_localization/nose/feature_1664.jpg)
 shows its activation overlays on held-out portraits.
 
+For direct visual inspection, [`test_contrast/nose_examples/validation/contact_sheet.jpg`](test_contrast/nose_examples/validation/contact_sheet.jpg)
+and [`test_contrast/nose_examples/test/contact_sheet.jpg`](test_contrast/nose_examples/test/contact_sheet.jpg)
+show nose feature 1664's jet activation overlays on sampled validation and
+independent test portraits, with cyan face boxes and yellow nose boxes. The
+contact sheets include up to two usable examples per prompt category. The
+underlying individual overlays and render settings are alongside them.
+
 ## Files
 
 - `face_parts_evaluation.json`: full pooled and per-category metrics.
