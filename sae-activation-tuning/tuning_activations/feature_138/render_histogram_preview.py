@@ -34,7 +34,6 @@ def main():
     groups = list(dict.fromkeys(key.split("|")[0] for key in keys))
     multipliers = [int(value) for value in maps["multipliers"]]
     alpha_indices = [multipliers.index(alpha) for alpha in PREVIEW_ALPHAS]
-    post = maps["post_reencoded_maps"]
     scaled = maps["scaled_coefficient_maps"]
     pre = maps["pre_maps"]
 
@@ -55,7 +54,7 @@ def main():
             continue
         indices = [i for i, key in enumerate(keys) if key.split("|")[0] == group]
         values = np.asarray([
-            np.count_nonzero(np.any(post[indices, alpha_index] > 0, axis=(1, 2)))
+            np.count_nonzero(np.any(scaled[indices, alpha_index] != 0, axis=(1, 2)))
             for alpha_index in alpha_indices
         ])
         if not np.any(values):
@@ -69,8 +68,8 @@ def main():
             label=GROUP_LABELS[group],
         )
         bottoms += values
-    ax_count.set_title("Images with an active feature by multiplier")
-    ax_count.set_ylabel("Images with feature active (count)")
+    ax_count.set_title("Images with a nonzero scaled feature by multiplier")
+    ax_count.set_ylabel("Images with nonzero coefficient (count)")
     ax_count.set_xlabel("Multiplier α (0 omitted)")
     ax_count.set_xticks((-10, -5, 0, 5, 10))
     ax_count.set_xlim(-13, 13)

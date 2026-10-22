@@ -10,7 +10,7 @@ Run the full comparison with `python sae-activation-tuning/tuning_activations/fe
 
 The earlier scarf/no-scarf prompt experiment remains in `../race_gender_feature_interventions/feature_138/` as a separate prompt-controlled exploration. It is not used for the biased-dataset results here.
 
-`feature_138_histogram_preview_stacked.png` is rendered from the saved `run_biased_002/activation_maps.npz` by `render_histogram_preview.py`. Its top panel reports raw image counts: an image counts as active when at least one spatial position has a positive post-reencoded feature activation. The bottom panel continues to show the signed scaled-coefficient distribution. Both panels use symmetric x limits so zero aligns vertically.
+`feature_138_histogram_preview_stacked.png` is rendered from the saved `run_biased_002/activation_maps.npz` by `render_histogram_preview.py`. Its top panel reports raw image counts: an image counts as active when at least one spatial position has a nonzero signed scaled coefficient, including negative coefficients. The bottom panel shows the signed scaled-coefficient distribution. Both panels use symmetric x limits so zero aligns vertically.
 
 The run folders contain the per-image generated outputs locally. The GitHub result package contains the aggregate metrics, activation maps, settings, and visual-review sheets; the generated image folders are multi-gigabyte.
 
