@@ -39,6 +39,10 @@ does not show that the SAE detects or semantically represents facial parts.
 - `annotations/bounding_boxes.csv`: aggregated automatic region boxes.
 - `contact_sheets/`: plain generated portraits grouped by prompt category.
   These are for browsing the images; they do not show training epochs.
+- `final_feature_localization/`: feature-to-region maps from the selected SAE
+  checkpoint only. One sheet per candidate feature; rows show categories with
+  the full-image activation overlay, face box, and target-part box. No epoch
+  columns appear here.
 - `region_heatmaps/<region>/feature_<id>.jpg`: epoch comparison sheets. Each
   row is a prompt category; columns show epochs 0, 4, 8, 12, 16, and 20 for the
   same held-out portrait. Each tile has the region's automatic bounding box
@@ -52,6 +56,9 @@ saved every four epochs. Therefore, the feature sheets show six snapshots
 (including the pretrained epoch 0), not all 21 epochs. To produce overlays for
 every epoch, the SAE must be trained again with `--snapshot-interval 1` before
 rendering the sheets.
+
+For the final-checkpoint maps without epoch comparisons, start at
+[`final_feature_localization/index.md`](final_feature_localization/index.md).
 
 Individual generated images, cached model features, and residual activations
 are stored locally and are not included in the GitHub repository.

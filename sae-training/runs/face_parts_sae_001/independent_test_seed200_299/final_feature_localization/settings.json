@@ -1,0 +1,10 @@
+{
+  "checkpoint": "/n/fs/goose/sae-training/runs/face_parts_sae_001/sae",
+  "checkpoint_selection": "best validation macro-region reconstruction MSE",
+  "sample_split": "test only",
+  "data": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299",
+  "feature_selection": "top-ranked region-localized candidates from validation data",
+  "feature_count_per_region": 3,
+  "display": "one held-out image per prompt category; full-image pixelated jet activation overlay; cyan face box; yellow target-region box; no epoch columns",
+  "warning": "Feature IDs are SAE coordinates, not semantic labels. Automatic boxes are unreviewed."
+}
