@@ -68,15 +68,13 @@ def main():
             label=GROUP_LABELS[group],
         )
         bottoms += values
-    ax_count.set_title("Images with a nonzero scaled feature by multiplier")
+    ax_count.set_title("Images with a nonzero scaled feature by multiplier (group colors labeled below)")
     ax_count.set_ylabel("Images with nonzero coefficient (count)")
     ax_count.set_xlabel("Multiplier α (0 omitted)")
     ax_count.set_xticks((-10, -5, 0, 5, 10))
     ax_count.set_xlim(-13, 13)
     ax_count.axvline(0, color="black", linewidth=1)
     ax_count.grid(axis="y", alpha=0.25)
-    ax_count.legend(loc="lower left", ncol=3, framealpha=0.85)
-
     bins = np.linspace(-550, 550, 51)
     hist_values, hist_weights, hist_colors, hist_labels = [], [], [], []
     hist_total = sum(
@@ -118,6 +116,14 @@ def main():
     ax_hist.legend(loc="upper center", ncol=4, framealpha=0.85)
 
     fig.tight_layout(rect=(0, 0, 1, 0.94))
+    top_position = ax_count.get_position()
+    top_width = top_position.width * (2 / 3)
+    ax_count.set_position((
+        top_position.x0 + (top_position.width - top_width) / 2,
+        top_position.y0,
+        top_width,
+        top_position.height,
+    ))
     fig.savefig(OUTPUT, dpi=160, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved {OUTPUT}")
