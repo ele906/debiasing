@@ -57,6 +57,33 @@ images, so treat them as preliminary spatial associations rather than semantic
 labels. The [nose feature map](final_feature_localization/nose/feature_1664.jpg)
 shows its activation overlays on held-out portraits.
 
+## Cross-region feature comparison
+
+Each of the four unique validation-selected features was scored in every
+annotated region using that region's part-minus-reference contrast. The left
+panel shows validation data and the right panel shows the independent test
+data, with one shared zero-centered color scale. Test cells also show
+stratified-bootstrap intervals. This makes cross-region activation visible:
+for example, feature 1664 has positive test contrast in the face and nose, but
+negative contrast in the eyebrows and ears. Positive cross-region values mean
+the feature is spatially associated with more than one annotated region; they
+do not establish exclusivity.
+
+![Validation and test cross-region feature contrasts](test_contrast/feature_cross_contrast/feature_cross_contrast.png)
+
+The [CSV table](test_contrast/feature_cross_contrast/feature_cross_contrast.csv)
+contains full-precision values and test intervals. The validation-selected
+feature IDs and test-only data remain fixed for this comparison.
+
+For image-level inspection, the [cross-feature jet overlay sheet](test_contrast/feature_cross_contrast/cross_feature_jet_overlays.jpg)
+shows one portrait per region, with each selected feature overlaid across all
+five regions. Validation is on the left and independent test on the right.
+For easier viewing, there is also one contact sheet per unique feature:
+[feature 1664](test_contrast/feature_cross_contrast/contact_sheets/feature_1664_contact_sheet.jpg),
+[feature 3701](test_contrast/feature_cross_contrast/contact_sheets/feature_3701_contact_sheet.jpg),
+[feature 1600](test_contrast/feature_cross_contrast/contact_sheets/feature_1600_contact_sheet.jpg),
+and [feature 4858](test_contrast/feature_cross_contrast/contact_sheets/feature_4858_contact_sheet.jpg).
+
 For direct visual inspection, [`test_contrast/nose_examples/validation/contact_sheet.jpg`](test_contrast/nose_examples/validation/contact_sheet.jpg)
 and [`test_contrast/nose_examples/test/contact_sheet.jpg`](test_contrast/nose_examples/test/contact_sheet.jpg)
 show nose feature 1664's jet activation overlays on sampled validation and
@@ -77,6 +104,9 @@ underlying individual overlays and render settings are alongside them.
   columns appear here.
 - `test_contrast/`: the quantitative held-out test contrast plot, summary
   tables, category-level values, calculation settings, and generation script.
+  `feature_cross_contrast/` contains the validation/test feature-by-region
+  comparison, and `nose_examples/` contains the actual validation and test
+  portraits with jet overlays.
 - `region_heatmaps/<region>/feature_<id>.jpg`: epoch comparison sheets. Each
   row is a prompt category; columns show epochs 0, 4, 8, 12, 16, and 20 for the
   same held-out portrait. Each tile has the region's automatic bounding box
