@@ -1,0 +1,7 @@
+{
+  "total_images": 120,
+  "per_cell": 10,
+  "feature_dimensions": 5120,
+  "training_run": false,
+  "complete": true
+}
