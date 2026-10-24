@@ -1,0 +1,39 @@
+{
+  "experiment": "face SAE feature 3725 attenuation on matched existing images",
+  "feature": 3725,
+  "sae_path": "/n/fs/goose/sae-training/runs/face_sae_020/sae",
+  "sae_weights_sha256": "4622aa020e9e14fd75d4494f5b9c5b36cee7f0009feba3b7eb07b046c3216b39",
+  "source_data": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed300_309",
+  "samples": 60,
+  "prompt_groups": [
+    "black_woman",
+    "east_asian_woman",
+    "hispanic_woman",
+    "indian_woman",
+    "middle_eastern_woman",
+    "white_woman"
+  ],
+  "seeds": [
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309
+  ],
+  "strengths": [
+    1.0,
+    0.5,
+    0.0
+  ],
+  "strength_definition": "1 is unchanged; 0.5 halves selected feature contribution; 0 removes selected feature contribution",
+  "activation_block": "unet.down_blocks.2.attentions.1",
+  "model": "stabilityai/sdxl-turbo",
+  "steps": 1,
+  "guidance_scale": 0.0,
+  "interpretation_limit": "Group association only; images are not labeled or controlled for bindis, earrings, or headwear."
+}

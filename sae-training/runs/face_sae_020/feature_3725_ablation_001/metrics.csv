@@ -1,0 +1,121 @@
+sample_id,race_prompt,seed,feature,strength,pixel_mae_vs_replay,replay_mae_vs_source,image
+black_woman_seed300,black,300,3725,0.5,0.0,0.0,images/black_woman_seed300_feature3725_strength0.5.png
+black_woman_seed300,black,300,3725,0.0,0.0,0.0,images/black_woman_seed300_feature3725_strength0.png
+east_asian_woman_seed300,east asian,300,3725,0.5,1.4870223999023438,0.0,images/east_asian_woman_seed300_feature3725_strength0.5.png
+east_asian_woman_seed300,east asian,300,3725,0.0,2.244478940963745,0.0,images/east_asian_woman_seed300_feature3725_strength0.png
+hispanic_woman_seed300,hispanic,300,3725,0.5,2.5900485515594482,0.0,images/hispanic_woman_seed300_feature3725_strength0.5.png
+hispanic_woman_seed300,hispanic,300,3725,0.0,3.871044158935547,0.0,images/hispanic_woman_seed300_feature3725_strength0.png
+indian_woman_seed300,indian,300,3725,0.5,6.672949314117432,0.0,images/indian_woman_seed300_feature3725_strength0.5.png
+indian_woman_seed300,indian,300,3725,0.0,11.185635566711426,0.0,images/indian_woman_seed300_feature3725_strength0.png
+middle_eastern_woman_seed300,middle eastern,300,3725,0.5,3.0094897747039795,0.0,images/middle_eastern_woman_seed300_feature3725_strength0.5.png
+middle_eastern_woman_seed300,middle eastern,300,3725,0.0,4.804721832275391,0.0,images/middle_eastern_woman_seed300_feature3725_strength0.png
+white_woman_seed300,white,300,3725,0.5,0.0,0.0,images/white_woman_seed300_feature3725_strength0.5.png
+white_woman_seed300,white,300,3725,0.0,0.0,0.0,images/white_woman_seed300_feature3725_strength0.png
+black_woman_seed301,black,301,3725,0.5,0.0,0.0,images/black_woman_seed301_feature3725_strength0.5.png
+black_woman_seed301,black,301,3725,0.0,0.0,0.0,images/black_woman_seed301_feature3725_strength0.png
+east_asian_woman_seed301,east asian,301,3725,0.5,2.218001127243042,0.0,images/east_asian_woman_seed301_feature3725_strength0.5.png
+east_asian_woman_seed301,east asian,301,3725,0.0,3.7280285358428955,0.0,images/east_asian_woman_seed301_feature3725_strength0.png
+hispanic_woman_seed301,hispanic,301,3725,0.5,0.835296630859375,0.0,images/hispanic_woman_seed301_feature3725_strength0.5.png
+hispanic_woman_seed301,hispanic,301,3725,0.0,1.26772940158844,0.0,images/hispanic_woman_seed301_feature3725_strength0.png
+indian_woman_seed301,indian,301,3725,0.5,5.078755855560303,0.0,images/indian_woman_seed301_feature3725_strength0.5.png
+indian_woman_seed301,indian,301,3725,0.0,8.93347454071045,0.0,images/indian_woman_seed301_feature3725_strength0.png
+middle_eastern_woman_seed301,middle eastern,301,3725,0.5,3.082172393798828,0.0,images/middle_eastern_woman_seed301_feature3725_strength0.5.png
+middle_eastern_woman_seed301,middle eastern,301,3725,0.0,5.54192590713501,0.0,images/middle_eastern_woman_seed301_feature3725_strength0.png
+white_woman_seed301,white,301,3725,0.5,0.0,0.0,images/white_woman_seed301_feature3725_strength0.5.png
+white_woman_seed301,white,301,3725,0.0,0.0,0.0,images/white_woman_seed301_feature3725_strength0.png
+black_woman_seed302,black,302,3725,0.5,0.0,0.0,images/black_woman_seed302_feature3725_strength0.5.png
+black_woman_seed302,black,302,3725,0.0,0.0,0.0,images/black_woman_seed302_feature3725_strength0.png
+east_asian_woman_seed302,east asian,302,3725,0.5,0.6844367980957031,0.0,images/east_asian_woman_seed302_feature3725_strength0.5.png
+east_asian_woman_seed302,east asian,302,3725,0.0,1.02059805393219,0.0,images/east_asian_woman_seed302_feature3725_strength0.png
+hispanic_woman_seed302,hispanic,302,3725,0.5,0.8285408020019531,0.0,images/hispanic_woman_seed302_feature3725_strength0.5.png
+hispanic_woman_seed302,hispanic,302,3725,0.0,1.1557985544204712,0.0,images/hispanic_woman_seed302_feature3725_strength0.png
+indian_woman_seed302,indian,302,3725,0.5,6.172492980957031,0.0,images/indian_woman_seed302_feature3725_strength0.5.png
+indian_woman_seed302,indian,302,3725,0.0,10.767256736755371,0.0,images/indian_woman_seed302_feature3725_strength0.png
+middle_eastern_woman_seed302,middle eastern,302,3725,0.5,4.225471496582031,0.0,images/middle_eastern_woman_seed302_feature3725_strength0.5.png
+middle_eastern_woman_seed302,middle eastern,302,3725,0.0,7.593237400054932,0.0,images/middle_eastern_woman_seed302_feature3725_strength0.png
+white_woman_seed302,white,302,3725,0.5,0.0,0.0,images/white_woman_seed302_feature3725_strength0.5.png
+white_woman_seed302,white,302,3725,0.0,0.0,0.0,images/white_woman_seed302_feature3725_strength0.png
+black_woman_seed303,black,303,3725,0.5,0.0,0.0,images/black_woman_seed303_feature3725_strength0.5.png
+black_woman_seed303,black,303,3725,0.0,0.0,0.0,images/black_woman_seed303_feature3725_strength0.png
+east_asian_woman_seed303,east asian,303,3725,0.5,1.78024423122406,0.0,images/east_asian_woman_seed303_feature3725_strength0.5.png
+east_asian_woman_seed303,east asian,303,3725,0.0,2.8293216228485107,0.0,images/east_asian_woman_seed303_feature3725_strength0.png
+hispanic_woman_seed303,hispanic,303,3725,0.5,0.9333025813102722,0.0,images/hispanic_woman_seed303_feature3725_strength0.5.png
+hispanic_woman_seed303,hispanic,303,3725,0.0,1.379791259765625,0.0,images/hispanic_woman_seed303_feature3725_strength0.png
+indian_woman_seed303,indian,303,3725,0.5,7.571987152099609,0.0,images/indian_woman_seed303_feature3725_strength0.5.png
+indian_woman_seed303,indian,303,3725,0.0,13.754300117492676,0.0,images/indian_woman_seed303_feature3725_strength0.png
+middle_eastern_woman_seed303,middle eastern,303,3725,0.5,5.831301212310791,0.0,images/middle_eastern_woman_seed303_feature3725_strength0.5.png
+middle_eastern_woman_seed303,middle eastern,303,3725,0.0,9.976527214050293,0.0,images/middle_eastern_woman_seed303_feature3725_strength0.png
+white_woman_seed303,white,303,3725,0.5,0.0,0.0,images/white_woman_seed303_feature3725_strength0.5.png
+white_woman_seed303,white,303,3725,0.0,0.0,0.0,images/white_woman_seed303_feature3725_strength0.png
+black_woman_seed304,black,304,3725,0.5,0.0,0.0,images/black_woman_seed304_feature3725_strength0.5.png
+black_woman_seed304,black,304,3725,0.0,0.0,0.0,images/black_woman_seed304_feature3725_strength0.png
+east_asian_woman_seed304,east asian,304,3725,0.5,0.7065226435661316,0.0,images/east_asian_woman_seed304_feature3725_strength0.5.png
+east_asian_woman_seed304,east asian,304,3725,0.0,1.13580322265625,0.0,images/east_asian_woman_seed304_feature3725_strength0.png
+hispanic_woman_seed304,hispanic,304,3725,0.5,2.0576961040496826,0.0,images/hispanic_woman_seed304_feature3725_strength0.5.png
+hispanic_woman_seed304,hispanic,304,3725,0.0,3.6211864948272705,0.0,images/hispanic_woman_seed304_feature3725_strength0.png
+indian_woman_seed304,indian,304,3725,0.5,5.599693298339844,0.0,images/indian_woman_seed304_feature3725_strength0.5.png
+indian_woman_seed304,indian,304,3725,0.0,9.651780128479004,0.0,images/indian_woman_seed304_feature3725_strength0.png
+middle_eastern_woman_seed304,middle eastern,304,3725,0.5,3.4860610961914062,0.0,images/middle_eastern_woman_seed304_feature3725_strength0.5.png
+middle_eastern_woman_seed304,middle eastern,304,3725,0.0,6.244680881500244,0.0,images/middle_eastern_woman_seed304_feature3725_strength0.png
+white_woman_seed304,white,304,3725,0.5,0.0,0.0,images/white_woman_seed304_feature3725_strength0.5.png
+white_woman_seed304,white,304,3725,0.0,0.0,0.0,images/white_woman_seed304_feature3725_strength0.png
+black_woman_seed305,black,305,3725,0.5,0.0,0.0,images/black_woman_seed305_feature3725_strength0.5.png
+black_woman_seed305,black,305,3725,0.0,0.0,0.0,images/black_woman_seed305_feature3725_strength0.png
+east_asian_woman_seed305,east asian,305,3725,0.5,3.4090259075164795,0.0,images/east_asian_woman_seed305_feature3725_strength0.5.png
+east_asian_woman_seed305,east asian,305,3725,0.0,5.992350101470947,0.0,images/east_asian_woman_seed305_feature3725_strength0.png
+hispanic_woman_seed305,hispanic,305,3725,0.5,1.9120445251464844,0.0,images/hispanic_woman_seed305_feature3725_strength0.5.png
+hispanic_woman_seed305,hispanic,305,3725,0.0,3.1579768657684326,0.0,images/hispanic_woman_seed305_feature3725_strength0.png
+indian_woman_seed305,indian,305,3725,0.5,5.8134002685546875,0.0,images/indian_woman_seed305_feature3725_strength0.5.png
+indian_woman_seed305,indian,305,3725,0.0,10.131407737731934,0.0,images/indian_woman_seed305_feature3725_strength0.png
+middle_eastern_woman_seed305,middle eastern,305,3725,0.5,4.77450704574585,0.0,images/middle_eastern_woman_seed305_feature3725_strength0.5.png
+middle_eastern_woman_seed305,middle eastern,305,3725,0.0,7.466585636138916,0.0,images/middle_eastern_woman_seed305_feature3725_strength0.png
+white_woman_seed305,white,305,3725,0.5,0.0,0.0,images/white_woman_seed305_feature3725_strength0.5.png
+white_woman_seed305,white,305,3725,0.0,0.0,0.0,images/white_woman_seed305_feature3725_strength0.png
+black_woman_seed306,black,306,3725,0.5,0.0,0.0,images/black_woman_seed306_feature3725_strength0.5.png
+black_woman_seed306,black,306,3725,0.0,0.0,0.0,images/black_woman_seed306_feature3725_strength0.png
+east_asian_woman_seed306,east asian,306,3725,0.5,3.2237751483917236,0.0,images/east_asian_woman_seed306_feature3725_strength0.5.png
+east_asian_woman_seed306,east asian,306,3725,0.0,5.851660251617432,0.0,images/east_asian_woman_seed306_feature3725_strength0.png
+hispanic_woman_seed306,hispanic,306,3725,0.5,2.2150306701660156,0.0,images/hispanic_woman_seed306_feature3725_strength0.5.png
+hispanic_woman_seed306,hispanic,306,3725,0.0,3.7138264179229736,0.0,images/hispanic_woman_seed306_feature3725_strength0.png
+indian_woman_seed306,indian,306,3725,0.5,6.068334102630615,0.0,images/indian_woman_seed306_feature3725_strength0.5.png
+indian_woman_seed306,indian,306,3725,0.0,9.46579360961914,0.0,images/indian_woman_seed306_feature3725_strength0.png
+middle_eastern_woman_seed306,middle eastern,306,3725,0.5,4.284063816070557,0.0,images/middle_eastern_woman_seed306_feature3725_strength0.5.png
+middle_eastern_woman_seed306,middle eastern,306,3725,0.0,7.141801357269287,0.0,images/middle_eastern_woman_seed306_feature3725_strength0.png
+white_woman_seed306,white,306,3725,0.5,0.0,0.0,images/white_woman_seed306_feature3725_strength0.5.png
+white_woman_seed306,white,306,3725,0.0,0.0,0.0,images/white_woman_seed306_feature3725_strength0.png
+black_woman_seed307,black,307,3725,0.5,0.0,0.0,images/black_woman_seed307_feature3725_strength0.5.png
+black_woman_seed307,black,307,3725,0.0,0.0,0.0,images/black_woman_seed307_feature3725_strength0.png
+east_asian_woman_seed307,east asian,307,3725,0.5,1.0596885681152344,0.0,images/east_asian_woman_seed307_feature3725_strength0.5.png
+east_asian_woman_seed307,east asian,307,3725,0.0,1.8122202157974243,0.0,images/east_asian_woman_seed307_feature3725_strength0.png
+hispanic_woman_seed307,hispanic,307,3725,0.5,0.0,0.0,images/hispanic_woman_seed307_feature3725_strength0.5.png
+hispanic_woman_seed307,hispanic,307,3725,0.0,0.0,0.0,images/hispanic_woman_seed307_feature3725_strength0.png
+indian_woman_seed307,indian,307,3725,0.5,3.4274368286132812,0.0,images/indian_woman_seed307_feature3725_strength0.5.png
+indian_woman_seed307,indian,307,3725,0.0,5.987303256988525,0.0,images/indian_woman_seed307_feature3725_strength0.png
+middle_eastern_woman_seed307,middle eastern,307,3725,0.5,3.721585512161255,0.0,images/middle_eastern_woman_seed307_feature3725_strength0.5.png
+middle_eastern_woman_seed307,middle eastern,307,3725,0.0,6.742090702056885,0.0,images/middle_eastern_woman_seed307_feature3725_strength0.png
+white_woman_seed307,white,307,3725,0.5,0.0,0.0,images/white_woman_seed307_feature3725_strength0.5.png
+white_woman_seed307,white,307,3725,0.0,0.0,0.0,images/white_woman_seed307_feature3725_strength0.png
+black_woman_seed308,black,308,3725,0.5,0.0,0.0,images/black_woman_seed308_feature3725_strength0.5.png
+black_woman_seed308,black,308,3725,0.0,0.0,0.0,images/black_woman_seed308_feature3725_strength0.png
+east_asian_woman_seed308,east asian,308,3725,0.5,1.8786367177963257,0.0,images/east_asian_woman_seed308_feature3725_strength0.5.png
+east_asian_woman_seed308,east asian,308,3725,0.0,3.138563871383667,0.0,images/east_asian_woman_seed308_feature3725_strength0.png
+hispanic_woman_seed308,hispanic,308,3725,0.5,2.380823850631714,0.0,images/hispanic_woman_seed308_feature3725_strength0.5.png
+hispanic_woman_seed308,hispanic,308,3725,0.0,3.821019411087036,0.0,images/hispanic_woman_seed308_feature3725_strength0.png
+indian_woman_seed308,indian,308,3725,0.5,9.18545150756836,0.0,images/indian_woman_seed308_feature3725_strength0.5.png
+indian_woman_seed308,indian,308,3725,0.0,14.939826011657715,0.0,images/indian_woman_seed308_feature3725_strength0.png
+middle_eastern_woman_seed308,middle eastern,308,3725,0.5,3.34527587890625,0.0,images/middle_eastern_woman_seed308_feature3725_strength0.5.png
+middle_eastern_woman_seed308,middle eastern,308,3725,0.0,5.6761932373046875,0.0,images/middle_eastern_woman_seed308_feature3725_strength0.png
+white_woman_seed308,white,308,3725,0.5,0.0,0.0,images/white_woman_seed308_feature3725_strength0.5.png
+white_woman_seed308,white,308,3725,0.0,0.0,0.0,images/white_woman_seed308_feature3725_strength0.png
+black_woman_seed309,black,309,3725,0.5,0.0,0.0,images/black_woman_seed309_feature3725_strength0.5.png
+black_woman_seed309,black,309,3725,0.0,0.0,0.0,images/black_woman_seed309_feature3725_strength0.png
+east_asian_woman_seed309,east asian,309,3725,0.5,1.9018617868423462,0.0,images/east_asian_woman_seed309_feature3725_strength0.5.png
+east_asian_woman_seed309,east asian,309,3725,0.0,3.1780192852020264,0.0,images/east_asian_woman_seed309_feature3725_strength0.png
+hispanic_woman_seed309,hispanic,309,3725,0.5,2.5599911212921143,0.0,images/hispanic_woman_seed309_feature3725_strength0.5.png
+hispanic_woman_seed309,hispanic,309,3725,0.0,4.097042083740234,0.0,images/hispanic_woman_seed309_feature3725_strength0.png
+indian_woman_seed309,indian,309,3725,0.5,5.026662349700928,0.0,images/indian_woman_seed309_feature3725_strength0.5.png
+indian_woman_seed309,indian,309,3725,0.0,8.316825866699219,0.0,images/indian_woman_seed309_feature3725_strength0.png
+middle_eastern_woman_seed309,middle eastern,309,3725,0.5,3.5167415142059326,0.0,images/middle_eastern_woman_seed309_feature3725_strength0.5.png
+middle_eastern_woman_seed309,middle eastern,309,3725,0.0,6.1305084228515625,0.0,images/middle_eastern_woman_seed309_feature3725_strength0.png
+white_woman_seed309,white,309,3725,0.5,0.0,0.0,images/white_woman_seed309_feature3725_strength0.5.png
+white_woman_seed309,white,309,3725,0.0,0.0,0.0,images/white_woman_seed309_feature3725_strength0.png
