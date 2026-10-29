@@ -19,7 +19,8 @@ import numpy as np
 from PIL import Image
 
 from render_signed_feature_visuals import (
-    LAYERS, SHORT, attach_heldout_standardized_effects, read_csv, selected_rows,
+    LAYERS, SHORT, attach_heldout_standardized_effects, layer_feature_contact_sheet,
+    read_csv, selected_rows,
     rank_across_layers_contact_sheet, write_csv,
 )
 
@@ -32,6 +33,8 @@ def main():
     parser.add_argument("--seed", type=int, default=150)
     parser.add_argument("--overlay-ranks", type=int, nargs="*", default=[4, 5],
                         help="Discovery ranks for baseline JET overlay sheets")
+    parser.add_argument("--allow-existing", action="store_true",
+                        help="Update a previously generated output directory")
     parser.add_argument("--cache-dir", type=Path, default=ROOT / "ReNO/hf_cache")
     args = parser.parse_args()
     if not 1 <= args.top_k <= 5120 or not 150 <= args.seed <= 199:
@@ -41,7 +44,7 @@ def main():
 
     run = args.run.resolve()
     output = (args.output or run / "results/top5_spatial_area").resolve()
-    if output.exists() and any(output.iterdir()):
+    if output.exists() and any(output.iterdir()) and not args.allow_existing:
         raise ValueError(f"Choose an empty output: {output}")
     output.mkdir(parents=True, exist_ok=True)
     selections = attach_heldout_standardized_effects(run, selected_rows(run, args.top_k))
@@ -112,6 +115,12 @@ def main():
         raise ValueError(f"Baseline replay mismatch: {max(replay_errors)}")
     for rank in args.overlay_ranks:
         rank_across_layers_contact_sheet(output, rank, selections, examples, maps, scales, args.seed)
+    for layer in LAYERS:
+        (output / layer).mkdir(exist_ok=True)
+        layer_feature_contact_sheet(output, layer,
+                                    [s for s in selections if s["layer"] == layer],
+                                    examples, maps, scales, args.seed,
+                                    filename=f"top{args.top_k}_features_by_rank_contact_sheet_jet.jpg")
     write_csv(output / "spatial_area.csv", areas)
 
     lines = ["# Top-K selected-feature spatial coverage", "",
@@ -131,6 +140,11 @@ def main():
         for rank in args.overlay_ranks:
             lines.extend([f"### Rank {rank}", "",
                           f"![Rank {rank} JET overlays](top{rank}_features_by_layer_contact_sheet_jet.jpg)", ""])
+    lines.extend(["## Per-layer Top-K JET contact sheets", "",
+                  "Each sheet fixes a layer: rows are ranks 1 through 5 and columns are the 12 prompt groups.", ""])
+    for layer in LAYERS:
+        lines.extend([f"### {SHORT[layer]}", "",
+                      f"![{SHORT[layer]} Top-{args.top_k} JET overlays]({layer}/top{args.top_k}_features_by_rank_contact_sheet_jet.jpg)", ""])
     lines.extend(["## Mean held-out contrast, in feature SD", "",
                   "This uses all held-out seeds 150–199; feature selection remains discovery-only.", "",
                   "| Layer | " + " | ".join(f"Rank {rank}" for rank in range(1, args.top_k + 1)) + " |",

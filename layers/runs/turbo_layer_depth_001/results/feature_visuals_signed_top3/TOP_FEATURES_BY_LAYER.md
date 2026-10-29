@@ -85,6 +85,9 @@ activation overlaid on its held-out seed-150 image. Color scale is normalized
 per feature, so use the overlays for spatial location/area—not cross-feature
 activation magnitude.
 
+The complementary **per-layer** sheets (rows = Rank 1–5; columns = prompt
+groups) are embedded in [the Top-5 overlay report](../top5_feature_overlays/REPORT.md).
+
 ### Rank 1
 
 ![Rank 1 JET overlays](top1_features_by_layer_contact_sheet_jet.jpg)

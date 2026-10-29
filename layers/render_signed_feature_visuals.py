@@ -244,14 +244,16 @@ def contact_sheet(title, rows, output, subtitle="", tile=184):
     sheet.save(output, quality=89, optimize=True)
 
 
-def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seed, tile=172):
+def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seed, tile=172,
+                                filename="top3_feature_contact_sheet_jet.jpg"):
     """One scan-friendly JET-overlay grid: discovery-rank rows by prompt columns."""
     layer_rows = [s for s in selections if s["layer"] == layer]
     groups = list(dict.fromkeys(s["target_group"] for s in layer_rows))
+    ranks = range(1, max(int(s["rank"]) for s in layer_rows) + 1)
     left, top, caption = 72, 126, 28
-    sheet = Image.new("RGB", (left + len(groups) * tile + 12, top + 3 * (tile + caption) + 16), "white")
+    sheet = Image.new("RGB", (left + len(groups) * tile + 12, top + len(ranks) * (tile + caption) + 16), "white")
     draw = ImageDraw.Draw(sheet)
-    draw.text((12, 10), f"{SHORT[layer]} | Top-3 feature activation JET overlays | held-out seed {seed}",
+    draw.text((12, 10), f"{SHORT[layer]} | Top-{len(ranks)} feature activation JET overlays | held-out seed {seed}",
               fill="#13283d", font=get_font(21))
     draw.text((12, 42), "Columns are prompt conditions; rows are discovery ranks. Blue → cyan → green → yellow → orange → red = low → high activation.",
               fill="#42556a", font=get_font(13))
@@ -259,7 +261,7 @@ def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale
         x = left + col_index * tile
         draw.multiline_text((x + 3, 72), group.replace(" ", "\n", 1), fill="#13283d",
                             font=get_font(12), spacing=0)
-    for row_index, rank in enumerate(range(1, 4)):
+    for row_index, rank in enumerate(ranks):
         y = top + row_index * (tile + caption)
         draw.text((8, y + tile // 2 - 8), f"Rank {rank}", fill="#087e8b", font=get_font(15))
         for col_index, group in enumerate(groups):
@@ -271,7 +273,7 @@ def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale
             overlay = jet_overlay(examples[(group, seed)], maps[(layer, group, feature, seed)],
                                   scale[(layer, feature)])
             sheet.paste(overlay.resize((tile - 6, tile - 6), Image.Resampling.LANCZOS), (x + 3, y + caption))
-    sheet.save(output / layer / "top3_feature_contact_sheet_jet.jpg", quality=92, optimize=True)
+    sheet.save(output / layer / filename, quality=92, optimize=True)
 
 
 def rank_across_layers_contact_sheet(output, rank, selections, examples, maps, scale, seed, tile=172):

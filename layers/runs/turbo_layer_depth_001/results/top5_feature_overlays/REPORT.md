@@ -22,6 +22,26 @@ Rows are U-Net layers; columns are prompt groups. Each feature uses its own acti
 
 ![Rank 5 JET overlays](top5_features_by_layer_contact_sheet_jet.jpg)
 
+## Per-layer Top-K JET contact sheets
+
+Each sheet fixes a layer: rows are ranks 1 through 5 and columns are the 12 prompt groups.
+
+### down.2.1
+
+![down.2.1 Top-5 JET overlays](unet_down_blocks_2_attentions_1/top5_features_by_rank_contact_sheet_jet.jpg)
+
+### mid.0
+
+![mid.0 Top-5 JET overlays](unet_mid_block_attentions_0/top5_features_by_rank_contact_sheet_jet.jpg)
+
+### up.0.0
+
+![up.0.0 Top-5 JET overlays](unet_up_blocks_0_attentions_0/top5_features_by_rank_contact_sheet_jet.jpg)
+
+### up.0.1
+
+![up.0.1 Top-5 JET overlays](unet_up_blocks_0_attentions_1/top5_features_by_rank_contact_sheet_jet.jpg)
+
 ## Mean held-out contrast, in feature SD
 
 This uses all held-out seeds 150–199; feature selection remains discovery-only.
