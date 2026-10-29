@@ -20,7 +20,7 @@ from PIL import Image
 
 from render_signed_feature_visuals import (
     LAYERS, SHORT, attach_heldout_standardized_effects, read_csv, selected_rows,
-    slug, write_csv,
+    rank_across_layers_contact_sheet, write_csv,
 )
 
 
@@ -30,10 +30,14 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--seed", type=int, default=150)
+    parser.add_argument("--overlay-ranks", type=int, nargs="*", default=[4, 5],
+                        help="Discovery ranks for baseline JET overlay sheets")
     parser.add_argument("--cache-dir", type=Path, default=ROOT / "ReNO/hf_cache")
     args = parser.parse_args()
     if not 1 <= args.top_k <= 5120 or not 150 <= args.seed <= 199:
         parser.error("top-k must be 1..5120 and seed must be held-out (150..199)")
+    if any(rank < 1 or rank > args.top_k for rank in args.overlay_ranks):
+        parser.error("overlay ranks must be within top-k")
 
     run = args.run.resolve()
     output = (args.output or run / "results/top5_spatial_area").resolve()
@@ -72,7 +76,7 @@ def main():
         sae.requires_grad_(False)
 
     source_root = Path(settings["image_source"]).parent
-    areas, replay_errors = [], []
+    areas, replay_errors, examples, maps, scales = [], [], {}, {}, {}
     for index, (group, row) in enumerate(row_by_group.items(), 1):
         seed = int(row["seed"])
         latent_rng = torch.Generator("cuda").manual_seed(seed)
@@ -86,12 +90,16 @@ def main():
         with Image.open(source_root / row["image"]) as source:
             replay_errors.append(float(np.abs(np.asarray(result.images[0], dtype=float) -
                                               np.asarray(source.convert("RGB"), dtype=float)).max()))
+        examples[(group, seed)] = result.images[0].convert("RGB")
         for layer, block in LAYERS.items():
             residual = (cache["output"][block] - cache["input"][block])[:, -1].permute(0, 2, 3, 1).float()
             codes = saes[layer].encode(residual)[0]
             for selection in (s for s in selections if s["layer"] == layer and s["target_group"] == group):
                 feature = int(selection["feature_id_layer_specific"])
                 values = codes[..., feature]
+                array = values.detach().cpu().numpy()
+                maps[(layer, group, feature, seed)] = array
+                scales[(layer, feature)] = max(scales.get((layer, feature), 0.0), float(array.max()))
                 areas.append({"layer": layer, "target_group": group, "rank": int(selection["rank"]),
                               "feature_id_layer_specific": feature, "seed": seed,
                               "grid_height": int(values.shape[0]), "grid_width": int(values.shape[1]),
@@ -102,6 +110,8 @@ def main():
         print(f"replayed {index}/12: {group}", flush=True)
     if max(replay_errors) != 0:
         raise ValueError(f"Baseline replay mismatch: {max(replay_errors)}")
+    for rank in args.overlay_ranks:
+        rank_across_layers_contact_sheet(output, rank, selections, examples, maps, scales, args.seed)
     write_csv(output / "spatial_area.csv", areas)
 
     lines = ["# Top-K selected-feature spatial coverage", "",
@@ -115,7 +125,13 @@ def main():
             values = [a["active_fraction"] for a in areas if a["layer"] == layer and a["rank"] == rank]
             cells.append(f"{np.mean(values) * 100:.1f}%")
         lines.append(f"| {SHORT[layer]} | " + " | ".join(cells) + " |")
-    lines.extend(["", "## Mean held-out contrast, in feature SD", "",
+    if args.overlay_ranks:
+        lines.extend(["", "## Baseline JET activation overlays", "",
+                      "Rows are U-Net layers; columns are prompt groups. Each feature uses its own activation color scale.", ""])
+        for rank in args.overlay_ranks:
+            lines.extend([f"### Rank {rank}", "",
+                          f"![Rank {rank} JET overlays](top{rank}_features_by_layer_contact_sheet_jet.jpg)", ""])
+    lines.extend(["## Mean held-out contrast, in feature SD", "",
                   "This uses all held-out seeds 150–199; feature selection remains discovery-only.", "",
                   "| Layer | " + " | ".join(f"Rank {rank}" for rank in range(1, args.top_k + 1)) + " |",
                   "|---|" + "|".join("---:" for _ in range(args.top_k)) + "|"])

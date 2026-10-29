@@ -18,6 +18,7 @@ See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md)
 See [the spatial activation-area summary](SPATIAL_ACTIVATION_SUMMARY.md) for the quantitative result behind the larger down.2.1 maps.
 See [the held-out contrast summary](HELDOUT_CONTRAST_SUMMARY.md) for layer/rank effect sizes in feature SD.
 See [the Top-5 spatial-and-contrast extension](../top5_spatial_area/REPORT.md) for ranks 4–5.
+See [the Rank-4/5 baseline JET overlays](../top5_feature_overlays/REPORT.md) for their cross-layer contact sheets.
 
 ## Cross-layer contact sheets
 
