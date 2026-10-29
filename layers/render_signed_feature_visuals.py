@@ -164,7 +164,8 @@ def write_ranked_feature_table(output, selections, top_k):
     for layer in LAYERS:
         rows = [row for row in selections if row["layer"] == layer]
         lines.extend([f"## {SHORT[layer]} (`{LAYERS[layer]}`)", "",
-                      "| Prompt group | Rank 1 | Rank 2 | Rank 3 |", "|---|---:|---:|---:|"])
+                      "| Prompt group | " + " | ".join(f"Rank {rank}" for rank in range(1, top_k + 1)) + " |",
+                      "|---|" + "|".join("---:" for _ in range(top_k)) + "|"])
         groups = list(dict.fromkeys(row["target_group"] for row in rows))
         for group in groups:
             ranked = sorted((row for row in rows if row["target_group"] == group),
@@ -172,8 +173,8 @@ def write_ranked_feature_table(output, selections, top_k):
             cells = []
             for row in ranked:
                 cells.append(f"F{int(row['feature_id_layer_specific'])} ({float(row['heldout_standardized_contrast']):+.2f} SD)")
-            cells += ["—"] * (3 - len(cells))
-            lines.append(f"| {group} | " + " | ".join(cells[:3]) + " |")
+            cells += ["—"] * (top_k - len(cells))
+            lines.append(f"| {group} | " + " | ".join(cells[:top_k]) + " |")
         lines.extend([""])
     lines.extend([
         "## How to use the galleries",
