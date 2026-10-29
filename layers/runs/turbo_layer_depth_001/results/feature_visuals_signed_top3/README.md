@@ -15,6 +15,7 @@ The source experiment ranks **one feature per layer/group cell** (48 selections)
 Prompt labels are generation conditions, not inferred human identity. These are exploratory visual interventions; no bias reduction or image-quality improvement is established.
 
 See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.
+See [the spatial activation-area summary](SPATIAL_ACTIVATION_SUMMARY.md) for the quantitative result behind the larger down.2.1 maps.
 
 ## Cross-layer contact sheets
 
