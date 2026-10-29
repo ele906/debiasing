@@ -1,0 +1,241 @@
+layer,target_group,rank,feature_id_layer_specific,seed,grid_height,grid_width,active_fraction,heldout_standardized_contrast
+unet_down_blocks_2_attentions_1,black man,1,527,150,16,16,0.93359375,2.6148679116734947
+unet_down_blocks_2_attentions_1,black man,2,4022,150,16,16,0.20703125,1.5599254327789682
+unet_down_blocks_2_attentions_1,black man,3,2137,150,16,16,0.0625,1.7253415508651295
+unet_down_blocks_2_attentions_1,black man,4,1237,150,16,16,0.28125,1.3257969102806908
+unet_down_blocks_2_attentions_1,black man,5,1991,150,16,16,0.15234375,1.3565749433462015
+unet_mid_block_attentions_0,black man,1,2138,150,16,16,0.06640625,2.1313565245555486
+unet_mid_block_attentions_0,black man,2,2875,150,16,16,0.0703125,0.7483868163896523
+unet_mid_block_attentions_0,black man,3,4338,150,16,16,0.11328125,0.3766054167757664
+unet_mid_block_attentions_0,black man,4,3482,150,16,16,0.03515625,0.5217566547500855
+unet_mid_block_attentions_0,black man,5,534,150,16,16,0.02734375,0.6060608462175557
+unet_up_blocks_0_attentions_0,black man,1,2975,150,16,16,0.078125,0.9414162100936844
+unet_up_blocks_0_attentions_0,black man,2,1573,150,16,16,0.078125,0.7121247751207119
+unet_up_blocks_0_attentions_0,black man,3,3111,150,16,16,0.1015625,0.8623444708827112
+unet_up_blocks_0_attentions_0,black man,4,1451,150,16,16,0.0390625,1.2451140607549525
+unet_up_blocks_0_attentions_0,black man,5,2618,150,16,16,0.03125,1.476717115384483
+unet_up_blocks_0_attentions_1,black man,1,4464,150,16,16,0.171875,2.3554744239283267
+unet_up_blocks_0_attentions_1,black man,2,4408,150,16,16,0.16015625,2.585218496281265
+unet_up_blocks_0_attentions_1,black man,3,4044,150,16,16,0.125,2.389415709745295
+unet_up_blocks_0_attentions_1,black man,4,383,150,16,16,0.265625,0.9006293125698063
+unet_up_blocks_0_attentions_1,black man,5,3460,150,16,16,0.07421875,2.230283427124407
+unet_down_blocks_2_attentions_1,east asian man,1,3722,150,16,16,0.91796875,1.3261544220356387
+unet_down_blocks_2_attentions_1,east asian man,2,1759,150,16,16,0.625,2.4164443492215817
+unet_down_blocks_2_attentions_1,east asian man,3,1600,150,16,16,0.20703125,1.0853329597139143
+unet_down_blocks_2_attentions_1,east asian man,4,2808,150,16,16,0.1640625,1.4504005659314754
+unet_down_blocks_2_attentions_1,east asian man,5,2810,150,16,16,0.07421875,0.6733560239722758
+unet_mid_block_attentions_0,east asian man,1,2385,150,16,16,0.00390625,0.9318883414922653
+unet_mid_block_attentions_0,east asian man,2,1424,150,16,16,0.03125,1.2043377396447958
+unet_mid_block_attentions_0,east asian man,3,3134,150,16,16,0.0859375,1.1092176172059836
+unet_mid_block_attentions_0,east asian man,4,4719,150,16,16,0.05078125,1.4846590400056223
+unet_mid_block_attentions_0,east asian man,5,3828,150,16,16,0.00390625,0.7015792828649202
+unet_up_blocks_0_attentions_0,east asian man,1,641,150,16,16,0.0390625,0.8449661423211522
+unet_up_blocks_0_attentions_0,east asian man,2,2854,150,16,16,0.03125,0.885755669801582
+unet_up_blocks_0_attentions_0,east asian man,3,573,150,16,16,0.09375,1.1917261978953424
+unet_up_blocks_0_attentions_0,east asian man,4,892,150,16,16,0.0703125,1.1487131858227697
+unet_up_blocks_0_attentions_0,east asian man,5,4323,150,16,16,0.01171875,0.631694635862847
+unet_up_blocks_0_attentions_1,east asian man,1,1042,150,16,16,0.0859375,2.4496325257391134
+unet_up_blocks_0_attentions_1,east asian man,2,383,150,16,16,0.03125,0.13648340076987675
+unet_up_blocks_0_attentions_1,east asian man,3,1130,150,16,16,0.1015625,2.1081589409155947
+unet_up_blocks_0_attentions_1,east asian man,4,354,150,16,16,0.0546875,2.0433136004913752
+unet_up_blocks_0_attentions_1,east asian man,5,2913,150,16,16,0.09375,1.130051851389531
+unet_down_blocks_2_attentions_1,hispanic man,1,1653,150,16,16,0.47265625,1.686447478724915
+unet_down_blocks_2_attentions_1,hispanic man,2,199,150,16,16,0.22265625,1.9516344790019662
+unet_down_blocks_2_attentions_1,hispanic man,3,1678,150,16,16,0.1796875,1.5752703800487786
+unet_down_blocks_2_attentions_1,hispanic man,4,2940,150,16,16,0.1640625,1.1078783459147696
+unet_down_blocks_2_attentions_1,hispanic man,5,4001,150,16,16,0.2421875,1.385239363380495
+unet_mid_block_attentions_0,hispanic man,1,4601,150,16,16,0.07421875,0.3249304165482331
+unet_mid_block_attentions_0,hispanic man,2,826,150,16,16,0.046875,0.5454548607418163
+unet_mid_block_attentions_0,hispanic man,3,169,150,16,16,0.0546875,0.7041134426197047
+unet_mid_block_attentions_0,hispanic man,4,1740,150,16,16,0.08984375,0.5757599427668554
+unet_mid_block_attentions_0,hispanic man,5,3828,150,16,16,0.00390625,0.5386067034080773
+unet_up_blocks_0_attentions_0,hispanic man,1,1573,150,16,16,0.07421875,1.0576303905412487
+unet_up_blocks_0_attentions_0,hispanic man,2,3339,150,16,16,0.0859375,0.8843460720536277
+unet_up_blocks_0_attentions_0,hispanic man,3,3137,150,16,16,0.00390625,1.0837375926240262
+unet_up_blocks_0_attentions_0,hispanic man,4,3111,150,16,16,0.09765625,0.6072352451904861
+unet_up_blocks_0_attentions_0,hispanic man,5,1451,150,16,16,0.03515625,0.49553556529486587
+unet_up_blocks_0_attentions_1,hispanic man,1,76,150,16,16,0.0703125,2.027523736652162
+unet_up_blocks_0_attentions_1,hispanic man,2,4922,150,16,16,0.078125,1.8051005463196164
+unet_up_blocks_0_attentions_1,hispanic man,3,3936,150,16,16,0.234375,1.0300083787564365
+unet_up_blocks_0_attentions_1,hispanic man,4,2355,150,16,16,0.1171875,1.3222274211648022
+unet_up_blocks_0_attentions_1,hispanic man,5,3351,150,16,16,0.12109375,1.4505500386449417
+unet_down_blocks_2_attentions_1,indian man,1,1050,150,16,16,0.88671875,2.312235339859255
+unet_down_blocks_2_attentions_1,indian man,2,3722,150,16,16,0.984375,1.9530802532968259
+unet_down_blocks_2_attentions_1,indian man,3,669,150,16,16,0.2890625,1.189037481975549
+unet_down_blocks_2_attentions_1,indian man,4,452,150,16,16,0.28515625,1.0117209469119863
+unet_down_blocks_2_attentions_1,indian man,5,1600,150,16,16,0.2421875,1.1544559834387473
+unet_mid_block_attentions_0,indian man,1,4228,150,16,16,0.1015625,0.8667841990698699
+unet_mid_block_attentions_0,indian man,2,2023,150,16,16,0.01953125,0.6618690996307143
+unet_mid_block_attentions_0,indian man,3,3770,150,16,16,0.02734375,0.6199632094841535
+unet_mid_block_attentions_0,indian man,4,3018,150,16,16,0.10546875,0.6256514211668387
+unet_mid_block_attentions_0,indian man,5,1373,150,16,16,0.0234375,1.5217892222949154
+unet_up_blocks_0_attentions_0,indian man,1,2261,150,16,16,0.1171875,1.7822120938347725
+unet_up_blocks_0_attentions_0,indian man,2,4540,150,16,16,0.0625,1.1429947193778427
+unet_up_blocks_0_attentions_0,indian man,3,3742,150,16,16,0.046875,0.8907231584286295
+unet_up_blocks_0_attentions_0,indian man,4,4782,150,16,16,0.05078125,2.14205472360795
+unet_up_blocks_0_attentions_0,indian man,5,2655,150,16,16,0.09765625,1.6895177391974414
+unet_up_blocks_0_attentions_1,indian man,1,2784,150,16,16,0.109375,2.496082836099301
+unet_up_blocks_0_attentions_1,indian man,2,1243,150,16,16,0.28515625,1.8437962054039079
+unet_up_blocks_0_attentions_1,indian man,3,2913,150,16,16,0.08203125,1.8167881674926907
+unet_up_blocks_0_attentions_1,indian man,4,4294,150,16,16,0.0625,2.2629456789244786
+unet_up_blocks_0_attentions_1,indian man,5,3301,150,16,16,0.0703125,2.249674501314289
+unet_down_blocks_2_attentions_1,middle eastern man,1,138,150,16,16,0.7578125,2.6273357787354104
+unet_down_blocks_2_attentions_1,middle eastern man,2,452,150,16,16,0.34765625,1.9077301479993958
+unet_down_blocks_2_attentions_1,middle eastern man,3,669,150,16,16,0.5,2.005073000877412
+unet_down_blocks_2_attentions_1,middle eastern man,4,1050,150,16,16,0.55078125,0.7384684031385632
+unet_down_blocks_2_attentions_1,middle eastern man,5,4858,150,16,16,0.51953125,1.5482549053207497
+unet_mid_block_attentions_0,middle eastern man,1,4228,150,16,16,0.140625,1.874844676237555
+unet_mid_block_attentions_0,middle eastern man,2,2023,150,16,16,0.14453125,1.760373272211449
+unet_mid_block_attentions_0,middle eastern man,3,3770,150,16,16,0.078125,1.7122675954679332
+unet_mid_block_attentions_0,middle eastern man,4,4399,150,16,16,0.0859375,1.7277509112759168
+unet_mid_block_attentions_0,middle eastern man,5,5029,150,16,16,0.05078125,1.166823199746619
+unet_up_blocks_0_attentions_0,middle eastern man,1,3742,150,16,16,0.0859375,1.963658808821108
+unet_up_blocks_0_attentions_0,middle eastern man,2,4540,150,16,16,0.0859375,1.6735241427671046
+unet_up_blocks_0_attentions_0,middle eastern man,3,2261,150,16,16,0.16015625,1.3026016246412444
+unet_up_blocks_0_attentions_0,middle eastern man,4,2766,150,16,16,0.078125,2.320361388422502
+unet_up_blocks_0_attentions_0,middle eastern man,5,1467,150,16,16,0.07421875,2.574414850800217
+unet_up_blocks_0_attentions_1,middle eastern man,1,4147,150,16,16,0.1015625,2.202091308243428
+unet_up_blocks_0_attentions_1,middle eastern man,2,1243,150,16,16,0.21875,0.7703181806065055
+unet_up_blocks_0_attentions_1,middle eastern man,3,2355,150,16,16,0.09765625,1.0741317320524812
+unet_up_blocks_0_attentions_1,middle eastern man,4,2363,150,16,16,0.0546875,2.0767994833274654
+unet_up_blocks_0_attentions_1,middle eastern man,5,3239,150,16,16,0.03515625,2.012670577286876
+unet_down_blocks_2_attentions_1,white man,1,2707,150,16,16,0.875,2.048558914012724
+unet_down_blocks_2_attentions_1,white man,2,4262,150,16,16,0.36328125,2.277302453013776
+unet_down_blocks_2_attentions_1,white man,3,243,150,16,16,0.5,2.262066049903411
+unet_down_blocks_2_attentions_1,white man,4,2810,150,16,16,0.3125,1.6461862371077125
+unet_down_blocks_2_attentions_1,white man,5,1664,150,16,16,0.37890625,1.2023485231727895
+unet_mid_block_attentions_0,white man,1,4338,150,16,16,0.09375,1.5953238557726794
+unet_mid_block_attentions_0,white man,2,3482,150,16,16,0.05078125,1.232133753761752
+unet_mid_block_attentions_0,white man,3,1874,150,16,16,0.0859375,0.39113148246379975
+unet_mid_block_attentions_0,white man,4,374,150,16,16,0.0859375,0.9856228781935088
+unet_mid_block_attentions_0,white man,5,836,150,16,16,0.078125,1.1092770190690657
+unet_up_blocks_0_attentions_0,white man,1,2975,150,16,16,0.046875,1.2224673387668898
+unet_up_blocks_0_attentions_0,white man,2,1811,150,16,16,0.05859375,1.8035691974444592
+unet_up_blocks_0_attentions_0,white man,3,1354,150,16,16,0.06640625,1.4941801702643474
+unet_up_blocks_0_attentions_0,white man,4,3339,150,16,16,0.09765625,1.0647442181835653
+unet_up_blocks_0_attentions_0,white man,5,1591,150,16,16,0.0546875,1.5822340907729626
+unet_up_blocks_0_attentions_1,white man,1,383,150,16,16,0.296875,1.4238403883796729
+unet_up_blocks_0_attentions_1,white man,2,3166,150,16,16,0.00390625,1.3197306628708372
+unet_up_blocks_0_attentions_1,white man,3,2138,150,16,16,0.0390625,1.6626860715713943
+unet_up_blocks_0_attentions_1,white man,4,3549,150,16,16,0.0390625,1.6458793816818775
+unet_up_blocks_0_attentions_1,white man,5,2727,150,16,16,0.62890625,1.0565330172944083
+unet_down_blocks_2_attentions_1,black woman,1,527,150,16,16,0.98046875,2.494584267260577
+unet_down_blocks_2_attentions_1,black woman,2,243,150,16,16,0.51953125,2.3881845163799253
+unet_down_blocks_2_attentions_1,black woman,3,3279,150,16,16,0.390625,1.9944570083238884
+unet_down_blocks_2_attentions_1,black woman,4,4022,150,16,16,0.59765625,1.7397724837788109
+unet_down_blocks_2_attentions_1,black woman,5,2230,150,16,16,0.3515625,1.3232674000597184
+unet_mid_block_attentions_0,black woman,1,4338,150,16,16,0.078125,1.295980006628108
+unet_mid_block_attentions_0,black woman,2,1650,150,16,16,0.140625,1.69197833523856
+unet_mid_block_attentions_0,black woman,3,2138,150,16,16,0.02734375,1.8808981503984865
+unet_mid_block_attentions_0,black woman,4,4601,150,16,16,0.04296875,0.6890265598434733
+unet_mid_block_attentions_0,black woman,5,2361,150,16,16,0.05859375,0.3929007116553844
+unet_up_blocks_0_attentions_0,black woman,1,4782,150,16,16,0.1328125,2.160632165417546
+unet_up_blocks_0_attentions_0,black woman,2,4163,150,16,16,0.0859375,1.6605161603360903
+unet_up_blocks_0_attentions_0,black woman,3,2975,150,16,16,0.046875,0.8373942701849477
+unet_up_blocks_0_attentions_0,black woman,4,2706,150,16,16,0.078125,0.7009594705852824
+unet_up_blocks_0_attentions_0,black woman,5,4659,150,16,16,0.03515625,1.495292199589718
+unet_up_blocks_0_attentions_1,black woman,1,4408,150,16,16,0.12890625,2.583780135491042
+unet_up_blocks_0_attentions_1,black woman,2,383,150,16,16,0.125,1.968029762061546
+unet_up_blocks_0_attentions_1,black woman,3,4464,150,16,16,0.11328125,2.0065439394508098
+unet_up_blocks_0_attentions_1,black woman,4,4044,150,16,16,0.0703125,2.2276741648805256
+unet_up_blocks_0_attentions_1,black woman,5,4951,150,16,16,0.0703125,2.5055474554535695
+unet_down_blocks_2_attentions_1,east asian woman,1,1759,150,16,16,0.97265625,2.6443434452349868
+unet_down_blocks_2_attentions_1,east asian woman,2,2810,150,16,16,0.60546875,2.4075571936252667
+unet_down_blocks_2_attentions_1,east asian woman,3,1600,150,16,16,0.18359375,1.4622605606410484
+unet_down_blocks_2_attentions_1,east asian woman,4,2808,150,16,16,0.1015625,2.3202435929399523
+unet_down_blocks_2_attentions_1,east asian woman,5,2230,150,16,16,0.23828125,0.943431085112936
+unet_mid_block_attentions_0,east asian woman,1,1424,150,16,16,0.05859375,0.6495743905542811
+unet_mid_block_attentions_0,east asian woman,2,3828,150,16,16,0.00390625,0.582278984765152
+unet_mid_block_attentions_0,east asian woman,3,846,150,16,16,0.00390625,1.1906749655342423
+unet_mid_block_attentions_0,east asian woman,4,4188,150,16,16,0.0,0.8444743431719095
+unet_mid_block_attentions_0,east asian woman,5,1740,150,16,16,0.0625,1.113560816577439
+unet_up_blocks_0_attentions_0,east asian woman,1,4540,150,16,16,0.06640625,0.9648639117941694
+unet_up_blocks_0_attentions_0,east asian woman,2,4323,150,16,16,0.02734375,1.3657122446080225
+unet_up_blocks_0_attentions_0,east asian woman,3,4367,150,16,16,0.015625,1.8794322309845841
+unet_up_blocks_0_attentions_0,east asian woman,4,3052,150,16,16,0.015625,2.2552526500362764
+unet_up_blocks_0_attentions_0,east asian woman,5,2854,150,16,16,0.046875,0.5449511130251199
+unet_up_blocks_0_attentions_1,east asian woman,1,1042,150,16,16,0.14453125,2.493541267952266
+unet_up_blocks_0_attentions_1,east asian woman,2,2138,150,16,16,0.1640625,2.43580013633987
+unet_up_blocks_0_attentions_1,east asian woman,3,354,150,16,16,0.04296875,2.2513034253929427
+unet_up_blocks_0_attentions_1,east asian woman,4,927,150,16,16,0.01953125,1.5023881159632944
+unet_up_blocks_0_attentions_1,east asian woman,5,3397,150,16,16,0.09375,1.6806820256735218
+unet_down_blocks_2_attentions_1,hispanic woman,1,527,150,16,16,0.63671875,0.3588065325105371
+unet_down_blocks_2_attentions_1,hispanic woman,2,4022,150,16,16,0.45703125,0.8585152445287434
+unet_down_blocks_2_attentions_1,hispanic woman,3,1584,150,16,16,0.26171875,1.023339611100936
+unet_down_blocks_2_attentions_1,hispanic woman,4,1600,150,16,16,0.15234375,0.4514479469267174
+unet_down_blocks_2_attentions_1,hispanic woman,5,199,150,16,16,0.015625,1.832156543884784
+unet_mid_block_attentions_0,hispanic woman,1,1424,150,16,16,0.0546875,0.5949708869242447
+unet_mid_block_attentions_0,hispanic woman,2,3828,150,16,16,0.015625,0.5578288685007922
+unet_mid_block_attentions_0,hispanic woman,3,3770,150,16,16,0.00390625,0.6339915473730908
+unet_mid_block_attentions_0,hispanic woman,4,247,150,16,16,0.015625,0.7678279816284749
+unet_mid_block_attentions_0,hispanic woman,5,3680,150,16,16,0.03125,0.46534708004553393
+unet_up_blocks_0_attentions_0,hispanic woman,1,2706,150,16,16,0.09375,0.6272049374831077
+unet_up_blocks_0_attentions_0,hispanic woman,2,4621,150,16,16,0.03125,1.0146406458314974
+unet_up_blocks_0_attentions_0,hispanic woman,3,641,150,16,16,0.0390625,0.5392792199725562
+unet_up_blocks_0_attentions_0,hispanic woman,4,3716,150,16,16,0.0390625,0.47080899587641434
+unet_up_blocks_0_attentions_0,hispanic woman,5,853,150,16,16,0.05078125,0.26804901712623597
+unet_up_blocks_0_attentions_1,hispanic woman,1,3166,150,16,16,0.05859375,1.5096705655293219
+unet_up_blocks_0_attentions_1,hispanic woman,2,3936,150,16,16,0.296875,0.770579683477858
+unet_up_blocks_0_attentions_1,hispanic woman,3,500,150,16,16,0.37109375,0.7032152481345119
+unet_up_blocks_0_attentions_1,hispanic woman,4,1243,150,16,16,0.1953125,0.3658707822510087
+unet_up_blocks_0_attentions_1,hispanic woman,5,1657,150,16,16,0.03515625,1.378689666174855
+unet_down_blocks_2_attentions_1,indian woman,1,3725,150,16,16,0.7578125,2.228075983426369
+unet_down_blocks_2_attentions_1,indian woman,2,3722,150,16,16,0.98828125,2.1633189114749714
+unet_down_blocks_2_attentions_1,indian woman,3,4858,150,16,16,0.5234375,2.067325182850209
+unet_down_blocks_2_attentions_1,indian woman,4,2527,150,16,16,0.49609375,2.424835622398498
+unet_down_blocks_2_attentions_1,indian woman,5,1050,150,16,16,0.45703125,2.274933859389037
+unet_mid_block_attentions_0,indian woman,1,3018,150,16,16,0.1171875,0.8847927786996551
+unet_mid_block_attentions_0,indian woman,2,1874,150,16,16,0.078125,0.9105159126860519
+unet_mid_block_attentions_0,indian woman,3,2023,150,16,16,0.01171875,0.555436984981332
+unet_mid_block_attentions_0,indian woman,4,1373,150,16,16,0.0390625,0.9198332251048785
+unet_mid_block_attentions_0,indian woman,5,4755,150,16,16,0.00390625,1.623229803234632
+unet_up_blocks_0_attentions_0,indian woman,1,4099,150,16,16,0.29296875,1.2995917497790288
+unet_up_blocks_0_attentions_0,indian woman,2,4540,150,16,16,0.1015625,1.1674785238624932
+unet_up_blocks_0_attentions_0,indian woman,3,2706,150,16,16,0.125,1.2648559688055072
+unet_up_blocks_0_attentions_0,indian woman,4,1292,150,16,16,0.09765625,1.702045187649189
+unet_up_blocks_0_attentions_0,indian woman,5,1486,150,16,16,0.1171875,1.3282297387741313
+unet_up_blocks_0_attentions_1,indian woman,1,1243,150,16,16,0.28515625,2.146841346572446
+unet_up_blocks_0_attentions_1,indian woman,2,3503,150,16,16,0.23828125,2.339920768938526
+unet_up_blocks_0_attentions_1,indian woman,3,3507,150,16,16,0.11328125,2.146056189719118
+unet_up_blocks_0_attentions_1,indian woman,4,4464,150,16,16,0.109375,1.197252847118435
+unet_up_blocks_0_attentions_1,indian woman,5,3351,150,16,16,0.0703125,2.193262672256784
+unet_down_blocks_2_attentions_1,middle eastern woman,1,138,150,16,16,0.95703125,2.656909443712184
+unet_down_blocks_2_attentions_1,middle eastern woman,2,3462,150,16,16,0.41796875,2.3335540969743556
+unet_down_blocks_2_attentions_1,middle eastern woman,3,3701,150,16,16,0.40234375,1.7645227142976072
+unet_down_blocks_2_attentions_1,middle eastern woman,4,3935,150,16,16,0.296875,2.6013708418077184
+unet_down_blocks_2_attentions_1,middle eastern woman,5,669,150,16,16,0.45703125,1.6980762436386634
+unet_mid_block_attentions_0,middle eastern woman,1,2023,150,16,16,0.10546875,1.6157820589388372
+unet_mid_block_attentions_0,middle eastern woman,2,5029,150,16,16,0.05859375,1.9816406134233988
+unet_mid_block_attentions_0,middle eastern woman,3,4399,150,16,16,0.10546875,1.7093361866655856
+unet_mid_block_attentions_0,middle eastern woman,4,3770,150,16,16,0.05078125,1.015220476660743
+unet_mid_block_attentions_0,middle eastern woman,5,3067,150,16,16,0.05859375,1.595067258989773
+unet_up_blocks_0_attentions_0,middle eastern woman,1,4099,150,16,16,0.328125,1.859047402830778
+unet_up_blocks_0_attentions_0,middle eastern woman,2,1088,150,16,16,0.3046875,2.458214831341074
+unet_up_blocks_0_attentions_0,middle eastern woman,3,4540,150,16,16,0.11328125,1.060386963947313
+unet_up_blocks_0_attentions_0,middle eastern woman,4,608,150,16,16,0.140625,2.2356658520253907
+unet_up_blocks_0_attentions_0,middle eastern woman,5,2655,150,16,16,0.22265625,1.7778100757942001
+unet_up_blocks_0_attentions_1,middle eastern woman,1,1243,150,16,16,0.19921875,0.4866352697630865
+unet_up_blocks_0_attentions_1,middle eastern woman,2,1779,150,16,16,0.1015625,2.1655196692774177
+unet_up_blocks_0_attentions_1,middle eastern woman,3,4743,150,16,16,0.09765625,2.167032990801103
+unet_up_blocks_0_attentions_1,middle eastern woman,4,3301,150,16,16,0.25390625,1.9706015565293626
+unet_up_blocks_0_attentions_1,middle eastern woman,5,3442,150,16,16,0.05859375,0.9797591691836837
+unet_down_blocks_2_attentions_1,white woman,1,4384,150,16,16,0.56640625,2.608670987879994
+unet_down_blocks_2_attentions_1,white woman,2,472,150,16,16,0.33984375,2.224393071771855
+unet_down_blocks_2_attentions_1,white woman,3,2250,150,16,16,0.28125,2.155228980148109
+unet_down_blocks_2_attentions_1,white woman,4,2611,150,16,16,0.31640625,1.5533988871172912
+unet_down_blocks_2_attentions_1,white woman,5,546,150,16,16,0.3125,1.6929003489560508
+unet_mid_block_attentions_0,white woman,1,2361,150,16,16,0.12890625,1.9737332508813326
+unet_mid_block_attentions_0,white woman,2,5094,150,16,16,0.14453125,2.256623490416261
+unet_mid_block_attentions_0,white woman,3,4786,150,16,16,0.08984375,1.3477608171719253
+unet_mid_block_attentions_0,white woman,4,1424,150,16,16,0.078125,0.7937498260949807
+unet_mid_block_attentions_0,white woman,5,3348,150,16,16,0.0546875,1.4935507583758876
+unet_up_blocks_0_attentions_0,white woman,1,4376,150,16,16,0.07421875,2.192808084791403
+unet_up_blocks_0_attentions_0,white woman,2,595,150,16,16,0.07421875,2.275873598075513
+unet_up_blocks_0_attentions_0,white woman,3,1343,150,16,16,0.15625,1.6733089491717168
+unet_up_blocks_0_attentions_0,white woman,4,3716,150,16,16,0.03125,0.5226732758833151
+unet_up_blocks_0_attentions_0,white woman,5,641,150,16,16,0.046875,0.7685680209284491
+unet_up_blocks_0_attentions_1,white woman,1,4461,150,16,16,0.11328125,1.8776358022302153
+unet_up_blocks_0_attentions_1,white woman,2,2727,150,16,16,0.4296875,1.2291468626393096
+unet_up_blocks_0_attentions_1,white woman,3,3132,150,16,16,0.06640625,1.7754600591745475
+unet_up_blocks_0_attentions_1,white woman,4,3096,150,16,16,0.046875,1.7592318157244897
+unet_up_blocks_0_attentions_1,white woman,5,3287,150,16,16,0.07421875,2.558314638117753

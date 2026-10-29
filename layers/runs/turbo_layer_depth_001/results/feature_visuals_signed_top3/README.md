@@ -17,6 +17,7 @@ Prompt labels are generation conditions, not inferred human identity. These are 
 See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.
 See [the spatial activation-area summary](SPATIAL_ACTIVATION_SUMMARY.md) for the quantitative result behind the larger down.2.1 maps.
 See [the held-out contrast summary](HELDOUT_CONTRAST_SUMMARY.md) for layer/rank effect sizes in feature SD.
+See [the Top-5 spatial-and-contrast extension](../top5_spatial_area/REPORT.md) for ranks 4–5.
 
 ## Cross-layer contact sheets
 
