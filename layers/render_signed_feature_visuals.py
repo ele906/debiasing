@@ -244,26 +244,28 @@ def contact_sheet(title, rows, output, subtitle="", tile=184):
 
 
 def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seed, tile=172):
-    """One scan-friendly JET-overlay grid: prompt rows by discovery rank columns."""
+    """One scan-friendly JET-overlay grid: discovery-rank rows by prompt columns."""
     layer_rows = [s for s in selections if s["layer"] == layer]
     groups = list(dict.fromkeys(s["target_group"] for s in layer_rows))
-    left, top, caption = 145, 104, 30
-    sheet = Image.new("RGB", (left + 3 * tile + 12, top + len(groups) * (tile + caption) + 16), "white")
+    left, top, caption = 72, 126, 28
+    sheet = Image.new("RGB", (left + len(groups) * tile + 12, top + 3 * (tile + caption) + 16), "white")
     draw = ImageDraw.Draw(sheet)
     draw.text((12, 10), f"{SHORT[layer]} | Top-3 feature activation JET overlays | held-out seed {seed}",
               fill="#13283d", font=get_font(21))
-    draw.text((12, 42), "Rows are prompt conditions; columns are discovery ranks. Blue → cyan → green → yellow → orange → red = low → high activation.",
+    draw.text((12, 42), "Columns are prompt conditions; rows are discovery ranks. Blue → cyan → green → yellow → orange → red = low → high activation.",
               fill="#42556a", font=get_font(13))
-    for rank in range(1, 4):
-        draw.text((left + (rank - 1) * tile + 4, 76), f"Rank {rank}", fill="#087e8b", font=get_font(17))
-    for row_index, group in enumerate(groups):
+    for col_index, group in enumerate(groups):
+        x = left + col_index * tile
+        draw.multiline_text((x + 3, 72), group.replace(" ", "\n", 1), fill="#13283d",
+                            font=get_font(12), spacing=0)
+    for row_index, rank in enumerate(range(1, 4)):
         y = top + row_index * (tile + caption)
-        draw.text((8, y + tile // 2 - 8), group, fill="#13283d", font=get_font(14))
-        for rank in range(1, 4):
+        draw.text((8, y + tile // 2 - 8), f"Rank {rank}", fill="#087e8b", font=get_font(15))
+        for col_index, group in enumerate(groups):
             selection = next(s for s in layer_rows
                              if s["target_group"] == group and int(s["rank"]) == rank)
             feature = int(selection["feature_id_layer_specific"])
-            x = left + (rank - 1) * tile
+            x = left + col_index * tile
             draw.text((x + 3, y + 3), f"F{feature}", fill="#13283d", font=get_font(13))
             overlay = jet_overlay(examples[(group, seed)], maps[(layer, group, feature, seed)],
                                   scale[(layer, feature)])
