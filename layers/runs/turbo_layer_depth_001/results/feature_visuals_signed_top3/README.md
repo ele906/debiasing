@@ -1,6 +1,6 @@
 # Layerwise signed feature sweeps and JET overlays
 
-These visualize the top three discovery-selected SAE features for every layer/group cell. Rank 1 corresponds to [the source plot](../layerwise_group_effects_jet.png); ranks 2–3 are the next discovery-only selections.
+These visualize the top discovery-selected SAE features for every layer/group cell. Rank 1 corresponds to [the source plot](../layerwise_group_effects_jet.png); ranks 2–3 are the next discovery-only selections.
 
 Held-out seeds: 150. Multipliers: -5, -3, -2, -1, 0, 1, 2, 3, 5.
 

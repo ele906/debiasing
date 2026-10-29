@@ -4,6 +4,10 @@
 
 Rows use the same held-out seeds in every panel. Multipliers are signed feature coefficients, not additive constants.
 
+## Top-3 JET contact sheet
+
+![Prompt groups × discovery ranks](top3_feature_contact_sheet_jet.jpg)
+
 ## black man · F4464 · rank 1
 
 ![Baseline activation](black_man_feature4464/activation_jet.jpg)

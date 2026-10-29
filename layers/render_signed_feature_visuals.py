@@ -243,6 +243,34 @@ def contact_sheet(title, rows, output, subtitle="", tile=184):
     sheet.save(output, quality=89, optimize=True)
 
 
+def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seed, tile=172):
+    """One scan-friendly JET-overlay grid: prompt rows by discovery rank columns."""
+    layer_rows = [s for s in selections if s["layer"] == layer]
+    groups = list(dict.fromkeys(s["target_group"] for s in layer_rows))
+    left, top, caption = 145, 104, 30
+    sheet = Image.new("RGB", (left + 3 * tile + 12, top + len(groups) * (tile + caption) + 16), "white")
+    draw = ImageDraw.Draw(sheet)
+    draw.text((12, 10), f"{SHORT[layer]} | Top-3 feature activation JET overlays | held-out seed {seed}",
+              fill="#13283d", font=get_font(21))
+    draw.text((12, 42), "Rows are prompt conditions; columns are discovery ranks. Blue → cyan → green → yellow → orange → red = low → high activation.",
+              fill="#42556a", font=get_font(13))
+    for rank in range(1, 4):
+        draw.text((left + (rank - 1) * tile + 4, 76), f"Rank {rank}", fill="#087e8b", font=get_font(17))
+    for row_index, group in enumerate(groups):
+        y = top + row_index * (tile + caption)
+        draw.text((8, y + tile // 2 - 8), group, fill="#13283d", font=get_font(14))
+        for rank in range(1, 4):
+            selection = next(s for s in layer_rows
+                             if s["target_group"] == group and int(s["rank"]) == rank)
+            feature = int(selection["feature_id_layer_specific"])
+            x = left + (rank - 1) * tile
+            draw.text((x + 3, y + 3), f"F{feature}", fill="#13283d", font=get_font(13))
+            overlay = jet_overlay(examples[(group, seed)], maps[(layer, group, feature, seed)],
+                                  scale[(layer, feature)])
+            sheet.paste(overlay.resize((tile - 6, tile - 6), Image.Resampling.LANCZOS), (x + 3, y + caption))
+    sheet.save(output / layer / "top3_feature_contact_sheet_jet.jpg", quality=92, optimize=True)
+
+
 def render_galleries(output, selections, examples, maps, strengths, seeds):
     scale = {}
     for key, array in maps.items():
@@ -255,14 +283,14 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
     write_csv(output / "overlay_scales.csv", scale_rows)
     groups = list(dict.fromkeys(s["target_group"] for s in selections))
     index = ["# Layerwise signed feature sweeps and JET overlays", "",
-             "These visualize the exact layer/group selections in [the source plot](../layerwise_group_effects_jet.png).",
+             "These visualize the top discovery-selected SAE features for every layer/group cell. Rank 1 corresponds to [the source plot](../layerwise_group_effects_jet.png); ranks 2–3 are the next discovery-only selections.",
              "", f"Held-out seeds: {', '.join(map(str, seeds))}. Multipliers: {', '.join(f'{s:g}' for s in strengths)}.",
              "", "**1 = original, 0 = remove, negative = reverse the selected contribution.** Each edit uses `output + (s - 1) * z_f * decoder_direction_f` and preserves reconstruction error.",
              "", "The original-code overlay is nonnegative. Signed overlays show `s * original z_f` over edited images, not re-encoded activations or pixel-level causal attribution. All maps are coarse spatial SAE cells resized with nearest-neighbor (pixelated) rendering; zero cells are transparent.",
              "", "Color scale is shared across displayed seeds/groups for each layer-specific feature. It is not shared across different features or layers. See `overlay_scales.csv`. The signed palette spans minus to plus the largest displayed multiplier times that feature scale.",
              "", "The source experiment ranks **one feature per layer/group cell** (48 selections). The script also supports `--top-k` to expand the discovery ranking. Top-K SAE sparsity remains 10; it is different from the number of ranked features visualized.",
              "", "Prompt labels are generation conditions, not inferred human identity. These are exploratory visual interventions; no bias reduction or image-quality improvement is established.", "",
-             "See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md).",
+             "See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.",
              "",
              "![Baseline JET overview](layerwise_feature_activation_overview_jet.jpg)", ""]
     for layer in LAYERS:
@@ -270,7 +298,9 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
             continue
         layer_index = [f"# {SHORT[layer]} · layer-specific feature sweeps", "",
                        "[Back to experiment index](../README.md)", "",
-                       "Rows use the same held-out seeds in every panel. Multipliers are signed feature coefficients, not additive constants.", ""]
+                       "Rows use the same held-out seeds in every panel. Multipliers are signed feature coefficients, not additive constants.", "",
+                       "## Top-3 JET contact sheet", "",
+                       f"![Prompt groups × discovery ranks](top3_feature_contact_sheet_jet.jpg)", ""]
         for selection in (s for s in selections if s["layer"] == layer):
             group, f = selection["target_group"], int(selection["feature_id_layer_specific"])
             directory = output / layer / f"{slug(group)}_feature{f}"
@@ -306,6 +336,7 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
                 f"![Signed image sweep]({relative}/signed_sweep.jpg)", "",
                 f"![Signed coefficient overlay]({relative}/signed_coefficient_jet.jpg)", ""])
         (output / layer / "README.md").write_text("\n".join(layer_index))
+        layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seeds[0])
         index.extend([f"- [{SHORT[layer]}: all selected features and signed sweeps]({layer}/README.md)"])
     # Match the 4x12 organization of the source figure using the first fixed evaluation seed.
     tile, row_height, left, top = 190, 286, 115, 82
