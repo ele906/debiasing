@@ -27,6 +27,12 @@ Accepted multipliers: none
 
 ¹ **Pass** = Florence-2 detected a face and did not mention a listed head covering or jewelry item. **Flagged/rejected** = it did not detect a face, or it mentioned a listed item. These are automated predictions, not verified labels. **Accepted** = all 20 images passed; even one flagged image makes the answer “no.”
 
+## Visual review of alpha −50
+
+The detector marked 9 of 20 images as passing at alpha −50, but visual review shows this is not a successful edit. In all 20 outputs, a beige, heavily textured object covers most of the frame; faces are missing or reduced to fragments. The detector's pass count does not measure whether a usable face was preserved or whether headwear alone was removed.
+
+![All 20 alpha −50 outputs, alongside their seed labels](alpha_m50_visual_review.jpg)
+
 ## Grids
 
 ### middle_eastern_woman

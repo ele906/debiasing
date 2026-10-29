@@ -27,7 +27,7 @@ Florence-2 predictions are heuristic, so these pass counts are only an automated
 | +15 | 20 | 12 | 8 | no |
 | +20 | 20 | 13 | 7 | no |
 
-No multiplier passed all 20 images. Among the negative settings, −50 had the most images pass (9/20); among the nonnegative settings, +20 had the most pass (13/20). Neither meets the all-images acceptance rule.
+No multiplier passed all 20 images. Although −50 had 9/20 automated passes, visual review of all 20 outputs shows severe corruption: a beige textured object covers most of each frame and faces are missing or fragmentary. This is not successful headwear removal. The detector's “pass” count only checks for a face label and no listed-item mention; it does not measure image quality or preserve the face. See the [alpha −50 visual review](../headwear_negative_screen/REPORT.md#visual-review-of-alpha--50). Among nonnegative settings, +20 had the most automated passes (13/20), which also requires visual review before interpretation.
 
 ¹ **Pass** = Florence-2 detected a face and did not mention a listed head covering or jewelry item. **Flagged/rejected** = it did not detect a face, or it mentioned a listed item. These are automated predictions, not verified labels. **Accepted** = all 20 images passed; even one flagged image makes the answer “no.”
 
