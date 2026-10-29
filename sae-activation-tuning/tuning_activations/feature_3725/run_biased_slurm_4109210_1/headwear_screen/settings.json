@@ -1,0 +1,28 @@
+{
+  "detector": "microsoft/Florence-2-base-ft",
+  "detector_revision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+  "criterion": "Image passes if Florence-2 <OD> detects a human face and neither its detailed caption nor object labels mention a configured forbidden attribute.",
+  "forbidden_attributes": [
+    "earrings",
+    "turban",
+    "headscarf/scarf",
+    "hijab",
+    "veil",
+    "head covering/wrap",
+    "dupatta"
+  ],
+  "groups": [
+    "middle_eastern_woman"
+  ],
+  "samples_per_group": 20,
+  "alphas_screened": [
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "max_failures_allowed_per_multiplier": 0,
+  "accepted_multipliers": [],
+  "interpretation": "Automated screening only. Florence-2 outputs are unverified predictions; a pass is not a quality or safety guarantee. Every alpha should receive human review before operational use."
+}

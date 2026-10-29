@@ -1,0 +1,6 @@
+alpha,images_screened,images_passing,images_rejected,max_failures_allowed,accepted
+0,20,0,20,0,False
+5,20,4,16,0,False
+10,20,9,11,0,False
+15,20,12,8,0,False
+20,20,13,7,0,False
