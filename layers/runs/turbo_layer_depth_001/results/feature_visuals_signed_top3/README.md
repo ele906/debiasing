@@ -1,6 +1,6 @@
 # Layerwise signed feature sweeps and JET overlays
 
-These visualize the exact layer/group selections in [the source plot](../layerwise_group_effects_jet.png).
+These visualize the top three discovery-selected SAE features for every layer/group cell. Rank 1 corresponds to [the source plot](../layerwise_group_effects_jet.png); ranks 2–3 are the next discovery-only selections.
 
 Held-out seeds: 150. Multipliers: -5, -3, -2, -1, 0, 1, 2, 3, 5.
 
@@ -14,7 +14,7 @@ The source experiment ranks **one feature per layer/group cell** (48 selections)
 
 Prompt labels are generation conditions, not inferred human identity. These are exploratory visual interventions; no bias reduction or image-quality improvement is established.
 
-See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md).
+See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.
 
 ![Baseline JET overview](layerwise_feature_activation_overview_jet.jpg)
 

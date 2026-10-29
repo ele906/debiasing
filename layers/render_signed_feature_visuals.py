@@ -96,6 +96,56 @@ def selected_rows(run, top_k):
     return result
 
 
+def attach_heldout_standardized_effects(run, selections):
+    """Evaluate frozen discovery choices in held-out standard-deviation units.
+
+    Feature rank remains discovery-only. These held-out quantities are reports,
+    not inputs to ranking.
+    """
+    frozen = {(row["layer"], row["target_group"], int(row["feature_id_layer_specific"])): row
+              for row in read_csv(run / "results/layerwise_group_effects.csv")}
+    for layer in LAYERS:
+        layer_rows = [row for row in selections if row["layer"] == layer]
+        with np.load(run / f"layer_{layer}.npz", allow_pickle=False) as data:
+            x = data["X_face_mean"]
+            races = data["race_prompt"].astype(str)
+            genders = data["gender_prompt"].astype(str)
+            seeds = data["seed"].astype(int)
+            heldout = np.isin(seeds, np.arange(150, 200))
+            for group in dict.fromkeys(row["target_group"] for row in layer_rows):
+                race, gender = group.rsplit(" ", 1)
+                cell = (races == race) & (genders == gender)
+                other = (races != race) & (genders == gender)
+                contrasts = []
+                for seed in range(150, 200):
+                    target = np.flatnonzero(cell & (seeds == seed))
+                    reference = np.flatnonzero(other & (seeds == seed))
+                    if len(target) == 1 and len(reference) == 5:
+                        contrasts.append(x[target[0]] - np.nanmean(x[reference], axis=0))
+                heldout_contrasts = np.asarray(contrasts)
+                if heldout_contrasts.shape[0] < 10:
+                    raise ValueError(f"Too few held-out paired contrasts for {layer}, {group}")
+                same_gender = x[heldout & (genders == gender)]
+                for row in (item for item in layer_rows if item["target_group"] == group):
+                    feature = int(row["feature_id_layer_specific"])
+                    values = heldout_contrasts[:, feature]
+                    values = values[np.isfinite(values)]
+                    scale_values = same_gender[:, feature]
+                    scale_values = scale_values[np.isfinite(scale_values)]
+                    scale = float(np.std(scale_values, ddof=1))
+                    if len(values) < 10 or not np.isfinite(scale) or scale <= 0:
+                        raise ValueError(f"Invalid held-out scale for {layer}, {group}, F{feature}")
+                    row["heldout_mean_contrast"] = float(np.mean(values))
+                    row["heldout_feature_activation_sd"] = scale
+                    row["heldout_standardized_contrast"] = float(np.mean(values) / scale)
+                    source = frozen.get((layer, group, feature))
+                    if source is not None and abs(
+                            row["heldout_standardized_contrast"] -
+                            float(source["heldout_standardized_contrast"])) > 1e-5:
+                        raise ValueError(f"Held-out effect differs from frozen source: {layer}, {group}, F{feature}")
+    return selections
+
+
 def write_ranked_feature_table(output, selections, top_k):
     """Make a concise GitHub-readable source table for the discovery ranking."""
     lines = [
@@ -104,10 +154,11 @@ def write_ranked_feature_table(output, selections, top_k):
         f"This table lists the top {top_k} features selected using **only discovery seeds 100–149**.",
         "The later signed image sweeps use held-out seed(s), so held-out images do not choose these IDs.",
         "",
-        "`contrast` is the mean feature activation in the target prompt group minus the",
-        "same-seed average over the other five race prompts of the same gender, within the",
-        "face box. It is a raw SAE-activation difference, not a semantic label, fairness",
-        "score, or image-quality score.",
+        "`held-out SD` is the held-out target-minus-reference activation contrast divided",
+        "by the held-out standard deviation of that feature among prompt groups of the same",
+        "gender. This makes magnitudes more comparable across features and layers. The",
+        "ranking itself still uses raw discovery contrast only; held-out values do not choose",
+        "the feature IDs. Neither quantity is a semantic label, fairness score, or quality score.",
         "",
     ]
     for layer in LAYERS:
@@ -120,7 +171,7 @@ def write_ranked_feature_table(output, selections, top_k):
                             key=lambda row: int(row["rank"]))
             cells = []
             for row in ranked:
-                cells.append(f"F{int(row['feature_id_layer_specific'])} ({float(row['discovery_mean_contrast']):+.3f})")
+                cells.append(f"F{int(row['feature_id_layer_specific'])} ({float(row['heldout_standardized_contrast']):+.2f} SD)")
             cells += ["—"] * (3 - len(cells))
             lines.append(f"| {group} | " + " | ".join(cells[:3]) + " |")
         lines.extend([""])
@@ -309,7 +360,7 @@ def main():
     (output / ".gitignore").write_text("# Reproducible full-resolution PNGs and numeric spatial maps stay local.\nraw/\n")
     (output / "raw").mkdir()
     settings = json.loads((run / "settings.json").read_text())
-    selections = selected_rows(run, args.top_k)
+    selections = attach_heldout_standardized_effects(run, selected_rows(run, args.top_k))
     if args.top_k == 1 and len(selections) != 48:
         raise ValueError("Expected 48 frozen layer/group selections")
     write_csv(output / "selected_features.csv", selections)
