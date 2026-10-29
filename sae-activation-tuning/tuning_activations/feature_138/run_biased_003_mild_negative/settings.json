@@ -1,0 +1,29 @@
+{
+  "feature": 138,
+  "source_dataset": "data/datasets/biased (simple-prompt set)",
+  "source_manifest": "backprop/manifest.csv",
+  "groups": [
+    "middle_eastern_woman"
+  ],
+  "samples_per_group": 20,
+  "prompt_template": "a picture of a {race} {gender}",
+  "alphas": [
+    -3,
+    -7,
+    -15
+  ],
+  "intervention": "block output plus (alpha - 1) times the original SAE coefficient times its decoder direction; alpha +1 is the no-op",
+  "block": "unet.down_blocks.2.attentions.1",
+  "checkpoint": "sdxl-unbox/checkpoints/unet.down_blocks.2.attentions.1_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+  "model": "stabilityai/sdxl-turbo",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "steps": 1,
+  "guidance_scale": 0.0,
+  "height": 512,
+  "width": 512,
+  "scheduler": "EulerAncestralDiscreteScheduler",
+  "timestep_spacing": "trailing",
+  "seed_replay": "The original biased-dataset seed and prompt are replayed for each alpha; original dataset PNG is retained for the original tile and pixel MAE reference.",
+  "sae_weights_sha256": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+  "run": "run_biased_003_mild_negative"
+}

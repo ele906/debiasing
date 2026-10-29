@@ -53,9 +53,14 @@ def main():
                         help="biased dataset image groups (defaults to all 12 race/gender groups)")
     parser.add_argument("--samples-per-group", type=int, default=20,
                         help="number of lowest-seed images per group (default: 20, matching other feature runs)")
+    parser.add_argument("--alphas", nargs="+", type=int, default=FACTORS,
+                        help="alpha values to generate (default: the full saved sweep)")
     parser.add_argument("--output", default="sae-activation-tuning/tuning_activations/feature_138/run_biased_002",
                         help="output directory, relative to the project root unless absolute")
     args = parser.parse_args()
+    alphas = list(dict.fromkeys(args.alphas))
+    if not alphas:
+        parser.error("at least one alpha value is required")
     root = find_project_root()
     output = Path(args.output).expanduser()
     if not output.is_absolute():
@@ -154,7 +159,7 @@ def main():
             shutil.copy2(source, baseline)
             base_rgb = np.asarray(Image.open(source).convert("RGB"), dtype=np.float32)
             key_pre = None
-            for alpha in FACTORS:
+            for alpha in alphas:
                 captured = {}
                 # Match the source dataset's independent CUDA generators for noise and scheduler.
                 noise_rng = torch.Generator("cuda").manual_seed(seed)
@@ -195,9 +200,9 @@ def main():
             map_keys.append(f"{group}|{seed}")
             print(f"Completed {group} seed={seed}; {len(metric_rows)} alpha results", flush=True)
         pre_maps.extend(group_maps["pre"])
-        post_maps.extend(np.asarray(group_maps["post"]).reshape(len(rows_by_group[group]), len(FACTORS), *group_maps["post"][0].shape))
-        scaled_maps.extend(np.asarray(group_maps["scaled"]).reshape(len(rows_by_group[group]), len(FACTORS), *group_maps["scaled"][0].shape))
-        footprint_maps.extend(np.asarray(group_maps["footprint"]).reshape(len(rows_by_group[group]), len(FACTORS), *group_maps["footprint"][0].shape))
+        post_maps.extend(np.asarray(group_maps["post"]).reshape(len(rows_by_group[group]), len(alphas), *group_maps["post"][0].shape))
+        scaled_maps.extend(np.asarray(group_maps["scaled"]).reshape(len(rows_by_group[group]), len(alphas), *group_maps["scaled"][0].shape))
+        footprint_maps.extend(np.asarray(group_maps["footprint"]).reshape(len(rows_by_group[group]), len(alphas), *group_maps["footprint"][0].shape))
 
     metric_rows.sort(key=lambda r: (args.groups.index(r["group"]), int(r["seed"]), int(r["alpha"])))
     review_rows.sort(key=lambda r: (args.groups.index(r["group"]), int(r["seed"]), int(r["alpha"])))
@@ -209,7 +214,7 @@ def main():
         post_reencoded_maps=np.asarray(post_maps, dtype=np.float32),
         intervention_footprint_maps=np.asarray(footprint_maps, dtype=np.float32),
         scaled_coefficient_maps=np.asarray(scaled_maps, dtype=np.float32),
-        map_keys=np.asarray(map_keys), multipliers=np.asarray(FACTORS),
+        map_keys=np.asarray(map_keys), multipliers=np.asarray(alphas),
     )
     settings_out = {
         "feature": FEATURE,
@@ -218,7 +223,7 @@ def main():
         "groups": args.groups,
         "samples_per_group": args.samples_per_group,
         "prompt_template": settings_in["prompt_template"],
-        "alphas": FACTORS,
+        "alphas": alphas,
         "intervention": "block output plus (alpha - 1) times the original SAE coefficient times its decoder direction; alpha +1 is the no-op",
         "block": BLOCK,
         "checkpoint": str(checkpoint.relative_to(root)),
