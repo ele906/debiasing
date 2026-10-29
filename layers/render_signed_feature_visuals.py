@@ -273,6 +273,35 @@ def layer_feature_contact_sheet(output, layer, selections, examples, maps, scale
     sheet.save(output / layer / "top3_feature_contact_sheet_jet.jpg", quality=92, optimize=True)
 
 
+def rank_across_layers_contact_sheet(output, rank, selections, examples, maps, scale, seed, tile=172):
+    """One rank at a time: layer rows by prompt-condition columns."""
+    groups = list(dict.fromkeys(s["target_group"] for s in selections))
+    left, top, caption = 78, 126, 28
+    sheet = Image.new("RGB", (left + len(groups) * tile + 12, top + len(LAYERS) * (tile + caption) + 16), "white")
+    draw = ImageDraw.Draw(sheet)
+    draw.text((12, 10), f"Top-{rank} SAE feature activation JET overlays | held-out seed {seed}",
+              fill="#13283d", font=get_font(21))
+    draw.text((12, 42), "Columns are prompt conditions; rows are U-Net layers. Blue → cyan → green → yellow → orange → red = low → high activation.",
+              fill="#42556a", font=get_font(13))
+    for col_index, group in enumerate(groups):
+        x = left + col_index * tile
+        draw.multiline_text((x + 3, 72), group.replace(" ", "\n", 1), fill="#13283d",
+                            font=get_font(12), spacing=0)
+    for row_index, layer in enumerate(LAYERS):
+        y = top + row_index * (tile + caption)
+        draw.text((7, y + tile // 2 - 8), SHORT[layer], fill="#087e8b", font=get_font(15))
+        for col_index, group in enumerate(groups):
+            selection = next(s for s in selections if s["layer"] == layer
+                             and s["target_group"] == group and int(s["rank"]) == rank)
+            feature = int(selection["feature_id_layer_specific"])
+            x = left + col_index * tile
+            draw.text((x + 3, y + 3), f"F{feature}", fill="#13283d", font=get_font(13))
+            overlay = jet_overlay(examples[(group, seed)], maps[(layer, group, feature, seed)],
+                                  scale[(layer, feature)])
+            sheet.paste(overlay.resize((tile - 6, tile - 6), Image.Resampling.LANCZOS), (x + 3, y + caption))
+    sheet.save(output / f"top{rank}_features_by_layer_contact_sheet_jet.jpg", quality=92, optimize=True)
+
+
 def render_galleries(output, selections, examples, maps, strengths, seeds):
     scale = {}
     for key, array in maps.items():
@@ -294,6 +323,12 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
              "", "Prompt labels are generation conditions, not inferred human identity. These are exploratory visual interventions; no bias reduction or image-quality improvement is established.", "",
              "See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.",
              "",
+             "## Cross-layer contact sheets", "",
+             "Each sheet fixes the discovery rank and compares the four layers (rows) across all 12 prompt groups (columns).", "",
+             "![Top-1 features across layers](top1_features_by_layer_contact_sheet_jet.jpg)", "",
+             "![Top-2 features across layers](top2_features_by_layer_contact_sheet_jet.jpg)", "",
+             "![Top-3 features across layers](top3_features_by_layer_contact_sheet_jet.jpg)", "",
+             "## Rank-1 overview", "",
              "![Baseline JET overview](layerwise_feature_activation_overview_jet.jpg)", ""]
     for layer in LAYERS:
         if not any(s["layer"] == layer for s in selections):
@@ -340,6 +375,8 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
         (output / layer / "README.md").write_text("\n".join(layer_index))
         layer_feature_contact_sheet(output, layer, selections, examples, maps, scale, seeds[0])
         index.extend([f"- [{SHORT[layer]}: all selected features and signed sweeps]({layer}/README.md)"])
+    for rank in range(1, max(int(s["rank"]) for s in selections) + 1):
+        rank_across_layers_contact_sheet(output, rank, selections, examples, maps, scale, seeds[0])
     # Match the 4x12 organization of the source figure using the first fixed evaluation seed.
     tile, row_height, left, top = 190, 286, 115, 82
     overview = Image.new("RGB", (left + len(groups)*tile, top + len(LAYERS)*row_height), "white")

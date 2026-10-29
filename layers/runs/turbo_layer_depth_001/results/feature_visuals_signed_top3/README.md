@@ -16,6 +16,18 @@ Prompt labels are generation conditions, not inferred human identity. These are 
 
 See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md), reported in held-out feature SD units.
 
+## Cross-layer contact sheets
+
+Each sheet fixes a discovery rank: rows are the four U-Net layers and columns are all 12 prompt groups.
+
+![Top-1 features across layers](top1_features_by_layer_contact_sheet_jet.jpg)
+
+![Top-2 features across layers](top2_features_by_layer_contact_sheet_jet.jpg)
+
+![Top-3 features across layers](top3_features_by_layer_contact_sheet_jet.jpg)
+
+## Rank-1 overview
+
 ![Baseline JET overview](layerwise_feature_activation_overview_jet.jpg)
 
 - [down.2.1: all selected features and signed sweeps](unet_down_blocks_2_attentions_1/README.md)
