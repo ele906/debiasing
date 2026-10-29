@@ -1,0 +1,33 @@
+{
+  "experiment": "same-sample layer-specific SAE comparison on SDXL Turbo",
+  "model": "stabilityai/sdxl-turbo",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "steps": 1,
+  "guidance_scale": 0.0,
+  "height": 512,
+  "width": 512,
+  "seeds": [
+    100,
+    199
+  ],
+  "samples": 1200,
+  "split": "discovery seeds 100-149; held-out seeds 150-199",
+  "activation_convention": "U-Net block output minus input; final cached sublayer",
+  "pooling": "mean/max/active fraction inside automatic face boxes, plus global mean",
+  "face_box_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/test_extension/annotations/bounding_boxes.csv",
+  "layers": [
+    "unet.down_blocks.2.attentions.1",
+    "unet.mid_block.attentions.0",
+    "unet.up_blocks.0.attentions.0",
+    "unet.up_blocks.0.attentions.1"
+  ],
+  "sae_weight_sha256": {
+    "unet.down_blocks.2.attentions.1": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+    "unet.mid_block.attentions.0": "49d38d9178c2a2780e04a5482a2feb9548c6e9a636ed1bf85291acf42e0ffa34",
+    "unet.up_blocks.0.attentions.0": "14c45efd9cce0258f014c49babdcd0e9ce8b266fe31eed72db1a45b990a1a0f8",
+    "unet.up_blocks.0.attentions.1": "f8eed82f4bcb2f010ae9075f10a1ece801ee3dec46dba7fadccc35f6c0a7836b"
+  },
+  "saes": "matching pretrained layer-specific SDXL Turbo SAEs; no fine-tuning in this run",
+  "image_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/test_extension/images",
+  "device": "NVIDIA L40"
+}

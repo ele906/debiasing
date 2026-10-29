@@ -1,0 +1,121 @@
+sample_id,race_prompt,gender_prompt,seed,ear_visibility,facing_camera,head_covering,notes
+black_man_seed100,black,man,100,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed101,black,man,101,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed102,black,man,102,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed103,black,man,103,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed104,black,man,104,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed105,black,man,105,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed106,black,man,106,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed107,black,man,107,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed108,black,man,108,partial,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_man_seed109,black,man,109,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed100,black,woman,100,partial,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed101,black,woman,101,partial,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed102,black,woman,102,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed103,black,woman,103,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed104,black,woman,104,partial,profile,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed105,black,woman,105,visible,profile,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed106,black,woman,106,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed107,black,woman,107,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed108,black,woman,108,visible,profile,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+black_woman_seed109,black,woman,109,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed100,east asian,man,100,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed101,east asian,man,101,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed102,east asian,man,102,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed103,east asian,man,103,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed104,east asian,man,104,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed105,east asian,man,105,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed106,east asian,man,106,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed107,east asian,man,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed108,east asian,man,108,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_man_seed109,east asian,man,109,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed100,east asian,woman,100,visible,profile,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed101,east asian,woman,101,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed102,east asian,woman,102,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed103,east asian,woman,103,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed104,east asian,woman,104,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed105,east asian,woman,105,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed106,east asian,woman,106,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed107,east asian,woman,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed108,east asian,woman,108,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+east_asian_woman_seed109,east asian,woman,109,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed100,hispanic,man,100,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed101,hispanic,man,101,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed102,hispanic,man,102,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed103,hispanic,man,103,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed104,hispanic,man,104,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed105,hispanic,man,105,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed106,hispanic,man,106,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed107,hispanic,man,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed108,hispanic,man,108,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_man_seed109,hispanic,man,109,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed100,hispanic,woman,100,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed101,hispanic,woman,101,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed102,hispanic,woman,102,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed103,hispanic,woman,103,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed104,hispanic,woman,104,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed105,hispanic,woman,105,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed106,hispanic,woman,106,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed107,hispanic,woman,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed108,hispanic,woman,108,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+hispanic_woman_seed109,hispanic,woman,109,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed100,indian,man,100,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed101,indian,man,101,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed102,indian,man,102,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed103,indian,man,103,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed104,indian,man,104,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed105,indian,man,105,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed106,indian,man,106,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed107,indian,man,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed108,indian,man,108,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_man_seed109,indian,man,109,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed100,indian,woman,100,partial,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed101,indian,woman,101,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed102,indian,woman,102,partial,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed103,indian,woman,103,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed104,indian,woman,104,partial,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed105,indian,woman,105,visible,profile,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed106,indian,woman,106,partial,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed107,indian,woman,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed108,indian,woman,108,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+indian_woman_seed109,indian,woman,109,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed100,middle eastern,man,100,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed101,middle eastern,man,101,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed102,middle eastern,man,102,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed103,middle eastern,man,103,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed104,middle eastern,man,104,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed105,middle eastern,man,105,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed106,middle eastern,man,106,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed107,middle eastern,man,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed108,middle eastern,man,108,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_man_seed109,middle eastern,man,109,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed100,middle eastern,woman,100,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed101,middle eastern,woman,101,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed102,middle eastern,woman,102,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed103,middle eastern,woman,103,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed104,middle eastern,woman,104,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed105,middle eastern,woman,105,not_visible,three_quarter,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed106,middle eastern,woman,106,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed107,middle eastern,woman,107,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed108,middle eastern,woman,108,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+middle_eastern_woman_seed109,middle eastern,woman,109,not_visible,front,yes,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed100,white,man,100,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed101,white,man,101,partial,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed102,white,man,102,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed103,white,man,103,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed104,white,man,104,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed105,white,man,105,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed106,white,man,106,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed107,white,man,107,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed108,white,man,108,visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_man_seed109,white,man,109,visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed100,white,woman,100,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed101,white,woman,101,not_visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed102,white,woman,102,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed103,white,woman,103,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed104,white,woman,104,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed105,white,woman,105,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed106,white,woman,106,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed107,white,woman,107,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed108,white,woman,108,not_visible,front,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
+white_woman_seed109,white,woman,109,not_visible,three_quarter,no,Visual label from 256px contact sheet; generated portrait; partial means only an ear edge/lobe was clear.
