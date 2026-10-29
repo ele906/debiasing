@@ -2,6 +2,9 @@
 
 These visualize the exact layer/group selections in [the source plot](../layerwise_group_effects_jet.png).
 
+For a narrative account of the experiment, methods, controls, color scales, and
+limits, read [REPORT.md](REPORT.md).
+
 Held-out seeds: 150, 151, 152. Multipliers: -5, -3, -2, -1, 0, 1, 2, 3, 5.
 
 **1 = original, 0 = remove, negative = reverse the selected contribution.** Each edit uses `output + (s - 1) * z_f * decoder_direction_f` and preserves reconstruction error.
