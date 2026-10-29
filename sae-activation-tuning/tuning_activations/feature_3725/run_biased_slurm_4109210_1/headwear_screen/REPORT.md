@@ -1,6 +1,8 @@
-# Feature 138 multiplier screen
+# Feature 3725 headwear multiplier screen
 
-This screen uses the pinned local Florence-2 base fine-tuned checkpoint. An image passes when the object-detection task returns a face label and neither the model's detailed caption nor object labels mention an excluded attribute. A multiplier passes when its rejected-image count is at most the configured failure allowance.
+This screen tests only alpha values 0, +5, +10, +15, and +20. The full feature run also contains negative values, but they were not included in this screen. In this intervention, alpha +1 is the no-op and alpha 0 removes the original feature contribution. Values below 0 reverse the feature direction; they are not simply “more removal.”
+
+The screen uses the pinned local Florence-2 base fine-tuned checkpoint. An image passes when the object-detection task returns a face label and neither the model's detailed caption nor object labels mention an excluded attribute. A multiplier passes when its rejected-image count is at most the configured failure allowance.
 
 Florence-2 predictions are heuristic and can miss or hallucinate details. A pass is a screening result, not proof of image quality. Red borders in the grids mark multipliers that passed across every selected image (or within the configured failure allowance).
 
@@ -16,6 +18,8 @@ Accepted multipliers: none
 | +10 | 20 | 9 | 11 | no |
 | +15 | 20 | 12 | 8 | no |
 | +20 | 20 | 13 | 7 | no |
+
+None was accepted because this screen required all 20 images to pass (zero failures allowed). Florence-2's pass count is an automated screening signal, not proof that headwear or earrings were actually removed.
 
 ## Grids
 
