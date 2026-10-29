@@ -96,6 +96,48 @@ def selected_rows(run, top_k):
     return result
 
 
+def write_ranked_feature_table(output, selections, top_k):
+    """Make a concise GitHub-readable source table for the discovery ranking."""
+    lines = [
+        "# Top discovery features by layer and prompt group",
+        "",
+        f"This table lists the top {top_k} features selected using **only discovery seeds 100–149**.",
+        "The later signed image sweeps use held-out seed(s), so held-out images do not choose these IDs.",
+        "",
+        "`contrast` is the mean feature activation in the target prompt group minus the",
+        "same-seed average over the other five race prompts of the same gender, within the",
+        "face box. It is a raw SAE-activation difference, not a semantic label, fairness",
+        "score, or image-quality score.",
+        "",
+    ]
+    for layer in LAYERS:
+        rows = [row for row in selections if row["layer"] == layer]
+        lines.extend([f"## {SHORT[layer]} (`{LAYERS[layer]}`)", "",
+                      "| Prompt group | Rank 1 | Rank 2 | Rank 3 |", "|---|---:|---:|---:|"])
+        groups = list(dict.fromkeys(row["target_group"] for row in rows))
+        for group in groups:
+            ranked = sorted((row for row in rows if row["target_group"] == group),
+                            key=lambda row: int(row["rank"]))
+            cells = []
+            for row in ranked:
+                cells.append(f"F{int(row['feature_id_layer_specific'])} ({float(row['discovery_mean_contrast']):+.3f})")
+            cells += ["—"] * (3 - len(cells))
+            lines.append(f"| {group} | " + " | ".join(cells[:3]) + " |")
+        lines.extend([""])
+    lines.extend([
+        "## How to use the galleries",
+        "",
+        "Each feature has an `activation_jet.jpg`, `signed_sweep.jpg`, and",
+        "`signed_coefficient_jet.jpg`. The sweep uses multipliers −5, −3, −2, −1,",
+        "0, 1, 2, 3, 5. `s = 1` is unchanged; `s = 0` removes the original feature",
+        "contribution; negative values reverse it. JET color runs blue → cyan → green →",
+        "yellow → orange → red. Read `REPORT.md` for the intervention equation and",
+        "interpretation limits.",
+        "",
+    ])
+    (output / "TOP_FEATURES_BY_LAYER.md").write_text("\n".join(lines))
+
+
 def signed_hook(sae, feature, strength, stats):
     import torch
 
@@ -169,6 +211,8 @@ def render_galleries(output, selections, examples, maps, strengths, seeds):
              "", "Color scale is shared across displayed seeds/groups for each layer-specific feature. It is not shared across different features or layers. See `overlay_scales.csv`. The signed palette spans minus to plus the largest displayed multiplier times that feature scale.",
              "", "The source experiment ranks **one feature per layer/group cell** (48 selections). The script also supports `--top-k` to expand the discovery ranking. Top-K SAE sparsity remains 10; it is different from the number of ranked features visualized.",
              "", "Prompt labels are generation conditions, not inferred human identity. These are exploratory visual interventions; no bias reduction or image-quality improvement is established.", "",
+             "See [top discovery features by layer and prompt group](TOP_FEATURES_BY_LAYER.md).",
+             "",
              "![Baseline JET overview](layerwise_feature_activation_overview_jet.jpg)", ""]
     for layer in LAYERS:
         if not any(s["layer"] == layer for s in selections):
@@ -269,6 +313,7 @@ def main():
     if args.top_k == 1 and len(selections) != 48:
         raise ValueError("Expected 48 frozen layer/group selections")
     write_csv(output / "selected_features.csv", selections)
+    write_ranked_feature_table(output, selections, args.top_k)
     manifest = read_csv(run / "manifest.csv")
     source_root = Path(settings["image_source"]).parent
     rows = [r for r in manifest if int(r["seed"]) in args.seeds]

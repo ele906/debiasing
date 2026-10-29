@@ -1,0 +1,145 @@
+layer,target_group,feature_id_layer_specific,rank,discovery_mean_contrast
+unet_down_blocks_2_attentions_1,black man,527,1,27.296297073364258
+unet_down_blocks_2_attentions_1,black man,4022,2,4.2057294845581055
+unet_down_blocks_2_attentions_1,black man,2137,3,3.579164743423462
+unet_down_blocks_2_attentions_1,east asian man,3722,1,8.930479049682617
+unet_down_blocks_2_attentions_1,east asian man,1759,2,7.39995002746582
+unet_down_blocks_2_attentions_1,east asian man,1600,3,6.109087944030762
+unet_down_blocks_2_attentions_1,hispanic man,1653,1,6.760439872741699
+unet_down_blocks_2_attentions_1,hispanic man,199,2,3.675858736038208
+unet_down_blocks_2_attentions_1,hispanic man,1678,3,2.439424753189087
+unet_down_blocks_2_attentions_1,indian man,1050,1,17.097339630126953
+unet_down_blocks_2_attentions_1,indian man,3722,2,12.901091575622559
+unet_down_blocks_2_attentions_1,indian man,669,3,6.0802483558654785
+unet_down_blocks_2_attentions_1,middle eastern man,138,1,13.336753845214844
+unet_down_blocks_2_attentions_1,middle eastern man,452,2,12.49987506866455
+unet_down_blocks_2_attentions_1,middle eastern man,669,3,9.743327140808105
+unet_down_blocks_2_attentions_1,white man,2707,1,12.309670448303223
+unet_down_blocks_2_attentions_1,white man,4262,2,8.96810245513916
+unet_down_blocks_2_attentions_1,white man,243,3,8.289137840270996
+unet_down_blocks_2_attentions_1,black woman,527,1,37.92937088012695
+unet_down_blocks_2_attentions_1,black woman,243,2,10.078911781311035
+unet_down_blocks_2_attentions_1,black woman,3279,3,8.430087089538574
+unet_down_blocks_2_attentions_1,east asian woman,1759,1,19.653369903564453
+unet_down_blocks_2_attentions_1,east asian woman,2810,2,14.564021110534668
+unet_down_blocks_2_attentions_1,east asian woman,1600,3,8.004193305969238
+unet_down_blocks_2_attentions_1,hispanic woman,527,1,5.51508903503418
+unet_down_blocks_2_attentions_1,hispanic woman,4022,2,3.6978588104248047
+unet_down_blocks_2_attentions_1,hispanic woman,1584,3,3.3305270671844482
+unet_down_blocks_2_attentions_1,indian woman,3725,1,24.864267349243164
+unet_down_blocks_2_attentions_1,indian woman,3722,2,14.975423812866211
+unet_down_blocks_2_attentions_1,indian woman,4858,3,9.361266136169434
+unet_down_blocks_2_attentions_1,middle eastern woman,138,1,31.088380813598633
+unet_down_blocks_2_attentions_1,middle eastern woman,3462,2,7.2174859046936035
+unet_down_blocks_2_attentions_1,middle eastern woman,3701,3,6.751915454864502
+unet_down_blocks_2_attentions_1,white woman,4384,1,10.894993782043457
+unet_down_blocks_2_attentions_1,white woman,472,2,6.629970073699951
+unet_down_blocks_2_attentions_1,white woman,2250,3,6.385919094085693
+unet_mid_block_attentions_0,black man,2138,1,3.418271780014038
+unet_mid_block_attentions_0,black man,2875,2,1.2573215961456299
+unet_mid_block_attentions_0,black man,4338,3,1.2295564413070679
+unet_mid_block_attentions_0,east asian man,2385,1,2.4393880367279053
+unet_mid_block_attentions_0,east asian man,1424,2,2.1304502487182617
+unet_mid_block_attentions_0,east asian man,3134,3,1.7686622142791748
+unet_mid_block_attentions_0,hispanic man,4601,1,1.375654697418213
+unet_mid_block_attentions_0,hispanic man,826,2,0.8561592698097229
+unet_mid_block_attentions_0,hispanic man,169,3,0.8318211436271667
+unet_mid_block_attentions_0,indian man,4228,1,3.2591331005096436
+unet_mid_block_attentions_0,indian man,2023,2,2.105402946472168
+unet_mid_block_attentions_0,indian man,3770,3,1.8479939699172974
+unet_mid_block_attentions_0,middle eastern man,4228,1,7.196162223815918
+unet_mid_block_attentions_0,middle eastern man,2023,2,5.248507022857666
+unet_mid_block_attentions_0,middle eastern man,3770,3,4.528014183044434
+unet_mid_block_attentions_0,white man,4338,1,6.219578266143799
+unet_mid_block_attentions_0,white man,3482,2,2.771043062210083
+unet_mid_block_attentions_0,white man,1874,3,1.3391185998916626
+unet_mid_block_attentions_0,black woman,4338,1,4.369626522064209
+unet_mid_block_attentions_0,black woman,1650,2,2.834777593612671
+unet_mid_block_attentions_0,black woman,2138,3,1.801457166671753
+unet_mid_block_attentions_0,east asian woman,1424,1,2.3000261783599854
+unet_mid_block_attentions_0,east asian woman,3828,2,2.2669644355773926
+unet_mid_block_attentions_0,east asian woman,846,3,2.0498099327087402
+unet_mid_block_attentions_0,hispanic woman,1424,1,2.3611056804656982
+unet_mid_block_attentions_0,hispanic woman,3828,2,2.2890994548797607
+unet_mid_block_attentions_0,hispanic woman,3770,3,2.1143059730529785
+unet_mid_block_attentions_0,indian woman,3018,1,2.4798619747161865
+unet_mid_block_attentions_0,indian woman,1874,2,2.4376447200775146
+unet_mid_block_attentions_0,indian woman,2023,3,2.1831917762756348
+unet_mid_block_attentions_0,middle eastern woman,2023,1,4.046188831329346
+unet_mid_block_attentions_0,middle eastern woman,5029,2,3.374100923538208
+unet_mid_block_attentions_0,middle eastern woman,4399,3,2.452167272567749
+unet_mid_block_attentions_0,white woman,2361,1,8.055997848510742
+unet_mid_block_attentions_0,white woman,5094,2,6.556946277618408
+unet_mid_block_attentions_0,white woman,4786,3,2.895263910293579
+unet_up_blocks_0_attentions_0,black man,2975,1,2.8650898933410645
+unet_up_blocks_0_attentions_0,black man,1573,2,2.0588769912719727
+unet_up_blocks_0_attentions_0,black man,3111,3,1.9671738147735596
+unet_up_blocks_0_attentions_0,east asian man,641,1,2.572550058364868
+unet_up_blocks_0_attentions_0,east asian man,2854,2,2.5540261268615723
+unet_up_blocks_0_attentions_0,east asian man,573,3,2.263270854949951
+unet_up_blocks_0_attentions_0,hispanic man,1573,1,2.591046094894409
+unet_up_blocks_0_attentions_0,hispanic man,3339,2,2.106569766998291
+unet_up_blocks_0_attentions_0,hispanic man,3137,3,1.4905704259872437
+unet_up_blocks_0_attentions_0,indian man,2261,1,9.240522384643555
+unet_up_blocks_0_attentions_0,indian man,4540,2,5.153656005859375
+unet_up_blocks_0_attentions_0,indian man,3742,3,4.5699663162231445
+unet_up_blocks_0_attentions_0,middle eastern man,3742,1,11.34804916381836
+unet_up_blocks_0_attentions_0,middle eastern man,4540,2,7.621379375457764
+unet_up_blocks_0_attentions_0,middle eastern man,2261,3,7.016061782836914
+unet_up_blocks_0_attentions_0,white man,2975,1,4.914668083190918
+unet_up_blocks_0_attentions_0,white man,1811,2,3.5351247787475586
+unet_up_blocks_0_attentions_0,white man,1354,3,3.224147081375122
+unet_up_blocks_0_attentions_0,black woman,4782,1,5.710643768310547
+unet_up_blocks_0_attentions_0,black woman,4163,2,3.4454755783081055
+unet_up_blocks_0_attentions_0,black woman,2975,3,2.5157594680786133
+unet_up_blocks_0_attentions_0,east asian woman,4540,1,5.4246368408203125
+unet_up_blocks_0_attentions_0,east asian woman,4323,2,3.7192673683166504
+unet_up_blocks_0_attentions_0,east asian woman,4367,3,3.0812151432037354
+unet_up_blocks_0_attentions_0,hispanic woman,2706,1,2.4844741821289062
+unet_up_blocks_0_attentions_0,hispanic woman,4621,2,2.134925603866577
+unet_up_blocks_0_attentions_0,hispanic woman,641,3,1.6181004047393799
+unet_up_blocks_0_attentions_0,indian woman,4099,1,11.056883811950684
+unet_up_blocks_0_attentions_0,indian woman,4540,2,7.279902935028076
+unet_up_blocks_0_attentions_0,indian woman,2706,3,4.252295970916748
+unet_up_blocks_0_attentions_0,middle eastern woman,4099,1,13.545559883117676
+unet_up_blocks_0_attentions_0,middle eastern woman,1088,2,10.969389915466309
+unet_up_blocks_0_attentions_0,middle eastern woman,4540,3,5.594158172607422
+unet_up_blocks_0_attentions_0,white woman,4376,1,8.971356391906738
+unet_up_blocks_0_attentions_0,white woman,595,2,6.044559955596924
+unet_up_blocks_0_attentions_0,white woman,1343,3,3.945096731185913
+unet_up_blocks_0_attentions_1,black man,4464,1,12.334097862243652
+unet_up_blocks_0_attentions_1,black man,4408,2,10.771651268005371
+unet_up_blocks_0_attentions_1,black man,4044,3,9.710175514221191
+unet_up_blocks_0_attentions_1,east asian man,1042,1,12.093770980834961
+unet_up_blocks_0_attentions_1,east asian man,383,2,6.748489856719971
+unet_up_blocks_0_attentions_1,east asian man,1130,3,6.188038349151611
+unet_up_blocks_0_attentions_1,hispanic man,76,1,6.126530647277832
+unet_up_blocks_0_attentions_1,hispanic man,4922,2,5.877410888671875
+unet_up_blocks_0_attentions_1,hispanic man,3936,3,4.9654221534729
+unet_up_blocks_0_attentions_1,indian man,2784,1,16.40013885498047
+unet_up_blocks_0_attentions_1,indian man,1243,2,12.24094009399414
+unet_up_blocks_0_attentions_1,indian man,2913,3,7.569406032562256
+unet_up_blocks_0_attentions_1,middle eastern man,4147,1,11.187712669372559
+unet_up_blocks_0_attentions_1,middle eastern man,1243,2,5.381575107574463
+unet_up_blocks_0_attentions_1,middle eastern man,2355,3,3.2845892906188965
+unet_up_blocks_0_attentions_1,white man,383,1,13.572005271911621
+unet_up_blocks_0_attentions_1,white man,3166,2,10.218685150146484
+unet_up_blocks_0_attentions_1,white man,2138,3,7.2647199630737305
+unet_up_blocks_0_attentions_1,black woman,4408,1,19.481121063232422
+unet_up_blocks_0_attentions_1,black woman,383,2,10.809496879577637
+unet_up_blocks_0_attentions_1,black woman,4464,3,10.30914306640625
+unet_up_blocks_0_attentions_1,east asian woman,1042,1,20.962120056152344
+unet_up_blocks_0_attentions_1,east asian woman,2138,2,15.846309661865234
+unet_up_blocks_0_attentions_1,east asian woman,354,3,5.977289199829102
+unet_up_blocks_0_attentions_1,hispanic woman,3166,1,14.611624717712402
+unet_up_blocks_0_attentions_1,hispanic woman,3936,2,4.199813365936279
+unet_up_blocks_0_attentions_1,hispanic woman,500,3,4.14137077331543
+unet_up_blocks_0_attentions_1,indian woman,1243,1,21.366783142089844
+unet_up_blocks_0_attentions_1,indian woman,3503,2,12.755021095275879
+unet_up_blocks_0_attentions_1,indian woman,3507,3,6.8593950271606445
+unet_up_blocks_0_attentions_1,middle eastern woman,1243,1,5.078987121582031
+unet_up_blocks_0_attentions_1,middle eastern woman,1779,2,4.21076774597168
+unet_up_blocks_0_attentions_1,middle eastern woman,4743,3,3.6035125255584717
+unet_up_blocks_0_attentions_1,white woman,4461,1,8.634001731872559
+unet_up_blocks_0_attentions_1,white woman,2727,2,6.6855010986328125
+unet_up_blocks_0_attentions_1,white woman,3132,3,5.689406871795654
