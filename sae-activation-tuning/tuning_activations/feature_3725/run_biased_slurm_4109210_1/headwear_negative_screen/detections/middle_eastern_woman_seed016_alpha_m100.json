@@ -1,0 +1,16 @@
+{
+  "image_sha256": "8129d6b39af09b057f2af77807f58431f39240fab8d9930112c18b58bda3fdf0",
+  "result": {
+    "image_sha256": "8129d6b39af09b057f2af77807f58431f39240fab8d9930112c18b58bda3fdf0",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be white and has a slight grain to it. There are small black dots in the middle of the fabric.",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

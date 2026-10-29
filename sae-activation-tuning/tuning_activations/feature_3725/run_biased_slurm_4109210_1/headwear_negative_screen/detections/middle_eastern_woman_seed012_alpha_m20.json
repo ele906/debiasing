@@ -1,0 +1,16 @@
+{
+  "image_sha256": "75989185f2556376dc23118984010f7ead8fd8450649d73064b5373ce8b57c1f",
+  "result": {
+    "image_sha256": "75989185f2556376dc23118984010f7ead8fd8450649d73064b5373ce8b57c1f",
+    "caption": "A close up of a woman's face is visible.  The woman has dark eyes and dark eyelashes.  Her eyebrows are furrowed.  She is wearing a black hat with a furrow on top of it.  A white wall is behind the woman.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

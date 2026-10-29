@@ -1,0 +1,19 @@
+{
+  "image_sha256": "b112e8890b6c3116d2fd4ead33476a91e8d4aacf6e90c9129553955b5929df75",
+  "result": {
+    "image_sha256": "b112e8890b6c3116d2fd4ead33476a91e8d4aacf6e90c9129553955b5929df75",
+    "caption": "Two women are posing for the camera. The woman on the left has dark hair and dark eyes. She is wearing a large white hat. The other woman has dark eyes and is smiling. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "image_sha256": "24fb778497fed799976e667864e45ad4f6898fcb243ee8ac979fbfadc356c396",
+  "result": {
+    "image_sha256": "24fb778497fed799976e667864e45ad4f6898fcb243ee8ac979fbfadc356c396",
+    "caption": "A woman is wearing a black scarf around her head. She is also wearing a white knit hat. The woman is smiling and looking at the camera. Behind her is a sandy beach.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

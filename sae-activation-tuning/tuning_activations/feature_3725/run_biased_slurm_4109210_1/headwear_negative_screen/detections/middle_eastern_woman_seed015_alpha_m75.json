@@ -1,0 +1,16 @@
+{
+  "image_sha256": "74664b0c825b9f37f2d3ad30fec667ab827562a97e22fd9228d01981478b9106",
+  "result": {
+    "image_sha256": "74664b0c825b9f37f2d3ad30fec667ab827562a97e22fd9228d01981478b9106",
+    "caption": "A person is wearing a white shirt. There is a large white object in front of the person. There are small black dots on the object. ",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

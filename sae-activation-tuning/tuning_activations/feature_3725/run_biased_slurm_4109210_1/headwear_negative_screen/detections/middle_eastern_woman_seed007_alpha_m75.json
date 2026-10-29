@@ -1,0 +1,16 @@
+{
+  "image_sha256": "ac372851606fede5fdc204f6f43de042839b2c9c881981992a9e4ce2c0618cf2",
+  "result": {
+    "image_sha256": "ac372851606fede5fdc204f6f43de042839b2c9c881981992a9e4ce2c0618cf2",
+    "caption": "The image is a close up of a piece of fabric. The fabric is white and has a scalloped edge. The edges of the fabric appear to be slightly worn. The background of the image is blurred.",
+    "object_labels": [
+      "furniture"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "image_sha256": "8c8603790686c9aefdc95f78604e7e11cb2455a1944bccfb94966f3081d7035a",
+  "result": {
+    "image_sha256": "8c8603790686c9aefdc95f78604e7e11cb2455a1944bccfb94966f3081d7035a",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be a type of carpet or rug. There are small white dots on the rug. The lines on the fabric appear to be thin. The color of the rug is a light beige.",
+    "object_labels": [
+      "shellfish"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

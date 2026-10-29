@@ -1,0 +1,20 @@
+{
+  "image_sha256": "8ff96b99befba243bb62fc0a2c25c46316ca02a4dddd0dbbca2dfb415dde40c2",
+  "result": {
+    "image_sha256": "8ff96b99befba243bb62fc0a2c25c46316ca02a4dddd0dbbca2dfb415dde40c2",
+    "caption": "A woman is looking directly at the camera. She is wearing a head covering on her face. The head covering is beige and has a design on it. The woman has blue eyes. The background is blurry.",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering,scarf"
+    ]
+  }
+}

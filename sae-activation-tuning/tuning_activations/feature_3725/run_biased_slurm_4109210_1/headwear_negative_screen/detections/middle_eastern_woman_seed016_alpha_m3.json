@@ -1,0 +1,19 @@
+{
+  "image_sha256": "8c3a68c07efd127dc52c84cb766da28667b8992ab21c4d5d6458df0572eabb44",
+  "result": {
+    "image_sha256": "8c3a68c07efd127dc52c84cb766da28667b8992ab21c4d5d6458df0572eabb44",
+    "caption": "A woman is wearing a gray scarf around her head. She has blue eyes and a pink lip. There is a building behind her. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

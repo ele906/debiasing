@@ -1,0 +1,21 @@
+{
+  "image_sha256": "7570606e190ec07c4c3f99a0992d0ef5225957398ac8ebbe83e9b323ebb1cc9d",
+  "result": {
+    "image_sha256": "7570606e190ec07c4c3f99a0992d0ef5225957398ac8ebbe83e9b323ebb1cc9d",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a beige headscarf with an intricate design on it.  Her eyes are blue and her eyebrows are light brown.  She is looking directly at the camera with a serious look on her face.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf,scarf"
+    ]
+  }
+}

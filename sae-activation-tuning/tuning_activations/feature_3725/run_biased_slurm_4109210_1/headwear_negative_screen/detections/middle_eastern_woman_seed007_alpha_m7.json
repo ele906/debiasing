@@ -1,0 +1,20 @@
+{
+  "image_sha256": "ef5aff1468ffcbde8218880809c9c19224527d614556d45c97e48a57e8b536d4",
+  "result": {
+    "image_sha256": "ef5aff1468ffcbde8218880809c9c19224527d614556d45c97e48a57e8b536d4",
+    "caption": "A woman is wearing a gray scarf around her head. The woman has blue eyes and brown eyebrows. She is smiling and looking at the camera. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

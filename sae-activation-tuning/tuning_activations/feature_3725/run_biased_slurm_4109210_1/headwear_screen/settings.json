@@ -16,6 +16,17 @@
   ],
   "samples_per_group": 20,
   "alphas_screened": [
+    -120,
+    -100,
+    -75,
+    -50,
+    -30,
+    -20,
+    -15,
+    -10,
+    -7,
+    -5,
+    -3,
     0,
     5,
     10,
@@ -24,5 +35,6 @@
   ],
   "max_failures_allowed_per_multiplier": 0,
   "accepted_multipliers": [],
-  "interpretation": "Automated screening only. Florence-2 outputs are unverified predictions; a pass is not a quality or safety guarantee. Every alpha should receive human review before operational use."
+  "interpretation": "Automated screening only. Florence-2 outputs are unverified predictions; a pass is not a quality or safety guarantee. Every alpha should receive human review before operational use.",
+  "negative_alpha_results": "Per-image outputs and grids: ../headwear_negative_screen/"
 }

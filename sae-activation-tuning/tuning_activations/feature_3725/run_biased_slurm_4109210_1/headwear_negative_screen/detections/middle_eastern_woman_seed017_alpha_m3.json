@@ -1,0 +1,22 @@
+{
+  "image_sha256": "228030eaf26f36a2feff4aa07667780d3909a07de14ab66079fe66ddb5002885",
+  "result": {
+    "image_sha256": "228030eaf26f36a2feff4aa07667780d3909a07de14ab66079fe66ddb5002885",
+    "caption": "A woman is wearing a headscarf. The head scarf is black and white. The woman has blue eyes and her eyebrows are black. She has a pink lip. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head scarf",
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head scarf,headscarf,scarf"
+    ]
+  }
+}

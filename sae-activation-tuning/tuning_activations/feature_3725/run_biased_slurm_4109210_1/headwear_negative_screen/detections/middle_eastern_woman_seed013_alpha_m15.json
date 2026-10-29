@@ -1,0 +1,20 @@
+{
+  "image_sha256": "f0ed0df3bc65a89c9b5defdf1b14ec6e0b835738197cf6280d1021276194a045",
+  "result": {
+    "image_sha256": "f0ed0df3bc65a89c9b5defdf1b14ec6e0b835738197cf6280d1021276194a045",
+    "caption": "A woman is wearing a black head covering. The head covering has an intricate design on it. The woman is smiling and looking into the camera. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

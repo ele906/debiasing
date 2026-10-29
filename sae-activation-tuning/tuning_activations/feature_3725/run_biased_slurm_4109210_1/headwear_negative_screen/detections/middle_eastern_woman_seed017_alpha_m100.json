@@ -1,0 +1,16 @@
+{
+  "image_sha256": "070233f931fad2a0aa1b8cab8d946cce5ec92247b5d1ec701dc83d58aec1e5d7",
+  "result": {
+    "image_sha256": "070233f931fad2a0aa1b8cab8d946cce5ec92247b5d1ec701dc83d58aec1e5d7",
+    "caption": "This is an image of a fur. The fur is light brown. There is fur on the right side of the image. There are small black dots on the fur. ",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

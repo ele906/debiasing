@@ -1,0 +1,17 @@
+{
+  "image_sha256": "8f289d2e8c0c084bb41902e8f7125c49f075554c8dd933e1ae75ed67842c91d6",
+  "result": {
+    "image_sha256": "8f289d2e8c0c084bb41902e8f7125c49f075554c8dd933e1ae75ed67842c91d6",
+    "caption": "There is a large pile of white sand. There is a person standing behind the pile of sand. The person is wearing a white shirt. ",
+    "object_labels": [
+      "human face",
+      "person",
+      "person",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

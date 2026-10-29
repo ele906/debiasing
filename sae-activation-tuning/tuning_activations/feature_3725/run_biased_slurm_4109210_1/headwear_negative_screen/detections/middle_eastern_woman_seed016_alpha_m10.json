@@ -1,0 +1,20 @@
+{
+  "image_sha256": "8bbb9c1c594c7d7d043c8771ba89a13fe9ffdcc3b0d83673851bc6c70f0dfc13",
+  "result": {
+    "image_sha256": "8bbb9c1c594c7d7d043c8771ba89a13fe9ffdcc3b0d83673851bc6c70f0dfc13",
+    "caption": "A woman is smiling and looking towards the camera. She is wearing a white headscarf with black designs on it. The background is blurry.",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf,scarf"
+    ]
+  }
+}

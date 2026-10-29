@@ -1,0 +1,15 @@
+{
+  "image_sha256": "b20623054e8082be0ae8c6d38828cb923bdd26eb4da28657d220b22ad00c49dd",
+  "result": {
+    "image_sha256": "b20623054e8082be0ae8c6d38828cb923bdd26eb4da28657d220b22ad00c49dd",
+    "caption": "The image is of a piece of cement. The cement is light brown in color. It looks like it has been cut in half. There is a person's arm visible in the image. The person is wearing a black tank top. The background of the image is blurry. There are no other objects in the background.",
+    "object_labels": [
+      "human face",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

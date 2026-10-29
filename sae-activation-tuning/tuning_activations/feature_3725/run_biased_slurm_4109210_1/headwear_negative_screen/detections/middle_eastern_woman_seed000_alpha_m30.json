@@ -1,0 +1,16 @@
+{
+  "image_sha256": "d9abb635863e086d772476e676919d209e8585e1ab399a89ce13be4cfb58a4c6",
+  "result": {
+    "image_sha256": "d9abb635863e086d772476e676919d209e8585e1ab399a89ce13be4cfb58a4c6",
+    "caption": "A person is wearing an orange shirt. There is a large white blanket on the ground. There are small black dots on the blanket. ",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

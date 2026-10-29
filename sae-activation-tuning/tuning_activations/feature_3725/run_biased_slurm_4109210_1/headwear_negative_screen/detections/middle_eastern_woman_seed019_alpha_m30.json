@@ -1,0 +1,16 @@
+{
+  "image_sha256": "be79318ce3409af30448466712b3dbbb8024c62506de666df2670c97c1456f1e",
+  "result": {
+    "image_sha256": "be79318ce3409af30448466712b3dbbb8024c62506de666df2670c97c1456f1e",
+    "caption": "The image is a close up of a piece of clothing. The clothing appears to be a beige color. There is a lace trim on the top of the shirt. There are small black dots on the bottom of the sweater. The sweater has a collar on the front. The image is not clear enough to be seen.",
+    "object_labels": [
+      "fancy dress"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

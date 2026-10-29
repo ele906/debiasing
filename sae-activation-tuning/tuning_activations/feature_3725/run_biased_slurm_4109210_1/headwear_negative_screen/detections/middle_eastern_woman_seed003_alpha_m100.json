@@ -1,0 +1,16 @@
+{
+  "image_sha256": "825598094145bb59b7fec796596fbc449b9a4df6b440767346596ea02cc2cc3d",
+  "result": {
+    "image_sha256": "825598094145bb59b7fec796596fbc449b9a4df6b440767346596ea02cc2cc3d",
+    "caption": "The image is of a bed. The headboard of the bed is made of wood. The wood is a light brown color. The sheets on the bed are white. The lines on the sheets are dark gray.",
+    "object_labels": [
+      "bed"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

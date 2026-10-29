@@ -1,0 +1,20 @@
+{
+  "image_sha256": "7c347b9c8b88c657a76ed07017dbc9ab9d41314f052cf88fc01bc024ee3a91c0",
+  "result": {
+    "image_sha256": "7c347b9c8b88c657a76ed07017dbc9ab9d41314f052cf88fc01bc024ee3a91c0",
+    "caption": "A woman is wearing a head covering. The head covering is brown and has a design on it. The woman has blue eyes and her eyebrows are brown. She has a serious look on her face. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering,scarf"
+    ]
+  }
+}

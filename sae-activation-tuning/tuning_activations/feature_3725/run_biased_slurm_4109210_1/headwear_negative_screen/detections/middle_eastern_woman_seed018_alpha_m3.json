@@ -1,0 +1,23 @@
+{
+  "image_sha256": "3dbca47e65005bed1374a403a2341a2bded6ef5ba0f6f260b95642e0dd505574",
+  "result": {
+    "image_sha256": "3dbca47e65005bed1374a403a2341a2bded6ef5ba0f6f260b95642e0dd505574",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a brown headscarf with a design on it.  Her eyes are blue and her eyebrows are dark.  She has a slight smile on her face and her lips are pink.  There is a gold earring on her ear. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "earring",
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:earring,headscarf"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "image_sha256": "d641982ad416f768143d9b5b92d9e87c1f2716b56391439197e66f550dc64ca0",
+  "result": {
+    "image_sha256": "d641982ad416f768143d9b5b92d9e87c1f2716b56391439197e66f550dc64ca0",
+    "caption": "This is an image of a man. The man has dark hair. The hair is brown. The eyebrows are black. The eyes are small and black. There is a white wall behind the man. There are small black dots on the wall. The wall is made of white paper. The paper is wrinkled. The shirt the man is wearing is blue.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "human face",
+      "human mouth",
+      "human nose",
+      "man"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

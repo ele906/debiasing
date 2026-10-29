@@ -1,0 +1,16 @@
+{
+  "image_sha256": "512491e346b2d918b1f16e6cb16598dfa7474a295fc11d416ea89a926398265d",
+  "result": {
+    "image_sha256": "512491e346b2d918b1f16e6cb16598dfa7474a295fc11d416ea89a926398265d",
+    "caption": "A close up of a person's head is visible.  The person appears to be wearing a white shirt and a black bracelet.  There is a white substance on the person's wrist.  A blurry background is seen behind the person.",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

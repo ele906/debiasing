@@ -1,0 +1,16 @@
+{
+  "image_sha256": "0728f7e061e9334aafd26e9e2bb4c6757001da03976a2344372c1aa290dbb7de",
+  "result": {
+    "image_sha256": "0728f7e061e9334aafd26e9e2bb4c6757001da03976a2344372c1aa290dbb7de",
+    "caption": "The image is a close up of a fur. The fur appears to be soft and fuzzy. There are thin dark grey lines running across the fur. There is a small blue dot in the lower right corner of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

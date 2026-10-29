@@ -1,0 +1,19 @@
+{
+  "image_sha256": "7243561248735863092bd6107e28df18f076ae00489d917b55ce74a87ce1632e",
+  "result": {
+    "image_sha256": "7243561248735863092bd6107e28df18f076ae00489d917b55ce74a87ce1632e",
+    "caption": "A woman is wearing a gray scarf around her head. There is a building behind the woman. The woman has blue eyes and brown eyebrows. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

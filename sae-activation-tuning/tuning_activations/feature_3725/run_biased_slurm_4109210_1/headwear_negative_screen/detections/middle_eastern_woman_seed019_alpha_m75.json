@@ -1,0 +1,16 @@
+{
+  "image_sha256": "6d409edee2f173347527f551c993cd247327d496c4dd073872825fe3f9ca6015",
+  "result": {
+    "image_sha256": "6d409edee2f173347527f551c993cd247327d496c4dd073872825fe3f9ca6015",
+    "caption": "A piece of white paper is sitting on a table. There is a white table behind the paper. There are small black dots on the paper on the table. ",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "image_sha256": "16cb60ee27ec045adb93ba6b068ee97ab18e511e10984b1cd778c66621eec87b",
+  "result": {
+    "image_sha256": "16cb60ee27ec045adb93ba6b068ee97ab18e511e10984b1cd778c66621eec87b",
+    "caption": "A person is holding a large white towel. The towel is wrinkled. The person is wearing a black bracelet. The bracelet has a black strap on it.",
+    "object_labels": [
+      "towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

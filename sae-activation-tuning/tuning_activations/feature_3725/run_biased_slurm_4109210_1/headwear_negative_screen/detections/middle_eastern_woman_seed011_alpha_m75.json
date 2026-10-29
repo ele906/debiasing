@@ -1,0 +1,16 @@
+{
+  "image_sha256": "68bb214dec39df054c06ca61c82a6b762f1c6888ceff474f74a009d4a44b780f",
+  "result": {
+    "image_sha256": "68bb214dec39df054c06ca61c82a6b762f1c6888ceff474f74a009d4a44b780f",
+    "caption": "A piece of paper is being held by someone. The paper is white and wrinkled. The person is holding the paper with their left hand. There is a blurry background behind the paper.",
+    "object_labels": [
+      "human hand"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

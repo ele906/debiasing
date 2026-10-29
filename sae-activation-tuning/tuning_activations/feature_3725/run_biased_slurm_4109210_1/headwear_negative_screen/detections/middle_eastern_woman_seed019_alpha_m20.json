@@ -1,0 +1,25 @@
+{
+  "image_sha256": "b97cbffea9e87e92bc76eb0f9fb8fc33fbed9292731301b0b14017ea1db4e73a",
+  "result": {
+    "image_sha256": "b97cbffea9e87e92bc76eb0f9fb8fc33fbed9292731301b0b14017ea1db4e73a",
+    "caption": "Two women are looking up at the camera. One of the women is wearing a black headscarf. The other woman is wearing black. The background is white. The women have dark brown eyes.",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human face",
+      "human face",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "image_sha256": "69ed428979b9e3e4ba857a137962b0e1fc0f2da26c66975f00e9791100e74b92",
+  "result": {
+    "image_sha256": "69ed428979b9e3e4ba857a137962b0e1fc0f2da26c66975f00e9791100e74b92",
+    "caption": "A woman is wearing a black head covering. The head covering is made of black fabric with black designs on it. The woman has dark brown eyes and dark brown eyebrows. She has a slight smile on her face. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "human mouth",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "image_sha256": "52b8834813f4d8a5dd8a96e2c2bf957c2dff04cd744a67bc206b928fd391e1ec",
+  "result": {
+    "image_sha256": "52b8834813f4d8a5dd8a96e2c2bf957c2dff04cd744a67bc206b928fd391e1ec",
+    "caption": "A close up of a child's face is visible.  The child is wearing a black t-shirt and has brown eyes.  Her eyebrows are furrowed and she is looking downward.  A piece of white fabric is draped over the child's head.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "human mouth",
+      "person",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

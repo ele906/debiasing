@@ -1,0 +1,19 @@
+{
+  "image_sha256": "d50173115c6fd2d88aa10098ef8307aaf88f518521d9667966828978f80c410c",
+  "result": {
+    "image_sha256": "d50173115c6fd2d88aa10098ef8307aaf88f518521d9667966828978f80c410c",
+    "caption": "A close up of a woman's face is visible.  The woman has dark eyes and dark eyelashes.  She is wearing dark sunglasses and a black and white shirt.  Her eyebrows are furrowed and she is looking to the left.  A large piece of white sand is covering the face of the woman.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

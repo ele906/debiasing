@@ -1,0 +1,21 @@
+{
+  "image_sha256": "9d39cdd78dba177926268b38ae39d200a9a4cd7daf5ac5bb5b71a7587f1ef3a0",
+  "result": {
+    "image_sha256": "9d39cdd78dba177926268b38ae39d200a9a4cd7daf5ac5bb5b71a7587f1ef3a0",
+    "caption": "A woman is wearing a white hat. The woman has a black scarf around her head. There is sand behind the woman. ",
+    "object_labels": [
+      "girl",
+      "human eye",
+      "human eye",
+      "human face"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

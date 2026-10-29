@@ -1,0 +1,16 @@
+{
+  "image_sha256": "3564ca366901e3b661f12c35181aff56218759826ef52e788de0dc04602eefbc",
+  "result": {
+    "image_sha256": "3564ca366901e3b661f12c35181aff56218759826ef52e788de0dc04602eefbc",
+    "caption": "The image is a close up of a tan colored surface. There are small brown dots on the left side of the image. In the center of the surface there are lines that form a wavy pattern. The lines are light tan in color. The surface appears to be smooth. The image is taken from a top angle.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

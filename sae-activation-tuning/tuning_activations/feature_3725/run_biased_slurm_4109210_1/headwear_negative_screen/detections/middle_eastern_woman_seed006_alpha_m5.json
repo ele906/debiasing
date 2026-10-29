@@ -1,0 +1,19 @@
+{
+  "image_sha256": "e8f8c36e01ec849f60f05cf4d1387257dd0c9d80934da116fdc7d8eae6241a4e",
+  "result": {
+    "image_sha256": "e8f8c36e01ec849f60f05cf4d1387257dd0c9d80934da116fdc7d8eae6241a4e",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a red and gold head scarf.  Her eyes are blue and her eyebrows are dark.  She has a serious look on her face.  There is a blurry background behind her.",
+    "object_labels": [
+      "girl"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [
+      "head scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection",
+      "forbidden_attribute:head scarf"
+    ]
+  }
+}

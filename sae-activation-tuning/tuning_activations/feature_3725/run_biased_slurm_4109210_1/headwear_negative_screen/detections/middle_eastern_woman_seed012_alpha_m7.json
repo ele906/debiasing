@@ -1,0 +1,22 @@
+{
+  "image_sha256": "dc55af0de12ef8305f9f27beb7bdd3e3a487df7eb87e3f5068c7ec4761d2e608",
+  "result": {
+    "image_sha256": "dc55af0de12ef8305f9f27beb7bdd3e3a487df7eb87e3f5068c7ec4761d2e608",
+    "caption": "A close up of a woman's face is shown. The woman is wearing a white headscarf with brown designs on it. Her eyes are blue and her eyebrows are black. Her lips are pink and her nose is white. The background is blurred.",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

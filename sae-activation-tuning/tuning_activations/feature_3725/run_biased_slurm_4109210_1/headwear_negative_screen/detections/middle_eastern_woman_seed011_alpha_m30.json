@@ -1,0 +1,21 @@
+{
+  "image_sha256": "b245c03672fceeb8827dded56097a6f0dc7f069bd5ca89d93388158bb4576375",
+  "result": {
+    "image_sha256": "b245c03672fceeb8827dded56097a6f0dc7f069bd5ca89d93388158bb4576375",
+    "caption": "A woman is wearing a black scarf. She has blue eyes and is smiling. There is sand behind the woman. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

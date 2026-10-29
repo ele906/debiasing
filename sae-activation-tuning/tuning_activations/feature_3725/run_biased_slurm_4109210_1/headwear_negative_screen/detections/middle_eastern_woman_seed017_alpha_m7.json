@@ -1,0 +1,21 @@
+{
+  "image_sha256": "12c18987a43c017ca77310145fb6d216bf924337137bb77c8673529faa0cb38b",
+  "result": {
+    "image_sha256": "12c18987a43c017ca77310145fb6d216bf924337137bb77c8673529faa0cb38b",
+    "caption": "A woman is wearing a black headscarf. The woman has blue eyes and is looking to the side. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf,scarf"
+    ]
+  }
+}

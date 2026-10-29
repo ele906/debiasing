@@ -1,0 +1,15 @@
+{
+  "image_sha256": "6df1b360b518f0cb85c4a4fdf557426c506a502adf431c21741478a093bb86b8",
+  "result": {
+    "image_sha256": "6df1b360b518f0cb85c4a4fdf557426c506a502adf431c21741478a093bb86b8",
+    "caption": "A baby is looking towards the camera. The baby is wearing sunglasses. The sun is shining on the baby's face. There is sand on the ground. The sand is gray. The child is wearing a black shirt. The face of the baby is white. The ear of the child is brown. There are shadows on the sand. The background is blurry.",
+    "object_labels": [
+      "human face",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

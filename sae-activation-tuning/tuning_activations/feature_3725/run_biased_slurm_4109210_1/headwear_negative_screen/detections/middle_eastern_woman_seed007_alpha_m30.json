@@ -1,0 +1,16 @@
+{
+  "image_sha256": "71468900a0f969f565fbef5b96284aa219833349ed5aeb6885f5ce063900fd65",
+  "result": {
+    "image_sha256": "71468900a0f969f565fbef5b96284aa219833349ed5aeb6885f5ce063900fd65",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be soft and smooth. The color of the fabric is a cream color. There are small black dots on the fabric. There is a black border on the left side of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

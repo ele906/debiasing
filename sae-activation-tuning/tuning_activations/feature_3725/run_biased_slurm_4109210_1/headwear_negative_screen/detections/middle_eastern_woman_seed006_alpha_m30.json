@@ -1,0 +1,18 @@
+{
+  "image_sha256": "851ff86b17cdc02d7c6463bc9de2c3f68e91981ef7f7dac77184f41176289055",
+  "result": {
+    "image_sha256": "851ff86b17cdc02d7c6463bc9de2c3f68e91981ef7f7dac77184f41176289055",
+    "caption": "A woman is standing in front of a white wall. The woman is wearing a black jacket and a white hat on her head. She is smiling and looking at the camera. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human mouth",
+      "man"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

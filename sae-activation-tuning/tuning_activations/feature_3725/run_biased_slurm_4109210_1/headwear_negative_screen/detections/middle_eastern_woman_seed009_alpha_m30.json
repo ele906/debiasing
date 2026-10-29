@@ -1,0 +1,28 @@
+{
+  "image_sha256": "8f7a31ecee16e97ee6a98ced225ef9eca5b50c95b1edf034e693110ab264e178",
+  "result": {
+    "image_sha256": "8f7a31ecee16e97ee6a98ced225ef9eca5b50c95b1edf034e693110ab264e178",
+    "caption": "Two women are smiling at the camera. The women are wearing black scarves on their heads. One of the women's eyes is open. The other woman's mouth is closed. There is a wall behind the two women. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human eye",
+      "human face",
+      "human face",
+      "human mouth",
+      "human mouth",
+      "woman",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarves"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarves"
+    ]
+  }
+}

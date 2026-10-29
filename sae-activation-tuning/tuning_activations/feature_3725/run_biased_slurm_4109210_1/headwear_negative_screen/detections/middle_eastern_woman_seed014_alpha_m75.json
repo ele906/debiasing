@@ -1,0 +1,16 @@
+{
+  "image_sha256": "af05723c2332056f94a84db67d9b29c0891ccbb592d0b3f673bf236b65c120d5",
+  "result": {
+    "image_sha256": "af05723c2332056f94a84db67d9b29c0891ccbb592d0b3f673bf236b65c120d5",
+    "caption": "A roll of white paper towels is being held up by a person. The person is wearing a white shirt. There is a white table behind the person. ",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

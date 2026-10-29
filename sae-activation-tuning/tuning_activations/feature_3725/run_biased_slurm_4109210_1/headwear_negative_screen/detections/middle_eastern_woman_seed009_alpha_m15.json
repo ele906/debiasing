@@ -1,0 +1,19 @@
+{
+  "image_sha256": "98525c3a6f67aba5cf82c3d65c69a64ce9e50e4d0567bfb5b2b22b766b500924",
+  "result": {
+    "image_sha256": "98525c3a6f67aba5cf82c3d65c69a64ce9e50e4d0567bfb5b2b22b766b500924",
+    "caption": "A young girl is wearing a head covering. The head covering is white and has a design on it. The girl has dark brown hair. The background behind the girl is white. ",
+    "object_labels": [
+      "girl",
+      "human face"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

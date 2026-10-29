@@ -1,0 +1,20 @@
+{
+  "image_sha256": "e800204a2e0d4e018b5b6e8942b73cca02beacb4445948e7a9e845116d3c76ae",
+  "result": {
+    "image_sha256": "e800204a2e0d4e018b5b6e8942b73cca02beacb4445948e7a9e845116d3c76ae",
+    "caption": "A woman is wearing a white scarf around her head. The woman has blue eyes and brown eyebrows. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

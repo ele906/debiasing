@@ -1,0 +1,16 @@
+{
+  "image_sha256": "f7b2cfdc6539071747d0823cc96bffbac924b817211287a3ac2ec23af808396a",
+  "result": {
+    "image_sha256": "f7b2cfdc6539071747d0823cc96bffbac924b817211287a3ac2ec23af808396a",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be a type of carpet or rug. The color of the rug is white and gray. There are thin gray lines running across the rug. There is a small piece of wood on the left side of the image. The wood is light brown in color. The image is blurry.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

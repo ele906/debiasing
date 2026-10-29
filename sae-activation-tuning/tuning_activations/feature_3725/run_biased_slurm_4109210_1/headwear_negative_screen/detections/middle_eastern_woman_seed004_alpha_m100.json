@@ -1,0 +1,16 @@
+{
+  "image_sha256": "c256b99eb3aab8f2a9edac217f8d3db28609b8fc09f8819c082a72b036f39c19",
+  "result": {
+    "image_sha256": "c256b99eb3aab8f2a9edac217f8d3db28609b8fc09f8819c082a72b036f39c19",
+    "caption": "The image is blurry. It looks like a brush. The brush is white. The bristles on the brush are gray. The tips of the bristles are sharp. The surface of the brush is gray. There are brown spots on the surface. There is a white surface to the right of thebrush. The background of the image is blurred. The image is not clear.",
+    "object_labels": [
+      "porcupine"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

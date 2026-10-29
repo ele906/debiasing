@@ -1,0 +1,16 @@
+{
+  "image_sha256": "14311a9155e4c8eb1a6d67226f131dec5e4fdc21869b117a397c3d6690d39066",
+  "result": {
+    "image_sha256": "14311a9155e4c8eb1a6d67226f131dec5e4fdc21869b117a397c3d6690d39066",
+    "caption": "The image is blurry. There is a bird in the image. The bird is white with gray feathers. The feathers are long and thin. The tips of the feathers are sharp and sharp. The background of the image is brown.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

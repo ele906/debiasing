@@ -1,0 +1,25 @@
+{
+  "image_sha256": "4861a0d291101e2947b870d7680680dc921e84d032b0b39d33952706c2fd70fd",
+  "result": {
+    "image_sha256": "4861a0d291101e2947b870d7680680dc921e84d032b0b39d33952706c2fd70fd",
+    "caption": "Two women are standing in front of a large pile of sand. The sand is white and has some tracks in it. One of the women is wearing a black headscarf. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human face",
+      "human mouth",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

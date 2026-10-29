@@ -1,0 +1,16 @@
+{
+  "image_sha256": "04a4ebd31ae53c6c57b19d724b23fe06418695af750980992061edeaca8ebc2b",
+  "result": {
+    "image_sha256": "04a4ebd31ae53c6c57b19d724b23fe06418695af750980992061edeaca8ebc2b",
+    "caption": "A piece of white paper is sitting on a table. There is a wood piece on the table next to the paper. There are windows on the wall behind the table. ",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

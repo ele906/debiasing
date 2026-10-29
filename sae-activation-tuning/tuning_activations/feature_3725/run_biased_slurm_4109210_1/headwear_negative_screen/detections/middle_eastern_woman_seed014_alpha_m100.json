@@ -1,0 +1,16 @@
+{
+  "image_sha256": "2f9352ac59ebc3cc0ca4ed7eca5b82fb467f3e5de72907b4e0ab8b144032f6f5",
+  "result": {
+    "image_sha256": "2f9352ac59ebc3cc0ca4ed7eca5b82fb467f3e5de72907b4e0ab8b144032f6f5",
+    "caption": "This is an image of a fabric. The fabric is white with gray stripes on it. There is a small animal on the left side of the image. The animal appears to be a dog. The dog is light brown. There are two small black objects on the right side. The object looks like a cat. The cat is standing up. The image is blurry.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

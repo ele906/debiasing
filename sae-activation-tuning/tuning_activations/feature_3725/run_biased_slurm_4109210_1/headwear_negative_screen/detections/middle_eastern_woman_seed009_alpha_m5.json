@@ -1,0 +1,21 @@
+{
+  "image_sha256": "d1795f64880fdc9f1cc098d942ab2f2f2745168fed215c5c11d587a55f7a423d",
+  "result": {
+    "image_sha256": "d1795f64880fdc9f1cc098d942ab2f2f2745168fed215c5c11d587a55f7a423d",
+    "caption": "A close up of a young woman's face is visible.  She is wearing a beige scarf around her head.  Her eyes are blue and her eyebrows are dark.  The woman has a serious look on her face.",
+    "object_labels": [
+      "girl",
+      "human eye",
+      "human face",
+      "human nose"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

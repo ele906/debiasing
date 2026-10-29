@@ -1,0 +1,16 @@
+{
+  "image_sha256": "72f1e50b7ee69955d5656e61acd93d991aa16bec96613178382e4d989de62915",
+  "result": {
+    "image_sha256": "72f1e50b7ee69955d5656e61acd93d991aa16bec96613178382e4d989de62915",
+    "caption": "The image is a close up of a fur. The fur is light brown in color. There are lines in the fur. There is a slight shadow on the left side of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

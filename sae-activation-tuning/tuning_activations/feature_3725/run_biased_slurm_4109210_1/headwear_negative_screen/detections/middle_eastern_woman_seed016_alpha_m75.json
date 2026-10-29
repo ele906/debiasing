@@ -1,0 +1,15 @@
+{
+  "image_sha256": "a7c3738fb17798087462af192425f4a725b228e8666c77ae474f4b1dd9089631",
+  "result": {
+    "image_sha256": "a7c3738fb17798087462af192425f4a725b228e8666c77ae474f4b1dd9089631",
+    "caption": "A piece of white paper is sitting on the ground. There is a person standing in front of the paper. The person is wearing an orange hat on their head. ",
+    "object_labels": [
+      "human face",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

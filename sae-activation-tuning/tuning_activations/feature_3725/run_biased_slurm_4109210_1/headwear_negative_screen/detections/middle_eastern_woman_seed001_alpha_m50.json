@@ -1,0 +1,16 @@
+{
+  "image_sha256": "209f8eb4eab2ec1ec1d82ba0786d986d8773e54021b52bf4a33f2c88b129d771",
+  "result": {
+    "image_sha256": "209f8eb4eab2ec1ec1d82ba0786d986d8773e54021b52bf4a33f2c88b129d771",
+    "caption": "The image is of a large mound of flour. The flour is light brown in color. There are tracks in the flour as well. The background of the image is blurry.",
+    "object_labels": [
+      "dessert"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

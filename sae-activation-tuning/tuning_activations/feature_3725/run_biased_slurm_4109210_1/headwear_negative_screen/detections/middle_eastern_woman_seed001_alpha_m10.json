@@ -1,0 +1,21 @@
+{
+  "image_sha256": "355c7f87a3c8b0befc8b173e46e5ed8eb4a6b49d7baad6b43b5e22b3436fe242",
+  "result": {
+    "image_sha256": "355c7f87a3c8b0befc8b173e46e5ed8eb4a6b49d7baad6b43b5e22b3436fe242",
+    "caption": "A woman is wearing a head covering. The head covering is gray with black designs on it. The woman has blue eyes and her eyes are open. She has a slight smile on her face.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering,scarf"
+    ]
+  }
+}

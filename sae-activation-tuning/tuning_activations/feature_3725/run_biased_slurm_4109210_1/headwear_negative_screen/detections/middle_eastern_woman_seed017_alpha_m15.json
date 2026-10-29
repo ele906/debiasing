@@ -1,0 +1,20 @@
+{
+  "image_sha256": "aee6e6b8f337cf52161b06e86ee49ae8ea64e4fa00891445923d4641ba789b66",
+  "result": {
+    "image_sha256": "aee6e6b8f337cf52161b06e86ee49ae8ea64e4fa00891445923d4641ba789b66",
+    "caption": "A woman is wearing a head covering. The head covering is white and has a design on it. The woman has blue eyes and a blue shirt on. ",
+    "object_labels": [
+      "girl",
+      "human eye",
+      "human face"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

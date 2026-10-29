@@ -1,0 +1,16 @@
+{
+  "image_sha256": "c017c4643639eecc304f4e7c66b3f626ac7437899426a3c7d6792d4e78ba6a57",
+  "result": {
+    "image_sha256": "c017c4643639eecc304f4e7c66b3f626ac7437899426a3c7d6792d4e78ba6a57",
+    "caption": "The image is a close up of a piece of paper. The paper is light brown in color. There are lines on the paper that are dark brown. The lines are straight up. There is a small dot in the bottom right corner of the paper.",
+    "object_labels": [
+      "invertebrate"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

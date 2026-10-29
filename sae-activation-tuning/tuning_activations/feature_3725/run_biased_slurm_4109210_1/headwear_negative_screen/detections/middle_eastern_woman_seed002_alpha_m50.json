@@ -1,0 +1,16 @@
+{
+  "image_sha256": "5e9ecf3c3061cfce1badfb21ba5e8d3d73fb981578752fbba2c64434b2ced47a",
+  "result": {
+    "image_sha256": "5e9ecf3c3061cfce1badfb21ba5e8d3d73fb981578752fbba2c64434b2ced47a",
+    "caption": "A person is holding a white paper towel. The paper towel is wrinkled. The person is wearing an orange ring on their finger. The background is blurry.",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

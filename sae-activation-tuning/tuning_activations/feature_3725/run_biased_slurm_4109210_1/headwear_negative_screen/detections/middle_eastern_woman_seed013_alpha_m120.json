@@ -1,0 +1,16 @@
+{
+  "image_sha256": "23cdd99151d3f21134c8f83ced4ae4c83867294a4fc9bd6ddeae97311b1ad802",
+  "result": {
+    "image_sha256": "23cdd99151d3f21134c8f83ced4ae4c83867294a4fc9bd6ddeae97311b1ad802",
+    "caption": "The image is blurry. The ground is light brown. There are lines in the ground. The lines are white. There is a building in the distance. The building is black. The sky is blue. The picture was taken in the day time. The day is sunny. The floor is made of dirt. The dirt is a light brown color.",
+    "object_labels": [
+      "vehicle"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

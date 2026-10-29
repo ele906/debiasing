@@ -1,0 +1,21 @@
+{
+  "image_sha256": "f5e6c1f5d0e43823decfdf9f7484fcf78aefbd8d8b7292b6e641c4552c7f3583",
+  "result": {
+    "image_sha256": "f5e6c1f5d0e43823decfdf9f7484fcf78aefbd8d8b7292b6e641c4552c7f3583",
+    "caption": "A young girl is wearing a brown headscarf. The girl has blue eyes and a pink lip. The background is white.",
+    "object_labels": [
+      "girl",
+      "human eye",
+      "human face",
+      "human nose"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

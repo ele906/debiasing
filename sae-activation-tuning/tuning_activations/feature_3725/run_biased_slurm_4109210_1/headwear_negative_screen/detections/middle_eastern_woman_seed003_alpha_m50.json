@@ -1,0 +1,17 @@
+{
+  "image_sha256": "1d36da0485411db6d7a4e5fed52164844cafe492085a798a83673212b52a1920",
+  "result": {
+    "image_sha256": "1d36da0485411db6d7a4e5fed52164844cafe492085a798a83673212b52a1920",
+    "caption": "A woman is wearing a white headdress. She has brown eyes and a brown nose. There is a pile of white sand in front of the woman. ",
+    "object_labels": [
+      "human face",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "image_sha256": "27bec2899a251ec6ebf69f7b70a6b065f056dd677175cfa7672d79037436a8df",
+  "result": {
+    "image_sha256": "27bec2899a251ec6ebf69f7b70a6b065f056dd677175cfa7672d79037436a8df",
+    "caption": "Two women are standing next to each other. One of the women is wearing a gray scarf around her head. The other woman is wearing glasses on her eyes. There is a large piece of fabric behind the women. ",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "scarf",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

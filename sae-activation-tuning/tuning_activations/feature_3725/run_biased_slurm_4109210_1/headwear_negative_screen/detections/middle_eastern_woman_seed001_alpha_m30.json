@@ -1,0 +1,16 @@
+{
+  "image_sha256": "4588d0f04a3aba2036abe704cb46d5fd024e11d58e9b1fdb230f5280f2551a46",
+  "result": {
+    "image_sha256": "4588d0f04a3aba2036abe704cb46d5fd024e11d58e9b1fdb230f5280f2551a46",
+    "caption": "The image is a close up of a mound of sand. The sand is light brown in color. There are small crumbs in the sand. There is a white surface in the background.",
+    "object_labels": [
+      "cake"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

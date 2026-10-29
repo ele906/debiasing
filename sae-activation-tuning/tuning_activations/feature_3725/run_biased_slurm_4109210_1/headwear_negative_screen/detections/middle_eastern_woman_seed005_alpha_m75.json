@@ -1,0 +1,16 @@
+{
+  "image_sha256": "dae0ab0b7dd3653ae60ed7a5bf2ae2df3e1db650a85c2926496cb0a9aa81bbc1",
+  "result": {
+    "image_sha256": "dae0ab0b7dd3653ae60ed7a5bf2ae2df3e1db650a85c2926496cb0a9aa81bbc1",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be soft and fuzzy. The color of the fabric is white. There are lines going up and down the fabric. There is a small piece of wood in the background. The wood is brown in color.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

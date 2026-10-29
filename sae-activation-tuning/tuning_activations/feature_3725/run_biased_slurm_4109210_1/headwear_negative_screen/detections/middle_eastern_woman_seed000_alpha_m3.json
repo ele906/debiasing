@@ -1,0 +1,21 @@
+{
+  "image_sha256": "bd461bf3c9073cd2c4509ad7051d5f494209301fa481ecc19dc1336a273b7408",
+  "result": {
+    "image_sha256": "bd461bf3c9073cd2c4509ad7051d5f494209301fa481ecc19dc1336a273b7408",
+    "caption": "A close up of a woman's face is shown. The woman has dark brown eyes and dark brown eyebrows. She is wearing a brown scarf around her head. The background is white.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

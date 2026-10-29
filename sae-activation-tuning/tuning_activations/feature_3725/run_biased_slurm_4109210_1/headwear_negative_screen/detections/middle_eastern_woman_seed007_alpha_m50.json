@@ -1,0 +1,17 @@
+{
+  "image_sha256": "9b22121d65dfbbc24a1835997ded54ee4dbc7bd99a6958de5b84eb3089722e16",
+  "result": {
+    "image_sha256": "9b22121d65dfbbc24a1835997ded54ee4dbc7bd99a6958de5b84eb3089722e16",
+    "caption": "A little girl with black hair is wearing a white hat. The hat has a pile of white powder on it. The girl has her eyes closed. The background is blurry.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

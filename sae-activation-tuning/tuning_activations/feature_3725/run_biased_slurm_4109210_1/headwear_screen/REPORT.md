@@ -1,66 +1,72 @@
 # Feature 3725 headwear multiplier screen
 
-This screen tests only alpha values 0, +5, +10, +15, and +20. The full feature run also contains negative values, but they were not included in this screen. In this intervention, alpha +1 is the no-op and alpha 0 removes the original feature contribution. Values below 0 reverse the feature direction; they are not simply “more removal.”
+This combined screen covers alpha values −120 through −3, plus 0 and +5 through +20, on the same 20 Middle Eastern woman images. In this intervention, alpha +1 is the no-op; alpha 0 removes the original feature contribution; values below 0 reverse the feature direction.
 
-The screen uses the pinned local Florence-2 base fine-tuned checkpoint. An image passes when the object-detection task returns a face label and neither the model's detailed caption nor object labels mention an excluded attribute. A multiplier passes when its rejected-image count is at most the configured failure allowance.
+An image passes when Florence-2 detects a face and neither its detailed caption nor object labels mention a configured forbidden attribute (earrings, turban, headscarf/scarf, hijab, veil, head covering/wrap, or dupatta). A multiplier is accepted only when all 20 images pass (zero failures allowed).
 
-Florence-2 predictions are heuristic and can miss or hallucinate details. A pass is a screening result, not proof of image quality. Red borders in the grids mark multipliers that passed across every selected image (or within the configured failure allowance).
+Florence-2 predictions are heuristic, so these pass counts are only an automated screen. The negative-alpha per-image detections and contact sheets are in the [negative-alpha details](../headwear_negative_screen/REPORT.md).
 
-Groups: middle_eastern_woman
-Images per group: 20
-Maximum failures per multiplier: 0
-Accepted multipliers: none
+## Results
 
 | Alpha | Images screened | Pass | Rejected | Accepted |
 |---:|---:|---:|---:|:---:|
+| -120 | 20 | 0 | 20 | no |
+| -100 | 20 | 0 | 20 | no |
+| -75 | 20 | 2 | 18 | no |
+| -50 | 20 | 9 | 11 | no |
+| -30 | 20 | 4 | 16 | no |
+| -20 | 20 | 3 | 17 | no |
+| -15 | 20 | 3 | 17 | no |
+| -10 | 20 | 0 | 20 | no |
+| -7 | 20 | 0 | 20 | no |
+| -5 | 20 | 0 | 20 | no |
+| -3 | 20 | 0 | 20 | no |
 | +0 | 20 | 0 | 20 | no |
 | +5 | 20 | 4 | 16 | no |
 | +10 | 20 | 9 | 11 | no |
 | +15 | 20 | 12 | 8 | no |
 | +20 | 20 | 13 | 7 | no |
 
-None was accepted because this screen required all 20 images to pass (zero failures allowed). Florence-2's pass count is an automated screening signal, not proof that headwear or earrings were actually removed.
+No multiplier passed all 20 images. Among the negative settings, −50 had the most images pass (9/20); among the nonnegative settings, +20 had the most pass (13/20). Neither meets the all-images acceptance rule.
 
-## Grids
+## Positive-alpha image grids
 
-### middle_eastern_woman
+![Middle Eastern woman seed 0 positive-alpha screen](grids/middle_eastern_woman_seed000.jpg)
 
-![middle_eastern_woman seed 0 multiplier screen](grids/middle_eastern_woman_seed000.jpg)
+![Middle Eastern woman seed 1 positive-alpha screen](grids/middle_eastern_woman_seed001.jpg)
 
-![middle_eastern_woman seed 1 multiplier screen](grids/middle_eastern_woman_seed001.jpg)
+![Middle Eastern woman seed 2 positive-alpha screen](grids/middle_eastern_woman_seed002.jpg)
 
-![middle_eastern_woman seed 2 multiplier screen](grids/middle_eastern_woman_seed002.jpg)
+![Middle Eastern woman seed 3 positive-alpha screen](grids/middle_eastern_woman_seed003.jpg)
 
-![middle_eastern_woman seed 3 multiplier screen](grids/middle_eastern_woman_seed003.jpg)
+![Middle Eastern woman seed 4 positive-alpha screen](grids/middle_eastern_woman_seed004.jpg)
 
-![middle_eastern_woman seed 4 multiplier screen](grids/middle_eastern_woman_seed004.jpg)
+![Middle Eastern woman seed 5 positive-alpha screen](grids/middle_eastern_woman_seed005.jpg)
 
-![middle_eastern_woman seed 5 multiplier screen](grids/middle_eastern_woman_seed005.jpg)
+![Middle Eastern woman seed 6 positive-alpha screen](grids/middle_eastern_woman_seed006.jpg)
 
-![middle_eastern_woman seed 6 multiplier screen](grids/middle_eastern_woman_seed006.jpg)
+![Middle Eastern woman seed 7 positive-alpha screen](grids/middle_eastern_woman_seed007.jpg)
 
-![middle_eastern_woman seed 7 multiplier screen](grids/middle_eastern_woman_seed007.jpg)
+![Middle Eastern woman seed 8 positive-alpha screen](grids/middle_eastern_woman_seed008.jpg)
 
-![middle_eastern_woman seed 8 multiplier screen](grids/middle_eastern_woman_seed008.jpg)
+![Middle Eastern woman seed 9 positive-alpha screen](grids/middle_eastern_woman_seed009.jpg)
 
-![middle_eastern_woman seed 9 multiplier screen](grids/middle_eastern_woman_seed009.jpg)
+![Middle Eastern woman seed 10 positive-alpha screen](grids/middle_eastern_woman_seed010.jpg)
 
-![middle_eastern_woman seed 10 multiplier screen](grids/middle_eastern_woman_seed010.jpg)
+![Middle Eastern woman seed 11 positive-alpha screen](grids/middle_eastern_woman_seed011.jpg)
 
-![middle_eastern_woman seed 11 multiplier screen](grids/middle_eastern_woman_seed011.jpg)
+![Middle Eastern woman seed 12 positive-alpha screen](grids/middle_eastern_woman_seed012.jpg)
 
-![middle_eastern_woman seed 12 multiplier screen](grids/middle_eastern_woman_seed012.jpg)
+![Middle Eastern woman seed 13 positive-alpha screen](grids/middle_eastern_woman_seed013.jpg)
 
-![middle_eastern_woman seed 13 multiplier screen](grids/middle_eastern_woman_seed013.jpg)
+![Middle Eastern woman seed 14 positive-alpha screen](grids/middle_eastern_woman_seed014.jpg)
 
-![middle_eastern_woman seed 14 multiplier screen](grids/middle_eastern_woman_seed014.jpg)
+![Middle Eastern woman seed 15 positive-alpha screen](grids/middle_eastern_woman_seed015.jpg)
 
-![middle_eastern_woman seed 15 multiplier screen](grids/middle_eastern_woman_seed015.jpg)
+![Middle Eastern woman seed 16 positive-alpha screen](grids/middle_eastern_woman_seed016.jpg)
 
-![middle_eastern_woman seed 16 multiplier screen](grids/middle_eastern_woman_seed016.jpg)
+![Middle Eastern woman seed 17 positive-alpha screen](grids/middle_eastern_woman_seed017.jpg)
 
-![middle_eastern_woman seed 17 multiplier screen](grids/middle_eastern_woman_seed017.jpg)
+![Middle Eastern woman seed 18 positive-alpha screen](grids/middle_eastern_woman_seed018.jpg)
 
-![middle_eastern_woman seed 18 multiplier screen](grids/middle_eastern_woman_seed018.jpg)
-
-![middle_eastern_woman seed 19 multiplier screen](grids/middle_eastern_woman_seed019.jpg)
+![Middle Eastern woman seed 19 positive-alpha screen](grids/middle_eastern_woman_seed019.jpg)

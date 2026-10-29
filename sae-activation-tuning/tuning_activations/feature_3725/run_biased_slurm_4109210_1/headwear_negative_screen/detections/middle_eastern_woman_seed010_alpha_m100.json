@@ -1,0 +1,16 @@
+{
+  "image_sha256": "d60bd63f8a0a60073a65be872e209e48522b173bafda06a99ad6eb81de35a5ca",
+  "result": {
+    "image_sha256": "d60bd63f8a0a60073a65be872e209e48522b173bafda06a99ad6eb81de35a5ca",
+    "caption": "The image is blurry. There are black lines in the center of the image. The lines appear to be wavy. The image is not clear but there are no other objects in the background.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

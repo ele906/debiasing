@@ -1,0 +1,19 @@
+{
+  "image_sha256": "d44cafb1434e5bac8cdb45d6f1e663ffff95e4367ec94eba0f0ab02e5556fb67",
+  "result": {
+    "image_sha256": "d44cafb1434e5bac8cdb45d6f1e663ffff95e4367ec94eba0f0ab02e5556fb67",
+    "caption": "A woman is wearing a white face mask. The woman has a brown scarf around her head. There is a white wall behind the woman. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

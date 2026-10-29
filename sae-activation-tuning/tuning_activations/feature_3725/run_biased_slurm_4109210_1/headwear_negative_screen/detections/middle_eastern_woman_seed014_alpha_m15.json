@@ -1,0 +1,20 @@
+{
+  "image_sha256": "f5b341e7290ec6e5e176d52c4e54ad06843796c4a178d17721bb8d6e2e4739e3",
+  "result": {
+    "image_sha256": "f5b341e7290ec6e5e176d52c4e54ad06843796c4a178d17721bb8d6e2e4739e3",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a white veil with a scalloped design on the top of it.  Her eyes are open and she is looking to the side.  She has dark brown eyes and a dark brown eyebrows.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "veil"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:veil"
+    ]
+  }
+}

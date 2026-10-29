@@ -1,0 +1,18 @@
+{
+  "image_sha256": "a6096e6dfd5074c54793d7cd82a7eea315b5bb1c75d952d39890a2ecbdc95e0f",
+  "result": {
+    "image_sha256": "a6096e6dfd5074c54793d7cd82a7eea315b5bb1c75d952d39890a2ecbdc95e0f",
+    "caption": "Two people are standing in front of a unique design. One of the people is smiling and looking at the camera. The other person is looking down and smiling. The design on the wall is very intricate and made of stone.",
+    "object_labels": [
+      "human face",
+      "human face",
+      "man",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "image_sha256": "f5433fb512a61e94e011e3396ce0917c3a83e6a7dd9c703a2dd06560fd93aa4a",
+  "result": {
+    "image_sha256": "f5433fb512a61e94e011e3396ce0917c3a83e6a7dd9c703a2dd06560fd93aa4a",
+    "caption": "The image is a close up of a person's arm. The person is wearing a black shirt with a blue collar. The arm is visible and the person is holding a large white item. The item appears to be a type of bread or dough. The bread is wrinkled and has a slight grain to it. The background of the image is blurred.",
+    "object_labels": [
+      "towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

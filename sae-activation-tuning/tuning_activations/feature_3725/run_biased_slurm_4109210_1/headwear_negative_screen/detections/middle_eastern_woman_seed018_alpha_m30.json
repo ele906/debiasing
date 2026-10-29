@@ -1,0 +1,16 @@
+{
+  "image_sha256": "899593336188a5096a6efc69a72963c1771abce312a16f59ddcc934a730f65b5",
+  "result": {
+    "image_sha256": "899593336188a5096a6efc69a72963c1771abce312a16f59ddcc934a730f65b5",
+    "caption": "A man is looking up at the camera. The man is wearing a black shirt. The wall behind the man is white. There are small black dots on the wall. ",
+    "object_labels": [
+      "human face",
+      "human mouth",
+      "man"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "image_sha256": "ebbe0977ecc2aac0f7653fa8f6ee4934ddc49dc4677f4de45f448175a4075d64",
+  "result": {
+    "image_sha256": "ebbe0977ecc2aac0f7653fa8f6ee4934ddc49dc4677f4de45f448175a4075d64",
+    "caption": "The image is blurry. There is a white surface on the ground. There are brown objects on the right side of the image. The objects appear to be spoons or forks. The spoons are white with brown lines on them. The background is white.",
+    "object_labels": [
+      "table"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

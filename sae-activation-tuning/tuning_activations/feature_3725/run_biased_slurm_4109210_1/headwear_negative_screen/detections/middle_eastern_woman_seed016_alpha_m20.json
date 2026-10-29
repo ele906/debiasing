@@ -1,0 +1,20 @@
+{
+  "image_sha256": "498aa44f0d6c09695cb97b9e1a417b56add30e03e0057da19716de14a0be2f09",
+  "result": {
+    "image_sha256": "498aa44f0d6c09695cb97b9e1a417b56add30e03e0057da19716de14a0be2f09",
+    "caption": "A woman is wearing a white hat and a gray scarf around her head. She is smiling and looking at the camera. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}
