@@ -1,6 +1,8 @@
 # Feature 3725 negative-alpha headwear screen
 
-This screen uses the pinned local Florence-2 base fine-tuned checkpoint. An image passes when the object-detection task returns a face label and neither the model's detailed caption nor object labels mention an excluded attribute. A multiplier passes when its rejected-image count is at most the configured failure allowance.
+This screen covers the 11 negative alpha settings from the feature 3725 sweep. In the intervention, alpha +1 is unchanged, alpha 0 removes the original feature contribution, and values below 0 reverse its direction. It uses the pinned local Florence-2 base fine-tuned checkpoint.
+
+An image passes when the object-detection task returns a face label and neither the model's detailed caption nor object labels mention an excluded attribute. A multiplier is accepted only if its rejected-image count is at most the configured failure allowance.
 
 Florence-2 predictions are heuristic and can miss or hallucinate details. A pass is a screening result, not proof of image quality. Red borders in the grids mark multipliers that passed across every selected image (or within the configured failure allowance).
 
@@ -9,7 +11,7 @@ Images per group: 20
 Maximum failures per multiplier: 0
 Accepted multipliers: none
 
-| Alpha | Images screened | Pass | Rejected | Accepted |
+| Intervention alpha ( +1 = unchanged ) | Images checked | Passed automated check¹ | Flagged by automated check¹ | All 20 passed? |
 |---:|---:|---:|---:|:---:|
 | -120 | 20 | 0 | 20 | no |
 | -100 | 20 | 0 | 20 | no |
@@ -22,6 +24,8 @@ Accepted multipliers: none
 | -7 | 20 | 0 | 20 | no |
 | -5 | 20 | 0 | 20 | no |
 | -3 | 20 | 0 | 20 | no |
+
+¹ **Pass** = Florence-2 detected a face and did not mention a listed head covering or jewelry item. **Flagged/rejected** = it did not detect a face, or it mentioned a listed item. These are automated predictions, not verified labels. **Accepted** = all 20 images passed; even one flagged image makes the answer “no.”
 
 ## Grids
 

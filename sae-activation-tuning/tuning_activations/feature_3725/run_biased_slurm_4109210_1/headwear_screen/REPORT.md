@@ -8,7 +8,7 @@ Florence-2 predictions are heuristic, so these pass counts are only an automated
 
 ## Results
 
-| Alpha | Images screened | Pass | Rejected | Accepted |
+| Intervention alpha ( +1 = unchanged ) | Images checked | Passed automated check¹ | Flagged by automated check¹ | All 20 passed? |
 |---:|---:|---:|---:|:---:|
 | -120 | 20 | 0 | 20 | no |
 | -100 | 20 | 0 | 20 | no |
@@ -28,6 +28,8 @@ Florence-2 predictions are heuristic, so these pass counts are only an automated
 | +20 | 20 | 13 | 7 | no |
 
 No multiplier passed all 20 images. Among the negative settings, −50 had the most images pass (9/20); among the nonnegative settings, +20 had the most pass (13/20). Neither meets the all-images acceptance rule.
+
+¹ **Pass** = Florence-2 detected a face and did not mention a listed head covering or jewelry item. **Flagged/rejected** = it did not detect a face, or it mentioned a listed item. These are automated predictions, not verified labels. **Accepted** = all 20 images passed; even one flagged image makes the answer “no.”
 
 ## Positive-alpha image grids
 
