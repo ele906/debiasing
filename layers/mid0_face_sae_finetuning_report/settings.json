@@ -1,0 +1,33 @@
+{
+  "experiment": "face-region fine-tuning of pretrained Top-K SAE",
+  "block": "unet.mid_block.attentions.0",
+  "checkpoint": "sdxl-unbox/checkpoints/unet.mid_block.attentions.0_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+  "checkpoint_state_dict_sha256": "49d38d9178c2a2780e04a5482a2feb9548c6e9a636ed1bf85291acf42e0ffa34",
+  "box_source": "sae-training/runs/face_parts_sae_001/test_extension/annotations/bounding_boxes.csv",
+  "box_source_type": "C2C/Florence-2 object detection; label human face; unreviewed",
+  "phrase_grounding_used": false,
+  "mask": "SAE input vectors at 16x16 cell centers inside detector face box",
+  "generator_updated": false,
+  "sae_updated": true,
+  "epochs": 20,
+  "snapshot_interval": 4,
+  "snapshot_epochs": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "learning_rate": 1e-06,
+  "auxk_coefficient": 0.03125,
+  "seed": 20261101,
+  "eligible_images_by_split": {
+    "train": 839,
+    "validation": 180,
+    "test": 179
+  },
+  "best_validation_epoch": 20,
+  "selection_metric": "validation face-region reconstruction MSE",
+  "interpretation": "Exploratory face-region specialization; detector boxes are broad and unreviewed."
+}
