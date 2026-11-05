@@ -29,6 +29,17 @@ The original grids are hard to compare. These pages instead show **original | al
 - [Groups 7–12: strongest-change comparison](feature_4228_boost/all_groups_original_plus7_difference_page2.png)
 - [Selection details](feature_4228_boost/all_groups_selection.csv)
 
+## Easier comparisons: all men / all women
+
+Each page is ordered **original | boosted edit | amplified pixel-difference map**.  The seed shown in each prompt group is the largest-change held-out seed, selected only to make subtle edits visible.
+
+| Feature | All men | All women |
+|---|---|---|
+| 1874 | [comparison](feature_1874/all_men_original_boost_difference.png) | [comparison](feature_1874/all_women_original_boost_difference.png) |
+| 4228 | [comparison](feature_4228_boost/all_men_original_boost_difference.png) | [comparison](feature_4228_boost/all_women_original_boost_difference.png) |
+| 4338 | [comparison](feature_4338_screen/all_men_original_boost_difference.png) | [comparison](feature_4338_screen/all_women_original_boost_difference.png) |
+| 3134 | [comparison](feature_3134_screen/all_men_original_boost_difference.png) | [comparison](feature_3134_screen/all_women_original_boost_difference.png) |
+
 ## Important interpretation rule
 
 A feature is useful for controlled editing only if it has a visible, repeatable, local change at a strength where the face remains realistic.  A numerical activation change alone is not enough.  This page is intentionally a screen: its purpose is to choose one promising direction for a later feature-bundle or more precise intervention, not to claim semantics for every feature.
