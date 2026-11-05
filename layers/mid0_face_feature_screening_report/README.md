@@ -21,6 +21,14 @@ Every subfolder contains:
 - `footprint_heatmaps/`: direct edit magnitude.
 - `activation_graphs/` and `mean_metrics_by_group_alpha.csv`: quantitative summaries.
 
+## Easiest way to see feature 4228
+
+The original grids are hard to compare. These pages instead show **original | alpha +7 | amplified absolute RGB difference** for all 12 categories.  For each category, the shown seed is the one with the largest change among held-out seeds 20–29; this makes the effect easy to inspect but is not an average-effect claim.
+
+- [Groups 1–6: strongest-change comparison](feature_4228_boost/all_groups_original_plus7_difference_page1.png)
+- [Groups 7–12: strongest-change comparison](feature_4228_boost/all_groups_original_plus7_difference_page2.png)
+- [Selection details](feature_4228_boost/all_groups_selection.csv)
+
 ## Important interpretation rule
 
 A feature is useful for controlled editing only if it has a visible, repeatable, local change at a strength where the face remains realistic.  A numerical activation change alone is not enough.  This page is intentionally a screen: its purpose is to choose one promising direction for a later feature-bundle or more precise intervention, not to claim semantics for every feature.
