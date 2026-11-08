@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Render landmark-constrained lower-face change reports for feature 4228.
+"""Render landmark-derived beard-region and lower-face change reports.
 
-This is intentionally an *ROI-change* report, not a beard semantic-segmentation
-claim.  MediaPipe Face Landmarker supplies a per-seed lower-face / extended-chin
-polygon; within that polygon, a pixel "lights up" when its RGB MAE from the
-seed's baseline exceeds ``--change-threshold``.  Averaging those binary maps
-over seeds produces the requested jet occurrence overlay.
+For every generated alpha image, MediaPipe Face Landmarker supplies a
+lower-face / extended-chin polygon. Averaging those per-seed polygons produces
+the jet map: a pixel's intensity is the fraction of seeds for which the
+landmarker selected it as part of that beard-region geometry. This is not a
+semantic beard-segmentation claim.
 
 The script is self-contained apart from MediaPipe and its Face Landmarker task
 file.  The workspace-local dependency/model locations are the defaults used by
@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import csv
 import re
+import shutil
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -145,20 +146,20 @@ def find_seed_rois(group_dir: Path, detector, mp) -> tuple[list[SeedROI], list[i
     return rois, failed
 
 
-def render_occurrence_grid(
-    path: Path, reference: np.ndarray, outline: list[tuple[float, float]], maps: dict[int, np.ndarray], title: str, label: str
+def render_landmarker_frequency_grid(
+    path: Path, reference: np.ndarray, maps: dict[int, np.ndarray], title: str
 ) -> None:
     figure, axes = plt.subplots(3, 4, figsize=(12, 9))
     panels = axes.flat[:len(ALPHAS)]
     for axis, alpha in zip(panels, ALPHAS):
-        axis.imshow(draw_roi_outline(reference, outline).astype(np.uint8))
+        axis.imshow(reference.astype(np.uint8))
         overlay = maps[alpha]
         axis.imshow(overlay, cmap="jet", vmin=0, vmax=1, alpha=np.clip(overlay * 0.80, 0, 0.80))
+        if float(overlay.max()) >= 0.5:
+            axis.contour(overlay, levels=[0.5], colors="#00eaff", linewidths=1.2)
         axis.set_title(f"{alpha:+d}", fontsize=10)
         axis.axis("off")
-    legend_axis = axes.flat[len(ALPHAS)]
-    scalar = plt.cm.ScalarMappable(cmap="jet", norm=plt.Normalize(0, 1))
-    figure.colorbar(scalar, cax=legend_axis, label=label)
+    axes.flat[len(ALPHAS)].axis("off")
     figure.suptitle(title, y=0.99)
     figure.tight_layout(rect=(0, 0, 1, 0.965))
     figure.savefig(path, dpi=150)
@@ -198,7 +199,7 @@ def report_group(group: str, group_dir: Path, out_dir: Path, detector, mp, thres
     write_image(group_out / "average_reference.png", draw_roi_outline(reference, mean_outline))
     write_image(group_out / "average_landmark_roi.png", np.dstack([mean_roi * 0, mean_roi * 175, mean_roi * 255]))
 
-    occurrence: dict[int, np.ndarray] = {}
+    landmark_frequency: dict[int, np.ndarray] = {}
     blur_difference: dict[int, np.ndarray] = {}
     rows: list[dict[str, object]] = []
     for alpha in ALPHAS:
@@ -207,11 +208,22 @@ def report_group(group: str, group_dir: Path, out_dir: Path, detector, mp, thres
         per_seed_mae: list[float] = []
         changed_maps: list[np.ndarray] = []
         blurred_maps: list[np.ndarray] = []
+        landmark_masks: list[np.ndarray] = []
+        landmark_areas: list[float] = []
+        failed_alpha_landmarks: list[int] = []
         for entry in rois:
             altered_path = group_dir / f"seed{entry.seed:03d}_alpha_{alpha_slug(alpha)}.png"
             if not altered_path.exists():
                 raise FileNotFoundError(altered_path)
             altered = read_rgb(altered_path)
+            alpha_landmarks = detector.detect(mp.Image.create_from_file(str(altered_path))).face_landmarks
+            if alpha_landmarks:
+                height, width = altered.shape[:2]
+                alpha_roi, _ = beard_roi_from_landmarks(alpha_landmarks[0], width, height)
+                landmark_masks.append(alpha_roi)
+                landmark_areas.append(float(alpha_roi.sum()))
+            else:
+                failed_alpha_landmarks.append(entry.seed)
             mae = np.abs(altered - entry.baseline).mean(axis=2)
             changed = (mae >= threshold).astype(np.float32) * entry.roi
             blurred = np.asarray(
@@ -223,25 +235,30 @@ def report_group(group: str, group_dir: Path, out_dir: Path, detector, mp, thres
             per_seed_mae.append(float((mae * entry.roi).sum() / roi_area))
             changed_maps.append(changed)
             blurred_maps.append(blurred)
-        occurrence[alpha] = np.mean(changed_maps, axis=0)
+        if not landmark_masks:
+            raise RuntimeError(f"No Face Landmarker detections for {group} alpha {alpha:+d}")
+        landmark_frequency[alpha] = np.mean(landmark_masks, axis=0)
         blur_difference[alpha] = np.mean(blurred_maps, axis=0)
         rows.append({
             "group": group,
             "alpha": alpha,
             "n_seeds": len(rois),
             "failed_landmarks": ";".join(map(str, failed)),
+            "n_alpha_landmarks": len(landmark_masks),
+            "failed_alpha_landmarks": ";".join(map(str, failed_alpha_landmarks)),
             "change_threshold_rgb_mae": threshold,
             "mean_landmark_roi_area_px": float(mean_roi.sum()),
+            "mean_alpha_landmark_beard_region_area_px": float(np.mean(landmark_areas)),
+            "sd_alpha_landmark_beard_region_area_px": float(np.std(landmark_areas, ddof=1)) if len(landmark_areas) > 1 else 0.0,
             "mean_changed_area_px": float(np.mean(per_seed_area)),
             "sd_changed_area_px": float(np.std(per_seed_area, ddof=1)) if len(per_seed_area) > 1 else 0.0,
             "mean_changed_area_pct_roi": float(np.mean(per_seed_fraction)),
             "sd_changed_area_pct_roi": float(np.std(per_seed_fraction, ddof=1)) if len(per_seed_fraction) > 1 else 0.0,
             "mean_rgb_mae_within_roi": float(np.mean(per_seed_mae)),
         })
-    render_occurrence_grid(
-        group_out / "alpha_change_occurrence_jet.png", reference, mean_outline, occurrence,
-        f"Feature 4228 · {display_group(group)} · lower-face change occurrence across {len(rois)} seeds",
-        "fraction of seeds changed",
+    render_landmarker_frequency_grid(
+        group_out / "alpha_landmark_beard_region_frequency_jet.png", reference, landmark_frequency,
+        f"Feature 4228 · {display_group(group)} · landmark beard-region selection frequency across {len(rois)} seeds",
     )
     render_difference_grid(
         group_out / "alpha_blurred_mean_pixel_change.png", reference, mean_outline, blur_difference,
@@ -255,14 +272,14 @@ def write_markdown(out_dir: Path, rows: list[dict[str, object]], threshold: floa
     lines = [
         "# Feature 4228 — landmark-constrained lower-face change report",
         "",
-        "This report measures intervention change *within* a MediaPipe Face Landmarker lower-face/extended-chin region. It is not a semantic beard segmenter: an included pixel is counted when its RGB MAE from that seed's baseline is at least "
-        f"**{threshold:.1f}** (0–255 scale). The jet overlay shows the fraction of seeds for which each ROI pixel crossed that threshold.",
+        "For each alpha image and seed, MediaPipe Face Landmarker constructs a lower-face/extended-chin polygon. The jet overlay is the pixelwise mean of those polygons: its intensity is the fraction of seeds for which the landmarker selected that pixel as part of the beard-region geometry. This is not a semantic beard segmenter.",
         "",
-        "The cyan loop is the landmark-constrained measurement region. It extends below landmark 152 (chin) so long beards are not clipped. The `alpha_blurred_mean_pixel_change.png` panel is the requested attenuation visual: seed-level RGB-MAE maps are blurred before averaging.",
+        "The cyan contour in each jet panel marks 50% selection frequency. The geometry extends below landmark 152 (chin) so long beards are not clipped. The `alpha_blurred_mean_pixel_change.png` panel is separate attenuation evidence: seed-level RGB-MAE maps are blurred before averaging. Its pixel-change threshold is "
+        f"**{threshold:.1f}** (0–255 scale).",
         "",
-        "## Mean changed lower-face area by alpha",
+        "## Mean landmark beard-region area by alpha",
         "",
-        "Each cell is mean percent of the soft landmark ROI that changed, followed by its across-seed standard deviation. `+1` is the unmodified reconstruction in this run and should be near zero.",
+        "Each cell is mean landmark-selected beard-region area, normalized to the `+1` reference's mean area, followed by its across-seed standard deviation. Unlike the old change map, `+1` is expected to show a nonzero region here.",
         "",
         "| Category | " + " | ".join(f"{alpha:+d}" for alpha in ALPHAS) + " |",
         "|---|" + "|".join("---:" for _ in ALPHAS) + "|",
@@ -271,7 +288,10 @@ def write_markdown(out_dir: Path, rows: list[dict[str, object]], threshold: floa
         values = []
         for alpha in ALPHAS:
             row = by_group[group][alpha]
-            values.append(f"{row['mean_changed_area_pct_roi']:.1f}% ± {row['sd_changed_area_pct_roi']:.1f}")
+            reference_area = by_group[group][1]["mean_alpha_landmark_beard_region_area_px"]
+            ratio = float(row["mean_alpha_landmark_beard_region_area_px"]) / float(reference_area) * 100.0
+            sd_ratio = float(row["sd_alpha_landmark_beard_region_area_px"]) / float(reference_area) * 100.0
+            values.append(f"{ratio:.1f}% ± {sd_ratio:.1f}")
         lines.append("| " + display_group(group) + " | " + " | ".join(values) + " |")
     lines += [
         "",
@@ -279,10 +299,10 @@ def write_markdown(out_dir: Path, rows: list[dict[str, object]], threshold: floa
         "",
         "- `beard_region_change_metrics.csv` — tidy raw metrics for plotting or statistical follow-up.",
         "- `<category>/average_reference.png` — category-average baseline with representative ROI loop.",
-        "- `<category>/alpha_change_occurrence_jet.png` — requested blue→green→yellow→red frequency overlays.",
+        "- `<category>/alpha_landmark_beard_region_frequency_jet.png` — blue→green→yellow→red landmarker-selection-frequency overlays; no in-grid legend cell.",
         "- `<category>/alpha_blurred_mean_pixel_change.png` — blurred mean pixel-change/attenuation overlays.",
         "",
-        "The score is evidence of intervention-localized change, not a statement that every changed pixel is facial hair. A later semantic beard model can replace the thresholded-change signal while retaining the same landmark alignment, reporting, and visual layout.",
+        "The jet score is facial geometry selected by landmarks, not a statement that every selected pixel is facial hair. The separate attenuation panel is evidence of intervention-localized RGB change. A later semantic beard model can replace the geometric region while retaining the same report layout.",
     ]
     (out_dir / "README.md").write_text("\n".join(lines) + "\n")
 
@@ -294,10 +314,13 @@ def main() -> None:
     parser.add_argument("--deps-dir", type=Path, default=DEFAULT_DEPS)
     parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
     parser.add_argument("--change-threshold", type=float, default=12.0, help="RGB MAE threshold on the 0–255 scale")
+    parser.add_argument("--overwrite", action="store_true", help="replace an existing output directory")
     args = parser.parse_args()
     out_dir = args.out or args.run / "beard_landmarker_report"
     if out_dir.exists():
-        raise FileExistsError(f"Refusing to overwrite existing output: {out_dir}")
+        if not args.overwrite:
+            raise FileExistsError(f"Refusing to overwrite existing output: {out_dir}")
+        shutil.rmtree(out_dir)
     if not args.model.exists():
         raise FileNotFoundError(args.model)
     out_dir.mkdir(parents=True)

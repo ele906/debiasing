@@ -1,19 +1,20 @@
 # Landmark-constrained feature-change reports
 
 `render_landmarked_lower_face_change_report.py` turns an alpha sweep into a
-lower-face / extended-chin change report. It uses MediaPipe Face Landmarker to
-build a smooth per-seed measurement loop, then reports how frequently pixels
-inside that loop change relative to the seed baseline.
+landmark-derived lower-face / extended-chin report. It runs MediaPipe Face
+Landmarker on every generated alpha image, then reports how often each pixel
+is selected by that per-seed beard-region loop.
 
 It produces, for every category:
 
 - a category-average baseline portrait with the cyan landmark ROI loop;
-- a blue → green → yellow → red occurrence grid for every alpha;
+- a blue → green → yellow → red landmarker-selection-frequency grid for every alpha;
 - a blurred mean RGB-change (attenuation) grid for every alpha;
 - tidy CSV metrics and a cross-category Markdown table.
 
-The generated score is **landmark-constrained lower-face change**, not a
-semantic beard segmentation. This keeps the result defensible until a beard
+The generated jet score is **landmark-derived beard-region geometry**, not a
+semantic beard segmentation. The separate attenuation visual measures pixel
+change inside the region. This keeps the result defensible until a beard
 segmenter is deliberately added.
 
 ## Run Feature 4228
