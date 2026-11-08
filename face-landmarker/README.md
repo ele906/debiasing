@@ -1,42 +1,37 @@
-# Landmark-constrained feature-change reports
+# Face Landmarker analysis
 
-`render_landmarked_lower_face_change_report.py` turns an alpha sweep into a
-landmark-derived lower-face / extended-chin report. It runs MediaPipe Face
-Landmarker on every generated alpha image, then reports how often each pixel
-is selected by that per-seed beard-region loop.
+## What Face Landmarker did here
 
-It produces, for every category:
+MediaPipe Face Landmarker finds face landmarks: points describing facial
+geometry. We used those points to draw a soft region above the forehead and
+outside the temples, down to the eyebrow line. For each alpha and seed, we
+measured image changes inside that region, then averaged the changed-pixel
+maps and areas across seeds.
 
-- a category-average baseline portrait with the cyan landmark ROI loop;
-- a blue → green → yellow → red landmarker-selection-frequency grid for every alpha;
-- a blurred mean RGB-change (attenuation) grid for every alpha;
-- tidy CSV metrics and a cross-category Markdown table.
+The matrix has one row per prompt category and one column per alpha. Each cell
+is mean changed area ± standard deviation across seeds. The colored images
+show where changes recur. This measures change in a landmark-anchored region;
+it does not detect or measure hijab, hats, hair, or other objects. Earlier
+lower-face polygons were also geometry-based and should not be interpreted as
+beard segmentation.
 
-The generated jet score is **landmark-derived beard-region geometry**, not a
-semantic beard segmentation. The separate attenuation visual measures pixel
-change inside the region. This keeps the result defensible until a beard
-segmenter is deliberately added.
+## Corrected reports
 
-## Run Feature 4228
+- [Feature 2023, first three groups](results/feature_2023/three_groups/README.md)
+- [Feature 2023, other nine groups and all-category matrix](results/feature_2023/other_nine_groups/README.md)
+- [Feature 1650, all categories and matrix](results/feature_1650/head_covering_region_report/README.md)
+- [Feature 4228, all categories and matrix](results/feature_4228/head_covering_region_report/README.md)
 
-The current local setup is in `.deps/` and `models/` (both ignored by Git):
+## Reusable scripts
 
-```bash
-python face-landmarker/render_landmarked_lower_face_change_report.py
-```
+- `render_feature_2023_upper_face_groups.py` runs the landmark-region analysis
+  on a feature's existing alpha-sweep images. The feature path is configurable
+  with `--run`; categories can be selected with `--groups`.
+- `plot_feature_2023_head_region_alpha.py` makes either the alpha trend chart
+  or category-by-alpha matrix from the report CSVs (`--matrix`).
+- `render_full_image_change_report.py` makes an unconstrained whole-image
+  change report without landmarks.
+- `render_landmarked_lower_face_change_report.py` is an earlier exploratory
+  lower-face geometry analysis; it is not a beard detector.
 
-The completed Feature 4228 output is at:
-
-`layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/beard_landmarker_report/`
-
-To use another alpha-sweep run:
-
-```bash
-python face-landmarker/render_landmarked_lower_face_change_report.py \
-  --run /path/to/feature_run \
-  --out /path/to/output_report
-```
-
-Use `--change-threshold` to tune the per-pixel RGB-MAE threshold (default:
-12 on the 0–255 scale). The default model is the official MediaPipe Face
-Landmarker task file in `models/face_landmarker.task`.
+The local MediaPipe package and task model are in `.deps/` and `models/`.

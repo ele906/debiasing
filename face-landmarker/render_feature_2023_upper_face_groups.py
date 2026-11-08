@@ -80,7 +80,7 @@ def render_grid(path: Path, reference: np.ndarray, maps: dict[int, np.ndarray], 
     fig.suptitle(title, y=.99); fig.tight_layout(rect=(0, 0, 1, .965)); fig.savefig(path, dpi=150); plt.close(fig)
 
 
-def process(run: Path, group: str, out: Path, mp, detector, threshold: float):
+def process(run: Path, group: str, out: Path, mp, detector, threshold: float, feature_label: str):
     image_root = run / "images" / group
     originals = sorted((image_root / "baseline").glob("seed*.png"))
     seeds = [int(re.search(r"seed(\d+)", p.name).group(1)) for p in originals]
@@ -105,8 +105,8 @@ def process(run: Path, group: str, out: Path, mp, detector, threshold: float):
         frequencies[alpha], changes[alpha], mask_means[alpha] = np.mean(hitmaps, axis=0), np.mean(diffs, axis=0), np.mean(masks, axis=0)
         rows.append({"group": group, "alpha": alpha, "n_seeds": len(masks), "change_threshold_rgb_mae": threshold, "mean_upper_roi_area_px": float(mask_means[alpha].sum()), "mean_changed_area_pct_upper_roi": float(np.mean(area_pct)), "sd_changed_area_pct_upper_roi": float(np.std(area_pct, ddof=1)), "mean_rgb_mae_upper_roi": float(np.mean(maes))})
     title = group.replace("_", " ").title()
-    render_grid(dest / "alpha_head_covering_region_change_frequency_jet.png", reference, frequencies, mask_means, f"Feature 2023 · {title} · head-covering-region change frequency", "jet", True)
-    render_grid(dest / "alpha_head_covering_region_blurred_pixel_change.png", reference, changes, mask_means, f"Feature 2023 · {title} · blurred mean change in head-covering region", "magma", False)
+    render_grid(dest / "alpha_head_covering_region_change_frequency_jet.png", reference, frequencies, mask_means, f"{feature_label} · {title} · head-covering-region change frequency", "jet", True)
+    render_grid(dest / "alpha_head_covering_region_blurred_pixel_change.png", reference, changes, mask_means, f"{feature_label} · {title} · blurred mean change in head-covering region", "magma", False)
     return rows
 
 
@@ -130,7 +130,7 @@ def main():
     try:
         for group in args.groups:
             print(f"Rendering {group}", flush=True)
-            rows.extend(process(run, group, out, mp, detector, args.change_threshold))
+            rows.extend(process(run, group, out, mp, detector, args.change_threshold, feature_label))
     finally: detector.close()
     with (out / "upper_face_metrics.csv").open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
