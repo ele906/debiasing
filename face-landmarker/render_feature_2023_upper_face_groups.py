@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Measure Feature 2023 changes in a landmark-anchored upper-face region.
+"""Measure Feature 2023 changes in a landmark-anchored head-covering region.
 
-The region is a soft quadrilateral from the forehead landmark to the eyebrow
-line, spanning the face width at the temples. It is a spatial ROI, not hijab or
-covering segmentation.
+The soft quadrilateral extends above the forehead and beyond the temples, then
+down to the eyebrow line. It captures the forehead and surrounding upper-head
+context where a covering may sit. It is a spatial ROI, not hijab segmentation.
 """
 from __future__ import annotations
 
@@ -44,17 +44,19 @@ def upper_face_mask(landmarks, width: int, height: int) -> tuple[np.ndarray, lis
     def pt(i):
         p = landmarks[i]
         return (float(p.x * width), float(p.y * height))
-    # 234/454 are temple-side face contour; 10 is forehead/top center;
-    # 105/334 track the left/right eyebrow line. Extend that line to temples.
+    # Use face height to expand above landmark 10 and outside both temples.
+    # 105/334 approximate brow height; the lower edge still includes upper face.
     left_temple, right_temple = pt(234), pt(454)
     forehead, brow_left, brow_right = pt(10), pt(105), pt(334)
     brow_y = (brow_left[1] + brow_right[1]) / 2
-    temple_x_pad = (right_temple[0] - left_temple[0]) * 0.04
+    face_height = max(pt(152)[1] - forehead[1], 1.0)
+    side_expand = (right_temple[0] - left_temple[0]) * 0.22
+    top_expand = face_height * 0.42
     polygon = [
-        (left_temple[0] + temple_x_pad, max(0, forehead[1])),
-        (right_temple[0] - temple_x_pad, max(0, forehead[1])),
-        (right_temple[0] - temple_x_pad, min(height - 1, brow_y)),
-        (left_temple[0] + temple_x_pad, min(height - 1, brow_y)),
+        (max(0, left_temple[0] - side_expand), max(0, forehead[1] - top_expand)),
+        (min(width - 1, right_temple[0] + side_expand), max(0, forehead[1] - top_expand)),
+        (min(width - 1, right_temple[0] + side_expand), min(height - 1, brow_y)),
+        (max(0, left_temple[0] - side_expand), min(height - 1, brow_y)),
     ]
     canvas = Image.new("L", (width, height), 0)
     ImageDraw.Draw(canvas).polygon(polygon, fill=255)
@@ -101,14 +103,14 @@ def process(group: str, out: Path, mp, detector, threshold: float):
         frequencies[alpha], changes[alpha], mask_means[alpha] = np.mean(hitmaps, axis=0), np.mean(diffs, axis=0), np.mean(masks, axis=0)
         rows.append({"group": group, "alpha": alpha, "n_seeds": len(masks), "change_threshold_rgb_mae": threshold, "mean_upper_roi_area_px": float(mask_means[alpha].sum()), "mean_changed_area_pct_upper_roi": float(np.mean(area_pct)), "sd_changed_area_pct_upper_roi": float(np.std(area_pct, ddof=1)), "mean_rgb_mae_upper_roi": float(np.mean(maes))})
     title = group.replace("_", " ").title()
-    render_grid(dest / "alpha_upper_face_change_frequency_jet.png", reference, frequencies, mask_means, f"Feature 2023 · {title} · upper-face change frequency", "jet", True)
-    render_grid(dest / "alpha_upper_face_blurred_pixel_change.png", reference, changes, mask_means, f"Feature 2023 · {title} · blurred mean change in upper-face ROI", "magma", False)
+    render_grid(dest / "alpha_head_covering_region_change_frequency_jet.png", reference, frequencies, mask_means, f"Feature 2023 · {title} · head-covering-region change frequency", "jet", True)
+    render_grid(dest / "alpha_head_covering_region_blurred_pixel_change.png", reference, changes, mask_means, f"Feature 2023 · {title} · blurred mean change in head-covering region", "magma", False)
     return rows
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", type=Path, default=RUN / "upper_face_landmark_report")
+    parser.add_argument("--out", type=Path, default=RUN / "head_covering_region_landmark_report")
     parser.add_argument("--change-threshold", type=float, default=12.0)
     args = parser.parse_args()
     if args.out.exists(): raise FileExistsError(args.out)
@@ -121,7 +123,7 @@ def main():
     finally: detector.close()
     with (args.out / "upper_face_metrics.csv").open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
-    lines = ["# Feature 2023 upper-face landmark analysis", "", "Face Landmarker anchors a soft forehead/upper-face quadrilateral from the forehead landmark to the eyebrow line, spanning temple to temple. This is a geometric ROI; it does not identify hijab or other coverings.", "", f"The jet maps show the fraction of seeds whose pixel changes from baseline by RGB MAE ≥ {args.change_threshold:.1f}, within that image's upper-face ROI. The cyan contour marks the mean ROI boundary. The blurred maps show mean pixel change within that ROI.", "", "## Changed upper-face area by alpha", "", "| Group | Alpha | Mean area % ± SD | Mean RGB MAE |", "|---|---:|---:|---:|"]
+    lines = ["# Feature 2023 landmark-anchored head-covering-region analysis", "", "Face Landmarker anchors a soft region that extends above the forehead and beyond the temples, down to the eyebrow line. It includes surrounding head context where a covering may sit. This is a geometric ROI, not hijab or semantic covering detection.", "", f"Jet maps show the fraction of seeds whose pixel changes from baseline by RGB MAE ≥ {args.change_threshold:.1f}, within each image's landmark-anchored region. The cyan contour marks the mean region boundary. Blurred maps show mean pixel change inside the same region.", "", "## Changed area by alpha", "", "| Group | Alpha | Mean area % ± SD | Mean RGB MAE |", "|---|---:|---:|---:|"]
     for row in rows: lines.append(f"| {row['group']} | {row['alpha']:+d} | {row['mean_changed_area_pct_upper_roi']:.1f}% ± {row['sd_changed_area_pct_upper_roi']:.1f} | {row['mean_rgb_mae_upper_roi']:.2f} |")
     (args.out / "README.md").write_text("\n".join(lines) + "\n")
     print(f"Wrote {args.out}", flush=True)
