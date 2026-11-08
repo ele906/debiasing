@@ -51,6 +51,13 @@ def display_group(group: str) -> str:
     return group.replace("_", " ").title()
 
 
+def feature_label(run: Path, supplied: str | None) -> str:
+    if supplied:
+        return supplied
+    match = re.fullmatch(r"feature_(\d+)", run.name)
+    return f"Feature {match.group(1)}" if match else run.name.replace("_", " ").title()
+
+
 def read_rgb(path: Path) -> np.ndarray:
     return np.asarray(Image.open(path).convert("RGB"), dtype=np.float32)
 
@@ -178,16 +185,16 @@ def render_difference_grid(
         axis.imshow(value, cmap="magma", vmin=0, vmax=vmax, alpha=np.clip(value / vmax * 0.86, 0, 0.86))
         axis.set_title(f"{alpha:+d}", fontsize=10)
         axis.axis("off")
-    legend_axis = axes.flat[len(ALPHAS)]
-    scalar = plt.cm.ScalarMappable(cmap="magma", norm=plt.Normalize(0, vmax))
-    figure.colorbar(scalar, cax=legend_axis, label="mean RGB MAE (0–255)")
+    axes.flat[len(ALPHAS)].axis("off")
     figure.suptitle(title, y=0.99)
     figure.tight_layout(rect=(0, 0, 1, 0.965))
     figure.savefig(path, dpi=150)
     plt.close(figure)
 
 
-def report_group(group: str, group_dir: Path, out_dir: Path, detector, mp, threshold: float) -> list[dict[str, object]]:
+def report_group(
+    group: str, group_dir: Path, out_dir: Path, detector, mp, threshold: float, label: str
+) -> list[dict[str, object]]:
     rois, failed = find_seed_rois(group_dir, detector, mp)
     if not rois:
         raise RuntimeError(f"No faces found in {group}")
@@ -258,19 +265,19 @@ def report_group(group: str, group_dir: Path, out_dir: Path, detector, mp, thres
         })
     render_landmarker_frequency_grid(
         group_out / "alpha_landmark_beard_region_frequency_jet.png", reference, landmark_frequency,
-        f"Feature 4228 · {display_group(group)} · landmark beard-region selection frequency across {len(rois)} seeds",
+        f"{label} · {display_group(group)} · landmark beard-region selection frequency across {len(rois)} seeds",
     )
     render_difference_grid(
         group_out / "alpha_blurred_mean_pixel_change.png", reference, mean_outline, blur_difference,
-        f"Feature 4228 · {display_group(group)} · blurred mean pixel change in landmark ROI",
+        f"{label} · {display_group(group)} · blurred mean pixel change in landmark ROI",
     )
     return rows
 
 
-def write_markdown(out_dir: Path, rows: list[dict[str, object]], threshold: float) -> None:
+def write_markdown(out_dir: Path, rows: list[dict[str, object]], threshold: float, label: str) -> None:
     by_group = {group: {int(row["alpha"]): row for row in rows if row["group"] == group} for group in GROUP_ORDER}
     lines = [
-        "# Feature 4228 — landmark-constrained lower-face change report",
+        f"# {label} — landmark-constrained lower-face change report",
         "",
         "For each alpha image and seed, MediaPipe Face Landmarker constructs a lower-face/extended-chin polygon. The jet overlay is the pixelwise mean of those polygons: its intensity is the fraction of seeds for which the landmarker selected that pixel as part of the beard-region geometry. This is not a semantic beard segmenter.",
         "",
@@ -313,10 +320,12 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=None)
     parser.add_argument("--deps-dir", type=Path, default=DEFAULT_DEPS)
     parser.add_argument("--model", type=Path, default=DEFAULT_MODEL)
+    parser.add_argument("--feature-label", help="title label; inferred from --run when omitted")
     parser.add_argument("--change-threshold", type=float, default=12.0, help="RGB MAE threshold on the 0–255 scale")
     parser.add_argument("--overwrite", action="store_true", help="replace an existing output directory")
     args = parser.parse_args()
     out_dir = args.out or args.run / "beard_landmarker_report"
+    label = feature_label(args.run, args.feature_label)
     if out_dir.exists():
         if not args.overwrite:
             raise FileExistsError(f"Refusing to overwrite existing output: {out_dir}")
@@ -330,7 +339,7 @@ def main() -> None:
         groups = [group for group in GROUP_ORDER if (args.run / "images" / group).is_dir()]
         for group in groups:
             print(f"Rendering {group}", flush=True)
-            rows.extend(report_group(group, args.run / "images" / group, out_dir, detector, mp, args.change_threshold))
+            rows.extend(report_group(group, args.run / "images" / group, out_dir, detector, mp, args.change_threshold, label))
     finally:
         detector.close()
     fieldnames = list(rows[0])
@@ -338,7 +347,7 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
-    write_markdown(out_dir, rows, args.change_threshold)
+    write_markdown(out_dir, rows, args.change_threshold, label)
     print(f"Wrote {out_dir}", flush=True)
 
 
