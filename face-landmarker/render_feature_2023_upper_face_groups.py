@@ -23,7 +23,8 @@ ROOT = Path("/n/fs/goose")
 RUN = ROOT / "layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_2023"
 DEPS = ROOT / "face-landmarker/.deps"
 MODEL = ROOT / "face-landmarker/models/face_landmarker.task"
-GROUPS = ("middle_eastern_man", "middle_eastern_woman", "indian_man")
+DEFAULT_GROUPS = ("middle_eastern_man", "middle_eastern_woman", "indian_man")
+ALL_GROUPS = ("black_man", "black_woman", "east_asian_man", "east_asian_woman", "hispanic_man", "hispanic_woman", "indian_man", "indian_woman", "middle_eastern_man", "middle_eastern_woman", "white_man", "white_woman")
 ALPHAS = (-7, -5, -3, -2, -1, 0, 1, 2, 3, 5, 7)
 
 
@@ -112,12 +113,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, default=RUN / "head_covering_region_landmark_report")
     parser.add_argument("--change-threshold", type=float, default=12.0)
+    parser.add_argument("--groups", nargs="+", choices=ALL_GROUPS, default=DEFAULT_GROUPS)
     args = parser.parse_args()
     if args.out.exists(): raise FileExistsError(args.out)
     args.out.mkdir(parents=True)
     mp, detector = setup_detector(); rows = []
     try:
-        for group in GROUPS:
+        for group in args.groups:
             print(f"Rendering {group}", flush=True)
             rows.extend(process(group, args.out, mp, detector, args.change_threshold))
     finally: detector.close()
