@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import csv
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -79,8 +80,8 @@ def render_grid(path: Path, reference: np.ndarray, maps: dict[int, np.ndarray], 
     fig.suptitle(title, y=.99); fig.tight_layout(rect=(0, 0, 1, .965)); fig.savefig(path, dpi=150); plt.close(fig)
 
 
-def process(group: str, out: Path, mp, detector, threshold: float):
-    image_root = RUN / "images" / group
+def process(run: Path, group: str, out: Path, mp, detector, threshold: float):
+    image_root = run / "images" / group
     originals = sorted((image_root / "baseline").glob("seed*.png"))
     seeds = [int(re.search(r"seed(\d+)", p.name).group(1)) for p in originals]
     baselines = [load(p) for p in originals]
@@ -115,18 +116,21 @@ def main():
     parser.add_argument("--out", type=Path)
     parser.add_argument("--change-threshold", type=float, default=12.0)
     parser.add_argument("--groups", nargs="+", choices=ALL_GROUPS, default=DEFAULT_GROUPS)
+    parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
     run = args.run
     feature_match = re.search(r"feature_(\d+)$", str(run))
     feature_label = f"Feature {feature_match.group(1)}" if feature_match else "Feature"
     out = args.out or run / "head_covering_region_landmark_report"
-    if out.exists(): raise FileExistsError(out)
+    if out.exists():
+        if not args.overwrite: raise FileExistsError(out)
+        shutil.rmtree(out)
     out.mkdir(parents=True)
     mp, detector = setup_detector(); rows = []
     try:
         for group in args.groups:
             print(f"Rendering {group}", flush=True)
-            rows.extend(process(group, out, mp, detector, args.change_threshold))
+            rows.extend(process(run, group, out, mp, detector, args.change_threshold))
     finally: detector.close()
     with (out / "upper_face_metrics.csv").open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
