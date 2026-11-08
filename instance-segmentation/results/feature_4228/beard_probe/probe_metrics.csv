@@ -1,0 +1,7 @@
+image,category,alpha,hair_class_pixels_total,lower_face_roi_pixels,hair_class_pixels_in_lower_face,candidate_pct_of_lower_face_roi
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed030_alpha_m7.png,indian_man,m7,53263,59845,372,0.6216058150221405
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed030_alpha_p1.png,indian_man,p1,49641,59009,621,1.0523818400582963
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed030_alpha_p7.png,indian_man,p7,47742,58032,242,0.41701130410807835
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed031_alpha_m7.png,indian_man,m7,40124,49856,17,0.034098202824133506
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed031_alpha_p1.png,indian_man,p1,46711,50173,574,1.1440416160086102
+layers/runs/mid0_sae_face_001/interventions/global_seed_average_001/feature_4228/images/indian_man/seed031_alpha_p7.png,indian_man,p7,55602,48776,1902,3.899458750205019
