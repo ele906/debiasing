@@ -6,6 +6,8 @@ Jet maps show the fraction of seeds whose pixel changes from baseline by RGB MAE
 
 ## Changed area by alpha
 
+![All 12 categories by alpha: mean changed area ± seed standard deviation](alpha_category_matrix.png)
+
 ![Alpha by category: changed area within the landmark-anchored head-covering region](alpha_category_trends.png)
 
 | Group | Alpha | Mean area % ± SD | Mean RGB MAE |
