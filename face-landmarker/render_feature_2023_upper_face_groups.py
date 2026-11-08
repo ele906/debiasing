@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Measure Feature 2023 changes in a landmark-anchored head-covering region.
+"""Measure feature changes in a landmark-anchored head-covering region.
 
 The soft quadrilateral extends above the forehead and beyond the temples, then
 down to the eyebrow line. It captures the forehead and surrounding upper-head
@@ -111,24 +111,29 @@ def process(group: str, out: Path, mp, detector, threshold: float):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", type=Path, default=RUN / "head_covering_region_landmark_report")
+    parser.add_argument("--run", type=Path, default=RUN)
+    parser.add_argument("--out", type=Path)
     parser.add_argument("--change-threshold", type=float, default=12.0)
     parser.add_argument("--groups", nargs="+", choices=ALL_GROUPS, default=DEFAULT_GROUPS)
     args = parser.parse_args()
-    if args.out.exists(): raise FileExistsError(args.out)
-    args.out.mkdir(parents=True)
+    run = args.run
+    feature_match = re.search(r"feature_(\d+)$", str(run))
+    feature_label = f"Feature {feature_match.group(1)}" if feature_match else "Feature"
+    out = args.out or run / "head_covering_region_landmark_report"
+    if out.exists(): raise FileExistsError(out)
+    out.mkdir(parents=True)
     mp, detector = setup_detector(); rows = []
     try:
         for group in args.groups:
             print(f"Rendering {group}", flush=True)
-            rows.extend(process(group, args.out, mp, detector, args.change_threshold))
+            rows.extend(process(group, out, mp, detector, args.change_threshold))
     finally: detector.close()
-    with (args.out / "upper_face_metrics.csv").open("w", newline="") as f:
+    with (out / "upper_face_metrics.csv").open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
-    lines = ["# Feature 2023 landmark-anchored head-covering-region analysis", "", "Face Landmarker anchors a soft region that extends above the forehead and beyond the temples, down to the eyebrow line. It includes surrounding head context where a covering may sit. This is a geometric ROI, not hijab or semantic covering detection.", "", f"Jet maps show the fraction of seeds whose pixel changes from baseline by RGB MAE ≥ {args.change_threshold:.1f}, within each image's landmark-anchored region. The cyan contour marks the mean region boundary. Blurred maps show mean pixel change inside the same region.", "", "## Changed area by alpha", "", "| Group | Alpha | Mean area % ± SD | Mean RGB MAE |", "|---|---:|---:|---:|"]
+    lines = [f"# {feature_label} landmark-anchored head-covering-region analysis", "", "Face Landmarker anchors a soft region that extends above the forehead and beyond the temples, down to the eyebrow line. It includes surrounding head context where a covering may sit. This is a geometric ROI, not hijab or semantic covering detection.", "", f"Jet maps show the fraction of seeds whose pixel changes from baseline by RGB MAE ≥ {args.change_threshold:.1f}, within each image's landmark-anchored region. The cyan contour marks the mean region boundary. Blurred maps show mean pixel change inside the same region.", "", "## Changed area by alpha", "", "| Group | Alpha | Mean area % ± SD | Mean RGB MAE |", "|---|---:|---:|---:|"]
     for row in rows: lines.append(f"| {row['group']} | {row['alpha']:+d} | {row['mean_changed_area_pct_upper_roi']:.1f}% ± {row['sd_changed_area_pct_upper_roi']:.1f} | {row['mean_rgb_mae_upper_roi']:.2f} |")
-    (args.out / "README.md").write_text("\n".join(lines) + "\n")
-    print(f"Wrote {args.out}", flush=True)
+    (out / "README.md").write_text("\n".join(lines) + "\n")
+    print(f"Wrote {out}", flush=True)
 
 
 if __name__ == "__main__": main()
