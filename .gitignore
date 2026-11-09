@@ -36,6 +36,10 @@ model_ts*.txt
 .vscode
 _darcs
 
+# local Python environment and generated segmentation outputs
+.venv/
+results/
+
 # demo 
 **/node_modules
 yarn.lock
