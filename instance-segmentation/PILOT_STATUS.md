@@ -21,9 +21,26 @@ Neither mask is accepted as beard ground truth.
 python instance-segmentation/prepare_beard_pilot.py
 ```
 
-By default this copies seed 30 at alphas -7, +1, and +7 for all 12 categories
-to `/tmp/goose_beard_annotation_pilot/`. See that folder's `ANNOTATION_GUIDE.md`
-for the LabelMe steps. To include more seeds, pass `--seeds 30 31 32`.
+By default this prepares seed 30 at alphas -7, +1, and +7 for all 12 categories
+in `/tmp/goose_beard_annotation_pilot/`. Face Landmarker cheek, jaw, and chin
+keypoints define a lower-face crop for annotation. This crop narrows the task but
+does not segment beard pixels; annotators must trace visible beard hair and leave
+skin, lips, and the separate mustache unlabeled. Matching full images with the
+crop boundary are saved in `context_images/`; the cropped images for LabelMe are
+in `images/`. See `ANNOTATION_GUIDE.md` for the exact labeling steps. To include
+more seeds, pass `--seeds 30 31 32`.
+
+If the pilot already exists, regenerate it with `--overwrite`.
+
+The current 36-image pilot is checked in at
+[`results/feature_4228/beard_annotation_pilot/`](results/feature_4228/beard_annotation_pilot/).
+To regenerate that repository copy, run from the repository root:
+
+```bash
+python instance-segmentation/prepare_beard_pilot.py \
+  --out instance-segmentation/results/feature_4228/beard_annotation_pilot \
+  --overwrite
+```
 
 Once annotations are saved, export binary masks with:
 
