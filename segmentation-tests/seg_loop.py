@@ -4,97 +4,77 @@ import torch
 import os
 from segment_anything import sam_model_registry, SamPredictor
 
-# --- SETUP ---
-print("Loading SAM Model...")
+# Load SAM
+print("Loading SAM...")
 sam = sam_model_registry["vit_b"](checkpoint="/scratch/el8403/checkpoints/sam_vit_b_01ec64.pth")
-sam.to("cuda" if torch.cuda.is_available() else "cpu")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+sam.to(device)
 predictor = SamPredictor(sam)
-os.makedirs("beard_cutouts", exist_ok=True) # output folder
 
-# Fixed coordinates
+# Hardcoded prompts for the beard based on earlier tests
+# [x, y] coords. 1 = include, 0 = exclude
 points = np.array([
-    [256, 400],  # Center
-    [220, 420],  # Left
-    [290, 420],  # Right
-    [190, 270],  # Cheek L
-    [320, 270],  # Cheek R
-    [256, 320],  # Nose
+    [256, 400], [220, 420], [290, 420],  # beard
+    [190, 270], [320, 270], [256, 320]   # cheeks/nose walls
 ])
 labels = np.array([1, 1, 1, 0, 0, 0]) 
 
-# --- Process Image ---
-def process_image(image_path, output_dir):
-    # Load image
-    image_bgr = cv2.imread(image_path)
-    if image_bgr is None:
-        print(f"Could not read {image_path}")
+out_dir = "beard_cutouts"
+os.makedirs(out_dir, exist_ok=True)
+
+def process_image(img_path):
+    img_bgr = cv2.imread(img_path)
+    if img_bgr is None:
         return None
+        
+    img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+    predictor.set_image(img_rgb)
     
-    image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-    
-    # Set image for SAM
-    predictor.set_image(image_rgb)
-    
-    # Predict
-    masks, scores, _ = predictor.predict(
+    masks, _, _ = predictor.predict(
         point_coords=points,
         point_labels=labels,
-        multimask_output=False, 
+        multimask_output=False
     )
     mask = masks[0]
     
-    # Save Cutout
-    filename = os.path.basename(image_path).replace(".png", "_cutout.png")
-    out_path = os.path.join(output_dir, filename)
+    # save RGBA
+    out_name = os.path.basename(img_path).replace(".png", "_cutout.png")
+    rgba = np.dstack([img_rgb, mask.astype(np.uint8) * 255])
+    cv2.imwrite(os.path.join(out_dir, out_name), cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA))
     
-    rgba = np.dstack([image_rgb, mask.astype(np.uint8) * 255])
-    cv2.imwrite(out_path, cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGRA))
-    
-    # Return the mask and original image for the preview grid
-    return mask, image_bgr
+    return mask, img_bgr
 
-# --- PROCESSING LOOP ---
-print("Starting loop from 000 to 099...")
-preview_images = []
+print("Processing seeds 000-099...")
+previews = []
 
-for i in range(100): # 0 to 99
-    # Format the number to be 3 digits (e.g., 0 -> 000, 15 -> 015)
-    seed_str = f"{i:03d}"
-    img_path = f"/n/fs/goose/data/datasets/biased/images/indian_man/seed{seed_str}.png"
+for i in range(100):
+    seed = f"{i:03d}"
+    path = f"/n/fs/goose/data/datasets/biased/images/indian_man/seed{seed}.png"
     
-    if not os.path.exists(img_path):
-        continue # Skip if the file doesn't exist
+    if not os.path.exists(path):
+        continue
         
-    print(f"Processing seed{seed_str}...")
+    print(f"  seed{seed}...")
+    res = process_image(path)
     
-    result = process_image(img_path, "beard_cutouts")
-    
-    # keep 9 results for a preview grid
-    if result is not None and len(preview_images) < 9:
-        mask, img = result
-        # Make a small red overlay for the preview
-        overlay = img.copy()
-        overlay[mask] = [0, 0, 255]
-        blended = cv2.addWeighted(overlay, 0.5, img, 0.5, 0)
-        # Add text of the seed number
-        cv2.putText(blended, f"seed{seed_str}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-        preview_images.append(blended)
+    # save the first 9 for the grid
+    if res and len(previews) < 9:
+        mask, img = res
+        img[mask] = [0, 0, 255] # red overlay
+        blended = cv2.addWeighted(img, 0.5, cv2.imread(path), 0.5, 0) # blend with clean original
+        cv2.putText(blended, f"seed{seed}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        previews.append(blended)
 
-# --- VERIFICATION GRID ---
-if len(preview_images) > 0:
-    print("Building preview grid...")
-    # Resize images to 256x256
-    resized = [cv2.resize(img, (256, 256)) for img in preview_images]
-    
-    # If we have less than 9 imgs, pad with black img (fallback)
-    while len(resized) < 9:
-        resized.append(np.zeros((256, 256, 3), dtype=np.uint8))
+# Make the grid
+if previews:
+    print("Building grid...")
+    # resize to 256x256
+    small = [cv2.resize(p, (256, 256)) for p in previews]
         
-    # Create 3x3 grid
-    row1 = np.hstack(resized[0:3])
-    row2 = np.hstack(resized[3:6])
-    row3 = np.hstack(resized[6:9])
-    grid = np.vstack((row1, row2, row3))
-    
+    grid = np.vstack([
+        np.hstack(small[0:3]),
+        np.hstack(small[3:6]),
+        np.hstack(small[6:9])
+    ])
     cv2.imwrite("preview_grid.png", grid)
-    print("Saved 100 cutouts to 'beard_cutouts/' and a preview to 'preview_grid.png'")
+    print("Done")
