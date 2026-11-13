@@ -4,8 +4,7 @@ import torch
 import random
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator
 
-# 1. Load Image (MAKE SURE THIS PATH IS CORRECT)
-image_path = "your_image.jpg" # <--- CHANGE THIS
+# 1. Load Image
 image_bgr = cv2.imread("/n/fs/goose/data/datasets/biased/images/indian_man/seed015.png")
 if image_bgr is None:
     raise ValueError(f"Could not load image at {image_path}. Check the path!")
