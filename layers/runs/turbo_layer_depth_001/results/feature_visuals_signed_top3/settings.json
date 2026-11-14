@@ -1,0 +1,25 @@
+{
+  "source_run": "/n/fs/goose/layers/runs/turbo_layer_depth_001",
+  "source_plot": "../layerwise_group_effects_jet.png",
+  "feature_selection": "discovery seeds 100-149 only",
+  "top_k": 3,
+  "seeds": [
+    150
+  ],
+  "strengths": [
+    -5.0,
+    -3.0,
+    -2.0,
+    -1.0,
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "intervention": "output + (strength - 1) * original_SAE_activation * decoder_direction",
+  "scope": "one layer and feature per generation; full spatial feature map (not face-masked)",
+  "jet_overlay": "nearest-neighbor; zero coefficients transparent; feature-wise common scale",
+  "labels": "generation-prompt conditions, not inferred human identities",
+  "quantitative_outcome": "pixel changes are not image-quality or fairness measures"
+}

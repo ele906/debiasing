@@ -1,0 +1,22 @@
+{
+  "image_sha256": "6a78a01d27efe1f55f4eea54c0eabf568819759bbe810deef8bcf4c908310df1",
+  "result": {
+    "image_sha256": "6a78a01d27efe1f55f4eea54c0eabf568819759bbe810deef8bcf4c908310df1",
+    "caption": "Two women are standing next to each other. One of the women is wearing a black scarf around her neck. She is smiling. The other woman is looking at the camera. The woman on the left has her mouth open. She has long black hair. The women on the right has a large amount of sand on her head. The sand is white. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

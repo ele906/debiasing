@@ -1,0 +1,16 @@
+{
+  "image_sha256": "94243c51de99682652856ee0df79618ef9d95a2b85e1f6ad6a47cecc9fa9717a",
+  "result": {
+    "image_sha256": "94243c51de99682652856ee0df79618ef9d95a2b85e1f6ad6a47cecc9fa9717a",
+    "caption": "A person is holding up a large piece of white powder. The powder appears to be made of clay. The person is wearing black clothes. The background is blurry.",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

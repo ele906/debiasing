@@ -1,0 +1,26 @@
+{
+  "image_sha256": "e6f75aa92d85bc4480e057140f8fa06db4e9c607a4bebdca180a040d9ceee136",
+  "result": {
+    "image_sha256": "e6f75aa92d85bc4480e057140f8fa06db4e9c607a4bebdca180a040d9ceee136",
+    "caption": "Three women are posing for a photo. All of the women are wearing black scarves on their heads. They are smiling and looking at the camera. Behind them is a large piece of art that looks like a bird. The bird is white and has small black circles on it.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "human face",
+      "human mouth",
+      "woman",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarves"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarves"
+    ]
+  }
+}

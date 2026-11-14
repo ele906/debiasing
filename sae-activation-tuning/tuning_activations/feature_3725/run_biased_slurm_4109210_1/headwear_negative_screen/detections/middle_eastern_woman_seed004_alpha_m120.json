@@ -1,0 +1,16 @@
+{
+  "image_sha256": "edae38b4309c7dede49272b91fc5e937da410d9412da4be13eb96ee4ec318d26",
+  "result": {
+    "image_sha256": "edae38b4309c7dede49272b91fc5e937da410d9412da4be13eb96ee4ec318d26",
+    "caption": "The image is blurry. There is dry grass on the ground. The grass is light brown in color. There are lines in the grass. The lines are dark brown. The ground is gray. The image is taken outdoors. The day is sunny. The sun is shining down on the field.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "sample_id": "black_man_seed001",
+  "image": "/n/fs/goose/backprop/images/black_man/seed001.png",
+  "image_sha256": "5c773408891268a720c208b68f4096ac8f5aa59d4657714e2a15328b8a55adab",
+  "caption": "This is a portrait of a black man. The man has dark skin and dark hair. He has a slight smile on his face. His eyes are open. His eyebrows are dark and his lips are lighter. He is wearing a button down shirt. The background behind the man is white. The photo is black and white.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        40.704002380371094,
+        0.25600001215934753,
+        491.7760314941406,
+        511.2320251464844
+      ],
+      [
+        41.72800064086914,
+        0.25600001215934753,
+        491.7760314941406,
+        212.22401428222656
+      ],
+      [
+        112.89600372314453,
+        182.01600646972656,
+        400.1280212402344,
+        238.3360137939453
+      ],
+      [
+        116.4800033569336,
+        188.16000366210938,
+        216.32000732421875,
+        237.31201171875
+      ],
+      [
+        304.3840026855469,
+        184.0640106201172,
+        398.08001708984375,
+        229.6320037841797
+      ],
+      [
+        105.7280044555664,
+        137.9840087890625,
+        417.0240173339844,
+        187.64801025390625
+      ],
+      [
+        177.4080047607422,
+        361.21600341796875,
+        345.85601806640625,
+        436.9920349121094
+      ],
+      [
+        70.4000015258789,
+        470.7840270996094,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "portrait",
+      "The man",
+      "hair",
+      "his eyes",
+      "his eyes",
+      "his eyes",
+      "his eyebrows",
+      "lips",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        80.64000701904297,
+        9.984000205993652,
+        440.5760192871094,
+        511.2320251464844
+      ],
+      [
+        184.5760040283203,
+        192.25601196289062,
+        332.0320129394531,
+        336.6400146484375
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "human nose",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>This is a portrait of a black man. The man has dark skin and dark hair. He has a slight smile on his face. His eyes are open. His eyebrows are dark and his lips are lighter. He is wearing a button down shirt. The background behind the man is white. The photo is black and white.</s>",
+    "grounding": "</s><s>portrait<loc_0><loc_0><loc_998><loc_998>The man<loc_79><loc_0><loc_960><loc_998>hair<loc_81><loc_0><loc_960><loc_414>his eyes<loc_220><loc_355><loc_781><loc_465><loc_227><loc_367><loc_422><loc_463><loc_594><loc_359><loc_777><loc_448>his eyebrows<loc_206><loc_269><loc_814><loc_366>lips<loc_346><loc_705><loc_675><loc_853>shirt<loc_137><loc_919><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_157><loc_19><loc_860><loc_998>human nose<loc_360><loc_375><loc_648><loc_657>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

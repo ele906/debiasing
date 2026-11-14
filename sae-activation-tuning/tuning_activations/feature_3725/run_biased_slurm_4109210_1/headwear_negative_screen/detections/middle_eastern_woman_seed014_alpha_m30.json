@@ -1,0 +1,17 @@
+{
+  "image_sha256": "bc9cdcc5883950420cac8764934547fd5135a05523467db7a1449e02fa34e405",
+  "result": {
+    "image_sha256": "bc9cdcc5883950420cac8764934547fd5135a05523467db7a1449e02fa34e405",
+    "caption": "A man is wearing a white sweater. The sweater has a scalloped design on it. The man has dark colored glasses on his eyes. ",
+    "object_labels": [
+      "glasses",
+      "human face",
+      "human face",
+      "man"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

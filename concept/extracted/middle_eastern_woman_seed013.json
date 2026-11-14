@@ -1,0 +1,93 @@
+{
+  "sample_id": "middle_eastern_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed013.png",
+  "image_sha256": "97c0ea00883a0bfe224541523b990fdb7570f9e508ffcec61035e764081fb292",
+  "caption": "A woman is wearing a brown scarf around her head. She has blue eyes and a pink lip. There is a blurry background behind her.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        494.3360290527344,
+        511.2320251464844
+      ],
+      [
+        140.03201293945312,
+        58.112003326416016,
+        418.04803466796875,
+        417.0240173339844
+      ],
+      [
+        176.89601135253906,
+        182.01600646972656,
+        388.3520202636719,
+        226.5600128173828
+      ],
+      [
+        178.9440155029297,
+        184.0640106201172,
+        255.2320098876953,
+        222.46400451660156
+      ],
+      [
+        312.5760192871094,
+        186.62400817871094,
+        386.8160095214844,
+        224.5120086669922
+      ],
+      [
+        236.80001831054688,
+        320.76800537109375,
+        333.5680236816406,
+        364.28802490234375
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "a brown scarf",
+      "her head",
+      "eyes",
+      "eyes",
+      "eyes",
+      "lip"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        170.75201416015625,
+        182.01600646972656,
+        257.2799987792969,
+        226.5600128173828
+      ],
+      [
+        141.56800842285156,
+        72.44800567626953,
+        407.8080139160156,
+        417.5360107421875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a brown scarf around her head. She has blue eyes and a pink lip. There is a blurry background behind her.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>a brown scarf<loc_0><loc_0><loc_965><loc_998>her head<loc_273><loc_113><loc_816><loc_814>eyes<loc_345><loc_355><loc_758><loc_442><loc_349><loc_359><loc_498><loc_434><loc_610><loc_364><loc_755><loc_438>lip<loc_462><loc_626><loc_651><loc_711></s>",
+    "objects": "</s><s>human eye<loc_333><loc_355><loc_502><loc_442>human face<loc_276><loc_141><loc_796><loc_815>scarf<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

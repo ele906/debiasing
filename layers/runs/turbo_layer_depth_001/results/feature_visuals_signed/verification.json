@@ -1,0 +1,35 @@
+{
+  "source_selection_csv_sha256": "a5554d75c7b69d6b29ede86a3ff0440d2caba6f5649c9af34b2b3e350df13e89",
+  "source_settings_sha256": "f66e4fd44f3e229a2b8e96e0c627428a218b46f9f3a66b7a3b38a1360a51d559",
+  "sae_weight_sha256": {
+    "unet.down_blocks.2.attentions.1": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+    "unet.mid_block.attentions.0": "49d38d9178c2a2780e04a5482a2feb9548c6e9a636ed1bf85291acf42e0ffa34",
+    "unet.up_blocks.0.attentions.0": "14c45efd9cce0258f014c49babdcd0e9ce8b266fe31eed72db1a45b990a1a0f8",
+    "unet.up_blocks.0.attentions.1": "f8eed82f4bcb2f010ae9075f10a1ece801ee3dec46dba7fadccc35f6c0a7836b"
+  },
+  "replay_samples": 36,
+  "max_source_replay_pixel_error": 0.0,
+  "max_cached_pooling_error": 3.814697265625e-06,
+  "layer_group_selections": 48,
+  "edits": 1296,
+  "no_op_images": 144,
+  "max_no_op_pixel_error": 0.0,
+  "seeds": [
+    150,
+    151,
+    152
+  ],
+  "multipliers": [
+    -5.0,
+    -3.0,
+    -2.0,
+    -1.0,
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "device": "NVIDIA L40",
+  "torch_version": "2.2.2+cu121"
+}

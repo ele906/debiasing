@@ -1,0 +1,114 @@
+{
+  "sample_id": "east_asian_man_seed001",
+  "image": "/n/fs/goose/backprop/images/east_asian_man/seed001.png",
+  "image_sha256": "8f8ff881124d8c7e92a7324aa522dbfd2d39ec7467e30df51a82999a7c40428b",
+  "caption": "An Asian man is looking directly at the camera. He has a serious look on his face. He is wearing a black headband on his head. His eyes are slightly open. His eyebrows are furrowed and he has a goatee on his chin. He appears to be wearing a robe. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        5.37600040435791,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        165.6320037841797,
+        132.864013671875,
+        367.87200927734375,
+        378.6240234375
+      ],
+      [
+        146.17601013183594,
+        5.88800048828125,
+        384.2560119628906,
+        184.0640106201172
+      ],
+      [
+        145.15200805664062,
+        5.88800048828125,
+        395.52001953125,
+        381.6960144042969
+      ],
+      [
+        189.1840057373047,
+        198.91200256347656,
+        340.2240295410156,
+        229.12001037597656
+      ],
+      [
+        192.76800537109375,
+        202.49600219726562,
+        240.38401794433594,
+        227.58401489257812
+      ],
+      [
+        287.4880065917969,
+        203.52000427246094,
+        336.1280212402344,
+        226.04800415039062
+      ],
+      [
+        185.60000610351562,
+        173.31201171875,
+        343.8080139160156,
+        199.93600463867188
+      ],
+      [
+        228.09600830078125,
+        337.66400146484375,
+        304.3840026855469,
+        436.4800109863281
+      ],
+      [
+        215.80801391601562,
+        332.0320129394531,
+        325.88800048828125,
+        380.6720275878906
+      ],
+      [
+        0.25600001215934753,
+        348.9280090332031,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "An Asian man",
+      "face",
+      "headband",
+      "head",
+      "his eyes",
+      "his eyes",
+      "his eyes",
+      "His eyebrows",
+      "goatee",
+      "chin",
+      "robe"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        167.1680145263672,
+        114.4320068359375,
+        366.3360290527344,
+        385.7920227050781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An Asian man is looking directly at the camera. He has a serious look on his face. He is wearing a black headband on his head. His eyes are slightly open. His eyebrows are furrowed and he has a goatee on his chin. He appears to be wearing a robe. The background is blurry.</s>",
+    "grounding": "</s><s>An Asian man<loc_0><loc_10><loc_998><loc_998>face<loc_323><loc_259><loc_718><loc_739>headband<loc_285><loc_11><loc_750><loc_359>head<loc_283><loc_11><loc_772><loc_745>his eyes<loc_369><loc_388><loc_664><loc_447><loc_376><loc_395><loc_469><loc_444><loc_561><loc_397><loc_656><loc_441>His eyebrows<loc_362><loc_338><loc_671><loc_390>goatee<loc_445><loc_659><loc_594><loc_852>chin<loc_421><loc_648><loc_636><loc_743>robe<loc_0><loc_681><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_326><loc_223><loc_715><loc_753>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

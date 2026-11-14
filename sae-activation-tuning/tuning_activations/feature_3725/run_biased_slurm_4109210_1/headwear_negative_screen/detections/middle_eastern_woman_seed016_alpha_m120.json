@@ -1,0 +1,16 @@
+{
+  "image_sha256": "09909c6087657253f76203ec6d137f5c8450049e283815fd9eb3c0a94dff00ee",
+  "result": {
+    "image_sha256": "09909c6087657253f76203ec6d137f5c8450049e283815fd9eb3c0a94dff00ee",
+    "caption": "The image is a close up of a surface. The surface appears to be made of dirt or sand. There are small bits of dirt scattered across the surface.",
+    "object_labels": [
+      "insect"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

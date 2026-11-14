@@ -1,0 +1,21 @@
+{
+  "image_sha256": "054b3dfe412dfc1e7bc7e21e820aabefbc3b67d5b5bca5ff40724d8b2f9de7ad",
+  "result": {
+    "image_sha256": "054b3dfe412dfc1e7bc7e21e820aabefbc3b67d5b5bca5ff40724d8b2f9de7ad",
+    "caption": "A woman is wearing a black head covering. There is a large wall behind the woman. The woman has brown eyes and brown eyebrows. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

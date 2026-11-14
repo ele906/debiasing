@@ -1,0 +1,16 @@
+{
+  "image_sha256": "b0ffa57b95c3d10b30806a594ba8b3830c94abebe9657a76dca1a866e17cf535",
+  "result": {
+    "image_sha256": "b0ffa57b95c3d10b30806a594ba8b3830c94abebe9657a76dca1a866e17cf535",
+    "caption": "The image is a close up of a rug. The rug is white and has small brown spots on it. There are small black lines on the rug. ",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

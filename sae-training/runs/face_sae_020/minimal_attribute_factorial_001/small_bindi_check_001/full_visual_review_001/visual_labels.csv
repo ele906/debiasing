@@ -1,0 +1,81 @@
+blind_id,sample_id,seed,visible_bindi,bindi_prompt,earrings_prompt,image,note
+img_048,indian_woman_bindi0_earrings0_seed500,500,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed500.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_050,indian_woman_bindi0_earrings1_seed500,500,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed500.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_056,indian_woman_bindi1_earrings0_seed500,500,yes,1,0,images/indian_woman_bindi1_earrings0_seed500.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_051,indian_woman_bindi1_earrings1_seed500,500,yes,1,1,images/indian_woman_bindi1_earrings1_seed500.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_026,indian_woman_bindi0_earrings0_seed501,501,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed501.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_073,indian_woman_bindi0_earrings1_seed501,501,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed501.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_061,indian_woman_bindi1_earrings0_seed501,501,yes,1,0,images/indian_woman_bindi1_earrings0_seed501.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_046,indian_woman_bindi1_earrings1_seed501,501,yes,1,1,images/indian_woman_bindi1_earrings1_seed501.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_042,indian_woman_bindi0_earrings0_seed502,502,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed502.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_043,indian_woman_bindi0_earrings1_seed502,502,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed502.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_001,indian_woman_bindi1_earrings0_seed502,502,yes,1,0,images/indian_woman_bindi1_earrings0_seed502.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_079,indian_woman_bindi1_earrings1_seed502,502,yes,1,1,images/indian_woman_bindi1_earrings1_seed502.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_014,indian_woman_bindi0_earrings0_seed503,503,no,0,0,images/indian_woman_bindi0_earrings0_seed503.png,No clear red bindi visible on contact sheet.
+img_015,indian_woman_bindi0_earrings1_seed503,503,no,0,1,images/indian_woman_bindi0_earrings1_seed503.png,No clear red bindi visible on contact sheet.
+img_035,indian_woman_bindi1_earrings0_seed503,503,yes,1,0,images/indian_woman_bindi1_earrings0_seed503.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_062,indian_woman_bindi1_earrings1_seed503,503,yes,1,1,images/indian_woman_bindi1_earrings1_seed503.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_077,indian_woman_bindi0_earrings0_seed504,504,no,0,0,images/indian_woman_bindi0_earrings0_seed504.png,No clear red bindi visible on contact sheet.
+img_039,indian_woman_bindi0_earrings1_seed504,504,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed504.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_070,indian_woman_bindi1_earrings0_seed504,504,yes,1,0,images/indian_woman_bindi1_earrings0_seed504.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_069,indian_woman_bindi1_earrings1_seed504,504,yes,1,1,images/indian_woman_bindi1_earrings1_seed504.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_059,indian_woman_bindi0_earrings0_seed505,505,yes,0,0,images/indian_woman_bindi0_earrings0_seed505.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_041,indian_woman_bindi0_earrings1_seed505,505,yes,0,1,images/indian_woman_bindi0_earrings1_seed505.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_034,indian_woman_bindi1_earrings0_seed505,505,yes,1,0,images/indian_woman_bindi1_earrings0_seed505.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_075,indian_woman_bindi1_earrings1_seed505,505,yes,1,1,images/indian_woman_bindi1_earrings1_seed505.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_057,indian_woman_bindi0_earrings0_seed506,506,no,0,0,images/indian_woman_bindi0_earrings0_seed506.png,No clear red bindi visible on contact sheet.
+img_037,indian_woman_bindi0_earrings1_seed506,506,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed506.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_007,indian_woman_bindi1_earrings0_seed506,506,yes,1,0,images/indian_woman_bindi1_earrings0_seed506.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_013,indian_woman_bindi1_earrings1_seed506,506,yes,1,1,images/indian_woman_bindi1_earrings1_seed506.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_002,indian_woman_bindi0_earrings0_seed507,507,no,0,0,images/indian_woman_bindi0_earrings0_seed507.png,No clear red bindi visible on contact sheet.
+img_029,indian_woman_bindi0_earrings1_seed507,507,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed507.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_060,indian_woman_bindi1_earrings0_seed507,507,yes,1,0,images/indian_woman_bindi1_earrings0_seed507.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_047,indian_woman_bindi1_earrings1_seed507,507,yes,1,1,images/indian_woman_bindi1_earrings1_seed507.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_030,indian_woman_bindi0_earrings0_seed508,508,no,0,0,images/indian_woman_bindi0_earrings0_seed508.png,No clear red bindi visible on contact sheet.
+img_064,indian_woman_bindi0_earrings1_seed508,508,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed508.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_067,indian_woman_bindi1_earrings0_seed508,508,yes,1,0,images/indian_woman_bindi1_earrings0_seed508.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_036,indian_woman_bindi1_earrings1_seed508,508,yes,1,1,images/indian_woman_bindi1_earrings1_seed508.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_063,indian_woman_bindi0_earrings0_seed509,509,no,0,0,images/indian_woman_bindi0_earrings0_seed509.png,No clear red bindi visible on contact sheet.
+img_016,indian_woman_bindi0_earrings1_seed509,509,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed509.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_053,indian_woman_bindi1_earrings0_seed509,509,yes,1,0,images/indian_woman_bindi1_earrings0_seed509.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_006,indian_woman_bindi1_earrings1_seed509,509,yes,1,1,images/indian_woman_bindi1_earrings1_seed509.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_055,indian_woman_bindi0_earrings0_seed510,510,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed510.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_009,indian_woman_bindi0_earrings1_seed510,510,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed510.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_011,indian_woman_bindi1_earrings0_seed510,510,yes,1,0,images/indian_woman_bindi1_earrings0_seed510.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_033,indian_woman_bindi1_earrings1_seed510,510,yes,1,1,images/indian_woman_bindi1_earrings1_seed510.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_020,indian_woman_bindi0_earrings0_seed511,511,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed511.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_078,indian_woman_bindi0_earrings1_seed511,511,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed511.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_004,indian_woman_bindi1_earrings0_seed511,511,yes,1,0,images/indian_woman_bindi1_earrings0_seed511.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_027,indian_woman_bindi1_earrings1_seed511,511,yes,1,1,images/indian_woman_bindi1_earrings1_seed511.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_080,indian_woman_bindi0_earrings0_seed512,512,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed512.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_005,indian_woman_bindi0_earrings1_seed512,512,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed512.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_019,indian_woman_bindi1_earrings0_seed512,512,yes,1,0,images/indian_woman_bindi1_earrings0_seed512.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_022,indian_woman_bindi1_earrings1_seed512,512,yes,1,1,images/indian_woman_bindi1_earrings1_seed512.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_024,indian_woman_bindi0_earrings0_seed513,513,yes,0,0,images/indian_woman_bindi0_earrings0_seed513.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_017,indian_woman_bindi0_earrings1_seed513,513,yes,0,1,images/indian_woman_bindi0_earrings1_seed513.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_018,indian_woman_bindi1_earrings0_seed513,513,yes,1,0,images/indian_woman_bindi1_earrings0_seed513.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_054,indian_woman_bindi1_earrings1_seed513,513,yes,1,1,images/indian_woman_bindi1_earrings1_seed513.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_038,indian_woman_bindi0_earrings0_seed514,514,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed514.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_032,indian_woman_bindi0_earrings1_seed514,514,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed514.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_058,indian_woman_bindi1_earrings0_seed514,514,yes,1,0,images/indian_woman_bindi1_earrings0_seed514.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_028,indian_woman_bindi1_earrings1_seed514,514,yes,1,1,images/indian_woman_bindi1_earrings1_seed514.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_031,indian_woman_bindi0_earrings0_seed515,515,no,0,0,images/indian_woman_bindi0_earrings0_seed515.png,No clear red bindi visible on contact sheet.
+img_071,indian_woman_bindi0_earrings1_seed515,515,yes,0,1,images/indian_woman_bindi0_earrings1_seed515.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_049,indian_woman_bindi1_earrings0_seed515,515,yes,1,0,images/indian_woman_bindi1_earrings0_seed515.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_021,indian_woman_bindi1_earrings1_seed515,515,yes,1,1,images/indian_woman_bindi1_earrings1_seed515.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_074,indian_woman_bindi0_earrings0_seed516,516,uncertain,0,0,images/indian_woman_bindi0_earrings0_seed516.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_052,indian_woman_bindi0_earrings1_seed516,516,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed516.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_045,indian_woman_bindi1_earrings0_seed516,516,yes,1,0,images/indian_woman_bindi1_earrings0_seed516.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_065,indian_woman_bindi1_earrings1_seed516,516,yes,1,1,images/indian_woman_bindi1_earrings1_seed516.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_066,indian_woman_bindi0_earrings0_seed517,517,no,0,0,images/indian_woman_bindi0_earrings0_seed517.png,No clear red bindi visible on contact sheet.
+img_044,indian_woman_bindi0_earrings1_seed517,517,no,0,1,images/indian_woman_bindi0_earrings1_seed517.png,No clear red bindi visible on contact sheet.
+img_012,indian_woman_bindi1_earrings0_seed517,517,yes,1,0,images/indian_woman_bindi1_earrings0_seed517.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_072,indian_woman_bindi1_earrings1_seed517,517,yes,1,1,images/indian_woman_bindi1_earrings1_seed517.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_008,indian_woman_bindi0_earrings0_seed518,518,no,0,0,images/indian_woman_bindi0_earrings0_seed518.png,No clear red bindi visible on contact sheet.
+img_068,indian_woman_bindi0_earrings1_seed518,518,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed518.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_025,indian_woman_bindi1_earrings0_seed518,518,yes,1,0,images/indian_woman_bindi1_earrings0_seed518.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_003,indian_woman_bindi1_earrings1_seed518,518,yes,1,1,images/indian_woman_bindi1_earrings1_seed518.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_040,indian_woman_bindi0_earrings0_seed519,519,no,0,0,images/indian_woman_bindi0_earrings0_seed519.png,No clear red bindi visible on contact sheet.
+img_010,indian_woman_bindi0_earrings1_seed519,519,uncertain,0,1,images/indian_woman_bindi0_earrings1_seed519.png,A small/dark/faint forehead mark is present or ambiguous; not counted as a clear red bindi.
+img_023,indian_woman_bindi1_earrings0_seed519,519,yes,1,0,images/indian_woman_bindi1_earrings0_seed519.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.
+img_076,indian_woman_bindi1_earrings1_seed519,519,yes,1,1,images/indian_woman_bindi1_earrings1_seed519.png,Clear red bindi-like dot visible; some examples also have sindoor or other forehead adornment.

@@ -1,0 +1,26 @@
+{
+  "cached_images": 600,
+  "features": 5120,
+  "races": [
+    "black",
+    "white",
+    "east asian",
+    "middle eastern",
+    "indian",
+    "hispanic"
+  ],
+  "genders": [
+    "man",
+    "woman"
+  ],
+  "n_train": 480,
+  "n_test": 120,
+  "suggested_features": [
+    138,
+    527,
+    3530
+  ],
+  "label_source": "generation prompt; no race inferred from pixels",
+  "pooling": "spatial maximum from existing generate_data.py",
+  "interpretation": "Association with prompt group is not evidence of harmful bias or a semantic feature label"
+}

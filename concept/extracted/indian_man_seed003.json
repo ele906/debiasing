@@ -1,0 +1,107 @@
+{
+  "sample_id": "indian_man_seed003",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed003.png",
+  "image_sha256": "7bec10d3fb47e7508a3d0bdf9ee4a5859941eee4804d1085a4acd06562247426",
+  "caption": "A man is wearing a red turban on his head. There is a red dot on his forehead. The man has a white beard on his face. There are gold beads around his neck. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        79.61600494384766,
+        0.25600001215934753,
+        491.7760314941406,
+        185.60000610351562
+      ],
+      [
+        79.61600494384766,
+        0.25600001215934753,
+        491.2640380859375,
+        185.60000610351562
+      ],
+      [
+        270.5920104980469,
+        129.79200744628906,
+        291.072021484375,
+        156.92800903320312
+      ],
+      [
+        170.75201416015625,
+        47.36000061035156,
+        398.5920104980469,
+        158.97601318359375
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        147.71200561523438,
+        238.84800720214844,
+        411.9040222167969,
+        426.2400207519531
+      ],
+      [
+        146.17601013183594,
+        47.36000061035156,
+        411.9040222167969,
+        425.72802734375
+      ],
+      [
+        133.37600708007812,
+        376.06402587890625,
+        388.3520202636719,
+        511.2320251464844
+      ],
+      [
+        176.38400268554688,
+        381.6960144042969,
+        368.8960266113281,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "a red turban",
+      "head",
+      "a red dot",
+      "forehead",
+      "The man",
+      "beard",
+      "face",
+      "gold beads",
+      "neck"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        147.71200561523438,
+        47.36000061035156,
+        409.85601806640625,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing a red turban on his head. There is a red dot on his forehead. The man has a white beard on his face. There are gold beads around his neck. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>a red turban<loc_155><loc_0><loc_960><loc_362>head<loc_155><loc_0><loc_959><loc_362>a red dot<loc_528><loc_253><loc_568><loc_306> forehead<loc_333><loc_92><loc_778><loc_310>The man<loc_0><loc_1><loc_998><loc_998>beard<loc_288><loc_466><loc_804><loc_832>face<loc_285><loc_92><loc_804><loc_831>gold beads<loc_260><loc_734><loc_758><loc_998>neck<loc_344><loc_745><loc_720><loc_998></s>",
+    "objects": "</s><s>human face<loc_288><loc_92><loc_800><loc_832>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

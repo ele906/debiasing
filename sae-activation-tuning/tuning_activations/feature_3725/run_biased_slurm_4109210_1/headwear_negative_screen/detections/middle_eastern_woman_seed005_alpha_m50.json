@@ -1,0 +1,16 @@
+{
+  "image_sha256": "18fbec00e469160a7224187f63ef7193c14f994d876dbe0b57654d932cc10eb9",
+  "result": {
+    "image_sha256": "18fbec00e469160a7224187f63ef7193c14f994d876dbe0b57654d932cc10eb9",
+    "caption": "A person is wearing a white shirt. There is a large piece of bread in front of the person. The bread is light brown in color. ",
+    "object_labels": [
+      "dessert"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

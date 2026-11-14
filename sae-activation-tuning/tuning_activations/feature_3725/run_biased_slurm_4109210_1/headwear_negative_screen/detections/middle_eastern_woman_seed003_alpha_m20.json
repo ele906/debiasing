@@ -1,0 +1,16 @@
+{
+  "image_sha256": "85b3cfbc9d9c6f85442df6601bfa458abc6d8ee4236c81a108f8a31a025ced23",
+  "result": {
+    "image_sha256": "85b3cfbc9d9c6f85442df6601bfa458abc6d8ee4236c81a108f8a31a025ced23",
+    "caption": "The image is a close up of a piece of clothing. It appears to be a beige sweater with a lace design on the front. The fabric is white and has a zipper on the left side of it. There is an orange piece of cloth on the bottom left corner of the image.",
+    "object_labels": [
+      "fancy dress"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

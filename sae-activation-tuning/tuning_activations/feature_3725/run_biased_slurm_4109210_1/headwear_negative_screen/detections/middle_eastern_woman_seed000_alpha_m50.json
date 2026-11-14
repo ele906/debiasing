@@ -1,0 +1,16 @@
+{
+  "image_sha256": "b1ee231c7b433fcd7f5d00e0388ccfa0a26660d85c05fdd2b2a19acc9614d3ca",
+  "result": {
+    "image_sha256": "b1ee231c7b433fcd7f5d00e0388ccfa0a26660d85c05fdd2b2a19acc9614d3ca",
+    "caption": "A woman with reddish brown hair is standing in front of a white chair. The chair has a large white seat. There is a blurry background behind the chair. ",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

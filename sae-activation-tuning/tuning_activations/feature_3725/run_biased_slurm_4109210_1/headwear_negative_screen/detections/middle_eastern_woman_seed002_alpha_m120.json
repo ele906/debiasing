@@ -1,0 +1,16 @@
+{
+  "image_sha256": "473e40cb55fd4b6cda581c90851190242c3a2d1f9406b0a299531d748d15b4a1",
+  "result": {
+    "image_sha256": "473e40cb55fd4b6cda581c90851190242c3a2d1f9406b0a299531d748d15b4a1",
+    "caption": "The image is a picture of a floor. The floor is a light gray color. There are lines going down the floor in a zig zag pattern. The lines are light gray in color.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "sample_id": "black_man_seed013",
+  "image": "/n/fs/goose/backprop/images/black_man/seed013.png",
+  "image_sha256": "0856283c55f4f52a06779776f731838b6c7fbbebeb3814843e307559e0087922",
+  "caption": "A black man is looking directly at the camera. His eyes are open and he has a slight smile on his face. He has short dark hair. He is wearing a black shirt.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        156.41600036621094,
+        186.62400817871094,
+        371.968017578125,
+        237.31201171875
+      ],
+      [
+        298.75201416015625,
+        196.864013671875,
+        369.9200134277344,
+        235.77601623535156
+      ],
+      [
+        160.0,
+        189.1840057373047,
+        228.09600830078125,
+        228.09600830078125
+      ],
+      [
+        194.81600952148438,
+        333.5680236816406,
+        323.84002685546875,
+        401.1520080566406
+      ],
+      [
+        116.99200439453125,
+        63.23200225830078,
+        403.7120056152344,
+        459.0080261230469
+      ],
+      [
+        126.2080078125,
+        0.25600001215934753,
+        417.5360107421875,
+        198.91200256347656
+      ],
+      [
+        0.25600001215934753,
+        408.83203125,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black man",
+      "His eyes",
+      "His eyes",
+      "His eyes",
+      "smile",
+      "face",
+      "hair",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        122.11200714111328,
+        59.13600158691406,
+        399.10400390625,
+        468.2240295410156
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black man is looking directly at the camera. His eyes are open and he has a slight smile on his face. He has short dark hair. He is wearing a black shirt.</s>",
+    "grounding": "</s><s>A black man<loc_0><loc_0><loc_998><loc_998>His eyes<loc_305><loc_364><loc_726><loc_463><loc_583><loc_384><loc_722><loc_460><loc_312><loc_369><loc_445><loc_445>smile<loc_380><loc_651><loc_632><loc_783>face<loc_228><loc_123><loc_788><loc_896>hair<loc_246><loc_0><loc_815><loc_388>shirt<loc_0><loc_798><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_238><loc_115><loc_779><loc_914>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

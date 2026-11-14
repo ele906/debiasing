@@ -1,0 +1,16 @@
+{
+  "image_sha256": "118c24e9a59cda519158a73a48215697f82f306eefdb0505589a9dc4f74ea44c",
+  "result": {
+    "image_sha256": "118c24e9a59cda519158a73a48215697f82f306eefdb0505589a9dc4f74ea44c",
+    "caption": "A close up of a brown and black animal. There is a white animal with a long neck. There are small black dots on the animal. ",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

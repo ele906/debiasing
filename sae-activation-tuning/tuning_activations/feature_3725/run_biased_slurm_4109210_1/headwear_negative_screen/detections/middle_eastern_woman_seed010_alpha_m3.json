@@ -1,0 +1,20 @@
+{
+  "image_sha256": "c17fffc8a64e986f0f9376589e329d1325025fd25dc80e4e2a7db372034be9fd",
+  "result": {
+    "image_sha256": "c17fffc8a64e986f0f9376589e329d1325025fd25dc80e4e2a7db372034be9fd",
+    "caption": "A close up of a woman's face is visible.  The woman has dark blue eyes and is wearing a brown headscarf with gold designs on it.  Her eyebrows are arched and she has a slight smile on her lips. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

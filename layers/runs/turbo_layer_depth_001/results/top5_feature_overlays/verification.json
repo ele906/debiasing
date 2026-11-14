@@ -1,0 +1,7 @@
+{
+  "top_k": 5,
+  "seed": 150,
+  "replay_samples": 12,
+  "max_source_replay_pixel_error": 0.0,
+  "maps_measured": 240
+}

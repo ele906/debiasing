@@ -1,0 +1,16 @@
+{
+  "image_sha256": "667813cdb7368dd91cd31ee0f9845d8e1e0a86a8448f73c1708f0f1fd4005439",
+  "result": {
+    "image_sha256": "667813cdb7368dd91cd31ee0f9845d8e1e0a86a8448f73c1708f0f1fd4005439",
+    "caption": "A white towel is draped over a person's shoulder.  The towel is white and fluffy.  There is a black strap on the arm of the person.  ",
+    "object_labels": [
+      "towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

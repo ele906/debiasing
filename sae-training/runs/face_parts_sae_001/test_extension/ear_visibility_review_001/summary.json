@@ -1,0 +1,55 @@
+{
+  "n_images": 120,
+  "device": "cuda",
+  "ear_visibility_counts": {
+    "partial": 25,
+    "visible": 47,
+    "not_visible": 48
+  },
+  "facing_camera_counts": {
+    "front": 80,
+    "three_quarter": 35,
+    "profile": 5
+  },
+  "ear_box_found_by_visibility": {
+    "no": {
+      "partial": 22,
+      "visible": 43,
+      "not_visible": 48
+    },
+    "yes": {
+      "visible": 4,
+      "partial": 3
+    }
+  },
+  "ear_visibility_by_pose": {
+    "front": {
+      "partial": 20,
+      "not_visible": 38,
+      "visible": 22
+    },
+    "three_quarter": {
+      "visible": 21,
+      "partial": 4,
+      "not_visible": 10
+    },
+    "profile": {
+      "partial": 1,
+      "visible": 4
+    }
+  },
+  "ear_activation": {
+    "visible": {
+      "n_with_usable_box": 3,
+      "mean_feature_4858": 14.420642217000326
+    },
+    "partial": {
+      "n_with_usable_box": 3,
+      "mean_feature_4858": 12.302900473276773
+    },
+    "not_visible": {
+      "n_with_usable_box": 0,
+      "mean_feature_4858": null
+    }
+  }
+}

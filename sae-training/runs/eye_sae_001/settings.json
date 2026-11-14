@@ -1,0 +1,78 @@
+{
+  "experiment": "eye-region fine-tuning of pretrained Top-K SAE",
+  "block": "unet.down_blocks.2.attentions.1",
+  "checkpoint": "/n/fs/goose/sdxl-unbox/checkpoints/unet.down_blocks.2.attentions.1_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+  "checkpoint_state_dict_sha256": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+  "box_source": "/n/fs/goose/concept/category_analysis_full/bounding_boxes.csv",
+  "box_source_type": "automatic object and phrase-grounding eye boxes; unreviewed",
+  "box_filter": {
+    "maximum_area_fraction": 0.12,
+    "minimum_activation_cells": 2
+  },
+  "training_objective": "SAE reconstruction and AuxK loss on eye-box activation vectors only",
+  "category_sampling": "uniform over race/gender categories, sampled with replacement to balance each epoch",
+  "generator_updated": false,
+  "sae_updated": true,
+  "epochs": 20,
+  "snapshot_interval": 4,
+  "snapshot_epochs": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20
+  ],
+  "learning_rate": 1e-06,
+  "auxk_coefficient": 0.03125,
+  "seed": 20261016,
+  "usable_eye_images_by_split": {
+    "train": 262,
+    "validation": 101,
+    "test": 90
+  },
+  "categories_by_split": {
+    "train": [
+      "black_man",
+      "black_woman",
+      "east_asian_man",
+      "east_asian_woman",
+      "hispanic_man",
+      "hispanic_woman",
+      "indian_man",
+      "indian_woman",
+      "middle_eastern_man",
+      "middle_eastern_woman",
+      "white_man",
+      "white_woman"
+    ],
+    "validation": [
+      "black_man",
+      "black_woman",
+      "east_asian_man",
+      "hispanic_man",
+      "hispanic_woman",
+      "indian_man",
+      "indian_woman",
+      "middle_eastern_man",
+      "middle_eastern_woman",
+      "white_man",
+      "white_woman"
+    ],
+    "test": [
+      "black_man",
+      "black_woman",
+      "east_asian_man",
+      "hispanic_man",
+      "hispanic_woman",
+      "middle_eastern_man",
+      "middle_eastern_woman",
+      "white_man",
+      "white_woman"
+    ]
+  },
+  "best_validation_epoch": 20,
+  "selection_metric": "macro-average validation eye-region reconstruction MSE across race/gender categories",
+  "interpretation": "Exploratory eye-region reconstruction specialization; boxes are sparse and unreviewed.",
+  "training_history_note": "Validation metrics were recomputed at saved snapshot epochs; per-epoch training losses were printed during training but not persisted in this recovered run."
+}

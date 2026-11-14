@@ -1,0 +1,16 @@
+{
+  "image_sha256": "424caba8e62e1cf8c388ffca85ad6f4418a11bf03433e868b74d9605e0a4b6b7",
+  "result": {
+    "image_sha256": "424caba8e62e1cf8c388ffca85ad6f4418a11bf03433e868b74d9605e0a4b6b7",
+    "caption": "The image is a close up of a white object. The object appears to be a type of ceramic or porcelain. It has a intricate design on it. There are small holes in the center of the design. The surface seems to be smooth and smooth. There is a black object in the bottom left corner of the image.",
+    "object_labels": [
+      "statue (sculpture)"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

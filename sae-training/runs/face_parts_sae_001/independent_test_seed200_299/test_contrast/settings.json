@@ -1,0 +1,34 @@
+{
+  "split": "independent test, seeds 200-299",
+  "checkpoint": "/n/fs/goose/sae-training/runs/face_parts_sae_001/checkpoints/epoch_020",
+  "feature_selection": "/n/fs/goose/sae-training/runs/face_parts_sae_001/individual_part_epoch_grids/validation_selected_features.csv",
+  "feature_ids": {
+    "face": 1664,
+    "eyes": 3701,
+    "eyebrows": 1600,
+    "nose": 1664,
+    "ears": 4858
+  },
+  "contrast": "per-image mean SAE activation in annotated part cells minus reference cells; average images within race/gender category, then average category means equally",
+  "references": {
+    "face": "outside_face",
+    "eyes": "rest_of_face",
+    "eyebrows": "rest_of_face",
+    "nose": "rest_of_face",
+    "ears": "outside_image"
+  },
+  "bootstrap": {
+    "method": "stratified image bootstrap within available race/gender categories; macro-average category contrast",
+    "samples": 5000,
+    "seed": 20261022,
+    "interval": "percentile 95%"
+  },
+  "box_filter": "same masks as validation feature selection: part boxes above 12% image area excluded; at least two part and reference cells required; facial boxes unreviewed automatic annotations",
+  "test_images_with_usable_boxes": {
+    "face": 1199,
+    "eyes": 477,
+    "eyebrows": 146,
+    "nose": 84,
+    "ears": 77
+  }
+}

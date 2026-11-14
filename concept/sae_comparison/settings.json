@@ -1,0 +1,28 @@
+{
+  "predictions_sha256": "5277d21ae544555f0916fd1a6ae25359a83eba9616889a4d8e5f5e6728711993",
+  "patterns": {
+    "head_covering": "\\b(head\\s*scarf|head\\s*covering|headdress|turban|hat|headband)\\b",
+    "turban": "\\bturban\\b",
+    "headscarf": "\\b(head\\s*scarf|headdress)\\b",
+    "earrings": "\\bearrings?\\b",
+    "necklace": "\\bnecklace\\b",
+    "beard": "\\b(beard|goatee)\\b",
+    "afro": "\\bafro\\b",
+    "kimono": "\\bkimono\\b",
+    "shirt": "\\bshirt\\b",
+    "tank_top": "\\btank top\\b",
+    "smile": "\\bsmile\\b",
+    "flower": "\\bflowers?\\b",
+    "red_dot": "\\bred dot\\b"
+  },
+  "sae_checkpoint": "/n/fs/goose/sdxl-unbox/checkpoints/unet.down_blocks.2.attentions.1_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+  "sae_weights_sha256": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+  "block": "unet.down_blocks.2.attentions.1",
+  "pooling": "spatial mean",
+  "samples": 72,
+  "train": 36,
+  "validation": 36,
+  "top_k": 5,
+  "selection": "Train only; within-group standardized mean differences when possible, otherwise flagged global contrast",
+  "interpretation": "Unreviewed detector-label agreement; not causal validation or evidence of reduced racism"
+}

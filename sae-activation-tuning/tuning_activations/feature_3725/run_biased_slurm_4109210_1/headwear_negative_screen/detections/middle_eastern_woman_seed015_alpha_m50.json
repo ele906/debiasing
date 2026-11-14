@@ -1,0 +1,16 @@
+{
+  "image_sha256": "27117a11b14686c643d55e7a471dc8b1fca62cb0406d3b5e8617bd377f941ef2",
+  "result": {
+    "image_sha256": "27117a11b14686c643d55e7a471dc8b1fca62cb0406d3b5e8617bd377f941ef2",
+    "caption": "A person is wearing a white shirt. There is sand on the person's head. The sand is light brown in color. ",
+    "object_labels": [
+      "human face",
+      "person",
+      "person"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

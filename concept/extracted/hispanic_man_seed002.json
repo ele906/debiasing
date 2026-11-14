@@ -1,0 +1,114 @@
+{
+  "sample_id": "hispanic_man_seed002",
+  "image": "/n/fs/goose/backprop/images/hispanic_man/seed002.png",
+  "image_sha256": "d0c50fa1a433a6fc65fc01d6e80ed3e446905af841f3beaf3bcded18bed9bfb4",
+  "caption": "A man is looking directly at the camera. He has a serious look on his face. His eyebrows are dark and his eyes are light brown. His mouth is slightly open and he has a slight smile on his lips. He is wearing a grey shirt with a white collar. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        116.99200439453125,
+        31.488000869750977,
+        413.4400329589844,
+        446.72003173828125
+      ],
+      [
+        139.52000427246094,
+        138.49600219726562,
+        394.49603271484375,
+        179.4560089111328
+      ],
+      [
+        140.54400634765625,
+        139.52000427246094,
+        253.1840057373047,
+        177.4080047607422
+      ],
+      [
+        280.32000732421875,
+        141.56800842285156,
+        393.4720153808594,
+        177.92001342773438
+      ],
+      [
+        154.36801147460938,
+        169.72801208496094,
+        382.2080078125,
+        207.6160125732422
+      ],
+      [
+        300.28802490234375,
+        172.2880096435547,
+        380.1600036621094,
+        205.56800842285156
+      ],
+      [
+        157.44000244140625,
+        172.2880096435547,
+        232.70401000976562,
+        205.05601501464844
+      ],
+      [
+        204.03201293945312,
+        319.7440185546875,
+        335.61602783203125,
+        360.7040100097656
+      ],
+      [
+        204.03201293945312,
+        319.7440185546875,
+        335.10400390625,
+        360.7040100097656
+      ],
+      [
+        0.25600001215934753,
+        410.8800048828125,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "face",
+      "his eyebrows",
+      "his eyebrows",
+      "his eyebrows",
+      "eyes",
+      "eyes",
+      "eyes",
+      "his mouth",
+      "lips",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        118.01600646972656,
+        28.41600227355957,
+        411.9040222167969,
+        443.1360168457031
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is looking directly at the camera. He has a serious look on his face. His eyebrows are dark and his eyes are light brown. His mouth is slightly open and he has a slight smile on his lips. He is wearing a grey shirt with a white collar. The background is blurry.</s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>face<loc_228><loc_61><loc_807><loc_872>his eyebrows<loc_272><loc_270><loc_770><loc_350><loc_274><loc_272><loc_494><loc_346><loc_547><loc_276><loc_768><loc_347>eyes<loc_301><loc_331><loc_746><loc_405><loc_586><loc_336><loc_742><loc_401><loc_307><loc_336><loc_454><loc_400>his mouth<loc_398><loc_624><loc_655><loc_704>lips<loc_398><loc_624><loc_654><loc_704>shirt<loc_0><loc_802><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_230><loc_55><loc_804><loc_865>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

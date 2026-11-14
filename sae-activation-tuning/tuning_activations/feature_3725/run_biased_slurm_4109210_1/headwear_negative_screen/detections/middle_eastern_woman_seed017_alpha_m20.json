@@ -1,0 +1,21 @@
+{
+  "image_sha256": "c6d8d301bf638019dd2b189c0e94b32a9c097aaae8bfa1ce1700508a72c8cdda",
+  "result": {
+    "image_sha256": "c6d8d301bf638019dd2b189c0e94b32a9c097aaae8bfa1ce1700508a72c8cdda",
+    "caption": "A woman is looking towards the camera. She is wearing a black scarf around her neck and a blue shirt. Her hair is pulled back in a ponytail. Her eyes are open and she has a slight smile on her face. Next to her head is a large tan stone. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

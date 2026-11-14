@@ -1,0 +1,93 @@
+{
+  "sample_id": "black_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed002.png",
+  "image_sha256": "589648e05e61415d165f0da5321813e123a001ef64c011652948d74314254eb5",
+  "caption": "A black woman with an afro is looking into the camera. She has large silver hoop earrings on her ears. She is wearing a black tank top. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        413.9520263671875
+      ],
+      [
+        119.04000854492188,
+        312.5760192871094,
+        169.21600341796875,
+        420.6080322265625
+      ],
+      [
+        330.4960021972656,
+        315.64801025390625,
+        374.52801513671875,
+        417.5360107421875
+      ],
+      [
+        116.99200439453125,
+        310.0160217285156,
+        377.0880126953125,
+        420.6080322265625
+      ],
+      [
+        68.35200500488281,
+        447.7440185546875,
+        428.8000183105469,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black woman",
+      "an afro",
+      "earrings",
+      "earrings",
+      "earrings",
+      "tank top"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        120.57600402832031,
+        314.1120300292969,
+        168.70401000976562,
+        419.5840148925781
+      ],
+      [
+        331.52001953125,
+        317.18402099609375,
+        374.0160217285156,
+        416.51202392578125
+      ],
+      [
+        132.864013671875,
+        121.08800506591797,
+        349.44000244140625,
+        419.5840148925781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "earrings",
+      "earrings",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black woman with an afro is looking into the camera. She has large silver hoop earrings on her ears. She is wearing a black tank top. </s>",
+    "grounding": "</s><s>A black woman<loc_0><loc_0><loc_998><loc_998>an afro<loc_0><loc_0><loc_997><loc_808>earrings<loc_232><loc_610><loc_330><loc_821><loc_645><loc_616><loc_731><loc_815>earrings<loc_228><loc_605><loc_736><loc_821>tank top<loc_133><loc_874><loc_837><loc_998></s>",
+    "objects": "</s><s>earrings<loc_235><loc_613><loc_329><loc_819><loc_647><loc_619><loc_730><loc_813>human face<loc_259><loc_236><loc_682><loc_819>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

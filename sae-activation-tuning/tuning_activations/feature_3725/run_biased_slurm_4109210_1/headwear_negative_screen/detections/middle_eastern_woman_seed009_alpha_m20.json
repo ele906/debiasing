@@ -1,0 +1,16 @@
+{
+  "image_sha256": "1979d2be9547d51e5e2649864a5b1e158213302e7a2e246396bc5a291d08fd38",
+  "result": {
+    "image_sha256": "1979d2be9547d51e5e2649864a5b1e158213302e7a2e246396bc5a291d08fd38",
+    "caption": "A woman is wearing a black dress. She is standing in front of a white wall. There is a black strap on the top of the dress.",
+    "object_labels": [
+      "fancy dress"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

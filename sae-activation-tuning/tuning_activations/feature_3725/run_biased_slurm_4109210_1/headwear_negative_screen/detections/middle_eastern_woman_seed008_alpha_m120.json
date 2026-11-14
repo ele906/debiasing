@@ -1,0 +1,16 @@
+{
+  "image_sha256": "f41ef154903dc3ae11d0fdf9c1b995e05de3724e71b54f5877cb65f34ea5c161",
+  "result": {
+    "image_sha256": "f41ef154903dc3ae11d0fdf9c1b995e05de3724e71b54f5877cb65f34ea5c161",
+    "caption": "The image is a close up of a surface. The surface appears to be made of wood. The wood is light brown in color. There are small black dots on the bottom of the wood.",
+    "object_labels": [
+      "table"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

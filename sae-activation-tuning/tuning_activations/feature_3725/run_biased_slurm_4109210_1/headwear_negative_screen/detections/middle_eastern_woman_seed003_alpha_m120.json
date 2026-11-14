@@ -1,0 +1,16 @@
+{
+  "image_sha256": "b9f9dd0678aeb584f8a0ff299a8ceca389e0a87de4d94ee8c68d60c00bbbd0b6",
+  "result": {
+    "image_sha256": "b9f9dd0678aeb584f8a0ff299a8ceca389e0a87de4d94ee8c68d60c00bbbd0b6",
+    "caption": "The image is a close up of a piece of fabric. The fabric appears to be soft and smooth. There are thin, dark gray stripes on the fabric. There is a wooden piece of furniture in the background. The wood is a light brown color.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

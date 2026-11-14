@@ -1,0 +1,72 @@
+{
+  "sample_id": "indian_man_seed002",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed002.png",
+  "image_sha256": "4221637752fc21b67f27771db4f81be031dee2b6d47e0747a5cdff8bb0b2cfc9",
+  "caption": "A man is wearing a red turban on his head. He has a necklace around his neck. There is dirt on the ground behind him. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        19.200000762939453,
+        0.25600001215934753,
+        491.2640380859375,
+        176.38400268554688
+      ],
+      [
+        62.208003997802734,
+        32.0,
+        453.8880310058594,
+        441.0880126953125
+      ],
+      [
+        134.91200256347656,
+        413.9520263671875,
+        370.4320068359375,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "a red turban",
+      "head",
+      "necklace",
+      "dirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        114.4320068359375,
+        37.63199996948242,
+        404.2240295410156,
+        443.1360168457031
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing a red turban on his head. He has a necklace around his neck. There is dirt on the ground behind him. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>a red turban<loc_37><loc_0><loc_959><loc_344>head<loc_121><loc_62><loc_886><loc_861>necklace<loc_263><loc_808><loc_723><loc_998>dirt<loc_0><loc_0><loc_997><loc_998></s>",
+    "objects": "</s><s>human face<loc_223><loc_73><loc_789><loc_865>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

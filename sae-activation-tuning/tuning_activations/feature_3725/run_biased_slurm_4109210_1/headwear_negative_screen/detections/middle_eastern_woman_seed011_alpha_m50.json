@@ -1,0 +1,17 @@
+{
+  "image_sha256": "099837535b9577eac893cc7405f264eb42b26a07d0edff0057f14f94f8db4a88",
+  "result": {
+    "image_sha256": "099837535b9577eac893cc7405f264eb42b26a07d0edff0057f14f94f8db4a88",
+    "caption": "A woman is wearing a large white hat. The woman has dark brown eyes and dark brown hair. She is smiling and looking to the side. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

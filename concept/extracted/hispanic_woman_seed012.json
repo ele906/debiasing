@@ -1,0 +1,100 @@
+{
+  "sample_id": "hispanic_woman_seed012",
+  "image": "/n/fs/goose/backprop/images/hispanic_woman/seed012.png",
+  "image_sha256": "1298cfdef800321ee42aab0b11e43bad9fdb3823df05f5de278846e56f8bfd54",
+  "caption": "A woman is looking at the camera. She has dark brown hair. She is wearing earrings that are gold in color. The woman is wearing a necklace around her neck. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        147.20001220703125,
+        0.25600001215934753,
+        511.2320251464844,
+        314.1120300292969
+      ],
+      [
+        423.6800231933594,
+        288.0,
+        477.9520263671875,
+        404.2240295410156
+      ],
+      [
+        179.4560089111328,
+        321.7920227050781,
+        224.00001525878906,
+        412.416015625
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        220.92800903320312,
+        407.2960205078125,
+        432.8960266113281,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "hair",
+      "earrings",
+      "earrings",
+      "The woman",
+      "necklace"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        422.656005859375,
+        287.4880065917969,
+        477.9520263671875,
+        403.7120056152344
+      ],
+      [
+        178.4320068359375,
+        320.76800537109375,
+        223.48800659179688,
+        412.416015625
+      ],
+      [
+        194.81600952148438,
+        87.8080062866211,
+        448.7680358886719,
+        426.2400207519531
+      ],
+      [
+        223.48800659179688,
+        410.8800048828125,
+        429.82403564453125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "earrings",
+      "earrings",
+      "human face",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking at the camera. She has dark brown hair. She is wearing earrings that are gold in color. The woman is wearing a necklace around her neck. The background is blurry.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>hair<loc_287><loc_0><loc_998><loc_613>earrings<loc_827><loc_562><loc_933><loc_789><loc_350><loc_628><loc_437><loc_805>The woman<loc_0><loc_1><loc_998><loc_998>necklace<loc_431><loc_795><loc_845><loc_998></s>",
+    "objects": "</s><s>earrings<loc_825><loc_561><loc_933><loc_788><loc_348><loc_626><loc_436><loc_805>human face<loc_380><loc_171><loc_876><loc_832>necklace<loc_436><loc_802><loc_839><loc_998>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

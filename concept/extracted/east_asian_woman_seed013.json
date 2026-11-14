@@ -1,0 +1,86 @@
+{
+  "sample_id": "east_asian_woman_seed013",
+  "image": "/n/fs/goose/backprop/images/east_asian_woman/seed013.png",
+  "image_sha256": "2d5eb85a815ca56d98d3dc1534eae90d33a4ca184a71266148cbacf726027642",
+  "caption": "A woman is wearing a kimono. She has a flower in her hair. She is looking off to the side. There are trees behind her. ",
+  "grounding": {
+    "bboxes": [
+      [
+        92.9280014038086,
+        10.496000289916992,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        92.41600799560547,
+        282.8800048828125,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        410.3680114746094,
+        81.66400146484375,
+        460.0320129394531,
+        163.58401489257812
+      ],
+      [
+        209.15200805664062,
+        10.496000289916992,
+        454.4000244140625,
+        237.31201171875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        463.1040344238281
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        238.84800720214844,
+        462.08001708984375
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "kimono",
+      "flower",
+      "hair",
+      "trees",
+      "trees"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        93.44000244140625,
+        282.8800048828125,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        229.12001037597656,
+        88.32000732421875,
+        384.76800537109375,
+        294.656005859375
+      ],
+      [
+        93.44000244140625,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "fancy dress",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a kimono. She has a flower in her hair. She is looking off to the side. There are trees behind her. </s>",
+    "grounding": "</s><s>A woman<loc_181><loc_20><loc_998><loc_998>kimono<loc_180><loc_552><loc_998><loc_998>flower<loc_801><loc_159><loc_898><loc_319>hair<loc_408><loc_20><loc_887><loc_463>trees<loc_0><loc_0><loc_998><loc_904><loc_0><loc_0><loc_466><loc_902></s>",
+    "objects": "</s><s>fancy dress<loc_182><loc_552><loc_998><loc_998>human face<loc_447><loc_172><loc_751><loc_575>woman<loc_182><loc_0><loc_998><loc_998></s>"
+  }
+}

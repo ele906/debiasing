@@ -1,0 +1,7 @@
+prompt_race,n_images,weight_minus_1_mean_pixel_diff,weight_minus_0_5_mean_pixel_diff,weight_0_mean_pixel_diff,weight_0_5_mean_pixel_diff
+black,6,12.166,9.857,7.266,4.263
+white,6,0.0,0.0,0.0,0.0
+east asian,6,0.1,0.089,0.066,0.052
+middle eastern,6,2.373,1.951,1.416,0.833
+indian,6,2.358,1.916,1.421,0.864
+hispanic,6,11.345,7.376,3.812,2.044

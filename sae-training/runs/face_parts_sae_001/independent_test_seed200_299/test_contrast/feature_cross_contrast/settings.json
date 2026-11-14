@@ -1,0 +1,62 @@
+{
+  "checkpoint": "/n/fs/goose/sae-training/runs/face_parts_sae_001/checkpoints/epoch_020",
+  "features": {
+    "1664": {
+      "selected_for": [
+        "face",
+        "nose"
+      ]
+    },
+    "3701": {
+      "selected_for": [
+        "eyes"
+      ]
+    },
+    "1600": {
+      "selected_for": [
+        "eyebrows"
+      ]
+    },
+    "4858": {
+      "selected_for": [
+        "ears"
+      ]
+    }
+  },
+  "validation_split": "backprop manifest rows labeled validation",
+  "test_split": "independent_test_seed200_299, seeds 200-299",
+  "metric": "per-image mean activation in region minus reference area; images averaged within race/gender categories, then category means equally averaged",
+  "references": {
+    "face": "outside_face",
+    "eyes": "rest_of_face",
+    "eyebrows": "rest_of_face",
+    "nose": "rest_of_face",
+    "ears": "outside_image"
+  },
+  "shared_color_scale_sae_activation_units": [
+    -13.499283633672844,
+    13.499283633672844
+  ],
+  "validation_usable_images_by_region": {
+    "face": 240,
+    "eyes": 101,
+    "eyebrows": 37,
+    "nose": 21,
+    "ears": 17
+  },
+  "test_usable_images_by_region": {
+    "face": 1199,
+    "eyes": 477,
+    "eyebrows": 146,
+    "nose": 84,
+    "ears": 77
+  },
+  "validation_samples_with_any_usable_box": 240,
+  "test_samples_with_any_usable_box": 1199,
+  "test_ci": {
+    "method": "stratified image bootstrap within available categories, then equal category macro-average",
+    "samples": 2000,
+    "interval": "percentile 95%"
+  },
+  "annotation_note": "Region boxes are automatic and have not been reviewed by a person."
+}

@@ -1,0 +1,21 @@
+{
+  "image_sha256": "6058b853d1ef12771e2460ffddda85cd8ff903b77fb328ebedfa2c196563e2a5",
+  "result": {
+    "image_sha256": "6058b853d1ef12771e2460ffddda85cd8ff903b77fb328ebedfa2c196563e2a5",
+    "caption": "A woman is wearing a headscarf. The head scarf is brown and red. The woman has dark brown eyes. There is a building behind the woman. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head scarf",
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head scarf,headscarf,scarf"
+    ]
+  }
+}

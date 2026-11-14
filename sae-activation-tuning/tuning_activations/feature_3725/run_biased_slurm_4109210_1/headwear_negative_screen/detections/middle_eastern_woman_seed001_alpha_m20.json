@@ -1,0 +1,22 @@
+{
+  "image_sha256": "208f2bba6c3a8006069284998fdce4c8bc0403451c2e42e13d68081291e4499b",
+  "result": {
+    "image_sha256": "208f2bba6c3a8006069284998fdce4c8bc0403451c2e42e13d68081291e4499b",
+    "caption": "Two people are standing in front of a wall. The wall is made of sand and has holes in it. One of the people is wearing a black headscarf. ",
+    "object_labels": [
+      "human face",
+      "human face",
+      "human mouth",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

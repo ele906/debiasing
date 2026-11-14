@@ -1,0 +1,16 @@
+{
+  "image_sha256": "b95f1389bb8c774dc1aacf68dc3ca93a604c5ac18509d5180d9a6873a4cd3351",
+  "result": {
+    "image_sha256": "b95f1389bb8c774dc1aacf68dc3ca93a604c5ac18509d5180d9a6873a4cd3351",
+    "caption": "This is a picture of a floor. The floor appears to be made of concrete. The concrete is light gray in color. There are small black dots on the floor. There is a small black dot on the left side of the picture. The lines on the concrete are thin and black. The picture is very blurry.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

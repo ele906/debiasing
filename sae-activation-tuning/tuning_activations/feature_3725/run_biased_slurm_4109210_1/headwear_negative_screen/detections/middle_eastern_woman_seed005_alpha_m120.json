@@ -1,0 +1,16 @@
+{
+  "image_sha256": "dd0b03bf31656be8317bb4aa0acff59bbcdcb3464f81604ce361ba2e6728e276",
+  "result": {
+    "image_sha256": "dd0b03bf31656be8317bb4aa0acff59bbcdcb3464f81604ce361ba2e6728e276",
+    "caption": "The image is a close up of a beige carpet or rug. The rug has a rough texture and appears to be made of a soft, textured fabric. The color of the rug is a light beige, and there are some darker shades of grey throughout the rug. There are some small, darker grey dots in the rug, as well as some darker gray dots.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

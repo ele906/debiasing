@@ -1,0 +1,93 @@
+{
+  "sample_id": "white_man_seed003",
+  "image": "/n/fs/goose/backprop/images/white_man/seed003.png",
+  "image_sha256": "7eae2e67528be72d750ede617970ad32e526616d25466f88e23574bd5f0fe1cc",
+  "caption": "A black and white portrait of a man. The man has a serious look on his face. He has light brown hair. He is wearing a black suit with a white collared shirt underneath.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        105.21600341796875,
+        0.25600001215934753,
+        424.1920166015625,
+        422.656005859375
+      ],
+      [
+        141.05599975585938,
+        61.69600296020508,
+        392.4480285644531,
+        419.5840148925781
+      ],
+      [
+        108.28800201416016,
+        0.25600001215934753,
+        424.7040100097656,
+        216.32000732421875
+      ],
+      [
+        0.25600001215934753,
+        382.2080078125,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        123.1360092163086,
+        379.64801025390625,
+        381.6960144042969,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black",
+      "portrait",
+      "man",
+      "The man",
+      "face",
+      "hair",
+      "suit",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        143.10400390625,
+        61.18400192260742,
+        390.9120178222656,
+        415.4880065917969
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white portrait of a man. The man has a serious look on his face. He has light brown hair. He is wearing a black suit with a white collared shirt underneath.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_998>portrait<loc_0><loc_0><loc_997><loc_998>man<loc_0><loc_0><loc_996><loc_998>The man<loc_205><loc_0><loc_828><loc_825>face<loc_275><loc_120><loc_766><loc_819>hair<loc_211><loc_0><loc_829><loc_422>suit<loc_0><loc_746><loc_998><loc_998>shirt<loc_240><loc_741><loc_745><loc_998></s>",
+    "objects": "</s><s>human face<loc_279><loc_119><loc_763><loc_811>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

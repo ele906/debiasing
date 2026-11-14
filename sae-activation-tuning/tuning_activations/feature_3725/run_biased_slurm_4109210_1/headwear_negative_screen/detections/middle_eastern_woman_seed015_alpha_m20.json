@@ -1,0 +1,17 @@
+{
+  "image_sha256": "661234475f8d7595b7c833dcc899d01abb8b66bf1c054ef4413f81557b69b2fa",
+  "result": {
+    "image_sha256": "661234475f8d7595b7c833dcc899d01abb8b66bf1c054ef4413f81557b69b2fa",
+    "caption": "A woman is wearing a headdress. The headdress is black and burgundy. The woman is smiling and looking to the side. The women is wearing dark brown eyes. The womans hair is wrapped around her head. There is a large piece of fabric over the woman's head. The fabric is white and has a hole in it. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

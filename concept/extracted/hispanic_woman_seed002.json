@@ -1,0 +1,107 @@
+{
+  "sample_id": "hispanic_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/hispanic_woman/seed002.png",
+  "image_sha256": "feeb38b3a440b5313e5e03ead5900f237512fb45173d5cfa0f180513ebb54614",
+  "caption": "A painting of a woman with long dark hair. The woman has a serious look on her face. She is wearing a white dress and a silver necklace. There are earrings on her ears. ",
+  "grounding": {
+    "bboxes": [
+      [
+        20.736000061035156,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        38.656002044677734,
+        0.25600001215934753,
+        511.2320251464844,
+        510.72003173828125
+      ],
+      [
+        20.736000061035156,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        106.24000549316406,
+        80.64000701904297,
+        329.4720153808594,
+        375.5520324707031
+      ],
+      [
+        20.224000930786133,
+        391.9360046386719,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        328.96002197265625,
+        259.3280029296875,
+        362.75201416015625,
+        381.6960144042969
+      ],
+      [
+        107.77600860595703,
+        295.1679992675781,
+        142.0800018310547,
+        372.4800109863281
+      ],
+      [
+        104.7040023803711,
+        254.7200164794922,
+        365.8240051269531,
+        381.18402099609375
+      ],
+      [
+        326.9120178222656,
+        205.05601501464844,
+        362.2400207519531,
+        267.52001953125
+      ]
+    ],
+    "labels": [
+      "A painting",
+      "hair",
+      "The woman",
+      "face",
+      "dress",
+      "earrings",
+      "earrings",
+      "earrings",
+      "ears"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        106.24000549316406,
+        78.59200286865234,
+        327.42401123046875,
+        374.52801513671875
+      ],
+      [
+        168.70401000976562,
+        414.4640197753906,
+        313.6000061035156,
+        507.64801025390625
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A painting of a woman with long dark hair. The woman has a serious look on her face. She is wearing a white dress and a silver necklace. There are earrings on her ears. </s>",
+    "grounding": "</s><s>A painting<loc_40><loc_0><loc_998><loc_998>hair<loc_75><loc_0><loc_998><loc_997>The woman<loc_40><loc_0><loc_997><loc_998>face<loc_207><loc_157><loc_643><loc_733>dress<loc_39><loc_765><loc_998><loc_998>earrings<loc_642><loc_506><loc_708><loc_745><loc_210><loc_576><loc_277><loc_727>earrings<loc_204><loc_497><loc_714><loc_744>ears<loc_638><loc_400><loc_707><loc_522></s>",
+    "objects": "</s><s>human face<loc_207><loc_153><loc_639><loc_731>necklace<loc_329><loc_809><loc_612><loc_991>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

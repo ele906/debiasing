@@ -1,0 +1,21 @@
+{
+  "image_sha256": "fdf541d38f4e496f3213ef6a5c4fff63e66ffe8dc232859bc8c0f733ceb84d5a",
+  "result": {
+    "image_sha256": "fdf541d38f4e496f3213ef6a5c4fff63e66ffe8dc232859bc8c0f733ceb84d5a",
+    "caption": "A woman is wearing a brown scarf around her head. She has dark brown eyes and a pink lip. The background is white. ",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "image_sha256": "dc18cc292e217f4cbbf045404aff5168dc746be2d498fc389a4bbf7783e29063",
+  "result": {
+    "image_sha256": "dc18cc292e217f4cbbf045404aff5168dc746be2d498fc389a4bbf7783e29063",
+    "caption": "The image is a close up of a piece of fabric. The fabric is white with thin grey stripes. There are small black dots on the top left corner of the image. ",
+    "object_labels": [
+      "insect"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

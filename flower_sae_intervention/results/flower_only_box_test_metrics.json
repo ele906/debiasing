@@ -1,0 +1,10 @@
+{
+  "mean_validation_loss": 0.28104139926532906,
+  "flower": {
+    "images": 240,
+    "c2c_positive_images": 13,
+    "objectness_average_precision": 0.7821936304672877,
+    "mean_iou_on_c2c_positive": 0.12764119735132604,
+    "recall_at_score_0p5_and_iou_0p5": 0.0
+  }
+}

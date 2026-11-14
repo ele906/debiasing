@@ -1,0 +1,115 @@
+{
+  "candidates": [
+    {
+      "concept": "head_covering",
+      "feature": 4154,
+      "pattern": "\\b(head\\s*scarf|head\\s*covering|headdress|turban|hat|headband)\\b"
+    },
+    {
+      "concept": "turban",
+      "feature": 1526,
+      "pattern": "\\bturban\\b"
+    },
+    {
+      "concept": "headscarf",
+      "feature": 1257,
+      "pattern": "\\b(head\\s*scarf|headdress)\\b"
+    },
+    {
+      "concept": "earrings",
+      "feature": 4858,
+      "pattern": "\\bearrings?\\b"
+    },
+    {
+      "concept": "necklace",
+      "feature": 3985,
+      "pattern": "\\bnecklace\\b"
+    },
+    {
+      "concept": "beard",
+      "feature": 5085,
+      "pattern": "\\b(beard|goatee)\\b"
+    },
+    {
+      "concept": "afro",
+      "feature": 1500,
+      "pattern": "\\bafro\\b"
+    },
+    {
+      "concept": "kimono",
+      "feature": 5046,
+      "pattern": "\\bkimono\\b"
+    },
+    {
+      "concept": "shirt",
+      "feature": 2858,
+      "pattern": "\\bshirt\\b"
+    },
+    {
+      "concept": "tank_top",
+      "feature": 318,
+      "pattern": "\\btank top\\b"
+    },
+    {
+      "concept": "smile",
+      "feature": 3593,
+      "pattern": "\\bsmile\\b"
+    },
+    {
+      "concept": "flower",
+      "feature": 2230,
+      "pattern": "\\bflowers?\\b"
+    },
+    {
+      "concept": "red_dot",
+      "feature": 1817,
+      "pattern": "\\bred dot\\b"
+    }
+  ],
+  "generation": {
+    "prompt_template": "a picture of a {race} {gender}",
+    "races": [
+      "black",
+      "white",
+      "east asian",
+      "middle eastern",
+      "indian",
+      "hispanic"
+    ],
+    "genders": [
+      "man",
+      "woman"
+    ],
+    "images_per_cell": 100,
+    "model": "stabilityai/sdxl-turbo",
+    "vae": "madebyollin/sdxl-vae-fp16-fix",
+    "block": "unet.down_blocks.2.attentions.1",
+    "sae_checkpoint": "/n/fs/goose/sdxl-unbox/checkpoints/unet.down_blocks.2.attentions.1_k10_hidden5120_auxk256_bs4096_lr0.0001/final",
+    "sae_weights_sha256": "39e3c6d17aa572a53368ca8ba8f82757947a3caf14fe654e84b175d0dc0a4650",
+    "steps": 1,
+    "guidance_scale": 0.0,
+    "height": 512,
+    "width": 512,
+    "dtype": "float16",
+    "scheduler": "EulerAncestralDiscreteScheduler",
+    "timestep_spacing": "trailing",
+    "rng": "Independent CUDA generators, each seeded with sample seed, for initial noise and scheduler",
+    "pooling": [
+      "spatial_mean",
+      "spatial_max",
+      "spatial_active_fraction"
+    ],
+    "split": "60/20/20 by seed, shared across all 12 groups; RNG 20261009",
+    "torch_version": "2.2.2+cu121",
+    "diffusers_version": "0.30.0",
+    "labels": "Generation prompt categories, not racial identities inferred from images"
+  },
+  "predictions_sha256": "6bf84c39e01cb93cbbec62553ad459ea2ecd9b9fb327300482fff60392a34da7",
+  "comparison_sha256": "0f432eb8f1ab86c580ca97e3ce61988749778db77c0365b96c71792499001dc6",
+  "split": "validation",
+  "samples": 240,
+  "box_reference": "Fractional spatial cell coverage of union of matching detector boxes",
+  "localization_reference": "All circular translations of each SAE map; exploratory reference, not a calibrated significance test",
+  "min_group_count": 3,
+  "candidate_source": "top_one"
+}

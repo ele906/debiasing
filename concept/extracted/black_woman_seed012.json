@@ -1,0 +1,72 @@
+{
+  "sample_id": "black_woman_seed012",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed012.png",
+  "image_sha256": "0f17290883d2cafd28da230f65ade5a2512637c8f7348d1aba6576701098e34a",
+  "caption": "A black woman with an afro is looking into the camera. She has a silver hoop earring on her ear. She is wearing a black tank top. ",
+  "grounding": {
+    "bboxes": [
+      [
+        46.84800338745117,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        83.71200561523438,
+        0.25600001215934753,
+        511.2320251464844,
+        323.3280029296875
+      ],
+      [
+        196.864013671875,
+        235.26400756835938,
+        235.26400756835938,
+        303.87200927734375
+      ],
+      [
+        140.03201293945312,
+        447.7440185546875,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black woman",
+      "an afro",
+      "ear",
+      "tank top"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        209.6640167236328,
+        296.1920166015625,
+        250.62400817871094,
+        384.76800537109375
+      ],
+      [
+        227.58401489257812,
+        121.08800506591797,
+        429.31201171875,
+        388.864013671875
+      ],
+      [
+        43.7760009765625,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "earrings",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black woman with an afro is looking into the camera. She has a silver hoop earring on her ear. She is wearing a black tank top. </s>",
+    "grounding": "</s><s>A black woman<loc_91><loc_0><loc_998><loc_998>an afro<loc_163><loc_0><loc_998><loc_631>ear<loc_384><loc_459><loc_459><loc_593>tank top<loc_273><loc_874><loc_998><loc_998></s>",
+    "objects": "</s><s>earrings<loc_409><loc_578><loc_489><loc_751>human face<loc_444><loc_236><loc_838><loc_759>woman<loc_85><loc_0><loc_998><loc_998></s>"
+  }
+}

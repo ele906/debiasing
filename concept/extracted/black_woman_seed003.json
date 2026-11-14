@@ -1,0 +1,65 @@
+{
+  "sample_id": "black_woman_seed003",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed003.png",
+  "image_sha256": "6cc763e4ec090d44dff444b8ce66730a112e2ac88bb551f15a34286afda3b613",
+  "caption": "A woman is looking directly at the camera. She has an afro. She is wearing silver hoop earrings. The background is white. The woman is wearing a tank top. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        350.97601318359375
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        91.39200592041016,
+        400.6400146484375,
+        462.5920104980469,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "afro",
+      "The woman",
+      "tank top"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        170.75201416015625,
+        55.552001953125,
+        396.54400634765625,
+        368.8960266113281
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking directly at the camera. She has an afro. She is wearing silver hoop earrings. The background is white. The woman is wearing a tank top. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_996><loc_998>afro<loc_0><loc_0><loc_998><loc_685>The woman<loc_0><loc_1><loc_996><loc_998>tank top<loc_178><loc_782><loc_903><loc_998></s>",
+    "objects": "</s><s>human face<loc_333><loc_108><loc_774><loc_720>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

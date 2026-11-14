@@ -1,0 +1,100 @@
+{
+  "sample_id": "white_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/white_woman/seed002.png",
+  "image_sha256": "c6b7e67ad26a81d30ce76f2085b7ea93272c863717121520c42b81cd54366545",
+  "caption": "A woman is looking at the camera. She has long blonde hair. Her eyes are blue and her eyebrows are light brown. She is wearing a white shirt. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        128.76800537109375,
+        162.04800415039062,
+        335.61602783203125,
+        197.8880157470703
+      ],
+      [
+        264.96002197265625,
+        165.12001037597656,
+        333.5680236816406,
+        196.3520050048828
+      ],
+      [
+        131.8400115966797,
+        165.6320037841797,
+        197.8880157470703,
+        194.81600952148438
+      ],
+      [
+        114.94400787353516,
+        136.9600067138672,
+        340.73602294921875,
+        165.6320037841797
+      ],
+      [
+        253.69601440429688,
+        136.44801330566406,
+        339.7120056152344,
+        164.09600830078125
+      ],
+      [
+        115.45600891113281,
+        141.56800842285156,
+        199.42401123046875,
+        166.656005859375
+      ],
+      [
+        0.25600001215934753,
+        425.2160339355469,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "hair",
+      "her eyes",
+      "her eyes",
+      "her eyes",
+      "eyebrows",
+      "eyebrows",
+      "eyebrows",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        103.16800689697266,
+        33.53600311279297,
+        383.2320251464844,
+        397.5680236816406
+      ]
+    ],
+    "labels": [
+      "girl",
+      "human face"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is looking at the camera. She has long blonde hair. Her eyes are blue and her eyebrows are light brown. She is wearing a white shirt. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_997><loc_998>hair<loc_0><loc_0><loc_998><loc_998>her eyes<loc_251><loc_316><loc_655><loc_386><loc_517><loc_322><loc_651><loc_383><loc_257><loc_323><loc_386><loc_380>eyebrows<loc_224><loc_267><loc_665><loc_323><loc_495><loc_266><loc_663><loc_320><loc_225><loc_276><loc_389><loc_325>shirt<loc_0><loc_830><loc_998><loc_998></s>",
+    "objects": "</s><s>girl<loc_0><loc_0><loc_998><loc_998>human face<loc_201><loc_65><loc_748><loc_776></s>"
+  }
+}

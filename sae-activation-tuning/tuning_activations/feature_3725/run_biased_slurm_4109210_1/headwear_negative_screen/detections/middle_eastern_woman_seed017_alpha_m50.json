@@ -1,0 +1,16 @@
+{
+  "image_sha256": "3c2ff3776e2f4665921268a752d491b380612bfacc5d75f9efa96528985ad3a0",
+  "result": {
+    "image_sha256": "3c2ff3776e2f4665921268a752d491b380612bfacc5d75f9efa96528985ad3a0",
+    "caption": "A person is wearing a white shirt. There is a large mound of dirt on the ground. There are small holes in the dirt. ",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

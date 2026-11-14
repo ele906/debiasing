@@ -1,0 +1,21 @@
+{
+  "image_sha256": "e327d5c42af43558543975eda2b4a827279dcb54d797edd085ee01414edcaabb",
+  "result": {
+    "image_sha256": "e327d5c42af43558543975eda2b4a827279dcb54d797edd085ee01414edcaabb",
+    "caption": "A close up of a young woman's face is visible.  She is wearing a brown head covering.  Her eyes are blue and her eyebrows are dark and her lips are pink.  The background is white.",
+    "object_labels": [
+      "girl",
+      "human eye",
+      "human face",
+      "human nose"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

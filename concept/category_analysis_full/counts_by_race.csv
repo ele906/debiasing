@@ -1,0 +1,7 @@
+race_prompt,images,head_covering,turban,headscarf,earrings,necklace,beard,afro,kimono,shirt,tank_top,smile,flower,red_dot
+black,200,1,0,0,91,21,6,81,0,67,24,47,1,0
+white,200,0,0,0,2,1,1,0,0,156,5,29,0,0
+east asian,200,29,0,0,34,0,22,0,113,61,0,36,61,0
+middle eastern,200,130,27,74,29,3,100,0,0,29,0,5,0,2
+indian,200,96,94,1,78,138,89,0,0,29,1,0,0,58
+hispanic,200,19,0,1,86,95,78,0,0,110,13,17,6,0

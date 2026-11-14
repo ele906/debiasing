@@ -1,0 +1,79 @@
+[
+  {
+    "step": 1,
+    "train_mse": 7.773953437805176,
+    "held_out_normalized_mse": 1.2213482856750488,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.732226550579071
+  },
+  {
+    "step": 51,
+    "train_mse": 4.517106056213379,
+    "held_out_normalized_mse": 1.1405962705612183,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.802734375
+  },
+  {
+    "step": 101,
+    "train_mse": 2.5515248775482178,
+    "held_out_normalized_mse": 1.0896360874176025,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.8226562738418579
+  },
+  {
+    "step": 151,
+    "train_mse": 1.8979988098144531,
+    "held_out_normalized_mse": 1.0625591278076172,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.830273449420929
+  },
+  {
+    "step": 201,
+    "train_mse": 1.5271259546279907,
+    "held_out_normalized_mse": 1.0448850393295288,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.83984375
+  },
+  {
+    "step": 251,
+    "train_mse": 1.3239011764526367,
+    "held_out_normalized_mse": 1.0308420658111572,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.8443359732627869
+  },
+  {
+    "step": 301,
+    "train_mse": 1.2025712728500366,
+    "held_out_normalized_mse": 1.015600562095642,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.850390613079071
+  },
+  {
+    "step": 351,
+    "train_mse": 1.0889692306518555,
+    "held_out_normalized_mse": 1.0054199695587158,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.8568359613418579
+  },
+  {
+    "step": 401,
+    "train_mse": 1.0007622241973877,
+    "held_out_normalized_mse": 0.9947554469108582,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.8609375357627869
+  },
+  {
+    "step": 451,
+    "train_mse": 0.9210014343261719,
+    "held_out_normalized_mse": 0.9849353432655334,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.86328125
+  },
+  {
+    "step": 500,
+    "train_mse": 0.8555681109428406,
+    "held_out_normalized_mse": 0.9757106304168701,
+    "mean_active_features": 20.0,
+    "unused_feature_fraction": 0.866015613079071
+  }
+]

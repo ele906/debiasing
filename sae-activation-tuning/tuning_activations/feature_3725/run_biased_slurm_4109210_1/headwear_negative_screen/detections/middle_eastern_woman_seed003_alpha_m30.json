@@ -1,0 +1,20 @@
+{
+  "image_sha256": "707767ba6919f785c4bb5a23acd90221da3bc60b00f49ed2c979697b882c2752",
+  "result": {
+    "image_sha256": "707767ba6919f785c4bb5a23acd90221da3bc60b00f49ed2c979697b882c2752",
+    "caption": "A woman is standing in front of a wall. The wall is white and has holes in it. The woman is wearing a black headscarf. ",
+    "object_labels": [
+      "human face",
+      "human mouth",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

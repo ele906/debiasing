@@ -1,0 +1,21 @@
+{
+  "image_sha256": "c31fa8eb4459f16263ccb1aaa4edf6e1013d8f2f7566622338c9cfe81a7e18da",
+  "result": {
+    "image_sha256": "c31fa8eb4459f16263ccb1aaa4edf6e1013d8f2f7566622338c9cfe81a7e18da",
+    "caption": "A woman is wearing a head covering. The head covering is gray. The woman has a black scarf around her neck. The background is blurry. ",
+    "object_labels": [
+      "human face",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering,scarf"
+    ]
+  }
+}

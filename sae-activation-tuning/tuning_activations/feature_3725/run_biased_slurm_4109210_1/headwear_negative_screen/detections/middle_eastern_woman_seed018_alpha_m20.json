@@ -1,0 +1,20 @@
+{
+  "image_sha256": "9410634897756afd4de455cc99ee6c483f198bb9d3c2ce1e4275826e0dc3816f",
+  "result": {
+    "image_sha256": "9410634897756afd4de455cc99ee6c483f198bb9d3c2ce1e4275826e0dc3816f",
+    "caption": "A woman with dark brown hair is wearing a white head scarf. The head scarf is wrapped around the woman's head. The woman has dark brown eyes and a dark brown lip. The background is blurry.",
+    "object_labels": [
+      "girl",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head scarf"
+    ]
+  }
+}

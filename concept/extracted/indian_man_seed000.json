@@ -1,0 +1,86 @@
+{
+  "sample_id": "indian_man_seed000",
+  "image": "/n/fs/goose/backprop/images/indian_man/seed000.png",
+  "image_sha256": "e62436de52006a9e5c44c2a4f32335918fa25c9bd1e9788c8785b86877666c16",
+  "caption": "An old man with grey hair and a white beard. He is wearing a tan scarf around his neck. The background is blurry. The man has a serious look on his face.",
+  "grounding": {
+    "bboxes": [
+      [
+        29.952001571655273,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        123.1360092163086,
+        0.25600001215934753,
+        504.06402587890625,
+        307.4560241699219
+      ],
+      [
+        192.25601196289062,
+        219.9040069580078,
+        434.94403076171875,
+        396.54400634765625
+      ],
+      [
+        164.60800170898438,
+        334.08001708984375,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        29.952001571655273,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        185.0880126953125,
+        54.52800369262695,
+        435.4560241699219,
+        396.54400634765625
+      ],
+      [
+        186.62400817871094,
+        55.552001953125,
+        433.9200134277344,
+        396.0320129394531
+      ]
+    ],
+    "labels": [
+      "An old man",
+      "hair",
+      "beard",
+      "scarf",
+      "The man",
+      "The man",
+      "face"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        186.1120147705078,
+        54.52800369262695,
+        432.384033203125,
+        397.5680236816406
+      ],
+      [
+        30.464000701904297,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>An old man with grey hair and a white beard. He is wearing a tan scarf around his neck. The background is blurry. The man has a serious look on his face.</s>",
+    "grounding": "</s><s>An old man<loc_58><loc_0><loc_998><loc_998>hair<loc_240><loc_0><loc_984><loc_600>beard<loc_375><loc_429><loc_849><loc_774>scarf<loc_321><loc_652><loc_998><loc_998>The man<loc_58><loc_1><loc_998><loc_998><loc_361><loc_106><loc_850><loc_774>face<loc_364><loc_108><loc_847><loc_773></s>",
+    "objects": "</s><s>human face<loc_363><loc_106><loc_844><loc_776>man<loc_59><loc_0><loc_998><loc_998></s>"
+  }
+}

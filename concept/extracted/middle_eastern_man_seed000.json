@@ -1,0 +1,93 @@
+{
+  "sample_id": "middle_eastern_man_seed000",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_man/seed000.png",
+  "image_sha256": "fdf34a1748642300da40ee451d9519027df49b38f648a5d9156370e8febc334f",
+  "caption": "A man is wearing a white headdress. The headdress is white with a black band around it. The man has a goatee on his head. He is wearing white clothes. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        51.45600128173828,
+        0.25600001215934753,
+        511.2320251464844,
+        434.4320068359375
+      ],
+      [
+        56.064002990722656,
+        13.056000709533691,
+        463.1040344238281,
+        84.73600769042969
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        118.52800750732422,
+        90.8800048828125,
+        446.2080078125,
+        449.280029296875
+      ],
+      [
+        128.76800537109375,
+        219.3920135498047,
+        418.04803466796875,
+        449.280029296875
+      ],
+      [
+        118.52800750732422,
+        90.8800048828125,
+        446.72003173828125,
+        449.280029296875
+      ]
+    ],
+    "labels": [
+      "A man",
+      "The headdress",
+      "band",
+      "The man",
+      "The man",
+      "goatee",
+      "head"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        130.3040008544922,
+        219.3920135498047,
+        418.5600280761719,
+        450.30401611328125
+      ],
+      [
+        129.79200744628906,
+        49.92000198364258,
+        409.85601806640625,
+        435.4560241699219
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human beard",
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing a white headdress. The headdress is white with a black band around it. The man has a goatee on his head. He is wearing white clothes. </s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>The headdress<loc_100><loc_0><loc_998><loc_848>band<loc_109><loc_25><loc_904><loc_165>The man<loc_0><loc_1><loc_998><loc_998><loc_231><loc_177><loc_871><loc_877>goatee<loc_251><loc_428><loc_816><loc_877>head<loc_231><loc_177><loc_872><loc_877></s>",
+    "objects": "</s><s>human beard<loc_254><loc_428><loc_817><loc_879>human face<loc_253><loc_97><loc_800><loc_850>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

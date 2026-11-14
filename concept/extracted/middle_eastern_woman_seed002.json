@@ -1,0 +1,142 @@
+{
+  "sample_id": "middle_eastern_woman_seed002",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed002.png",
+  "image_sha256": "ba67cebb6d13dfdbfd60675d51bd789278bd2b2c0478e3497137890e94ed01d6",
+  "caption": "A woman is wearing a headscarf. The head scarf is burgundy with gold designs on it. The woman has blue eyes and a small star on her forehead. Her eyebrows are dark and well manicured. Her lips are pink and her nose is pink. She is wearing earrings that are gold in color. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        502.0160217285156,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        500.9920349121094,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        501.5040283203125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        500.9920349121094,
+        511.2320251464844
+      ],
+      [
+        121.08800506591797,
+        155.3920135498047,
+        372.4800109863281,
+        206.59201049804688
+      ],
+      [
+        123.1360092163086,
+        157.44000244140625,
+        216.83201599121094,
+        201.47201538085938
+      ],
+      [
+        283.3919982910156,
+        160.0,
+        370.4320068359375,
+        204.03201293945312
+      ],
+      [
+        244.48001098632812,
+        106.24000549316406,
+        258.8160095214844,
+        125.69600677490234
+      ],
+      [
+        105.21600341796875,
+        125.18400573730469,
+        392.96002197265625,
+        166.14401245117188
+      ],
+      [
+        105.7280044555664,
+        125.69600677490234,
+        229.6320037841797,
+        166.14401245117188
+      ],
+      [
+        269.0559997558594,
+        129.27999877929688,
+        391.9360046386719,
+        165.12001037597656
+      ],
+      [
+        186.62400817871094,
+        325.3760070800781,
+        313.0880126953125,
+        379.1360168457031
+      ],
+      [
+        202.49600219726562,
+        181.50401306152344,
+        293.63201904296875,
+        308.4800109863281
+      ],
+      [
+        97.53600311279297,
+        316.6720275878906,
+        128.76800537109375,
+        384.76800537109375
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "headscarf",
+      "The head scarf",
+      "The woman",
+      "eyes",
+      "eyes",
+      "eyes",
+      "star",
+      "her eyebrows",
+      "her eyebrows",
+      "her eyebrows",
+      "Her lips",
+      "nose",
+      "earrings"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        116.99200439453125,
+        155.9040069580078,
+        218.8800048828125,
+        203.52000427246094
+      ],
+      [
+        91.90400695800781,
+        14.080000877380371,
+        409.85601806640625,
+        441.0880126953125
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a headscarf. The head scarf is burgundy with gold designs on it. The woman has blue eyes and a small star on her forehead. Her eyebrows are dark and well manicured. Her lips are pink and her nose is pink. She is wearing earrings that are gold in color. The background is blurry.</s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_980><loc_998>headscarf<loc_0><loc_0><loc_978><loc_998>The head scarf<loc_0><loc_0><loc_979><loc_998>The woman<loc_0><loc_1><loc_978><loc_998>eyes<loc_236><loc_303><loc_727><loc_403><loc_240><loc_307><loc_423><loc_393><loc_553><loc_312><loc_723><loc_398>star<loc_477><loc_207><loc_505><loc_245>her eyebrows<loc_205><loc_244><loc_767><loc_324><loc_206><loc_245><loc_448><loc_324><loc_525><loc_252><loc_765><loc_322>Her lips<loc_364><loc_635><loc_611><loc_740>nose<loc_395><loc_354><loc_573><loc_602>earrings<loc_190><loc_618><loc_251><loc_751></s>",
+    "objects": "</s><s>human eye<loc_228><loc_304><loc_427><loc_397>human face<loc_179><loc_27><loc_800><loc_861>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

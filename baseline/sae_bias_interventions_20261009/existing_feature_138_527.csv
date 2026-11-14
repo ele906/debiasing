@@ -1,0 +1,25 @@
+prompt_race,prompt_gender,feature,images,mean_spatial_max,image_active_fraction
+black,man,138,50,0.0,0.0
+black,man,527,50,41.16352462768555,1.0
+black,woman,138,50,0.0,0.0
+black,woman,527,50,45.582271575927734,1.0
+white,man,138,50,0.0,0.0
+white,man,527,50,0.4806777536869049,0.06
+white,woman,138,50,0.0,0.0
+white,woman,527,50,0.36630943417549133,0.04
+east asian,man,138,50,0.0,0.0
+east asian,man,527,50,1.0241010189056396,0.12
+east asian,woman,138,50,0.0,0.0
+east asian,woman,527,50,0.0,0.0
+middle eastern,man,138,50,29.500259399414062,1.0
+middle eastern,man,527,50,5.568910121917725,0.54
+middle eastern,woman,138,50,39.35929489135742,1.0
+middle eastern,woman,527,50,9.38321304321289,0.86
+indian,man,138,50,2.34818696975708,0.2
+indian,man,527,50,13.103763580322266,1.0
+indian,woman,138,50,15.392874717712402,0.92
+indian,woman,527,50,13.41418170928955,1.0
+hispanic,man,138,50,0.0,0.0
+hispanic,man,527,50,14.110966682434082,1.0
+hispanic,woman,138,50,0.0,0.0
+hispanic,woman,527,50,14.406177520751953,1.0

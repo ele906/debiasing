@@ -1,0 +1,27 @@
+{
+  "image_sha256": "68a2b8556e255598ad0c15588ff7a4149691672ad0175c41f2ecb9e7aa20c426",
+  "result": {
+    "image_sha256": "68a2b8556e255598ad0c15588ff7a4149691672ad0175c41f2ecb9e7aa20c426",
+    "caption": "Three women are posing for a picture. The woman on the right is smiling. The women on the left are looking at the camera. All of the women are wearing a headdress. The headdress is made of fabric. The fabric is white with black designs on it. The background is blurry. There are many designs on the fabric.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human face",
+      "human face",
+      "human face",
+      "human mouth",
+      "human mouth",
+      "human mouth",
+      "human nose",
+      "woman",
+      "woman",
+      "woman",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

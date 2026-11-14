@@ -1,0 +1,18 @@
+{
+  "train": [
+    "a studio portrait of a person, natural lighting",
+    "a red parrot on a branch in a tropical forest",
+    "a goose swimming on a lake at sunrise",
+    "a cozy living room with a sofa and plants",
+    "a mountain landscape with a river, detailed photograph",
+    "a bowl of fresh fruit on a wooden table",
+    "a city street at night with neon lights",
+    "a golden retriever playing in a garden",
+    "a ceramic teapot beside a window",
+    "a sailing boat on the ocean"
+  ],
+  "held_out": [
+    "a bicycle parked beside a brick wall",
+    "a field of wildflowers under a blue sky"
+  ]
+}

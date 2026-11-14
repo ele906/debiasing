@@ -1,0 +1,79 @@
+{
+  "sample_id": "hispanic_man_seed001",
+  "image": "/n/fs/goose/backprop/images/hispanic_man/seed001.png",
+  "image_sha256": "56ddc2ea7a0cb7b859d4dcfc02982ade6ad19a44b09446fa0eb1f76a39d715a1",
+  "caption": "A man is looking directly at the camera. He has a serious look on his face. His eyebrows are furrowed and he has a goatee. He is wearing a light blue button down shirt. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        148.22401428222656,
+        161.0240020751953,
+        368.3840026855469,
+        201.47201538085938
+      ],
+      [
+        149.760009765625,
+        163.58401489257812,
+        238.3360137939453,
+        196.864013671875
+      ],
+      [
+        270.08001708984375,
+        165.12001037597656,
+        367.3600158691406,
+        200.44801330566406
+      ],
+      [
+        173.31201171875,
+        298.2400207519531,
+        347.9040222167969,
+        451.3280334472656
+      ],
+      [
+        0.25600001215934753,
+        402.176025390625,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "his eyebrows",
+      "his eyebrows",
+      "his eyebrows",
+      "goatee",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        129.79200744628906,
+        66.81600189208984,
+        388.864013671875,
+        448.7680358886719
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is looking directly at the camera. He has a serious look on his face. His eyebrows are furrowed and he has a goatee. He is wearing a light blue button down shirt. The background is blurry.</s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>his eyebrows<loc_289><loc_314><loc_719><loc_393><loc_292><loc_319><loc_465><loc_384><loc_527><loc_322><loc_717><loc_391>goatee<loc_338><loc_582><loc_679><loc_881>shirt<loc_0><loc_785><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_253><loc_130><loc_759><loc_876>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "image_sha256": "da9bdcced689ce573e7db6f7403f7921b4f621ff46bc8d76aa337dbe071f8f13",
+  "result": {
+    "image_sha256": "da9bdcced689ce573e7db6f7403f7921b4f621ff46bc8d76aa337dbe071f8f13",
+    "caption": "Two women are standing next to each other. One of the women is wearing a large white hat. The other woman has long dark hair. The women are looking at the camera. ",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [],
+    "image_passes": true,
+    "rejection_reasons": []
+  }
+}

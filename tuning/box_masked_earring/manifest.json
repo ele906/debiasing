@@ -1,0 +1,96 @@
+[
+  {
+    "sample_id": "east_asian_woman_seed054",
+    "split": "validation",
+    "race_prompt": "east asian",
+    "gender_prompt": "woman",
+    "image": "/n/fs/goose/backprop/images/east_asian_woman/seed054.png",
+    "source_label": "detector_positive",
+    "feature": 4858,
+    "c2c_boxes": [
+      {
+        "label": "earrings",
+        "xyxy": [
+          346.8800048828125,
+          254.7200164794922,
+          372.99200439453125,
+          318.7200012207031
+        ],
+        "area_fraction": 0.006374998360872297
+      }
+    ]
+  },
+  {
+    "sample_id": "east_asian_woman_seed061",
+    "split": "validation",
+    "race_prompt": "east asian",
+    "gender_prompt": "woman",
+    "image": "/n/fs/goose/backprop/images/east_asian_woman/seed061.png",
+    "source_label": "detector_positive",
+    "feature": 4858,
+    "c2c_boxes": [
+      {
+        "label": "earrings",
+        "xyxy": [
+          178.4320068359375,
+          236.80001831054688,
+          195.8400115966797,
+          274.6880187988281
+        ],
+        "area_fraction": 0.002516000720500955
+      }
+    ]
+  },
+  {
+    "sample_id": "east_asian_woman_seed047",
+    "split": "validation",
+    "race_prompt": "east asian",
+    "gender_prompt": "woman",
+    "image": "/n/fs/goose/backprop/images/east_asian_woman/seed047.png",
+    "source_label": "detector_positive",
+    "feature": 4858,
+    "c2c_boxes": [
+      {
+        "label": "earrings",
+        "xyxy": [
+          210.17601013183594,
+          244.48001098632812,
+          229.12001037597656,
+          287.4880065917969
+        ],
+        "area_fraction": 0.00310799972248077
+      }
+    ]
+  },
+  {
+    "sample_id": "east_asian_woman_seed066",
+    "split": "validation",
+    "race_prompt": "east asian",
+    "gender_prompt": "woman",
+    "image": "/n/fs/goose/backprop/images/east_asian_woman/seed066.png",
+    "source_label": "detector_positive",
+    "feature": 4858,
+    "c2c_boxes": [
+      {
+        "label": "brown tassel earrings",
+        "xyxy": [
+          388.864013671875,
+          248.57601928710938,
+          416.0000305175781,
+          344.32000732421875
+        ],
+        "area_fraction": 0.009911004914282984
+      },
+      {
+        "label": "brown tassel earrings",
+        "xyxy": [
+          179.4560089111328,
+          237.31201171875,
+          201.9840087890625,
+          334.5920104980469
+        ],
+        "area_fraction": 0.008359999849796296
+      }
+    ]
+  }
+]

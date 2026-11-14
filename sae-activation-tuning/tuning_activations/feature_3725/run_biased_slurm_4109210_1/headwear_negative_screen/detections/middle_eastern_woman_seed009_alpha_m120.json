@@ -1,0 +1,16 @@
+{
+  "image_sha256": "930d1d8a95bde467653010aa9b26c8430e8cadff12aeaad0272c1755d6f35518",
+  "result": {
+    "image_sha256": "930d1d8a95bde467653010aa9b26c8430e8cadff12aeaad0272c1755d6f35518",
+    "caption": "The image is a close up of a surface. The surface appears to be smooth. There are lines in the image. The lines are light gray. There is a slight shadow on the surface.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

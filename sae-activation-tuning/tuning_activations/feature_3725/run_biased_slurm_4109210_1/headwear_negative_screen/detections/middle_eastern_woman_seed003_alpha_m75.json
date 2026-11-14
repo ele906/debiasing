@@ -1,0 +1,16 @@
+{
+  "image_sha256": "056839c57985e723da7f9b3459d4f97c28ba4a42716a244011ac4cd04d01cb6d",
+  "result": {
+    "image_sha256": "056839c57985e723da7f9b3459d4f97c28ba4a42716a244011ac4cd04d01cb6d",
+    "caption": "A person is wearing a white shirt. They are standing in front of a pile of white flour. There is a white bucket next to the flour. ",
+    "object_labels": [
+      "paper towel"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

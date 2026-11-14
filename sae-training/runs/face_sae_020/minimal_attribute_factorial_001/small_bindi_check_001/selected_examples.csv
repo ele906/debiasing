@@ -1,0 +1,9 @@
+blind_id,sample_id,seed,visible_bindi,prompt_bindi,prompt_earrings,image,residual,visual_note
+img_066,indian_woman_bindi0_earrings0_seed517,517,0,0,0,images/indian_woman_bindi0_earrings0_seed517.png,residuals/indian_woman_bindi0_earrings0_seed517.npy,no clear red bindi visible
+img_044,indian_woman_bindi0_earrings1_seed517,517,0,0,1,images/indian_woman_bindi0_earrings1_seed517.png,residuals/indian_woman_bindi0_earrings1_seed517.npy,no clear red bindi visible
+img_012,indian_woman_bindi1_earrings0_seed517,517,1,1,0,images/indian_woman_bindi1_earrings0_seed517.png,residuals/indian_woman_bindi1_earrings0_seed517.npy,red bindi visible
+img_072,indian_woman_bindi1_earrings1_seed517,517,1,1,1,images/indian_woman_bindi1_earrings1_seed517.png,residuals/indian_woman_bindi1_earrings1_seed517.npy,red bindi visible
+img_040,indian_woman_bindi0_earrings0_seed519,519,0,0,0,images/indian_woman_bindi0_earrings0_seed519.png,residuals/indian_woman_bindi0_earrings0_seed519.npy,no clear red bindi visible
+img_010,indian_woman_bindi0_earrings1_seed519,519,0,0,1,images/indian_woman_bindi0_earrings1_seed519.png,residuals/indian_woman_bindi0_earrings1_seed519.npy,no clear red bindi visible
+img_023,indian_woman_bindi1_earrings0_seed519,519,1,1,0,images/indian_woman_bindi1_earrings0_seed519.png,residuals/indian_woman_bindi1_earrings0_seed519.npy,red bindi visible
+img_076,indian_woman_bindi1_earrings1_seed519,519,1,1,1,images/indian_woman_bindi1_earrings1_seed519.png,residuals/indian_woman_bindi1_earrings1_seed519.npy,red bindi visible

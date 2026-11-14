@@ -1,0 +1,22 @@
+{
+  "features": [
+    138,
+    527,
+    3530
+  ],
+  "seeds": [
+    40,
+    41,
+    42
+  ],
+  "strengths": [
+    0,
+    0.5,
+    1,
+    2
+  ],
+  "block": "unet.down_blocks.2.attentions.1",
+  "prompt_template": "a portrait of a {race} {gender} with a neutral expression, without any facial coverings, in a neutral white colored t-shirt against a neutral white background",
+  "baseline": "/n/fs/goose/baseline/images",
+  "checkpoint": "existing pretrained k10 SAE; not the unrelated pilot SAE"
+}

@@ -1,0 +1,93 @@
+{
+  "sample_id": "indian_woman_seed003",
+  "image": "/n/fs/goose/backprop/images/indian_woman/seed003.png",
+  "image_sha256": "eb02c55c9efdbaf97e9b3d5be748e30d9ddc0bf260738867101c6263d9856042",
+  "caption": "A woman is wearing a red turban on her head. She has a gold necklace around her neck. There are earrings on her ears. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        105.21600341796875,
+        0.25600001215934753,
+        479.488037109375,
+        244.48001098632812
+      ],
+      [
+        108.80000305175781,
+        0.25600001215934753,
+        476.9280090332031,
+        407.8080139160156
+      ],
+      [
+        136.9600067138672,
+        390.9120178222656,
+        383.7440185546875,
+        511.2320251464844
+      ],
+      [
+        127.74400329589844,
+        259.3280029296875,
+        182.52801513671875,
+        401.1520080566406
+      ],
+      [
+        381.18402099609375,
+        272.1280212402344,
+        433.40802001953125,
+        390.9120178222656
+      ],
+      [
+        257.7920227050781,
+        41.21600341796875,
+        291.5840148925781,
+        166.656005859375
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "a red turban",
+      "head",
+      "necklace",
+      "earrings",
+      "earrings",
+      "earrings"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        144.1280059814453,
+        55.552001953125,
+        407.8080139160156,
+        409.85601806640625
+      ],
+      [
+        138.49600219726562,
+        394.49603271484375,
+        382.72003173828125,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "necklace",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a red turban on her head. She has a gold necklace around her neck. There are earrings on her ears. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>a red turban<loc_205><loc_0><loc_936><loc_477>head<loc_212><loc_0><loc_931><loc_796>necklace<loc_267><loc_763><loc_749><loc_998>earrings<loc_249><loc_506><loc_356><loc_783><loc_744><loc_531><loc_846><loc_763>earrings<loc_503><loc_80><loc_569><loc_325></s>",
+    "objects": "</s><s>human face<loc_281><loc_108><loc_796><loc_800>necklace<loc_270><loc_770><loc_747><loc_998>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

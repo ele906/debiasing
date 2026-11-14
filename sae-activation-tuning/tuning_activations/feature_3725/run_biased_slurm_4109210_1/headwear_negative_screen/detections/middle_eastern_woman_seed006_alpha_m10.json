@@ -1,0 +1,21 @@
+{
+  "image_sha256": "4ae1620cc27759a54946ea8fc72cc32b97b257ffc666126c182a84f33b84b56b",
+  "result": {
+    "image_sha256": "4ae1620cc27759a54946ea8fc72cc32b97b257ffc666126c182a84f33b84b56b",
+    "caption": "A woman is wearing a brown headscarf. The woman has blue eyes and a brown nose. She has a smile on her face. ",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf,scarf"
+    ]
+  }
+}

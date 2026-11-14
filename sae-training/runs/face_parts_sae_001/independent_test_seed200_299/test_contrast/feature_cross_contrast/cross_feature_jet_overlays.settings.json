@@ -1,0 +1,59 @@
+{
+  "features": [
+    {
+      "feature": 1664,
+      "selected_for": [
+        "face",
+        "nose"
+      ]
+    },
+    {
+      "feature": 3701,
+      "selected_for": [
+        "eyes"
+      ]
+    },
+    {
+      "feature": 1600,
+      "selected_for": [
+        "eyebrows"
+      ]
+    },
+    {
+      "feature": 4858,
+      "selected_for": [
+        "ears"
+      ]
+    }
+  ],
+  "regions": [
+    "face",
+    "eyes",
+    "eyebrows",
+    "nose",
+    "ears"
+  ],
+  "validation_examples": {
+    "face": "black_man_seed002",
+    "eyes": "black_man_seed002",
+    "eyebrows": "black_man_seed018",
+    "nose": "black_man_seed002",
+    "ears": "black_man_seed051"
+  },
+  "test_examples": {
+    "face": "black_man_seed200",
+    "eyes": "black_man_seed200",
+    "eyebrows": "black_man_seed201",
+    "nose": "black_man_seed203",
+    "ears": "black_man_seed219"
+  },
+  "per_feature_contact_sheets": [
+    "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/test_contrast/feature_cross_contrast/contact_sheets/feature_1664_contact_sheet.jpg",
+    "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/test_contrast/feature_cross_contrast/contact_sheets/feature_3701_contact_sheet.jpg",
+    "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/test_contrast/feature_cross_contrast/contact_sheets/feature_1600_contact_sheet.jpg",
+    "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/test_contrast/feature_cross_contrast/contact_sheets/feature_4858_contact_sheet.jpg"
+  ],
+  "checkpoint": "/n/fs/goose/sae-training/runs/face_parts_sae_001/checkpoints/epoch_020",
+  "overlay": "jet feature activation normalized within detected face; cyan outline is face; yellow outline is target region when distinct from face",
+  "note": "One representative image is shown per split/region; these examples illustrate maps and are not used to calculate contrast means or intervals."
+}

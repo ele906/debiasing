@@ -1,0 +1,16 @@
+{
+  "image_sha256": "1001f1ff30877d68db8e273b9cf70e6d81cc5bddfcfc87dd82e5b6446b1fb612",
+  "result": {
+    "image_sha256": "1001f1ff30877d68db8e273b9cf70e6d81cc5bddfcfc87dd82e5b6446b1fb612",
+    "caption": "The image is a close up of a white fabric. The fabric appears to be soft and fluffy. There are small black dots in the middle of the fabric. There is a black object in the top left corner of the image.",
+    "object_labels": [
+      "bed"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

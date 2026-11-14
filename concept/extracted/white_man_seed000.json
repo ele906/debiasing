@@ -1,0 +1,86 @@
+{
+  "sample_id": "white_man_seed000",
+  "image": "/n/fs/goose/backprop/images/white_man/seed000.png",
+  "image_sha256": "66ce196165737dcbd9d42a87f10a452858f03382c28a92934660e556d48f34f2",
+  "caption": "A black and white photo of a man. The man has a serious look on his face. His hair is slicked back. He is wearing a white collared button down shirt with a black jacket over it.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        110.33600616455078,
+        60.67200469970703,
+        395.52001953125,
+        429.31201171875
+      ],
+      [
+        66.30400085449219,
+        0.25600001215934753,
+        421.63201904296875,
+        206.59201049804688
+      ],
+      [
+        0.25600001215934753,
+        403.7120056152344,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        403.7120056152344,
+        510.72003173828125,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black",
+      "photo",
+      "man",
+      "face",
+      "His hair",
+      "shirt",
+      "jacket"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        117.5040054321289,
+        59.13600158691406,
+        392.4480285644531,
+        426.2400207519531
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white photo of a man. The man has a serious look on his face. His hair is slicked back. He is wearing a white collared button down shirt with a black jacket over it.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_998>photo<loc_0><loc_0><loc_996><loc_998>man<loc_0><loc_0><loc_997><loc_998>face<loc_215><loc_118><loc_772><loc_838>His hair<loc_129><loc_0><loc_823><loc_403>shirt<loc_0><loc_788><loc_998><loc_998>jacket<loc_0><loc_788><loc_997><loc_998></s>",
+    "objects": "</s><s>human face<loc_229><loc_115><loc_766><loc_832>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

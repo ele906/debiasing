@@ -1,0 +1,20 @@
+{
+  "image_sha256": "1be3a3f87cffcf43a3082a50de62be623590357bdf258af7c74b0c74d6c17d81",
+  "result": {
+    "image_sha256": "1be3a3f87cffcf43a3082a50de62be623590357bdf258af7c74b0c74d6c17d81",
+    "caption": "A woman is looking at the camera. She is wearing a black scarf around her head. She has blue eyes and a blue shirt on. Next to the woman is a large stone.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

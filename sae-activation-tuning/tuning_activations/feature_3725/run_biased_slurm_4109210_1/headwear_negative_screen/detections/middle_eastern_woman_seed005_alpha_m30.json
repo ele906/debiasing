@@ -1,0 +1,16 @@
+{
+  "image_sha256": "1ecab80404527ea473c699a837c9c8727a6413836a89d2bd8a870132d073a602",
+  "result": {
+    "image_sha256": "1ecab80404527ea473c699a837c9c8727a6413836a89d2bd8a870132d073a602",
+    "caption": "The image is a close up of a white sweater. The sweater has a lot of fur on it. The fur appears to be soft and fuzzy. There are many lines on the sweater.",
+    "object_labels": [
+      "sheep"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

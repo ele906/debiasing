@@ -1,0 +1,16 @@
+{
+  "image_sha256": "a816b49cacb6465b2f85f1460b2bbfb0554ec639384d11b6a01e15864ab374d9",
+  "result": {
+    "image_sha256": "a816b49cacb6465b2f85f1460b2bbfb0554ec639384d11b6a01e15864ab374d9",
+    "caption": "The image is a close up of a surface. The surface appears to be wet. There are small cracks in the middle of the surface. There is a black dot in the bottom left corner of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

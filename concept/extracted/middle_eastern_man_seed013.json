@@ -1,0 +1,107 @@
+{
+  "sample_id": "middle_eastern_man_seed013",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_man/seed013.png",
+  "image_sha256": "d670093f09d05c548002f2bfd9b17d311247afc9a8d6abeefdec83c1e5035502",
+  "caption": "A man is wearing a white and black head covering. He has a long beard on his face. The man has dark brown eyes and black eyebrows. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        121.60000610351562,
+        237.82400512695312,
+        409.85601806640625,
+        487.16802978515625
+      ],
+      [
+        121.08800506591797,
+        99.5840072631836,
+        411.9040222167969,
+        485.63201904296875
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        170.75201416015625,
+        183.04000854492188,
+        243.968017578125,
+        215.80801391601562
+      ],
+      [
+        298.75201416015625,
+        185.60000610351562,
+        371.968017578125,
+        215.29600524902344
+      ],
+      [
+        155.9040069580078,
+        152.83200073242188,
+        386.30401611328125,
+        190.7200164794922
+      ],
+      [
+        156.41600036621094,
+        153.8560028076172,
+        255.7440185546875,
+        188.16000366210938
+      ]
+    ],
+    "labels": [
+      "A man",
+      "head",
+      "beard",
+      "face",
+      "The man",
+      "eyes",
+      "eyes",
+      "eyebrows",
+      "eyebrows"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        125.69600677490234,
+        274.176025390625,
+        410.8800048828125,
+        489.2160339355469
+      ],
+      [
+        126.2080078125,
+        72.44800567626953,
+        407.2960205078125,
+        448.7680358886719
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human beard",
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is wearing a white and black head covering. He has a long beard on his face. The man has dark brown eyes and black eyebrows. The background is blurry.</s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>head<loc_0><loc_0><loc_997><loc_998>beard<loc_237><loc_464><loc_800><loc_951>face<loc_236><loc_194><loc_804><loc_948>The man<loc_0><loc_1><loc_998><loc_998>eyes<loc_333><loc_357><loc_476><loc_421><loc_583><loc_362><loc_726><loc_420>eyebrows<loc_304><loc_298><loc_754><loc_372><loc_305><loc_300><loc_499><loc_367></s>",
+    "objects": "</s><s>human beard<loc_245><loc_535><loc_802><loc_955>human face<loc_246><loc_141><loc_795><loc_876>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

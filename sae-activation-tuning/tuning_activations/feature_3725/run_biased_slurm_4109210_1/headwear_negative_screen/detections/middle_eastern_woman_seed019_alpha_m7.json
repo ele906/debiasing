@@ -1,0 +1,21 @@
+{
+  "image_sha256": "df1be5f929575a744989aaff739d53772112a75fdc7ece64fe6e35931e5c6f77",
+  "result": {
+    "image_sha256": "df1be5f929575a744989aaff739d53772112a75fdc7ece64fe6e35931e5c6f77",
+    "caption": "A woman is wearing a gray headscarf. The woman has dark eyes and a pink lip. The background is blurry.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf,scarf"
+    ]
+  }
+}

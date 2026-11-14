@@ -1,0 +1,16 @@
+{
+  "image_sha256": "dc6d6a631d66e016336817d3a448cd29b603cf3abe83f18b6b598c1784fde5bf",
+  "result": {
+    "image_sha256": "dc6d6a631d66e016336817d3a448cd29b603cf3abe83f18b6b598c1784fde5bf",
+    "caption": "The image is a close up of a rug or carpet. The rug is a light beige color. There are small dark brown dots in the center of the rug. The lines on the rug are dark brown in color.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

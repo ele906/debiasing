@@ -1,0 +1,16 @@
+{
+  "image_sha256": "4b7b26f43f6116095a5c5ad7d46073f0aed175ac828099c9a737f1e198a30ba3",
+  "result": {
+    "image_sha256": "4b7b26f43f6116095a5c5ad7d46073f0aed175ac828099c9a737f1e198a30ba3",
+    "caption": "The image is a close up of a white surface. The surface appears to be made of wool or yarn. There are lines going across the surface. There is a small black dot in the middle of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

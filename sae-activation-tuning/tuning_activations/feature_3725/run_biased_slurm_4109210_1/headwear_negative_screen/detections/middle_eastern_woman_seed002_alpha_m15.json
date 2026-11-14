@@ -1,0 +1,21 @@
+{
+  "image_sha256": "8a911494e9807dec6e5cc19246f09821be12c78af2180c15f1b80d1e609b9576",
+  "result": {
+    "image_sha256": "8a911494e9807dec6e5cc19246f09821be12c78af2180c15f1b80d1e609b9576",
+    "caption": "A close up of a woman's face is visible.  The woman has dark brown hair and is wearing a grey scarf.  Her eyes are open and her lips are slightly parted.  She is smiling.  Behind her is a white lace object.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

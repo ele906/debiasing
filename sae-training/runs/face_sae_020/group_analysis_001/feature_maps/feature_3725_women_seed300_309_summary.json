@@ -1,0 +1,18 @@
+{
+  "feature": 3725,
+  "images": 60,
+  "seeds": [
+    300,
+    309
+  ],
+  "mean_activation_by_group": {
+    "black_woman": 0.0,
+    "white_woman": 0.0,
+    "east_asian_woman": 1.1744988143444062,
+    "middle_eastern_woman": 7.557316160202026,
+    "indian_woman": 16.909150218963624,
+    "hispanic_woman": 1.1185815691947938
+  },
+  "overlay": "Jet, shared activation scale across all displayed images",
+  "contact_sheet": "/n/fs/goose/sae-training/runs/face_sae_020/group_analysis_001/feature_maps/feature_3725_women_seed300_309_jet.jpg"
+}

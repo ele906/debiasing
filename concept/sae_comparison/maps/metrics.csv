@@ -1,0 +1,13 @@
+concept,feature,detector_present,sample_id,mean,maximum,active_fraction,replay_mae
+headscarf,3364,1,middle_eastern_man_seed000,0.0,0.0,0.0,0.0
+headscarf,3364,1,middle_eastern_man_seed003,0.0,0.0,0.0,0.0
+headscarf,3364,0,black_man_seed000,0.0,0.0,0.0,0.0
+headscarf,3364,0,black_man_seed001,0.0,0.0,0.0,0.0
+necklace,43,1,indian_woman_seed000,0.08832191675901413,11.414077758789062,0.0078125,0.0
+necklace,43,1,indian_woman_seed001,0.08286413550376892,11.031198501586914,0.0078125,0.0
+necklace,43,0,black_man_seed000,0.0,0.0,0.0,0.0
+necklace,43,0,black_man_seed001,0.0,0.0,0.0,0.0
+kimono,1899,1,east_asian_woman_seed000,2.4321210384368896,23.11697006225586,0.16796875,0.0
+kimono,1899,1,east_asian_woman_seed001,2.8431954383850098,19.917381286621094,0.203125,0.0
+kimono,1899,0,black_man_seed000,0.0,0.0,0.0,0.0
+kimono,1899,0,black_man_seed001,0.0,0.0,0.0,0.0

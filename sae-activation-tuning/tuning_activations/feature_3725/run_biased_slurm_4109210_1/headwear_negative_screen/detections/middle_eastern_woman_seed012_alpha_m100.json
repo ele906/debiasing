@@ -1,0 +1,16 @@
+{
+  "image_sha256": "0c2537665291a056984a125f1b9ac310a02973c83c8441a27569474e524ffd06",
+  "result": {
+    "image_sha256": "0c2537665291a056984a125f1b9ac310a02973c83c8441a27569474e524ffd06",
+    "caption": "The image is a close up of a piece of fabric. The fabric is white and has a thin, wavy design on it. There are small brown dots on the left side of the fabric. ",
+    "object_labels": [
+      "insect"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

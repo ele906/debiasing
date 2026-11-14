@@ -1,0 +1,20 @@
+{
+  "image_sha256": "bba73c3c87a55f3e723a340864995e19275712f0783d1015a25797816c6e5d45",
+  "result": {
+    "image_sha256": "bba73c3c87a55f3e723a340864995e19275712f0783d1015a25797816c6e5d45",
+    "caption": "A woman is wearing a red head scarf. The woman has blue eyes and a pink nose. There is a white shirt under the woman. ",
+    "object_labels": [
+      "human face",
+      "scarf"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head scarf",
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head scarf,scarf"
+    ]
+  }
+}

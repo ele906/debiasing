@@ -1,0 +1,1 @@
+Discovery images only; exact pixel replay verified. Left: original. Right: SAE map, scaled independently per image. Compare metrics.csv for magnitudes; brightness across maps is not comparable. Detector positives/negatives are unreviewed. These maps do not establish a causal concept feature.

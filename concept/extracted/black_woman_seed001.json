@@ -1,0 +1,121 @@
+{
+  "sample_id": "black_woman_seed001",
+  "image": "/n/fs/goose/backprop/images/black_woman/seed001.png",
+  "image_sha256": "8cd738a9e812904706b34a110d73aef9990dcfd9dfe7109b5ae9ae250b1a980f",
+  "caption": "A black and white photo of a woman with an afro. The woman is wearing large silver earrings. The earrings are dangling from the ear. The hair of the woman is dark and curly.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        510.2080383300781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.2080383300781,
+        510.2080383300781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        409.3440246582031
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.6960144042969,
+        510.2080383300781
+      ],
+      [
+        350.97601318359375,
+        312.06402587890625,
+        399.61602783203125,
+        412.9280090332031
+      ],
+      [
+        171.7760009765625,
+        282.8800048828125,
+        210.17601013183594,
+        383.7440185546875
+      ],
+      [
+        350.97601318359375,
+        312.5760192871094,
+        399.61602783203125,
+        412.9280090332031
+      ],
+      [
+        165.12001037597656,
+        213.760009765625,
+        201.9840087890625,
+        290.0480041503906
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        509.18402099609375,
+        408.32000732421875
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        508.6720275878906,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A black",
+      "photo",
+      "afro",
+      "The woman",
+      "earrings",
+      "earrings",
+      "The earrings",
+      "ear",
+      "The hair",
+      "woman"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        350.97601318359375,
+        314.1120300292969,
+        398.5920104980469,
+        412.416015625
+      ],
+      [
+        171.7760009765625,
+        283.3919982910156,
+        209.6640167236328,
+        383.7440185546875
+      ],
+      [
+        196.864013671875,
+        97.53600311279297,
+        404.2240295410156,
+        389.8880310058594
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "earrings",
+      "earrings",
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A black and white photo of a woman with an afro. The woman is wearing large silver earrings. The earrings are dangling from the ear. The hair of the woman is dark and curly.</s>",
+    "grounding": "</s><s>A black<loc_0><loc_0><loc_998><loc_996>photo<loc_0><loc_0><loc_996><loc_996>afro<loc_0><loc_0><loc_997><loc_799>The woman<loc_0><loc_0><loc_995><loc_996>earrings<loc_685><loc_609><loc_780><loc_806><loc_335><loc_552><loc_410><loc_749>The earrings<loc_685><loc_610><loc_780><loc_806>ear<loc_322><loc_417><loc_394><loc_566>The hair<loc_0><loc_0><loc_994><loc_797>woman<loc_0><loc_0><loc_993><loc_998></s>",
+    "objects": "</s><s>earrings<loc_685><loc_613><loc_778><loc_805><loc_335><loc_553><loc_409><loc_749>human face<loc_384><loc_190><loc_789><loc_761>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

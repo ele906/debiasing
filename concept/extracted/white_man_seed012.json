@@ -1,0 +1,93 @@
+{
+  "sample_id": "white_man_seed012",
+  "image": "/n/fs/goose/backprop/images/white_man/seed012.png",
+  "image_sha256": "c027b592f3f356b10c01c718f813231c183ac0269f69258d6cb56394c5e153bc",
+  "caption": "The image is a black and white photo of a man. The man has medium length hair. The hair is a light brown color. He has dark eyes. He is wearing a white collared button down shirt. The shirt has a collar around the neck. The background behind the man is blurry. The mans mouth is slightly open. He appears to be looking off to the side.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        78.08000183105469,
+        0.25600001215934753,
+        454.4000244140625,
+        264.96002197265625
+      ],
+      [
+        163.58401489257812,
+        214.27200317382812,
+        376.5760192871094,
+        251.13601684570312
+      ],
+      [
+        297.72802734375,
+        218.36801147460938,
+        374.0160217285156,
+        248.57601928710938
+      ],
+      [
+        167.6800079345703,
+        217.34400939941406,
+        240.38401794433594,
+        246.01600646972656
+      ],
+      [
+        0.25600001215934753,
+        419.5840148925781,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        143.10400390625,
+        420.6080322265625,
+        385.7920227050781,
+        511.2320251464844
+      ],
+      [
+        209.15200805664062,
+        363.2640075683594,
+        338.176025390625,
+        399.61602783203125
+      ]
+    ],
+    "labels": [
+      "The man",
+      "hair",
+      "eyes",
+      "eyes",
+      "eyes",
+      "The shirt",
+      "neck",
+      "The mans mouth"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        123.64800262451172,
+        85.24800109863281,
+        409.85601806640625,
+        478.4640197753906
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>The image is a black and white photo of a man. The man has medium length hair. The hair is a light brown color. He has dark eyes. He is wearing a white collared button down shirt. The shirt has a collar around the neck. The background behind the man is blurry. The mans mouth is slightly open. He appears to be looking off to the side.</s>",
+    "grounding": "</s><s>The man<loc_0><loc_0><loc_998><loc_998>hair<loc_152><loc_0><loc_887><loc_517>eyes<loc_319><loc_418><loc_735><loc_490><loc_581><loc_426><loc_730><loc_485><loc_327><loc_424><loc_469><loc_480>The shirt<loc_0><loc_819><loc_998><loc_998>neck<loc_279><loc_821><loc_753><loc_998>The mans mouth<loc_408><loc_709><loc_660><loc_780></s>",
+    "objects": "</s><s>human face<loc_241><loc_166><loc_800><loc_934>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

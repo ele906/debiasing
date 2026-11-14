@@ -1,0 +1,19 @@
+{
+  "image_sha256": "53fcd02f913fc7a668c6fca53e7fe91a53aee479a4f33f3fbf548ed6e0b0c616",
+  "result": {
+    "image_sha256": "53fcd02f913fc7a668c6fca53e7fe91a53aee479a4f33f3fbf548ed6e0b0c616",
+    "caption": "A woman is wearing a gray head covering. She has dark brown hair. She is smiling and has her eyes closed. ",
+    "object_labels": [
+      "girl"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection",
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

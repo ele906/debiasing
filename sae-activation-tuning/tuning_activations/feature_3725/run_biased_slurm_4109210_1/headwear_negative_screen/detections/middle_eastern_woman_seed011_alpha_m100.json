@@ -1,0 +1,16 @@
+{
+  "image_sha256": "5a91594c1a755a74a0daf8f5c4d06442f42d1cde4be8b75d1072a4e9611533b8",
+  "result": {
+    "image_sha256": "5a91594c1a755a74a0daf8f5c4d06442f42d1cde4be8b75d1072a4e9611533b8",
+    "caption": "The image is blurry. There are small black dots in the center of the image. There is a white object that appears to be a fan. The fan is made of plastic. The blades of the fan are long and thin. The lines on the fan appear to be made up of thin, wavy lines. The surface of the table is white.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

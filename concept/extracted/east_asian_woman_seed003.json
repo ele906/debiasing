@@ -1,0 +1,86 @@
+{
+  "sample_id": "east_asian_woman_seed003",
+  "image": "/n/fs/goose/backprop/images/east_asian_woman/seed003.png",
+  "image_sha256": "124e34fe851083cb97bc3305a5b5ecd2d61a0603583743769ee1d2c62c8ecd59",
+  "caption": "A woman is wearing a kimono. She has two flowers on her head. The woman has dark brown hair. ",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        0.25600001215934753,
+        327.9360046386719,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        370.4320068359375,
+        0.25600001215934753,
+        485.1200256347656,
+        159.48800659179688
+      ],
+      [
+        135.42401123046875,
+        0.25600001215934753,
+        440.5760192871094,
+        356.6080017089844
+      ],
+      [
+        0.25600001215934753,
+        0.7680000066757202,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        135.42401123046875,
+        0.25600001215934753,
+        440.06402587890625,
+        356.6080017089844
+      ],
+      [
+        136.44801330566406,
+        0.25600001215934753,
+        440.06402587890625,
+        228.09600830078125
+      ]
+    ],
+    "labels": [
+      "A woman",
+      "kimono",
+      "flowers",
+      "head",
+      "The woman",
+      "The woman",
+      "hair"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        175.87200927734375,
+        69.37600708007812,
+        396.0320129394531,
+        355.5840148925781
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "woman"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A woman is wearing a kimono. She has two flowers on her head. The woman has dark brown hair. </s>",
+    "grounding": "</s><s>A woman<loc_0><loc_0><loc_998><loc_998>kimono<loc_0><loc_640><loc_998><loc_998>flowers<loc_723><loc_0><loc_947><loc_311>head<loc_264><loc_0><loc_860><loc_696>The woman<loc_0><loc_1><loc_998><loc_998><loc_264><loc_0><loc_859><loc_696>hair<loc_266><loc_0><loc_859><loc_445></s>",
+    "objects": "</s><s>human face<loc_343><loc_135><loc_773><loc_694>woman<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

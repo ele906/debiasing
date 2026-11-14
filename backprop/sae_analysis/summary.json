@@ -1,0 +1,12 @@
+{
+  "images": 1200,
+  "dimensions": 5120,
+  "discovery": 720,
+  "validation": 240,
+  "reserved_test": 240,
+  "pooling": "mean",
+  "method": "Discovery-standardized within-gender one-race-vs-other-races mean contrast",
+  "trained": false,
+  "interpretation": "Prompt-group associations; not racism, covering labels, or causal effects",
+  "source": "Adapted from ../sdxl-unbox/scripts/sae_bias_experiment.py"
+}

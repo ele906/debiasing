@@ -1,0 +1,16 @@
+{
+  "image_sha256": "db37c9c3bb65112de9d0b5372a50d4c9b355cd3bc9283f5215bce636d6f543c5",
+  "result": {
+    "image_sha256": "db37c9c3bb65112de9d0b5372a50d4c9b355cd3bc9283f5215bce636d6f543c5",
+    "caption": "The image is blurry. The ground appears to be made of sand. The sand is light brown in color. There is a black object in the bottom right corner of the image.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

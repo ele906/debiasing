@@ -1,0 +1,16 @@
+{
+  "image_sha256": "ab6e201d9692dc936440d193c71f1f069c1880d564ee6c6b83cc923c09fa20cc",
+  "result": {
+    "image_sha256": "ab6e201d9692dc936440d193c71f1f069c1880d564ee6c6b83cc923c09fa20cc",
+    "caption": "The image is a close up of a piece of wood. The wood is white and has a rough texture. There are small dark holes in the wood.",
+    "object_labels": [
+      "animal"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

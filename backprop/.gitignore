@@ -1,0 +1,9 @@
+# Reproducible datasets, model arrays, and run outputs stay local.
+images/
+features/
+*.npz
+sae_heatmaps/
+trained_probe*/
+suppression*/
+logs/
+__pycache__/

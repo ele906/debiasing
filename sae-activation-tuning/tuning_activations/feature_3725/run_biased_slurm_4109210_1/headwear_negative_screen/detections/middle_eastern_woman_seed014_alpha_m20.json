@@ -1,0 +1,23 @@
+{
+  "image_sha256": "ee62ca5571899c85b672eb624187a86ff975995e118e4aac5978220261026397",
+  "result": {
+    "image_sha256": "ee62ca5571899c85b672eb624187a86ff975995e118e4aac5978220261026397",
+    "caption": "A close up of a person's face is visible.  The person is wearing a blue headscarf and a light blue shirt.  There is a piece of fabric with holes in it behind the person.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human mouth",
+      "human nose",
+      "man",
+      "man"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "headscarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:headscarf"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "sample_id": "middle_eastern_woman_seed001",
+  "image": "/n/fs/goose/backprop/images/middle_eastern_woman/seed001.png",
+  "image_sha256": "d3a15971a746a3118c5374748e2915e2710a3c7f5ced3d7573b9aad9a531a262",
+  "caption": "This is a portrait of a woman. The woman is wearing a head scarf. The head scarf is brown with red designs on it. There is a ring on the top of the headscarf. The girl has blue eyes. Her eyebrows are brown and her lips are pink. The background behind the girl is a light brown color.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        98.04800415039062,
+        0.25600001215934753,
+        473.85601806640625,
+        511.2320251464844
+      ],
+      [
+        244.99200439453125,
+        136.9600067138672,
+        265.9840087890625,
+        162.04800415039062
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        510.72003173828125,
+        511.2320251464844
+      ],
+      [
+        163.07200622558594,
+        179.96800231933594,
+        348.416015625,
+        218.36801147460938
+      ],
+      [
+        165.12001037597656,
+        182.01600646972656,
+        231.6800079345703,
+        215.80801391601562
+      ],
+      [
+        281.85601806640625,
+        183.04000854492188,
+        346.8800048828125,
+        215.29600524902344
+      ],
+      [
+        155.3920135498047,
+        160.0,
+        358.656005859375,
+        189.69601440429688
+      ],
+      [
+        271.10400390625,
+        162.04800415039062,
+        358.1440124511719,
+        188.67201232910156
+      ],
+      [
+        211.20001220703125,
+        310.52801513671875,
+        305.9200134277344,
+        350.4640197753906
+      ]
+    ],
+    "labels": [
+      "The woman",
+      "The head scarf",
+      "a ring",
+      "The girl",
+      "eyes",
+      "eyes",
+      "eyes",
+      "Her eyebrows",
+      "Her eyebrows",
+      "lips"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        134.91200256347656,
+        82.1760025024414,
+        382.72003173828125,
+        399.10400390625
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "scarf"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>This is a portrait of a woman. The woman is wearing a head scarf. The head scarf is brown with red designs on it. There is a ring on the top of the headscarf. The girl has blue eyes. Her eyebrows are brown and her lips are pink. The background behind the girl is a light brown color.</s>",
+    "grounding": "</s><s>The woman<loc_0><loc_0><loc_998><loc_998>The head scarf<loc_191><loc_0><loc_925><loc_998>a ring<loc_478><loc_267><loc_519><loc_316>The girl<loc_0><loc_0><loc_997><loc_998>eyes<loc_318><loc_351><loc_680><loc_426><loc_322><loc_355><loc_452><loc_421><loc_550><loc_357><loc_677><loc_420>Her eyebrows<loc_303><loc_312><loc_700><loc_370><loc_529><loc_316><loc_699><loc_368>lips<loc_412><loc_606><loc_597><loc_684></s>",
+    "objects": "</s><s>human face<loc_263><loc_160><loc_747><loc_779>scarf<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

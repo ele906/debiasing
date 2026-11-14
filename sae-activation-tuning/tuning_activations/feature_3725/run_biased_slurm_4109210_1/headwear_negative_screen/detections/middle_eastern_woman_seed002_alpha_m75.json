@@ -1,0 +1,16 @@
+{
+  "image_sha256": "f0569885424ff4399a675257f029c5c1d44922645bc2c2a20ca06e14d13e32a3",
+  "result": {
+    "image_sha256": "f0569885424ff4399a675257f029c5c1d44922645bc2c2a20ca06e14d13e32a3",
+    "caption": "The image is a close up of a piece of fabric. The fabric is white and appears to be made of a soft material. The edges of the fabric are slightly blurred, but it looks like it has been folded or folded. There are no other objects in the image.",
+    "object_labels": [
+      "table"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

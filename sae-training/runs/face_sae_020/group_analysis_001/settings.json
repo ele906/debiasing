@@ -1,0 +1,16 @@
+{
+  "experiment": "group activation scan on existing held-out portraits",
+  "sae_run": "/n/fs/goose/sae-training/runs/face_sae_020",
+  "sae_weights_sha256": "4622aa020e9e14fd75d4494f5b9c5b36cee7f0009feba3b7eb07b046c3216b39",
+  "activation_block": "unet.down_blocks.2.attentions.1",
+  "residual_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/residuals",
+  "residual_source_sae": "pretrained SDXL Turbo SAE",
+  "encoding_model": "face_sae_020 selected epoch 20",
+  "pooling": "mean, max, and active fraction within automatic human-face box; plus global mean",
+  "box_source": "/n/fs/goose/sae-training/runs/face_parts_sae_001/independent_test_seed200_299/annotations/bounding_boxes.csv",
+  "images": 1200,
+  "face_box_usable": 1199,
+  "labels": "race_prompt and gender_prompt are generated prompt groups",
+  "device": "cuda",
+  "batch_size": 32
+}

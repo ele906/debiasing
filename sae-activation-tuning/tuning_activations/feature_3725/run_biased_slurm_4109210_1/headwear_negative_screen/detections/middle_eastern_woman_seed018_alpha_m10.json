@@ -1,0 +1,21 @@
+{
+  "image_sha256": "3ea4d8d6de1e1efbc22715bfa613cc1360c6e4b37c2abad6f1a05d7cd090aa68",
+  "result": {
+    "image_sha256": "3ea4d8d6de1e1efbc22715bfa613cc1360c6e4b37c2abad6f1a05d7cd090aa68",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a black scarf around her head.  Her eyes are blue and her eyebrows are dark.  She has a serious look on her face.",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "scarf"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:scarf"
+    ]
+  }
+}

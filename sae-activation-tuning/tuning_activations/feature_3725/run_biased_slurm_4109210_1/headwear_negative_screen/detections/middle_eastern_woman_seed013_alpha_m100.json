@@ -1,0 +1,16 @@
+{
+  "image_sha256": "cbb66d2b8066936bd2e1582e14ec896fb19cfc1ddab026db52261f2d5c75b3fd",
+  "result": {
+    "image_sha256": "cbb66d2b8066936bd2e1582e14ec896fb19cfc1ddab026db52261f2d5c75b3fd",
+    "caption": "The image is blurry. There are wooden sticks in the image. The sticks are light brown in color. The background of the image is blurred. The sky is blue. The ground is light brown. There is a building in the background. The building is dark brown. The wood sticks are sticking up in the air. The tips of the sticks are sharp.",
+    "object_labels": [
+      "furniture"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

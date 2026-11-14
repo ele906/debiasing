@@ -1,0 +1,16 @@
+{
+  "image_sha256": "e1f0a9548707d79dd8178ca3fe14a0e36a9187061ac7fd6302141ec916fab155",
+  "result": {
+    "image_sha256": "e1f0a9548707d79dd8178ca3fe14a0e36a9187061ac7fd6302141ec916fab155",
+    "caption": "A close up of a person's face is covered in white clay. The clay is making the clay look like it has been used to make a face mask. The person has blonde hair and is wearing a white dress. The background of the photo is blurred.",
+    "object_labels": [
+      "person"
+    ],
+    "face_detected": false,
+    "forbidden_attributes": [],
+    "image_passes": false,
+    "rejection_reasons": [
+      "no_face_detection"
+    ]
+  }
+}

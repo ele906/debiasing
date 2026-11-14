@@ -1,0 +1,20 @@
+{
+  "image_sha256": "020481f194bfd29337f81116b291af9205f947b0362eb89904b5fc9624bbce48",
+  "result": {
+    "image_sha256": "020481f194bfd29337f81116b291af9205f947b0362eb89904b5fc9624bbce48",
+    "caption": "A woman is wearing a black head covering. There is a white wall behind the woman. The woman has blue eyes and is smiling. ",
+    "object_labels": [
+      "human eye",
+      "human face",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

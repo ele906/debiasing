@@ -1,0 +1,22 @@
+{
+  "image_sha256": "edd78fe65f9c652ad0e618260094ba9c818d980e44357a3fd13a340ea726d1cb",
+  "result": {
+    "image_sha256": "edd78fe65f9c652ad0e618260094ba9c818d980e44357a3fd13a340ea726d1cb",
+    "caption": "A close up of a woman's face is visible.  The woman is wearing a black head covering.  Her eyes are blue and her eyebrows are dark.  She has a slight smile on her face.",
+    "object_labels": [
+      "human eye",
+      "human eye",
+      "human face",
+      "human nose",
+      "woman"
+    ],
+    "face_detected": true,
+    "forbidden_attributes": [
+      "head covering"
+    ],
+    "image_passes": false,
+    "rejection_reasons": [
+      "forbidden_attribute:head covering"
+    ]
+  }
+}

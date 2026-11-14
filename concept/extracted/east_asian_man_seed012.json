@@ -1,0 +1,72 @@
+{
+  "sample_id": "east_asian_man_seed012",
+  "image": "/n/fs/goose/backprop/images/east_asian_man/seed012.png",
+  "image_sha256": "57e34f7cb9a728d0327ea685df096aa39e3ef12f8f75bdb6c8cc5748c94a2f76",
+  "caption": "A man is looking directly at the camera. He has a slight smile on his face. His hair is black and spiked up. He is wearing a grey shirt. The background is blurry.",
+  "grounding": {
+    "bboxes": [
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ],
+      [
+        254.7200164794922,
+        332.54400634765625,
+        344.32000732421875,
+        367.3600158691406
+      ],
+      [
+        178.4320068359375,
+        94.46400451660156,
+        418.04803466796875,
+        420.6080322265625
+      ],
+      [
+        160.0,
+        0.25600001215934753,
+        438.52801513671875,
+        258.30401611328125
+      ],
+      [
+        0.25600001215934753,
+        393.4720153808594,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "A man",
+      "smile",
+      "face",
+      "His hair",
+      "shirt"
+    ]
+  },
+  "objects": {
+    "bboxes": [
+      [
+        178.4320068359375,
+        92.41600799560547,
+        416.51202392578125,
+        422.1440124511719
+      ],
+      [
+        0.25600001215934753,
+        0.25600001215934753,
+        511.2320251464844,
+        511.2320251464844
+      ]
+    ],
+    "labels": [
+      "human face",
+      "man"
+    ]
+  },
+  "raw": {
+    "caption": "</s><s>A man is looking directly at the camera. He has a slight smile on his face. His hair is black and spiked up. He is wearing a grey shirt. The background is blurry.</s>",
+    "grounding": "</s><s>A man<loc_0><loc_0><loc_998><loc_998>smile<loc_497><loc_649><loc_672><loc_717>face<loc_348><loc_184><loc_816><loc_821>His hair<loc_312><loc_0><loc_856><loc_504>shirt<loc_0><loc_768><loc_998><loc_998></s>",
+    "objects": "</s><s>human face<loc_348><loc_180><loc_813><loc_824>man<loc_0><loc_0><loc_998><loc_998></s>"
+  }
+}

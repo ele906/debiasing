@@ -1,0 +1,20 @@
+{
+  "output": "/n/fs/goose/baseline/sae_experiment_20261009",
+  "cache_dir": "/n/fs/goose/ReNO/hf_cache",
+  "prompts": null,
+  "prompt": "a goose swimming on a lake at sunrise",
+  "block": "unet.down_blocks.2.attentions.1",
+  "checkpoint": null,
+  "seeds": 4,
+  "steps": 500,
+  "batch_size": 1024,
+  "features": null,
+  "strengths": [
+    0,
+    0.5,
+    1,
+    2
+  ],
+  "seed": 42,
+  "allow_download": false
+}

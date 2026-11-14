@@ -1,0 +1,17 @@
+concept,target_feature,source_label,sample_id,split,race_prompt,gender_prompt,image,features
+headscarf,1257,detector_positive,middle_eastern_woman_seed042,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed042.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed042.npz
+headscarf,1257,detector_positive,middle_eastern_woman_seed052,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed052.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed052.npz
+headscarf,1257,detector_positive,middle_eastern_woman_seed002,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed002.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed002.npz
+headscarf,1257,detector_positive,middle_eastern_woman_seed045,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed045.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed045.npz
+headscarf,1257,detector_negative,middle_eastern_woman_seed070,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed070.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed070.npz
+headscarf,1257,detector_negative,middle_eastern_woman_seed054,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed054.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed054.npz
+headscarf,1257,detector_negative,middle_eastern_woman_seed096,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed096.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed096.npz
+headscarf,1257,detector_negative,middle_eastern_woman_seed013,validation,middle eastern,woman,/n/fs/goose/backprop/images/middle_eastern_woman/seed013.png,/n/fs/goose/backprop/features/middle_eastern_woman/seed013.npz
+earrings,4858,detector_positive,east_asian_woman_seed054,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed054.png,/n/fs/goose/backprop/features/east_asian_woman/seed054.npz
+earrings,4858,detector_positive,east_asian_woman_seed061,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed061.png,/n/fs/goose/backprop/features/east_asian_woman/seed061.npz
+earrings,4858,detector_positive,east_asian_woman_seed047,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed047.png,/n/fs/goose/backprop/features/east_asian_woman/seed047.npz
+earrings,4858,detector_positive,east_asian_woman_seed066,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed066.png,/n/fs/goose/backprop/features/east_asian_woman/seed066.npz
+earrings,4858,detector_negative,east_asian_woman_seed053,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed053.png,/n/fs/goose/backprop/features/east_asian_woman/seed053.npz
+earrings,4858,detector_negative,east_asian_woman_seed002,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed002.png,/n/fs/goose/backprop/features/east_asian_woman/seed002.npz
+earrings,4858,detector_negative,east_asian_woman_seed042,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed042.png,/n/fs/goose/backprop/features/east_asian_woman/seed042.npz
+earrings,4858,detector_negative,east_asian_woman_seed013,validation,east asian,woman,/n/fs/goose/backprop/images/east_asian_woman/seed013.png,/n/fs/goose/backprop/features/east_asian_woman/seed013.npz
