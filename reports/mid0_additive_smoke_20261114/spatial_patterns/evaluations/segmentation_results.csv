@@ -1,0 +1,2 @@
+status,reason
+not_used_for_beard_scoring,Existing SAM probes are class-agnostic and lack validated beard masks; use blinded human ratings

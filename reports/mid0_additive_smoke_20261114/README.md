@@ -74,3 +74,7 @@ Workspace source: `/n/fs/goose/experiments/mid0_sae_selectivity/additive_2026111
 ## Signed fixed-activation follow-up
 
 [View all 130 signed fixed-target images, paired controls, and naturalness measurements](fixed_targets/README.md). Targets range from −200 through +200, including 0.
+
+## Spatial-pattern transfer experiment
+
+[Spatial activation-pattern transfer: matched natural, shuffled, uniform and localized interventions](spatial_patterns/README.md)
