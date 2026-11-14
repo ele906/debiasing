@@ -70,3 +70,7 @@ The encoder uses nonnegative Top-K (k=10); newly introduced coordinates are deco
 Contact sheets are viewing derivatives. **Every original PNG in [originals/](originals/) remains at 512×512 without resizing or recompression.** [Per-image measurements](per_image_results.csv), [lossless activation archives](activations/), [configuration and calibration](config/), [source code](code/), and [file hashes](manifest.json) are included. The 44 multiplicative reference images are separate from the 40 additive/control images.
 
 Workspace source: `/n/fs/goose/experiments/mid0_sae_selectivity/additive_20261114_174738_954258`. Full parallel additive workers are separate and remain in progress.
+
+## Signed fixed-activation follow-up
+
+[View all 130 signed fixed-target images, paired controls, and naturalness measurements](fixed_targets/README.md). Targets range from −200 through +200, including 0.

@@ -1,0 +1,822 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 3414,
+    "sha256": "bc981d538f899a0f78b4ae73f8ac89b3b78f445babe7ff06c5ccb601a14f5dff"
+  },
+  {
+    "path": "activation_and_naturalness.csv",
+    "bytes": 98139,
+    "sha256": "89cb5ad15510751ce9da4faea06d6b084653e9617697eb214dec255bd7dbe75d"
+  },
+  {
+    "path": "all_generations.csv",
+    "bytes": 150327,
+    "sha256": "1f670e76e853a1ae07c7e23f11c6a9f6719d1b829b56f14f2705307978d2b486"
+  },
+  {
+    "path": "code/additive.py",
+    "bytes": 25174,
+    "sha256": "7d0a6bcaae055dc5499538a0874002b6a552c470aa77d529f79b2db1b9e11ad0"
+  },
+  {
+    "path": "code/fixed4228.sbatch",
+    "bytes": 728,
+    "sha256": "dfe1b5514a860379b89ea6f43d1674ee91946c14206e7e84d5c226d5065ab926"
+  },
+  {
+    "path": "code/inspect_fixed_sweep.py",
+    "bytes": 4859,
+    "sha256": "3907845edc53a728dd43b780046ece9cd6b81474229ae192627031bd96c5450d"
+  },
+  {
+    "path": "code/prepare_set_sweep.py",
+    "bytes": 4288,
+    "sha256": "e723dc8d6a4ad54cbf53a518e4bef34e1b08f71c4fabfd3a6bfbe5914fee7c72"
+  },
+  {
+    "path": "code/run.py",
+    "bytes": 18533,
+    "sha256": "885450326dcf92d437e89f475b2dda0864a26d7bb81ddd666d7c407e717448c5"
+  },
+  {
+    "path": "code/test_additive.py",
+    "bytes": 1809,
+    "sha256": "9487827066a3e7907429dab5cc34f16d557cd27e79fbb1fc99a3e49c688e079a"
+  },
+  {
+    "path": "config/experiment_config.json",
+    "bytes": 6183,
+    "sha256": "b8d785526249658d243a645926b87522325c716a9be22a14db69946c13bb79de"
+  },
+  {
+    "path": "config/validation.json",
+    "bytes": 376,
+    "sha256": "1499d214ade3100dcdc63ca55de2b4a1f49b076b665f7940db219a69ceb1b61c"
+  },
+  {
+    "path": "figures/black_man_signed_targets.png",
+    "bytes": 5413012,
+    "sha256": "687531df4bcebaf9f2b06b9659bc5c94580199822676ea0509a1f20e6ee9db39"
+  },
+  {
+    "path": "figures/east_asian_man_signed_targets.png",
+    "bytes": 5635662,
+    "sha256": "7f1df862be5014ba76b482c1197cf057c92fd664866f8660b627070f35bcdc54"
+  },
+  {
+    "path": "figures/seed030_pair.png",
+    "bytes": 2182459,
+    "sha256": "e6570220395660119236174e5caaabd9c231dc46572715d1d95eade230e17664"
+  },
+  {
+    "path": "originals/black_man_seed030_baseline.png",
+    "bytes": 298777,
+    "sha256": "27d62019f2844210517d1494396d6aa665019490f3f6984c9096674ebec912da"
+  },
+  {
+    "path": "originals/black_man_seed030_reconstruction_only.png",
+    "bytes": 300450,
+    "sha256": "9f23a82bc7267a0006308db997b4b6763c045ba07bbb095ec9039869f92814e5"
+  },
+  {
+    "path": "originals/black_man_seed030_set_0.0.png",
+    "bytes": 298728,
+    "sha256": "f83da0f74c699d62f5f12e23b89ae7afb66bacf2630cf867ae46fc6578568c95"
+  },
+  {
+    "path": "originals/black_man_seed030_set_10.0.png",
+    "bytes": 298901,
+    "sha256": "0f1cd98a8f397a8d1386520c27ec0cd3ebafa0dc0108082f5934abcb0cb9ffa7"
+  },
+  {
+    "path": "originals/black_man_seed030_set_100.0.png",
+    "bytes": 299906,
+    "sha256": "41cc582bbc61e23868a6727669c31846076d99fff4c58b2bf546829b6a614732"
+  },
+  {
+    "path": "originals/black_man_seed030_set_150.0.png",
+    "bytes": 298679,
+    "sha256": "f6fe0d6dbb45ef4ba286aaeee2ad42b15a471799e1fe04be51d6f16b2f71964a"
+  },
+  {
+    "path": "originals/black_man_seed030_set_200.0.png",
+    "bytes": 298185,
+    "sha256": "b25f04700c394bcbb979f929d29aff2baf005cb42763bdab64460d3ca0f53d18"
+  },
+  {
+    "path": "originals/black_man_seed030_set_25.0.png",
+    "bytes": 299166,
+    "sha256": "5b6211429a822e5634adab5a1ab897289ff243f91426d9c479855686b5df11b3"
+  },
+  {
+    "path": "originals/black_man_seed030_set_50.0.png",
+    "bytes": 298808,
+    "sha256": "70549ca8a9bbb2ea8a8aeffe9f62469287f4e1107e661ef50a86662c0e365720"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg10.0.png",
+    "bytes": 298027,
+    "sha256": "9d558cf0033876a4293774140a92a103aebffaa5c04b92dd93d5488cc737ce8f"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg100.0.png",
+    "bytes": 301512,
+    "sha256": "63e7e14ca485adbf809b32b08c1fb38ec726f7fc4462e59294371af487335427"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg150.0.png",
+    "bytes": 305887,
+    "sha256": "cdc80775fa4ec2d5ed59d17d52dad99bf5500c73ffb63230b4db0d33bdfb25bc"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg200.0.png",
+    "bytes": 321743,
+    "sha256": "756f5afe50ca030a2b0af9d4764f88c98968874fca1138846a45df1aea4a6033"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg25.0.png",
+    "bytes": 297284,
+    "sha256": "27ceb5023748b6d0f2fd5add38b34f6dbf2e97f2749510405fee588c26a49e52"
+  },
+  {
+    "path": "originals/black_man_seed030_set_neg50.0.png",
+    "bytes": 298609,
+    "sha256": "0f64464a258dc724c02bf3cd590c557d8ef35c53defae73d13fef5664f53cac8"
+  },
+  {
+    "path": "originals/black_man_seed031_baseline.png",
+    "bytes": 345441,
+    "sha256": "0ed5a80525fcec27ba45e89d0c26c55352a6ea43cc9127f4592c476bf65ef93f"
+  },
+  {
+    "path": "originals/black_man_seed031_reconstruction_only.png",
+    "bytes": 342317,
+    "sha256": "c3ca764fa4d10ffcf2088433e3925307bc03090c37c974f512810d25118c828a"
+  },
+  {
+    "path": "originals/black_man_seed031_set_0.0.png",
+    "bytes": 345364,
+    "sha256": "0f91e0c8982ebd09c57a72d1fbe8b32cbf335d3a71aff26cf606e8e5dfaa9e53"
+  },
+  {
+    "path": "originals/black_man_seed031_set_10.0.png",
+    "bytes": 343759,
+    "sha256": "b2c6dc584ee42e342b20604399f6074facb2671d77727841cbad1bc5bf449fe2"
+  },
+  {
+    "path": "originals/black_man_seed031_set_100.0.png",
+    "bytes": 334536,
+    "sha256": "8b83e83d5587bd2072f57bc1be295076dae16906644167cb72c901293c6fd84d"
+  },
+  {
+    "path": "originals/black_man_seed031_set_150.0.png",
+    "bytes": 332173,
+    "sha256": "4f5a43e96ced93ec6361211637c2a9a60d9347aeed58a5ade444da28326d9421"
+  },
+  {
+    "path": "originals/black_man_seed031_set_200.0.png",
+    "bytes": 329302,
+    "sha256": "05f6516f5199935a8a166418c088522d25429b67883171d85b329c15b1e98898"
+  },
+  {
+    "path": "originals/black_man_seed031_set_25.0.png",
+    "bytes": 343202,
+    "sha256": "d0b2e5ec9065142342688e08be0672327fb28c749483c214d4cb334c1a09f476"
+  },
+  {
+    "path": "originals/black_man_seed031_set_50.0.png",
+    "bytes": 339536,
+    "sha256": "11e5b59653c75894b9e7c74c82eee475b291187898fe4594729899dfb1bbc691"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg10.0.png",
+    "bytes": 346891,
+    "sha256": "63f98b0848b718c85556ead725832529b56086d25084a8f89cd94b9fcc107bd6"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg100.0.png",
+    "bytes": 353930,
+    "sha256": "b6354242ac6367f98aeac1237f27c5b93aa31705e89caed0aa0353ec5f0f7738"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg150.0.png",
+    "bytes": 354966,
+    "sha256": "7d44d0a5f7bb355a964c4537c784db24cb28dce15e860b5062e655bcd312c62b"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg200.0.png",
+    "bytes": 358130,
+    "sha256": "48b1e8cb8286e4db292a37fd405647dc5f8dc49876907630df2091e6095cc4b8"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg25.0.png",
+    "bytes": 348100,
+    "sha256": "0d9756f787ef41f18ae654c9b0b3be20e7662021c53eabff6eec4c43d268db69"
+  },
+  {
+    "path": "originals/black_man_seed031_set_neg50.0.png",
+    "bytes": 350745,
+    "sha256": "4ee9c26f7102e8239e74a0a20346f37de55cf5ca1b4960f47a3fc9d01346d151"
+  },
+  {
+    "path": "originals/black_man_seed032_baseline.png",
+    "bytes": 300056,
+    "sha256": "0b43da46f17da9c9bc1b409a4fa089bc920f47ecc2d59f7e97708bf9ea0af8d6"
+  },
+  {
+    "path": "originals/black_man_seed032_reconstruction_only.png",
+    "bytes": 305792,
+    "sha256": "e8d4c682d353c0b50cb53580081a2befe6e7795c28b297ce38fc06d743f83542"
+  },
+  {
+    "path": "originals/black_man_seed032_set_0.0.png",
+    "bytes": 300056,
+    "sha256": "0b43da46f17da9c9bc1b409a4fa089bc920f47ecc2d59f7e97708bf9ea0af8d6"
+  },
+  {
+    "path": "originals/black_man_seed032_set_10.0.png",
+    "bytes": 299134,
+    "sha256": "acf9c0e9c2b9c975c37cc41fc6129bda248fdc01e24c2ad1f05855ee082d8703"
+  },
+  {
+    "path": "originals/black_man_seed032_set_100.0.png",
+    "bytes": 292604,
+    "sha256": "515ba6c1b7c3b4c7eb331cd899e30bffdef1f255f7929fd5aa6f6caee8c640e5"
+  },
+  {
+    "path": "originals/black_man_seed032_set_150.0.png",
+    "bytes": 289199,
+    "sha256": "4f7a4fa19ec0796cc99c5484d05793e82ac5342119c95531c4419c6e44ec0792"
+  },
+  {
+    "path": "originals/black_man_seed032_set_200.0.png",
+    "bytes": 289291,
+    "sha256": "a247e78c171e0ce16eb39be0371e048110e92f12eeefee337ac4409b0cbbd30c"
+  },
+  {
+    "path": "originals/black_man_seed032_set_25.0.png",
+    "bytes": 297873,
+    "sha256": "0ea26cbb226d2ba20c455271d88737499eb78f0e246f0d93517817452376d3cf"
+  },
+  {
+    "path": "originals/black_man_seed032_set_50.0.png",
+    "bytes": 295727,
+    "sha256": "18ac54e43dd69fd25b32b691b9450d884b2f62b16c34a922bd8c052e97afae4f"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg10.0.png",
+    "bytes": 300980,
+    "sha256": "efa943270e2096c48ada95055630b2228b0b2a74783089ae066a20d527b921f7"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg100.0.png",
+    "bytes": 308211,
+    "sha256": "6030f687a18ca02ba5c98c9b35db1b7fad3a2a4c5b8761cfe299f08370c84bb3"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg150.0.png",
+    "bytes": 309756,
+    "sha256": "d2f2bb2ad770633375c6e419d1ec58e73ef8c1aef9056789277bc19c7022ea85"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg200.0.png",
+    "bytes": 310225,
+    "sha256": "6dd2c23f1ed6fe1841e866ad42cbca145534682a80581ef5e770e6985994a205"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg25.0.png",
+    "bytes": 302393,
+    "sha256": "adbc54a993c7227fef7de956832b6c239bebf699efadc357e11b6ecdf26f02c0"
+  },
+  {
+    "path": "originals/black_man_seed032_set_neg50.0.png",
+    "bytes": 304237,
+    "sha256": "8d95fac8c34d67655d57a7f9db00c8b6bc36031a377c6a5670826853a3c8ba50"
+  },
+  {
+    "path": "originals/black_man_seed033_baseline.png",
+    "bytes": 303803,
+    "sha256": "9357d1f949039238cd42b0657f187db527bf480fefa24206b8db859f294effd9"
+  },
+  {
+    "path": "originals/black_man_seed033_reconstruction_only.png",
+    "bytes": 300860,
+    "sha256": "ff0ff7620a54b8153296359f2e87ec32095ad63074847b82241aaf185d96ec1e"
+  },
+  {
+    "path": "originals/black_man_seed033_set_0.0.png",
+    "bytes": 304470,
+    "sha256": "050ee941f0d016d4d328c158e424e3343b587288ba4c721a19f8b17a039a5e41"
+  },
+  {
+    "path": "originals/black_man_seed033_set_10.0.png",
+    "bytes": 304105,
+    "sha256": "48bd197129f2336546636636e2ed00d7f8295dae753383f02a1ee1b1a271e94a"
+  },
+  {
+    "path": "originals/black_man_seed033_set_100.0.png",
+    "bytes": 304895,
+    "sha256": "80bf0932c0da01efc40bee6b4e97315dbe79049c62d527d19462245807efc2e4"
+  },
+  {
+    "path": "originals/black_man_seed033_set_150.0.png",
+    "bytes": 307413,
+    "sha256": "25454bd35215d8f9e687ec556de379797d5ca1695b7c26a56ca4c9133c926d13"
+  },
+  {
+    "path": "originals/black_man_seed033_set_200.0.png",
+    "bytes": 306879,
+    "sha256": "68721808bb4f1a44a9f09d0a6d8d6cdbf8f1503bb7da5c137f5df9ca70bb16e4"
+  },
+  {
+    "path": "originals/black_man_seed033_set_25.0.png",
+    "bytes": 303491,
+    "sha256": "034f0b2efacf0ed95935c7b38fe7c254237337db90039c4527ccec368225b08d"
+  },
+  {
+    "path": "originals/black_man_seed033_set_50.0.png",
+    "bytes": 303586,
+    "sha256": "500936d430d3b3b6b03dd91695da53b356a3fb10bc9ef0ee056b208bd5625d28"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg10.0.png",
+    "bytes": 305283,
+    "sha256": "6aa91bbae64af2ba4cbc70661ff237be9b0c8fbd282be58ba52bce91d70c15a5"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg100.0.png",
+    "bytes": 298662,
+    "sha256": "ee0f11647f3caee67d4173730311433ce2a1259cf96d6d0487bcc6bae4ff8de1"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg150.0.png",
+    "bytes": 289644,
+    "sha256": "4cc13b007804c8fc8851128ded88fdccf0608b5a1035754b24743b0cd1c522ac"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg200.0.png",
+    "bytes": 298039,
+    "sha256": "8e59a9038815f5e1d46407d7d49db6ec6779e04e93b51b456d87ed6a8bd60bbc"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg25.0.png",
+    "bytes": 305581,
+    "sha256": "c4ff75c3bc0595a887653c2a13ce2d6626d14d561d0e260e1e09d9418e04edec"
+  },
+  {
+    "path": "originals/black_man_seed033_set_neg50.0.png",
+    "bytes": 305124,
+    "sha256": "e0356b9e420854ffb2aac386ee8b31cbbcaf93ace9354e651752b794f325b6a8"
+  },
+  {
+    "path": "originals/black_man_seed034_baseline.png",
+    "bytes": 284351,
+    "sha256": "23cdf04697312647bab4cfe28efd7ced8b0e7f30b8da456ebe8b3d632c3aa105"
+  },
+  {
+    "path": "originals/black_man_seed034_reconstruction_only.png",
+    "bytes": 286941,
+    "sha256": "b35875744205191401f32e628051034b0b2fc7daf00bcf4c5d3473dbf404c3df"
+  },
+  {
+    "path": "originals/black_man_seed034_set_0.0.png",
+    "bytes": 284351,
+    "sha256": "23cdf04697312647bab4cfe28efd7ced8b0e7f30b8da456ebe8b3d632c3aa105"
+  },
+  {
+    "path": "originals/black_man_seed034_set_10.0.png",
+    "bytes": 283499,
+    "sha256": "4210162a5c256d85795accde2caea31dec69d0638931e097a7f8c689cc886919"
+  },
+  {
+    "path": "originals/black_man_seed034_set_100.0.png",
+    "bytes": 274681,
+    "sha256": "377815571bae019588169ad6ff3385ff3312089f709a3d0cd5df544e9c2470a7"
+  },
+  {
+    "path": "originals/black_man_seed034_set_150.0.png",
+    "bytes": 277556,
+    "sha256": "7c9c7d9bbc59b827d4ae96f7ec8e324dda7bad66e771ade9ba5e41dc5d19db56"
+  },
+  {
+    "path": "originals/black_man_seed034_set_200.0.png",
+    "bytes": 281382,
+    "sha256": "fe4de05fa8221fa52f7ee094fefcfad4facf73d607fadf2de8bad433fa0e77ed"
+  },
+  {
+    "path": "originals/black_man_seed034_set_25.0.png",
+    "bytes": 281126,
+    "sha256": "02bb45d18cf81d0f8cc9a48bc88f76f497ade4f7ff7a91feb7fbbf2f70c8d422"
+  },
+  {
+    "path": "originals/black_man_seed034_set_50.0.png",
+    "bytes": 278323,
+    "sha256": "ddf4ede2712e2ccab7e334e2247ae061ac9e4b7bf043187a33211ea7e71b6e23"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg10.0.png",
+    "bytes": 285455,
+    "sha256": "abef8288dc1d5d169c640a47694fe0e082e0a2da87d3f5cae5fe86d76fbb91bb"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg100.0.png",
+    "bytes": 292979,
+    "sha256": "0d1b374003ad274e21f9297be59b903fc6b8586e528bb208630c98d8c21f6a0a"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg150.0.png",
+    "bytes": 294196,
+    "sha256": "c0ec8bbd1f0cbd50a0e4c12e44cb7c1a692141c631f3939b61f86d48566b3fbb"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg200.0.png",
+    "bytes": 299105,
+    "sha256": "1f02fd68ace6549929e0ed91be009ee5b90fb5d3e9e2752bfbedb910f0117641"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg25.0.png",
+    "bytes": 287762,
+    "sha256": "ddd215364df4a1c53fb6e9961228acb466e363a8bf4b019af00e5bd4011d8dcd"
+  },
+  {
+    "path": "originals/black_man_seed034_set_neg50.0.png",
+    "bytes": 290520,
+    "sha256": "778b6424789e9fbe8ff7a0fcbf2e4625d58eb3f68e85f2b067499ef017aac3d1"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_baseline.png",
+    "bytes": 323272,
+    "sha256": "e1802232c5ac9123ce8728d7369dc2c38d6b09e28a8c26fc800ec27d14281d57"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_reconstruction_only.png",
+    "bytes": 322409,
+    "sha256": "7f12dd4b3aaa5e9991c90827b1b7b5810fde69b91d5c8e9cbf51999154897852"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_0.0.png",
+    "bytes": 323272,
+    "sha256": "e1802232c5ac9123ce8728d7369dc2c38d6b09e28a8c26fc800ec27d14281d57"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_10.0.png",
+    "bytes": 322798,
+    "sha256": "5a96677083756c60779fc28b0dbfa494c06d23a500ba3b435b913ea80862f543"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_100.0.png",
+    "bytes": 320633,
+    "sha256": "e187d895cf83629e523f8e4630645985335768955e4da4942ca97016db4a2a5a"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_150.0.png",
+    "bytes": 317267,
+    "sha256": "d1540d961978705789cb290bc4789dbca235b8f94f92ca3850680ec1bea8d1a6"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_200.0.png",
+    "bytes": 309898,
+    "sha256": "a54e17c6a1625ab43efabf61887e337526b071c91d4a2c6a2fd6d5682ed3aaba"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_25.0.png",
+    "bytes": 323464,
+    "sha256": "42888bfe01d2c47b5d791f24b8fac1000600fc35ba3a1a21499977f927a4f45d"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_50.0.png",
+    "bytes": 323083,
+    "sha256": "8835d887d270c648b6b4dc3594111f67a161240ab3f5cf338414d751f2c6c940"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg10.0.png",
+    "bytes": 322947,
+    "sha256": "4567b14ec3d5f6e78eec58ff8a3b19668975d9002d877fb5f9f6de19e83b4ce4"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg100.0.png",
+    "bytes": 319545,
+    "sha256": "5c3cd79aa69090dd3dc3adba67df000d91354884b9eb57bacfb6e648960aeda5"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg150.0.png",
+    "bytes": 316125,
+    "sha256": "0a9b9517bc8f9bcd3f371b7e65257b9aa456570d9d474874463f9c11639cfd6b"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg200.0.png",
+    "bytes": 310411,
+    "sha256": "26bd0feafdc8e490967d9fd8e475875aba5fdc603d31edd3d1dce2a056243059"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg25.0.png",
+    "bytes": 323033,
+    "sha256": "eb614d5805e724fbf67433e624d9f33571a7fd9d707e8c3096c8b79802cfe461"
+  },
+  {
+    "path": "originals/east_asian_man_seed030_set_neg50.0.png",
+    "bytes": 322724,
+    "sha256": "ea0a06f70aca7710ce0a4fa6eae0448188684f1c52f082b517adb07ecdad8d72"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_baseline.png",
+    "bytes": 358145,
+    "sha256": "fa5df7700ebf7034d23f7af454d28ebef6d4652f8871d0448f6959b62bbb03e0"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_reconstruction_only.png",
+    "bytes": 353475,
+    "sha256": "2ec91ddf67e7fa2eeef37230add297b8d27663eab001f7db18bb84565f964582"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_0.0.png",
+    "bytes": 358145,
+    "sha256": "fa5df7700ebf7034d23f7af454d28ebef6d4652f8871d0448f6959b62bbb03e0"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_10.0.png",
+    "bytes": 358424,
+    "sha256": "96750c89de3dd109e4d309ae1753eba481f767e571c45acafbcf629c96de8ef0"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_100.0.png",
+    "bytes": 355424,
+    "sha256": "bfe99ba5c3e214667f6f915d035721475296c77734a2b285774648f13fba3230"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_150.0.png",
+    "bytes": 351457,
+    "sha256": "fb6b00f3afca7941a1a4cc7a493f4b63be083ec72734ee69b37ff7ed8207e1a1"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_200.0.png",
+    "bytes": 343932,
+    "sha256": "772e1b981fbc158d79254cf4a4a5b1b7e24a5348837cc0af053a62c75e9591b5"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_25.0.png",
+    "bytes": 357477,
+    "sha256": "653d7bfc37bac0a9d37b451bacc8ce1722863623e6dee7118a6834ef531b4412"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_50.0.png",
+    "bytes": 356513,
+    "sha256": "2b31e392aa8cf9a7688020a7ba06df825af259b24d7935c1be523fb1fd1f7bfa"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg10.0.png",
+    "bytes": 358161,
+    "sha256": "5300e04a52a769dc1b5de93a44f23083044e0c87af58eebed5d24167956607ee"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg100.0.png",
+    "bytes": 353220,
+    "sha256": "7740644074af6500b97499f77ccc47470b7f83173f41df1f0a9c4150bd37dde0"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg150.0.png",
+    "bytes": 347252,
+    "sha256": "95e34fdbb7695f86e78b611c7632d52c8b0641d4cf28f52f1a3f442b29184e26"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg200.0.png",
+    "bytes": 341303,
+    "sha256": "99043b653337bd847fd726da6567965698ae3252e1289b6cf15e81d7fefbf945"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg25.0.png",
+    "bytes": 357446,
+    "sha256": "f6a23fa9aa2d6e181bde596c8b7c8d2d7e75025cfef21907212d25803b34ba88"
+  },
+  {
+    "path": "originals/east_asian_man_seed031_set_neg50.0.png",
+    "bytes": 356996,
+    "sha256": "32d746fe6cc077b772e73b6b39cf5e8e04fa6a64c80f2a7fd097281975dc9619"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_baseline.png",
+    "bytes": 310300,
+    "sha256": "c66f454c6e32a51a1c6019b72df3d37f5e60dc1e3feb15400c0e7d54c5916001"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_reconstruction_only.png",
+    "bytes": 308160,
+    "sha256": "1959721cfc8d05a292fac7ebc68237369efac42baaf07fd0783af9000eb24853"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_0.0.png",
+    "bytes": 310300,
+    "sha256": "c66f454c6e32a51a1c6019b72df3d37f5e60dc1e3feb15400c0e7d54c5916001"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_10.0.png",
+    "bytes": 310426,
+    "sha256": "eb2a2478fbef2199179053e0dec401295a405d37cde558937c4c9d51704be36f"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_100.0.png",
+    "bytes": 309266,
+    "sha256": "b4e57f506c23982af62617398cad31d9a32bf195d7935eefb8761b417e8b9967"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_150.0.png",
+    "bytes": 308085,
+    "sha256": "ee6abd1a46f9b3c0ce99fdbddad6efe2b4a2ecd00fbe38e736287a2a5132726e"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_200.0.png",
+    "bytes": 304858,
+    "sha256": "51a5c47c6d55416f5c9ca9049f1847676b24ab5122ccfb6a6725e43b997dd064"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_25.0.png",
+    "bytes": 310754,
+    "sha256": "bb94a3943c289ef30e6e549e5efcd0995310cabe05271d3adbbce7a2b72672fc"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_50.0.png",
+    "bytes": 309882,
+    "sha256": "7845cee387146f693ed53b816d354a0d603799fb08fb7f163b747279a564d7c4"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg10.0.png",
+    "bytes": 310282,
+    "sha256": "65c2756d0844473414e4146c4601ae720d326da62aa86a8510c8a1ffb9cb1c9f"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg100.0.png",
+    "bytes": 310031,
+    "sha256": "3f3ec1d046d3d283ce65584709c282317db4978280f02e9f622ab84f20fb7d9f"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg150.0.png",
+    "bytes": 311096,
+    "sha256": "ad9a536f5d13dbc5c9a71b9497c8c86b5c86f48002e68ef2c747fee0762b717a"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg200.0.png",
+    "bytes": 304518,
+    "sha256": "f16a4963d11f00e2bcb81487b482eb357a00fceceb07b912f2d2fbf6518e3b9b"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg25.0.png",
+    "bytes": 310617,
+    "sha256": "787d72b583ac938cf9e73771964fe286e5236210be0e7a30ee5ec0589be4cd54"
+  },
+  {
+    "path": "originals/east_asian_man_seed032_set_neg50.0.png",
+    "bytes": 309571,
+    "sha256": "f2e5bb665ef711b0f47aa2f2765b0737db369be75a52694d6bfe35727720210b"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_baseline.png",
+    "bytes": 312845,
+    "sha256": "13c26e979ec69c0a460023c91eb31b8f48ad94736190d95aa4858216dcf73ac3"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_reconstruction_only.png",
+    "bytes": 316952,
+    "sha256": "5e48deccde1882eae0d5899bf7bf9df2543b7721c3a79da4415952fb12f2759d"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_0.0.png",
+    "bytes": 312883,
+    "sha256": "0f7b98109e6176dcdab5acb3477bc999a4c7c4e57213b184da524117eda42fc8"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_10.0.png",
+    "bytes": 312905,
+    "sha256": "0beb1164e752762ea28f1b47be3430f87c9719d79e190f4b3aa921c49b0eb719"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_100.0.png",
+    "bytes": 310100,
+    "sha256": "ad10c0b19acf9a2614f38bb3708c5c4f2b8544997bbaaa422c7b341286233c13"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_150.0.png",
+    "bytes": 306502,
+    "sha256": "348111390625a3085c4e3dfb2b07e99fdc91a5ff96dfb6c02b01d7832412fcff"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_200.0.png",
+    "bytes": 305559,
+    "sha256": "95482067c057897297e70d0d2751b10812da6fc85ad3605960b5968731ddd452"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_25.0.png",
+    "bytes": 312824,
+    "sha256": "6eb48642cd4f3a58ee2806ea918f4ba052143fddda3433eef8e3460dec528c1c"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_50.0.png",
+    "bytes": 311451,
+    "sha256": "f23d727a534f053bd13400462482ba310c6eeb9af77089e3a1770692e5b1a190"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg10.0.png",
+    "bytes": 312598,
+    "sha256": "c2b9d37fbef6746b1000702595989e194e12605ad9cd980c6b64d15f52559260"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg100.0.png",
+    "bytes": 313769,
+    "sha256": "603cc6beb78613afe4777e1a6b504dd12c32880e68183d9f0f0ba8830d3c7942"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg150.0.png",
+    "bytes": 311423,
+    "sha256": "515576ac651adbb3bf31c404440b3407524864b1ea58a46c5d42cd2cba2f94ac"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg200.0.png",
+    "bytes": 308414,
+    "sha256": "c03a79843786583eb4961fadb72056bab69222bb33f409a0d9c476c53110b5f3"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg25.0.png",
+    "bytes": 314024,
+    "sha256": "8d7c299ac8e5f3f223f7f7f4466b1284e1710b0002fde670acc0ba19752d4247"
+  },
+  {
+    "path": "originals/east_asian_man_seed033_set_neg50.0.png",
+    "bytes": 315038,
+    "sha256": "ec5c75479ab1c27d77248ca4ade11b72ea9065a74438d9e1e6d46f4ab30004e3"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_baseline.png",
+    "bytes": 287792,
+    "sha256": "db8c4f9428494af086238bcafb8f2531023c4131e8679ca8b0d18d2194bac0f0"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_reconstruction_only.png",
+    "bytes": 292998,
+    "sha256": "a1966e32ecf423d2f1f7d69c1f4da4f65a9021d345b338d568ef05bb8106aa15"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_0.0.png",
+    "bytes": 287792,
+    "sha256": "db8c4f9428494af086238bcafb8f2531023c4131e8679ca8b0d18d2194bac0f0"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_10.0.png",
+    "bytes": 288933,
+    "sha256": "3206e1e509753355800bd11380191a8bf8d2c1e6fd71f7d94da93668b7ebbc82"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_100.0.png",
+    "bytes": 293795,
+    "sha256": "9a9b47102fa16a0dae31ea63d995a221a7b0d63f6c5109b8c9927d858c3f24da"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_150.0.png",
+    "bytes": 295302,
+    "sha256": "b3aae3d8e03655f40d063d923d6282fe747e77693d2408104a2082a3e9ee62f4"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_200.0.png",
+    "bytes": 296789,
+    "sha256": "a943f0b3d284c440eb6c6c28b535c7575dee0f3445cc3f95732b044540ead585"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_25.0.png",
+    "bytes": 290701,
+    "sha256": "54dda5dcd2d3824eb184203e03aaaa35a70ccb2e144746598ab11dea63f5768c"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_50.0.png",
+    "bytes": 291493,
+    "sha256": "ddde4ad293a569d205a6bcd2fd5083a0f7777b1e98aa7bdce8f42bd4267ac908"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg10.0.png",
+    "bytes": 286787,
+    "sha256": "e372a3d7912901503e36f407ba013aede7a907e32a4938c93ce3ca721d2b3e4d"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg100.0.png",
+    "bytes": 281052,
+    "sha256": "4d3ae2d5f351ed4c55561991d13eb50faa92c0f8e2444924b03e181d739c3e7e"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg150.0.png",
+    "bytes": 278939,
+    "sha256": "aa648473c599c24a72db542c734e1391f99be08fb52dc55e046c6da4004ab0df"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg200.0.png",
+    "bytes": 277293,
+    "sha256": "8f7429a033b098e1805d32b0b5fafbcaebe6ba7c8430443920cfab40c59b3e59"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg25.0.png",
+    "bytes": 285509,
+    "sha256": "be5efc875408cd4e27ccee0c397d17ddec3ccc9abd029a7856a3b2d40c9f7178"
+  },
+  {
+    "path": "originals/east_asian_man_seed034_set_neg50.0.png",
+    "bytes": 283702,
+    "sha256": "6212c3c5fffee8d84823909dd831528ad3dbcab7d13b85904669ddc52af41f9f"
+  }
+]
