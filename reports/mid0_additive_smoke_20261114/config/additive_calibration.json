@@ -1,0 +1,82 @@
+{
+  "4228": {
+    "small": 1.73515043258667,
+    "moderate": 10.670955181121826,
+    "matched_small": 42.5241641998291,
+    "matched_moderate": 65.13631439208984,
+    "active_contexts": 26,
+    "inactive_contexts": 34
+  },
+  "4554": {
+    "small": 1.5974555969238282,
+    "moderate": 9.663747787475586,
+    "matched_small": 26.120471477508545,
+    "matched_moderate": 70.14009094238281,
+    "active_contexts": 44,
+    "inactive_contexts": 16
+  },
+  "1650": {
+    "small": 1.6096969604492188,
+    "moderate": 10.015276908874512,
+    "matched_small": 30.827701568603516,
+    "matched_moderate": 37.686683654785156,
+    "active_contexts": 26,
+    "inactive_contexts": 34
+  },
+  "4586": {
+    "small": 1.5603963851928713,
+    "moderate": 9.375152587890625,
+    "matched_small": 31.1263370513916,
+    "matched_moderate": 48.440185546875,
+    "active_contexts": 33,
+    "inactive_contexts": 27
+  },
+  "5094": {
+    "small": 1.7641340255737306,
+    "moderate": 10.588659286499023,
+    "matched_small": 29.728426933288574,
+    "matched_moderate": 61.650394439697266,
+    "active_contexts": 27,
+    "inactive_contexts": 33
+  },
+  "2023": {
+    "small": 1.7883622646331787,
+    "moderate": 11.570503234863281,
+    "matched_small": 36.780948638916016,
+    "matched_moderate": 105.49385070800781,
+    "active_contexts": 41,
+    "inactive_contexts": 19
+  },
+  "1074": {
+    "small": 1.4870996713638307,
+    "moderate": 9.000664234161377,
+    "matched_small": 27.867935180664062,
+    "matched_moderate": 55.044246673583984,
+    "active_contexts": 29,
+    "inactive_contexts": 31
+  },
+  "4338": {
+    "small": 2.1943037986755374,
+    "moderate": 15.288150310516357,
+    "matched_small": 78.93832015991211,
+    "matched_moderate": 113.51799011230469,
+    "active_contexts": 55,
+    "inactive_contexts": 5
+  },
+  "2361": {
+    "small": 1.6340259552001954,
+    "moderate": 9.745271682739258,
+    "matched_small": 27.350223541259766,
+    "matched_moderate": 48.30156707763672,
+    "active_contexts": 43,
+    "inactive_contexts": 17
+  },
+  "4399": {
+    "small": 1.6907962322235108,
+    "moderate": 10.697311878204346,
+    "matched_small": 30.880842208862305,
+    "matched_moderate": 65.41960144042969,
+    "active_contexts": 50,
+    "inactive_contexts": 10
+  }
+}

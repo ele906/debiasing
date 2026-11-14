@@ -1,4 +1,0 @@
-run_*/images/
-run_*/detector/*_grounded.jpg
-run_*/detector/*.json
-!run_*/detector/settings.json

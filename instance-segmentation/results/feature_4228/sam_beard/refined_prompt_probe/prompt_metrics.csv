@@ -1,3 +1,0 @@
-prompt_set,mask_pixels,crop_area_pct,sam_predicted_iou,mask_x0,mask_y0,mask_x1,mask_y1
-broad_lower_face,35544,49.862521744009875,0.9713534712791443,0,65,283,251
-tight_beard_box,34260,48.06127602266989,0.969829797744751,0,1,284,251
