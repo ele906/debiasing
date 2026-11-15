@@ -1,0 +1,13 @@
+group,target_norm,outcome,mean_difference,ci_low,ci_high,n_seed_clusters,n_ineligible_seed_clusters,contrast
+black_man,42.5242,post_reencoded_discrepancy,-7.1160898208618155,-9.14776806036631,-5.084411581357321,2,3,natural_minus_mean3_shuffles_at_identical_support
+black_man,42.5242,pixel_mae,0.02520953284369576,-0.00859685738881428,0.05901592307620579,2,3,natural_minus_mean3_shuffles_at_identical_support
+black_man,42.5242,lowerface_change_fraction,-0.01765985009588094,-0.018381890228940573,-0.016937809962821307,2,3,natural_minus_mean3_shuffles_at_identical_support
+black_man,65.1363,post_reencoded_discrepancy,-14.436101992925009,-16.042872780561446,-12.82933120528857,2,3,natural_minus_mean3_shuffles_at_identical_support
+black_man,65.1363,pixel_mae,0.061366399129231794,-0.0014241642422146011,0.12415696250067818,2,3,natural_minus_mean3_shuffles_at_identical_support
+black_man,65.1363,lowerface_change_fraction,-0.014887521022922769,-0.023222017279220058,-0.006553024766625482,2,3,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,42.5242,post_reencoded_discrepancy,-3.2833759784698486,-4.162875572840372,-2.3674704233805333,4,1,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,42.5242,pixel_mae,0.07493183347913956,0.020396444532606348,0.12946722242567277,4,1,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,42.5242,lowerface_change_fraction,0.006928581961461343,-0.010545103410786178,0.024402267333708864,4,1,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,65.1363,post_reencoded_discrepancy,-9.281492710113525,-11.255415439605713,-7.307569980621338,4,1,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,65.1363,pixel_mae,0.11404879887898765,0.038756794399685296,0.18934080335829,4,1,natural_minus_mean3_shuffles_at_identical_support
+east_asian_man,65.1363,lowerface_change_fraction,0.011653830222987554,-0.010603935535412733,0.03391159598138784,4,1,natural_minus_mean3_shuffles_at_identical_support

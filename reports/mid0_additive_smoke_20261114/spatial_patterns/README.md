@@ -74,3 +74,7 @@ The smoke test passed with 24 edited conditions and two pixel-identical no-op re
 [Paired comparisons](results/paired_comparisons.csv), [per-image results](results/per_image_results.csv), [naturalness measurements](results/naturalness.csv), [per-image demographic confidences](evaluations/demographic_predictions.csv), [configuration](configuration.csv), [checkpoint hashes](source_checkpoint_hashes.csv), [code](code/) and [research summary](results/research_summary.md).
 
 This experiment establishes a controlled comparison of spatial layouts and quantifies their distinct support shifts. **It does not yet establish that feature 4228 controls beards, nor demographic causal specificity.** Blinded semantic ratings are the next required evidence.
+
+## Bounded support-expansion analysis
+
+[Analysis-only follow-up: support expansion, design confounding, and re-encoding mechanics](support_analysis/README.md)

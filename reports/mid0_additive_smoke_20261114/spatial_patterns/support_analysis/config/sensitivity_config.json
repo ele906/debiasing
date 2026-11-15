@@ -1,0 +1,9 @@
+{
+  "specs": [
+    "adjusted_without_ppm",
+    "paired_strength_blocks"
+  ],
+  "rationale": "Check numerical applied-norm jitter control and allow response effects to vary by target within paired blocks; no outcome-selected model search",
+  "same_support_rule": "Natural compared with all three shuffled replicas only if their support equals natural exactly; donor-average inside recipient seed",
+  "inactive_rule": "Original selected-feature map nonzero fraction exactly zero"
+}
