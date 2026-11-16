@@ -1,0 +1,6 @@
+image_id,prompt_set,observation,source,sam_quality_score,mask_pixels
+indian_man_seed030_baseline,box_plus_points,"Proposal captures much of the visible white beard, with boundaries still unvalidated.","Assistant visual inspection of displayed overlays; qualitative, not human ground truth or measured accuracy",0.9343856573104858,31994
+indian_man_seed030_baseline,box_only,Top proposal selects a small clothing/neck-side region rather than the visible beard.,"Assistant visual inspection of displayed overlays; qualitative, not human ground truth or measured accuracy",0.8361486196517944,3071
+white_woman_seed030_baseline,box_plus_points,"On this displayed face without an obvious beard, the proposal includes chin/neck skin.","Assistant visual inspection of displayed overlays; qualitative, not human ground truth or measured accuracy",0.9554986953735352,33368
+hispanic_woman_seed030_baseline,box_only,Proposal includes jewelry/necklace rather than a beard region.,"Assistant visual inspection of displayed overlays; qualitative, not human ground truth or measured accuracy",0.8971794247627258,3189
+middle_eastern_woman_seed030_baseline,box_only,Proposal includes head-covering fabric below the face rather than a beard region.,"Assistant visual inspection of displayed overlays; qualitative, not human ground truth or measured accuracy",0.9280110597610474,38691

@@ -1,0 +1,17 @@
+{
+  "n_images": 36,
+  "n_groups": 12,
+  "expected_predictions": 72,
+  "complete_predictions": 72,
+  "candidate_masks": 216,
+  "image_conditions": [
+    "baseline",
+    "add10",
+    "add50"
+  ],
+  "all_originals_hash_verified": true,
+  "all_masks_original_resolution": true,
+  "n_generated_diffusion_images": 0,
+  "n_trained_models": 0,
+  "semantic_accuracy_measured": false
+}

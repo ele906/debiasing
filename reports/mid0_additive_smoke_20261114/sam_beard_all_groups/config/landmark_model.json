@@ -1,0 +1,7 @@
+{
+  "checkpoint": "/n/fs/goose/face-landmarker/models/face_landmarker.task",
+  "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+  "mediapipe": "0.10.30",
+  "numpy": "1.26.4",
+  "frozen_prompts": "Generated from baseline only and reused unchanged at both offsets; groups/genders do not alter the geometry rule"
+}

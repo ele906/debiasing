@@ -1,0 +1,12 @@
+{
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.6",
+  "pillow": "12.3.0",
+  "device": "NVIDIA L40",
+  "precision": "float32",
+  "sam_checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+  "sam_mask_logit_threshold": 0.0,
+  "multimask_output": true,
+  "candidate_selection": "argmax model-estimated mask quality; not semantic beard confidence"
+}

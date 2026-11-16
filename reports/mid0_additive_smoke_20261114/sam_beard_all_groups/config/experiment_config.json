@@ -1,0 +1,40 @@
+{
+  "run_id": "sam_beard_all_groups_20261116_233008_010361",
+  "feature_id": 4228,
+  "layer": "unet.mid_block.attentions.0",
+  "sae_checkpoint": "/n/fs/goose/layers/runs/mid0_sae_face_001/sae",
+  "sae_sha256": "cbb3a0a2d0c43c822c7ba97a494de38ae56ea25401a8d31484ffa32e7cc329a6",
+  "generator": "Existing frozen SDXL Turbo images only; no generator/SAE inference",
+  "sam_checkpoint": "/n/fs/goose/segment-anything/checkpoints/sam_vit_b_01ec64.pth",
+  "sam_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+  "sam_architecture": "vit_b",
+  "groups": [
+    "black_man",
+    "black_woman",
+    "east_asian_man",
+    "east_asian_woman",
+    "hispanic_man",
+    "hispanic_woman",
+    "indian_man",
+    "indian_woman",
+    "middle_eastern_man",
+    "middle_eastern_woman",
+    "white_man",
+    "white_woman"
+  ],
+  "seed": 30,
+  "conditions": [
+    "baseline",
+    "fixed_10",
+    "fixed_50"
+  ],
+  "prompt_sets": [
+    "box_only",
+    "box_plus_points"
+  ],
+  "selection": "Prespecified all12 groups x baseline,+10,+50; no selection by beard appearance",
+  "inference_rule": "SAM model-quality argmax per prompt, preserve all3 candidates and logits",
+  "presence_gate": "None: nonempty masks are proposals, not evidence of beard presence",
+  "definitions": "Candidate chin/jaw region excludes lips/moustache by negative prompting intent; semantic membership unverified",
+  "metrics": "Raw proposal area, overlap with fixed lower-face ROI and lips, prompt sensitivity, paired proposal-area changes; NOT validated beard coverage"
+}

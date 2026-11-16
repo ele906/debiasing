@@ -1,0 +1,5 @@
+path,sha256,bytes
+/n/fs/goose/segment-anything/segment_anything/predictor.py,ab66c29ac0b5b204d23997ef49d8a2476f71b596ce97e35efbf116cfc2118fce,11649
+/n/fs/goose/segment-anything/segment_anything/build_sam.py,77bc4faf728118625ddd184dc4e6375bd1b5c636fc66fb429f9fc5276f331cc5,2941
+/n/fs/goose/segment-anything/segment_anything/modeling/sam.py,2d501173b7345f6829f745a2ade240c98026f6b3237bf6cf8e9473405e86c54e,7226
+/n/fs/goose/segment-anything/segment_anything/modeling/mask_decoder.py,6a2455e990515c67a061187c92c236b879b189f21ef6ebfce1627cae9a6b2f93,6615
