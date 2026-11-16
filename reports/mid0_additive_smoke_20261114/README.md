@@ -78,3 +78,7 @@ Workspace source: `/n/fs/goose/experiments/mid0_sae_selectivity/additive_2026111
 ## Spatial-pattern transfer experiment
 
 [Spatial activation-pattern transfer: matched natural, shuffled, uniform and localized interventions](spatial_patterns/README.md)
+
+## Existing-photo gallery: all ten features
+
+[Gallery of the existing ten-feature photos, with README and LaTeX/PDF summary](ten_feature_gallery/README.md)
