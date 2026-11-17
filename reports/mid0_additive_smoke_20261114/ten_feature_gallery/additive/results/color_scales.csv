@@ -1,0 +1,11 @@
+feature_id,vmin,vmax,cmap,quantity,scope,interpolation,opacity,zero_activation
+1074,0,81.19451904296875,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+1650,0,98.42900085449219,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+2023,0,110.03010559082031,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+2361,0,102.81953430175781,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+4228,0,108.78214263916016,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+4338,0,134.04714965820312,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+4399,0,94.78671264648438,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+4554,0,96.00979614257812,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+4586,0,89.58714294433594,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent
+5094,0,96.20454406738281,jet,absolute SAE coordinate activation,All12 prompt groups and baseline/+10/+20/+50 for this feature,"nearest from16x16 to512x512, then thumbnail",0.45,transparent

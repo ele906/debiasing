@@ -1,0 +1,42 @@
+{
+  "run_id": "additive_gender_gallery_20261117_050815_555416",
+  "source": "/n/fs/goose/experiments/mid0_sae_selectivity/ten_feature_review_20261116_230430_705065/results/per_image_pixel_results.csv",
+  "source_sha256": "091422997d210114138b507980e4dc805f946d2770c03a40dab8f725ae9d7bd4",
+  "feature_ids": [
+    1074,
+    1650,
+    2023,
+    2361,
+    4228,
+    4338,
+    4399,
+    4554,
+    4586,
+    5094
+  ],
+  "seed": 30,
+  "races": [
+    "indian",
+    "middle_eastern",
+    "east_asian",
+    "black",
+    "hispanic",
+    "white"
+  ],
+  "offsets": [
+    0,
+    10,
+    20,
+    50
+  ],
+  "sae_sha256": "cbb3a0a2d0c43c822c7ba97a494de38ae56ea25401a8d31484ffa32e7cc329a6",
+  "layer": "unet.mid_block.attentions.0",
+  "n_panels": 480,
+  "n_photo_sheets": 20,
+  "n_overlay_sheets": 20,
+  "n_generated_images": 0,
+  "n_models_run": 0,
+  "color_scale": "Shared within each feature across both genders and all conditions; scales differ between features",
+  "overlay_source": "Modified selected SAE coordinate; baseline uses original map from paired pre-edit archive",
+  "numpy_version": "2.2.6"
+}

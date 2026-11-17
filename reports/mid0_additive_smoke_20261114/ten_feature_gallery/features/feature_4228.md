@@ -1,7 +1,21 @@
-# Feature 4228: existing photos
+# Feature 4228: additive interventions
 
-Same saved prompt and seed30 across columns: **unchanged → multiply×7 → add+10 → add+20 → add+50**. Each row is a prompt group. These are direct viewing derivatives of old PNGs, not new generations. Originals remain at512×512 in the experiment archive. Multipliers and additive constants are different units; these columns are not perturbation-matched.
+Six race-prompt rows per sheet. Columns: **baseline → add+10 → add+20 → add+50**. Same saved prompt and seed30 across columns.
 
-[Back to all ten features](../README.md)
+[All features](../README.md) · [Heatmap definitions and code](../additive/README.md) · [Earlier multiplication/addition comparison](../gallery/feature_4228.png)
 
-![All twelve prompt groups](../gallery/feature_4228.png)
+## Men
+
+![Men](../additive/figures/feature_4228_men.png)
+
+## Women
+
+![Women](../additive/figures/feature_4228_women.png)
+
+## Jet activation overlays
+
+Colors indicate modified SAE coordinate magnitude. One shared scale is used for this feature’s men’s and women’s sheets; zero is transparent. These are activation maps, not beard masks.
+
+![Men activation overlay](../additive/figures/feature_4228_men_jet.png)
+
+![Women activation overlay](../additive/figures/feature_4228_women_jet.png)
