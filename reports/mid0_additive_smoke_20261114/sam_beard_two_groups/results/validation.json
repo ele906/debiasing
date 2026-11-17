@@ -1,0 +1,12 @@
+{
+  "n_images": 30,
+  "n_groups": 2,
+  "n_seeds": 5,
+  "n_expected_predictions": 60,
+  "n_completed": 60,
+  "n_candidates": 180,
+  "original_hashes_verified": true,
+  "n_new_diffusion_images": 0,
+  "n_trained_models": 0,
+  "semantics": "Visual screening by assistant is not independent ground truth; proposal metrics are exploratory"
+}

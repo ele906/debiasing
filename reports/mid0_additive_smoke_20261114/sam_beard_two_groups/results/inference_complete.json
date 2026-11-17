@@ -1,0 +1,7 @@
+{
+  "n_images": 30,
+  "n_completed": 60,
+  "no_new_diffusion_images": true,
+  "no_weights_updated": true,
+  "mask_semantics_validated": false
+}

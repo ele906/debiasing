@@ -1,0 +1,17 @@
+prompt_group,prompt_set,condition,subset,n_seed_pairs,n_expected,mean_change_pp,ci95_low,ci95_high,ci_method,bootstrap_seed
+indian_man,box_only,fixed_10,all_proposals,5,5,6.152415052056313,-0.9333550557494164,19.108738973736763,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_only,fixed_10,visually_screened_proxy,0,5,,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_only,fixed_50,all_proposals,5,5,5.774033293128014,-2.784612774848938,19.676896296441555,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_only,fixed_50,visually_screened_proxy,0,5,,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_plus_points,fixed_10,all_proposals,5,5,6.176104247570038,-2.2006165981292725,20.98348766565323,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_plus_points,fixed_10,visually_screened_proxy,1,5,-0.5645453929901123,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_plus_points,fixed_50,all_proposals,5,5,-4.255558550357819,-11.53963714838028,0.5480438470840454,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+indian_man,box_plus_points,fixed_50,visually_screened_proxy,1,5,-0.7464349269866943,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_only,fixed_10,all_proposals,5,5,0.5123062431812286,-0.5458621680736542,1.7968927323818207,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_only,fixed_10,visually_screened_proxy,1,5,0.5466043949127197,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_only,fixed_50,all_proposals,5,5,5.29926210641861,0.09166359901428223,15.11216938495636,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_only,fixed_50,visually_screened_proxy,1,5,0.4433244466781616,,,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_plus_points,fixed_10,all_proposals,5,5,0.21336674690246582,-0.7740604877471924,0.9306001663208008,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_plus_points,fixed_10,visually_screened_proxy,5,5,0.21336674690246582,-0.7740604877471924,0.9306001663208008,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_plus_points,fixed_50,all_proposals,5,5,2.708328366279602,1.9008058309555054,3.797450065612793,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228
+middle_eastern_man,box_plus_points,fixed_50,visually_screened_proxy,5,5,2.708328366279602,1.9008058309555054,3.797450065612793,percentile bootstrap of paired seed deltas; 10000 draws; exploratory; n<=5; no CI if n<2,4228

@@ -1,0 +1,7 @@
+{
+  "exact_design_grid": true,
+  "paired_delta_arithmetic": true,
+  "all60_predictions_complete": true,
+  "reused_predictions": 12,
+  "no_single_seed_uncertainty_intervals": true
+}
