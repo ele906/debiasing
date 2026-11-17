@@ -1,0 +1,13 @@
+{
+  "n_conditions": 7440,
+  "n_unique_assets": 4440,
+  "n_new_generated_images": 0,
+  "n_trained_models": 0,
+  "features": [
+    4228
+  ],
+  "n_private_review_joins": 10,
+  "bootstrap_seed": 4228,
+  "n_bootstrap": 10000,
+  "random_control_status": "No matched-norm random controls found in inspected intervention archives; other nine selected features are not random controls"
+}
