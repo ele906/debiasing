@@ -1,0 +1,11 @@
+feature_id,n_unique_parser_zero_contexts,n_contexts_with_any_positive_beard_pixel,max_beard_pixels_from_parser_zero_context,interpretation
+1074,34,2,23,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+1650,34,2,26,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+2023,34,3,29,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+2361,34,2,45,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+4228,34,2,40,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+4338,34,2,267,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+4399,34,2,64,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+4554,34,2,15,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+4586,34,2,22,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"
+5094,34,1,28,"Any positive argmax pixel, not validated beard presence; repeated offsets count once per context"

@@ -74,6 +74,8 @@ For +50 addition to feature4228, using a provisional1% beard/face threshold, par
 
 Matched-norm random-feature/direction controls were not found in the inspected face-intervention archives. Other selected features are descriptive comparisons, not random controls. No feature-specific or demographic causal conclusion is established.
 
+Single-pixel sensitivity: `results/any_pixel_initiation.csv` retains any positive class14 pixels arising from exact parser-zero baselines. Small predictions do occur below the1% criterion, so absence of1% crossings must not be read as absence of every predicted beard pixel or proof that addition cannot initiate hair.
+
 ## Figures
 
 ![Ten features, multipliers −7 through +7](figures/ten_feature_multiplicative_low_range.png)
