@@ -1,0 +1,9 @@
+gender,kind,title,path
+men,all,Feature 4228: beard area change (all seeds),figures/feature4228_men_all_delta_current_face_pp.png
+men,baseline_bearded,Feature 4228: beard area change (baseline-bearded),figures/feature4228_men_baseline_bearded_delta_current_face_pp.png
+men,additive,Feature 4228: beard area change (additive),figures/feature4228_men_additive_fixed.png
+men,norm,Feature 4228: beard area change vs intervention size,figures/feature4228_men_applied_norm.png
+women,all,Feature 4228: beard area change (all seeds),figures/feature4228_women_all_delta_current_face_pp.png
+women,baseline_bearded,Feature 4228: beard area change (baseline-bearded),figures/feature4228_women_baseline_bearded_delta_current_face_pp.png
+women,additive,Feature 4228: beard area change (additive),figures/feature4228_women_additive_fixed.png
+women,norm,Feature 4228: beard area change vs intervention size,figures/feature4228_women_applied_norm.png

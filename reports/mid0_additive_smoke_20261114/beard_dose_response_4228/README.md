@@ -1,57 +1,58 @@
-# Existing-image beard-parser intervention scoring
+# Feature 4228: beard area changes
 
-{
-  "n_conditions": 7440,
-  "n_unique_assets": 4440,
-  "n_new_generated_images": 0,
-  "n_trained_models": 0,
-  "features": [
-    4228
-  ],
-  "n_private_review_joins": 10,
-  "bootstrap_seed": 4228,
-  "n_bootstrap": 10000,
-  "random_control_status": "No matched-norm random controls found in inspected intervention archives; other nine selected features are not random controls"
-}
+Four views of the existing experiment, shown separately for men’s and women’s prompt groups. This revision changes presentation only; no images were generated or rescored.
 
-## Definitions and limits
+## Men’s prompt groups
 
-The evaluator is the existing FaceParsing decoder and DINOv3 backbone. Raw class14 is listed as Beard in its README; a conflicting visualization class list remains documented. These are unvalidated parser predictions. The original helper, weights and preprocessing are unchanged.
+### 1. beard area change (all seeds)
 
-Primary area fraction is beard / parser classes1–11 plus14 (facial components and beard; excludes neck12 and hair13). Secondary metrics divide by the same-seed baseline face area held fixed, and by full512×512 image area. Current-face normalization can itself change under edits; fixed-denominator sensitivity is provided. Zero denominators stay missing. Fixed-baseline fractions can exceed100%; they are not clipped.
+![Feature 4228: beard area change (all seeds)](figures/feature4228_men_all_delta_current_face_pp.png)
 
-Every edit is paired by feature, prompt and seed with its own control. Multiplicative controls use α=1; additive uses the saved no-intervention image. config/control_equivalence.csv records actual RGB equivalence. α=0 removes the coordinate, α=1 leaves it unchanged, α<0 reverses sign, α>1 amplifies. There are no fractional α between0 and1: no graded attenuation claim is supported within that interval. Applied L2 is recorded separately; negative multipliers are not relabeled attenuation.
+### 2. beard area change (baseline-bearded)
 
-Full20-seed multiplicative curves and five-seed additive curves have different precision. Use results/common_seed_comparison.csv for shared seeds30–34. Per-context paired curves have one line per seed; bootstrap resamples seeds, averaging contexts within a seed before pooled summaries. Confidence intervals do not account for parser error. No multiple-testing-adjusted significance or demographic specificity is claimed. Prompt groups are conditioning text.
+![Feature 4228: beard area change (baseline-bearded)](figures/feature4228_men_baseline_bearded_delta_current_face_pp.png)
 
-Baseline-bearded panels use a provisional baseline beard/face fraction≥1%; thresholds0,0.5,1,2,5% are retained for sensitivity. This is an operational parser criterion, not validated beard presence. All zero-baseline contexts remain in the full table and initiation analysis. Additive initiation is a threshold crossing, not proof of new facial hair.
+### 3. beard area change (additive)
 
-Shading |α|≥50 is a caution range motivated by an existing stratified100-case human review; it is not a universal distortion threshold. MediaPipe detection is not structural validity. Per-case review linkage, where available, stays local/private; unreviewed images are not presumed usable.
+![Feature 4228: beard area change (additive)](figures/feature4228_men_additive_fixed.png)
 
-## Figures
+### 4. beard area change vs intervention size
 
-![feature4228_men_all_delta_current_face_pp](figures/feature4228_men_all_delta_current_face_pp.png)
+![Feature 4228: beard area change vs intervention size](figures/feature4228_men_applied_norm.png)
 
-![feature4228_men_baseline_bearded_delta_current_face_pp](figures/feature4228_men_baseline_bearded_delta_current_face_pp.png)
+## Women’s prompt groups
 
-![feature4228_additive_fixed](figures/feature4228_additive_fixed.png)
+### 1. beard area change (all seeds)
 
-![feature4228_applied_norm](figures/feature4228_applied_norm.png)
+![Feature 4228: beard area change (all seeds)](figures/feature4228_women_all_delta_current_face_pp.png)
 
-Women parser-comparison panels, fixed-baseline denominator panels, all PNG/PDF figures and seed30 paired galleries are in figures/. All arrays, original PNGs and masks remain on the research host. Existing exact-image predictions retain missing probability fields explicitly; fresh predictions preserve full class maps and lossless float32 beard-probability maps. No source images were regenerated, resized, or overwritten. Contact sheets alone use resized previews.
+### 2. beard area change (baseline-bearded)
 
-## Reproduce and resume
+![Feature 4228: beard area change (baseline-bearded)](figures/feature4228_women_baseline_bearded_delta_current_face_pp.png)
+
+### 3. beard area change (additive)
+
+![Feature 4228: beard area change (additive)](figures/feature4228_women_additive_fixed.png)
+
+### 4. beard area change vs intervention size
+
+![Feature 4228: beard area change vs intervention size](figures/feature4228_women_applied_norm.png)
+
+## How to read the figures
+
+Beard area is the parser’s class14 area divided by its facial classes1–11 and14, excluding neck and hair. The axis label “Area change (%)” means edited beard-area percentage minus the same-prompt, same-seed control percentage:10% to12% is shown as+2. This is a percentage-point difference, not relative percentage growth. These remain parser measurements rather than validated beard masks. Prompt gender does not establish facial-hair presence.
+
+1. **All seeds:** all20 multiplicative seeds per group. Thin lines are individual seeds, the bold line is their mean, and shading around it is the existing95% seed-bootstrap interval. α=0 removes the coordinate, α=1 leaves it unchanged, α<0 reverses sign, and α>1 amplifies. Gray end bands mark |α|≥50 as a caution range, not a per-image distortion verdict.
+2. **Baseline-bearded:** the same analysis restricted to baseline parsed beard/face fraction≥1%. A panel with no eligible seeds is missing a qualifying sample, not a measured zero effect.
+3. **Additive:** five seeds per group at offsets10,20,50. Each edit is compared with its saved no-intervention baseline.
+4. **Applied L2:** L2 is the magnitude of the actual block-output change after dtype casting: `sqrt(sum((edited_block - original_block)**2))`. It is a measurement, **not regularization or a training penalty**. For a change vector(3,4), L2=5. Opposite changes(3,4) and(−3,−4) have the same L2, so size alone does not describe direction. The different markers identify intervention methods/signs. This scatter plot helps inspect responses at comparable sizes; it does not by itself establish a direction effect after controlling for magnitude.
+
+Panel y scales vary so small responses remain visible. Graph4 contains20 multiplicative seeds and five additive seeds; graph3 is not a magnitude-matched comparison with graph1. No new uncertainty calculations or statistical tests are introduced.
+
+## Data and reproduction
+
+The original scored tables, archives, checkpoints, input hashes and methodological details are preserved in the [original scoring report](ORIGINAL_ANALYSIS.md) and the local source run recorded in config/plot_presentation/input_hashes.csv. The unchanged scored tables remain in this report’s results/ directory on GitHub.
 
 ```bash
-# Original smoke test: feature4228,12 conditions; expanded runs reuse its verified result.
-# Shards: 0 through 3
-sbatch config/code/score.sbatch /n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166 --shard 0
-PYTHONNOUSERSITE=1 PYTHONPATH=/n/fs/goose/experiments/mid0_sae_selectivity/deps /n/fs/goose/el8403/conda-envs/goose/bin/python /n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166/config/code/analyze.py --run /n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166
+PYTHONNOUSERSITE=1 PYTHONPATH=/n/fs/goose/experiments/mid0_sae_selectivity/deps /n/fs/goose/el8403/conda-envs/goose/bin/python config/plot_presentation/code/presentation.py --source-run /n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166 --output-dir /path/to/new_figure_directory
 ```
-
-Completed assets are SHA-verified and skipped on resume. Each shard has an exclusive lock and append-only journal. Partial attempts are retained. Missing predictions block the final analysis rather than silently disappear. Input hashes, source CSV snapshots, checkpoint hashes, runtime versions and code are in config/. Full archive: `/n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166`.
-
-
-## GitHub release scope
-
-Large per-image tables and input manifests are losslessly gzip-compressed (`.csv.gz`); read with pandas.read_csv or gzip.open. Private per-case distortion-review joins and reviewer labels are excluded. The full masks/probabilities/originals remain in `/n/fs/goose/experiments/mid0_sae_selectivity/beard_interventions_20261117_020843_219166`. The local full-output manifest lists those files; they are not all uploaded here.
