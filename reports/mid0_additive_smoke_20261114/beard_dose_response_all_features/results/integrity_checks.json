@@ -1,0 +1,13 @@
+{
+  "n_conditions": 74400,
+  "method_counts": {
+    "multiplicative": 69600,
+    "additive": 4200,
+    "baseline": 600
+  },
+  "all_class_counts_conserved": true,
+  "all_noop_deltas_zero": true,
+  "normalization_bounds_checked": true,
+  "n_pixel_equal_controls": 600,
+  "n_control_checks": 600
+}

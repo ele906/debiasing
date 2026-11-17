@@ -1,0 +1,21 @@
+feature_id,majority_clear_distortion,n_reviewed,n_with_finite_score,mean_delta_current_face_pp,mean_absolute_delta_current_face_pp,interpretation
+1074,yes,2,2,,,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+1074,no,8,8,-0.13549413596210574,0.13549413596210574,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+1650,yes,3,2,,,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+1650,no,7,7,0.18682729588486305,0.19310486171548755,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+2023,yes,3,3,0.1807245258072857,0.1807245258072857,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+2023,no,7,7,0.0470547558704425,0.0470547558704425,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+2361,yes,3,3,0.15770120687881814,0.15770120687881814,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+2361,no,7,7,-0.13322102688044862,0.18888490751399908,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4228,yes,3,3,8.206033662596235,8.206033662596235,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4228,no,7,7,0.4924299907933157,0.8748999056966061,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4338,yes,6,5,1.3435044296730574,1.3515471832579031,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4338,no,4,4,-0.16645129552738583,0.16645129552738583,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4399,yes,2,2,,,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4399,no,8,8,-0.1717705209269692,0.1717705209269692,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4554,yes,4,4,2.285662587063671,2.285662587063671,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4554,no,6,6,-0.10121317346396215,0.10121317346396215,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4586,yes,1,1,,,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+4586,no,9,9,0.056907054681694075,0.07065399703074932,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+5094,yes,1,1,,,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3
+5094,no,9,9,0.08931218064538202,0.08931218064538202,Selected review subset only; no extrapolation to unreviewed images; means suppressed for n<3

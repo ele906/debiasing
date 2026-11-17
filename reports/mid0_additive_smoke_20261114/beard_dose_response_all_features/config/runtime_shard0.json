@@ -1,0 +1,16 @@
+{
+  "python": "3.10.22 (main, Oct 29 2026, 20:33:25) [GCC 14.3.0]",
+  "torch": "2.6.0+cu124",
+  "numpy": "2.2.6",
+  "pillow": "12.3.0",
+  "device": "NVIDIA L40",
+  "precision": "float32",
+  "torch_cuda": "12.4",
+  "cudnn_version": 90100,
+  "tf32_matmul": false,
+  "tf32_cudnn": true,
+  "checkpoint_hashes": [
+    "ad5266f61eaf540f120e15c47315bef3e2302c720c1c7135d0a3e9f9de55af39",
+    "73cec8be7427c8655ceced13ce62f6e20a1fa90d1b4d4a550df17a1144081a7c"
+  ]
+}
