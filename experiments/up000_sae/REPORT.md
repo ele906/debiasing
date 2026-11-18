@@ -25,6 +25,8 @@ The table uses seeds 100–199 and the historical candidate filter, the union of
 
 [Full ranking with activation magnitudes](discovery/full_ranking.csv) · [JET overlays](discovery/overlays) · [Per-image matched discovery maps summary](discovery/spatial_by_image.csv)
 
+[Per-feature prevalence histograms and multi-seed JET galleries](FEATURE_GALLERIES.md)
+
 ## Controls and stability
 
 The 1,260-condition pilot covered features 1088, 4099, and 55 at α = −30, −7, 0, 1, 3, 10, and 30. Pixel replay passed at α=1 and −7. The pilot passed before SLURM submitted the full run. The full run recorded 17,400 unique conditions, including 600 α=1 controls. Every clean control matched the archived mid.0 sweep control at the pixel level. The older source dataset PNGs differed from these controls. All 9,106 zero-activation conditions were pixel-exact no-ops. [Pilot gate](pilot/validation.json) · [SLURM jobs](jobs.txt) · [Source manifest](source_manifest.sha256) · [Full shards](full)
