@@ -1,0 +1,48 @@
+{
+  "n_additive_edits": 4200,
+  "n_saved_pixel_identical": 0,
+  "saved_pixel_mae_min": 0.2823753356933594,
+  "saved_pixel_mae_max": 23.165420532226562,
+  "n_pixel_equal_baseline_checks": 600,
+  "additive_grid_shape": [
+    16,
+    16
+  ],
+  "addition_applies_to_all_positions": true,
+  "overlay": "modified SAE coordinate, not attention; baseline uses original coordinate",
+  "max_relative_l2_field_correction": 0.0008346300471336362,
+  "nominal_multiplicative_seeds": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "additive_seeds": [
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "gallery_seed": 30,
+  "bootstrap_resamples": 10000,
+  "y_values_changed": false,
+  "images_changed": false,
+  "models_run": 0
+}

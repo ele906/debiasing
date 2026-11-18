@@ -1,5 +1,11 @@
 # Feature 4228: beard area changes
 
+## Audit update — 18 November 2026
+
+The additive scatterplot x-axis now uses the recorded **post-casting block-output L2** (`decoded_perturbation_norm`). It previously used latent-coordinate L2 (`perturbation_norm`); the largest difference across4,200 edits is0.084%. Images, beard measurements, paired changes and confidence intervals are unchanged.
+
+Twenty multiplicative seeds were evaluated per group, but some extreme points use fewer finite beard/face ratios because the parser returned zero face area. Baseline-bearded curves also use only qualifying seeds. [Exact per-point counts](corrections_20261118/per_point_seed_counts.csv) and the [file/code audit](corrections_20261118/AUDIT.md) document this.
+
 Four views of the existing experiment, shown separately for men’s and women’s prompt groups. This revision changes presentation only; no images were generated or rescored.
 
 ## Men’s prompt groups
@@ -42,7 +48,7 @@ Four views of the existing experiment, shown separately for men’s and women’
 
 Beard area is the parser’s class14 area divided by its facial classes1–11 and14, excluding neck and hair. The axis label “Area change (%)” means edited beard-area percentage minus the same-prompt, same-seed control percentage:10% to12% is shown as+2. This is a percentage-point difference, not relative percentage growth. These remain parser measurements rather than validated beard masks. Prompt gender does not establish facial-hair presence.
 
-1. **All seeds:** all20 multiplicative seeds per group. Thin lines are individual seeds, the bold line is their mean, and shading around it is the existing95% seed-bootstrap interval. α=0 removes the coordinate, α=1 leaves it unchanged, α<0 reverses sign, and α>1 amplifies. Gray end bands mark |α|≥50 as a caution range, not a per-image distortion verdict.
+1. **All seeds:**20 seeds evaluated per group; each point averages its finite normalized scores. Thin lines are individual seeds, the bold line is their mean, and shading around it is the existing95% seed-bootstrap interval. α=0 removes the coordinate, α=1 leaves it unchanged, α<0 reverses sign, and α>1 amplifies. Gray end bands mark |α|≥50 as a caution range, not a per-image distortion verdict.
 2. **Baseline-bearded:** the same analysis restricted to baseline parsed beard/face fraction≥1%. A panel with no eligible seeds is missing a qualifying sample, not a measured zero effect.
 3. **Additive:** five seeds per group at offsets10,20,50. Each edit is compared with its saved no-intervention baseline.
 4. **Applied L2:** L2 is the magnitude of the actual block-output change after dtype casting: `sqrt(sum((edited_block - original_block)**2))`. It is a measurement, **not regularization or a training penalty**. For a change vector(3,4), L2=5. Opposite changes(3,4) and(−3,−4) have the same L2, so size alone does not describe direction. The different markers identify intervention methods/signs. This scatter plot helps inspect responses at comparable sizes; it does not by itself establish a direction effect after controlling for magnitude.

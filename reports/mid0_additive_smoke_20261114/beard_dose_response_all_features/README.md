@@ -1,5 +1,11 @@
 # Existing-image beard-parser intervention scoring
 
+## Audit update — 18 November 2026
+
+The additive scatterplot x-axis now uses the recorded **post-casting block-output L2** (`decoded_perturbation_norm`). It previously used latent-coordinate L2 (`perturbation_norm`); the largest difference across4,200 edits is0.084%. Images, beard measurements, paired changes and confidence intervals are unchanged.
+
+Twenty multiplicative seeds were evaluated per group, but some extreme points use fewer finite beard/face ratios because the parser returned zero face area. Baseline-bearded curves also use only qualifying seeds. [Exact per-point counts](corrections_20261118/per_point_seed_counts.csv) and the [file/code audit](corrections_20261118/AUDIT.md) document this.
+
 {
   "n_conditions": 74400,
   "n_unique_assets": 49520,

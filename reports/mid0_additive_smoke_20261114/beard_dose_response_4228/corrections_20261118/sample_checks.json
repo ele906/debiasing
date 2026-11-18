@@ -1,0 +1,146 @@
+[
+  {
+    "group": "black_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 7.04198694229126,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.91015625
+  },
+  {
+    "group": "east_asian_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 4.843746185302734,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  },
+  {
+    "group": "white_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 5.178886413574219,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.95703125
+  },
+  {
+    "group": "middle_eastern_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 12.86696720123291,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.75
+  },
+  {
+    "group": "indian_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 9.289867401123047,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.8515625
+  },
+  {
+    "group": "hispanic_man",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 3.8278121948242188,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.9375
+  },
+  {
+    "group": "black_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 9.618767738342285,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  },
+  {
+    "group": "white_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 6.822690486907959,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  },
+  {
+    "group": "east_asian_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 4.5584564208984375,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  },
+  {
+    "group": "middle_eastern_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 6.962392330169678,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 0.99609375
+  },
+  {
+    "group": "indian_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 9.198107719421387,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  },
+  {
+    "group": "hispanic_woman",
+    "pixels_equal": false,
+    "mean_absolute_pixel_difference": 8.567830085754395,
+    "max_error_from_z_plus_50": 0.0,
+    "original_map_shape": [
+      16,
+      16
+    ],
+    "modified_min": 50.0,
+    "original_zero_fraction": 1.0
+  }
+]
