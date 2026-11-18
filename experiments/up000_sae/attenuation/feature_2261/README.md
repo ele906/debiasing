@@ -2,7 +2,7 @@
 
 Peak discovery prompt group · middle eastern man
 
-[All 420 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)
+[All 660 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)
 
 ![Signed coefficients for the peak group](signed_change_heatmaps/middle_eastern_man_seed30.jpg)
 

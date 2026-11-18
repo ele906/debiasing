@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw
 
 RUN = Path(__file__).resolve().parent
 OUT = RUN / "attenuation"
-ALPHAS = (-7, -5, -3, -2, -1, 0, 1)
+ALPHAS = (-7, -5, -3, -2, -1, 0, 1, 2, 3, 5, 7)
 SEED = 30
 TILE = 216
 VIEWS = ("plain_grids", "signed_change_heatmaps", "post_activation_heatmaps",
@@ -38,10 +38,10 @@ def overlay(image, values, signed=False):
 def make_grid(path, panels):
     step = TILE + 10
     row_height = TILE + 30
-    sheet = Image.new("RGB", (3 * step, 3 * row_height), "white")
+    sheet = Image.new("RGB", (4 * step, 3 * row_height), "white")
     draw = ImageDraw.Draw(sheet)
     for index, (label, image) in enumerate(panels):
-        row, column = divmod(index, 3)
+        row, column = divmod(index, 4)
         x, y = column * step, row * row_height
         draw.text((x + 4, y + 4), label, fill="#142539")
         sheet.paste(image, (x + 4, y + 20))
@@ -69,7 +69,7 @@ def render(feature, peak):
     folder.mkdir(parents=True, exist_ok=True)
     manifest = pd.read_csv(RUN / "full" / f"feature_{feature}" / "manifest.csv")
     subset = manifest[manifest.alpha.isin(ALPHAS)].sort_values(["group", "seed", "alpha"])
-    if len(subset) != 420 or subset.duplicated(["group", "seed", "alpha"]).any():
+    if len(subset) != 60 * len(ALPHAS) or subset.duplicated(["group", "seed", "alpha"]).any():
         raise ValueError(f"Incomplete attenuation data for feature {feature}")
     records = []
     for (group, seed), rows in subset.groupby(["group", "seed"]):
@@ -94,7 +94,7 @@ def render(feature, peak):
             panels["intervention_footprint_heatmaps"].append((label, overlay(tile, applied)))
         if seed == SEED:
             for view, edits in panels.items():
-                original = edits[-1][1]
+                original = edits[ALPHAS.index(1)][1]
                 make_grid(folder / view / f"{group}_seed{seed}.jpg", [("Original", original), *edits])
 
     metrics = pd.DataFrame(records)
@@ -107,7 +107,7 @@ def render(feature, peak):
     plot_curves(folder / "activation_curves.png", summary)
     lines = [f"# up.0.0 feature {feature}", "",
              f"Peak discovery prompt group · {peak.replace('_', ' ')}", "",
-             "[All 420 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)",
+             "[All 660 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)",
              "", f"![Signed coefficients for the peak group](signed_change_heatmaps/{peak}_seed{SEED}.jpg)",
              "", "![Activation curves](activation_curves.png)", "",
              "| Prompt group | Plain | Signed coefficients | Post activation | Applied L2 footprint |",
@@ -125,9 +125,9 @@ def main():
         render(row.feature, row.peak_group)
     root = ["# up.0.0 attenuation reports", "",
             "All ten independently ranked features use the saved evaluation sweep. Each feature report covers "
-            "12 prompt groups, seeds 30–34, and multipliers −7, −5, −3, −2, −1, 0, and +1. "
+            "12 prompt groups, seeds 30–34, and multipliers −7, −5, −3, −2, −1, 0, +1, +2, +3, +5, and +7. "
             "The visual grids use seed 30 for every group so the same portraits can be compared across features.", "",
-            "The 3 × 3 grid follows the mid.0 example. The first tile shows the clean baseline. "
+            "The 3 × 4 grid shows the full requested range in ascending order. The first tile shows the clean baseline. "
             "The signed view uses α times the original coefficient, with warm colors for positive values "
             "and cool colors for negative values. At α=0 the signed map is zero and transparent. "
             "The post-activation view shows the feature after re-encoding the edited residual. "

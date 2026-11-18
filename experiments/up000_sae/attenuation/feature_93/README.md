@@ -2,7 +2,7 @@
 
 Peak discovery prompt group · indian woman
 
-[All 420 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)
+[All 660 conditions](metrics.csv) · [Five-seed means and SEM](mean_metrics_by_group_alpha.csv)
 
 ![Signed coefficients for the peak group](signed_change_heatmaps/indian_woman_seed30.jpg)
 

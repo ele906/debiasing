@@ -1,8 +1,8 @@
 # up.0.0 attenuation reports
 
-All ten independently ranked features use the saved evaluation sweep. Each feature report covers 12 prompt groups, seeds 30–34, and multipliers −7, −5, −3, −2, −1, 0, and +1. The visual grids use seed 30 for every group so the same portraits can be compared across features.
+All ten independently ranked features use the saved evaluation sweep. Each feature report covers 12 prompt groups, seeds 30–34, and multipliers −7, −5, −3, −2, −1, 0, +1, +2, +3, +5, and +7. The visual grids use seed 30 for every group so the same portraits can be compared across features.
 
-The 3 × 3 grid follows the mid.0 example. The first tile shows the clean baseline. The signed view uses α times the original coefficient, with warm colors for positive values and cool colors for negative values. At α=0 the signed map is zero and transparent. The post-activation view shows the feature after re-encoding the edited residual. The footprint view shows the actual per-cell perturbation L2 after the generation dtype cast. Each tile is color-scaled independently. Its caption gives the full-tensor L2 for dose comparisons.
+The 3 × 4 grid shows the full requested range in ascending order. The first tile shows the clean baseline. The signed view uses α times the original coefficient, with warm colors for positive values and cool colors for negative values. At α=0 the signed map is zero and transparent. The post-activation view shows the feature after re-encoding the edited residual. The footprint view shows the actual per-cell perturbation L2 after the generation dtype cast. Each tile is color-scaled independently. Its caption gives the full-tensor L2 for dose comparisons.
 
 The curves show mean intended and re-encoded activation with standard errors across five seeds. All-zero overlays indicate a zero coefficient or perturbation for that panel.
 
