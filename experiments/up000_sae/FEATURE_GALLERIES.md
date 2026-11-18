@@ -6,6 +6,8 @@ Each prevalence plot shows all 12 prompt groups and the per-image histogram for 
 
 [Group prevalence table](feature_prevalence/group_prevalence.csv) · [JET scales and seeds](multiseed_jet/settings.json)
 
+[Mean-activation bar charts in the mid.0 reference format](GROUP_ACTIVATION_CHARTS.md)
+
 ## up.0.0
 
 | Rank | Feature | Peak-mean prompt group | Disparity | Prevalence | JET overlays |
