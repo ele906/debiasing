@@ -1,0 +1,57 @@
+{
+  "feature": 4303,
+  "block": "unet.up_blocks.0.attentions.0",
+  "alphas": [
+    1,
+    -100,
+    -70,
+    -50,
+    -40,
+    -30,
+    -20,
+    -15,
+    -12,
+    -10,
+    -7,
+    -5,
+    -3,
+    -2,
+    -1,
+    0,
+    2,
+    3,
+    5,
+    7,
+    10,
+    12,
+    15,
+    20,
+    30,
+    40,
+    50,
+    70,
+    100
+  ],
+  "seeds": [
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "checkpoint_sha256": "871cf2675d9bcb1b74c8e76779461f327efaf826fdcf7d4954cb5daa100080d0",
+  "checkpoint_files": {
+    "state_dict.pth": "871cf2675d9bcb1b74c8e76779461f327efaf826fdcf7d4954cb5daa100080d0",
+    "config.json": "fe83c72387cb57636d305c512b046f2f97b7606515c96ed9a7d5d26c5c2bfe78"
+  },
+  "manifest_sha256": "92bce894e086caab164774d234e614906918369de41ff7b189f89cd5905fcb56",
+  "generation_settings_sha256": "b0130a07f4bf81e38d83991eea8ddb282ba8929f2641a12bae0193dcb97c8e2e",
+  "mode": "full",
+  "code_sha256": "07aabf88161cc80a0f5bb517447776e54346215f7caf8c9ca9c046dab0e06fa4",
+  "software": {
+    "torch": "2.6.0+cu124",
+    "diffusers": "0.30.0",
+    "transformers": "4.44.2"
+  },
+  "device": "NVIDIA L40"
+}

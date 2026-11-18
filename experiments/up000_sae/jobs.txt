@@ -1,0 +1,14 @@
+Training 4271977
+Discovery 4271982
+Pilot 4271983
+Pilot validation 4271984
+Pilot evaluation 4271987
+Discovery retry 4272069
+Pilot retry 4272070
+Pilot validation retry 4272071
+Pilot evaluation retry 4272072
+Full sweep 4272134
+Full evaluation 4272135
+Pilot evaluation hull retry 4272136
+Feature 3742 beard evaluation 4272254
+Spatial activation comparison 4272255

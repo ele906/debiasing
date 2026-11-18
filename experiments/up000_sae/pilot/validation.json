@@ -1,0 +1,35 @@
+{
+  "checkpoint_sha256": "871cf2675d9bcb1b74c8e76779461f327efaf826fdcf7d4954cb5daa100080d0",
+  "features": [
+    1088,
+    4099,
+    55
+  ],
+  "shards": {
+    "1088": {
+      "conditions": 420,
+      "active_edits": 138,
+      "zero_activation_conditions": 259,
+      "no_ops_passed": true,
+      "matched_mid0_controls": 60,
+      "matched_dataset_controls": 0
+    },
+    "4099": {
+      "conditions": 420,
+      "active_edits": 150,
+      "zero_activation_conditions": 245,
+      "no_ops_passed": true,
+      "matched_mid0_controls": 60,
+      "matched_dataset_controls": 0
+    },
+    "55": {
+      "conditions": 420,
+      "active_edits": 144,
+      "zero_activation_conditions": 252,
+      "no_ops_passed": true,
+      "matched_mid0_controls": 60,
+      "matched_dataset_controls": 0
+    }
+  },
+  "passed": true
+}

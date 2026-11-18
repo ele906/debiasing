@@ -1,0 +1,19 @@
+{
+  "block": "unet.up_blocks.0.attentions.0",
+  "model": "stabilityai/sdxl-turbo",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "images": 1200,
+  "residual_shape": [
+    16,
+    16,
+    1280
+  ],
+  "dtype": "float16",
+  "splits": {
+    "train": "100-169",
+    "validation": "170-184",
+    "test": "185-199"
+  },
+  "activation_convention": "U-Net block output minus input",
+  "pretrained_sae_sha256": "14c45efd9cce0258f014c49babdcd0e9ce8b266fe31eed72db1a45b990a1a0f8"
+}

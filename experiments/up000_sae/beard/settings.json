@@ -1,0 +1,17 @@
+{
+  "feature": 3742,
+  "checkpoint_hashes": [
+    "ad5266f61eaf540f120e15c47315bef3e2302c720c1c7135d0a3e9f9de55af39",
+    "73cec8be7427c8655ceced13ce62f6e20a1fa90d1b4d4a550df17a1144081a7c"
+  ],
+  "unique_images": 816,
+  "groups": 12,
+  "seeds": [
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "baseline_bearded_threshold": 0.01
+}

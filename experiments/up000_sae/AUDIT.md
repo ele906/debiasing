@@ -1,0 +1,11 @@
+# SDXL Turbo up.0.0 audit
+
+The archived layer-depth comparison names up.0.0 as `unet.up_blocks.0.attentions.0`. The hook is on the complete attention module output. The SAE input is output[0] minus inputs[0], with NCHW tensors converted to channel-last residual vectors. At 512 × 512, the expected hook tensor is [1, 1280, 16, 16] and the stored per-image residual is [16, 16, 1280]. Both layers use 256 spatial tokens. Live capture checks this shape.
+
+The matching pretrained checkpoint is `sdxl-unbox/checkpoints/unet.up_blocks.0.attentions.0_k10_hidden5120_auxk256_bs4096_lr0.0001/final`. Its Top-K architecture has 1,280 input channels, 5,120 directions, k=10 and auxk=256. The weight SHA-256 is `14c45efd9cce0258f014c49babdcd0e9ce8b266fe31eed72db1a45b990a1a0f8`, matching the archived comparison. The archived chunk and merged caches contain pooled pretrained codes. The published overlays and held-out contrasts describe those pretrained features. No compatible fine-tuned up.0.0 checkpoint or full fine-tuned sweep surfaced in the inspected runs.
+
+The comparable mid.0 checkpoint came from the face-region trainer, with masks from the existing Florence-2 human-face boxes, 20 epochs, LR 1e-6, seed 20261101, and selection on validation face reconstruction MSE. The earlier eight-epoch full-grid training experiment supplies the capture recipe and split, 100–169 train, 170–184 validation, 185–199 test. The discovery ranking pools raw means across all grid cells, and the historical selection restricted candidates to the union of each group's 10 highest mean features. A full dictionary ranking should also be saved.
+
+The matched mid.0 run uses seeds 30–34, SDXL Turbo at 512 × 512 with one denoising step, guidance 0, and Euler Ancestral trailing spacing. The intervention is an output-space decoder-vector delta using the unedited code times (alpha − 1). Existing mid.0 files include applied post-cast L2, MediaPipe detection, human review CSV, and magnitude plots. The DINOv3 beard parser is available under face-parsing-beard-class for a feature-specific follow-up after qualitative review.
+
+The original reno environment is absent. The archived top-10 SLURM script uses the local goose interpreter and vendored generation dependencies. Imports verified PyTorch 2.6.0+cu124, Diffusers 0.30.0, and Transformers 4.44.2.

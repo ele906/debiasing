@@ -1,0 +1,10 @@
+/capture/
+/training/
+/incomplete-training-*/
+/discovery/
+/pilot/
+/full/
+/*.out
+/*.lock
+/__pycache__/
+/beard/
