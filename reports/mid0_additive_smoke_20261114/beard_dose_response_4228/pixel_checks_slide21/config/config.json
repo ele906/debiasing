@@ -1,0 +1,11 @@
+{
+  "feature": 4228,
+  "seed": 30,
+  "groups": 12,
+  "pairwise_comparisons": 72,
+  "source": "/n/fs/goose/experiments/mid0_sae_selectivity/ten_feature_review_20261116_230430_705065/results/per_image_pixel_results.csv",
+  "source_sha256": "091422997d210114138b507980e4dc805f946d2770c03a40dab8f725ae9d7bd4",
+  "pixel_units": "RGB integer intensity0\u2013255",
+  "difference_visualization": "absolute RGB differences times4, capped255 for viewing only; numerical metrics and NPZ differences are not amplified or clipped",
+  "models_run": 0
+}
