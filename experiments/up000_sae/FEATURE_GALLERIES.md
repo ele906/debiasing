@@ -8,6 +8,8 @@ Each prevalence plot shows all 12 prompt groups and the per-image histogram for 
 
 [Mean-activation bar charts in the mid.0 reference format](GROUP_ACTIVATION_CHARTS.md)
 
+[Per-feature attenuation grids and curves](attenuation/README.md)
+
 ## up.0.0
 
 | Rank | Feature | Peak-mean prompt group | Disparity | Prevalence | JET overlays |
